@@ -119,6 +119,23 @@ body {
   border-radius: var(--radius);
 }
 
+/* Product card — bigger, bolder, with image glow */
+.card-product {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+.card-product:hover {
+  border-color: rgba(212,160,67,0.35);
+  box-shadow:
+    0 0 0 1px rgba(212,160,67,0.08) inset,
+    0 30px 80px rgba(0,0,0,0.6),
+    0 0 120px rgba(212,160,67,0.04);
+  transform: translateY(-8px);
+}
+
 /* ─────────────────────────────────────
    BUTTONS
 ───────────────────────────────────── */
