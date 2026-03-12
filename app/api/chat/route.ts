@@ -68,8 +68,9 @@ export async function POST(req: NextRequest) {
       const toolMessages: OpenAI.Chat.ChatCompletionToolMessageParam[] = []
 
       for (const call of msg.tool_calls) {
-        if (call.function.name === 'search_peptides') {
-          const { query } = JSON.parse(call.function.arguments) as { query: string }
+        const fn = (call as { id: string; function: { name: string; arguments: string } })
+        if (fn.function.name === 'search_peptides') {
+          const { query } = JSON.parse(fn.function.arguments) as { query: string }
           const results = await searchPeptides(query)
           if (results.length > products.length) products = results
 
@@ -79,14 +80,14 @@ export async function POST(req: NextRequest) {
 
           toolMessages.push({
             role: 'tool',
-            tool_call_id: call.id,
+            tool_call_id: fn.id,
             content: toolResult || 'No matching peptides found.',
           })
         } else {
           // Unknown tool — respond with empty to satisfy the requirement
           toolMessages.push({
             role: 'tool',
-            tool_call_id: call.id,
+            tool_call_id: fn.id,
             content: 'Tool not available.',
           })
         }
