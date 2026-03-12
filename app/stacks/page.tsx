@@ -1,95 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { stacks } from '@/lib/stacks'
 import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
   title: 'Stack Protocols | PeptiZzy',
-  description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, and cognitive performance.',
+  description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance. Full detail pages for each stack.',
 }
-
-const stacks = [
-  {
-    id: 'looks-max',
-    name: 'The Looks Max Stack',
-    tagline: 'Comprehensive physical transformation',
-    desc: 'Addresses all four pillars of physical optimization: skin quality, pigmentation, body composition, and cellular longevity. The definitive looks maximization protocol.',
-    badge: 'Most Popular',
-    accent: '#d4a043',
-    compounds: [
-      { slug: 'ghk-cu',        role: 'Skin & Collagen',        timing: '3× weekly' },
-      { slug: 'melanotan-2',   role: 'Pigmentation & Libido',  timing: 'Loading + Maintenance' },
-      { slug: 'bpc-157',       role: 'Foundation Recovery',    timing: 'Daily' },
-      { slug: 'ipamorelin',    role: 'GH Optimization',        timing: '2–3× daily' },
-    ],
-    outcomes: ['Deep, even tan', 'Improved skin thickness', 'Lean body composition', 'Accelerated recovery'],
-    duration: '12 weeks',
-  },
-  {
-    id: 'body-comp',
-    name: 'The Body Sculptor',
-    tagline: 'Elite lean mass and fat loss',
-    desc: 'Growth hormone optimization stacked for maximum body composition transformation. Build lean muscle while stripping fat — the dual recomposition effect.',
-    badge: 'Advanced',
-    accent: '#6090ff',
-    compounds: [
-      { slug: 'ipamorelin',    role: 'GH Pulse Optimization',  timing: '2–3× daily' },
-      { slug: 'cjc-1295',     role: 'Sustained GH Elevation', timing: 'With Ipamorelin' },
-      { slug: 'tesamorelin',   role: 'Visceral Fat Reduction', timing: 'Daily (evening)' },
-      { slug: 'igf-1-lr3',    role: 'Muscle Hyperplasia',     timing: 'Post-workout' },
-    ],
-    outcomes: ['Significant lean mass', 'Visceral fat reduction', 'Sharper definition', 'Enhanced recovery'],
-    duration: '16 weeks',
-  },
-  {
-    id: 'wolverine',
-    name: 'The Wolverine Stack',
-    tagline: 'Maximum tissue repair and regeneration',
-    desc: 'Near-superhuman recovery properties. Combines the two most powerful tissue repair peptides with GH optimization for training frequency otherwise unattainable.',
-    badge: 'Elite Recovery',
-    accent: '#40c090',
-    compounds: [
-      { slug: 'bpc-157',       role: 'Local Tissue Repair',    timing: 'Daily near injury' },
-      { slug: 'tb-500',        role: 'Systemic Regeneration',  timing: '2–3× weekly' },
-      { slug: 'ipamorelin',    role: 'GH for Recovery',        timing: 'Pre-sleep' },
-      { slug: 'ghk-cu',        role: 'Connective Tissue',      timing: '2× weekly' },
-    ],
-    outcomes: ['Accelerated healing', 'Reduced inflammation', 'Greater training frequency', 'Joint health'],
-    duration: '8 weeks',
-  },
-  {
-    id: 'longevity',
-    name: 'The Longevity Protocol',
-    tagline: 'Biological age reversal',
-    desc: 'The most comprehensive anti-aging protocol available. Combines telomere extension, mitochondrial optimization, immune enhancement, and sleep improvement.',
-    badge: 'Longevity',
-    accent: '#a060ff',
-    compounds: [
-      { slug: 'epithalon',         role: 'Telomere Extension',     timing: '10–20 day cycle ×2/yr' },
-      { slug: 'ghk-cu',            role: 'Skin & Gene Expression', timing: '3× weekly' },
-      { slug: 'thymosin-alpha-1',  role: 'Immune Optimization',    timing: '2–3× weekly' },
-      { slug: 'mots-c',            role: 'Mitochondrial Health',   timing: '3–5× weekly' },
-    ],
-    outcomes: ['Telomere lengthening', 'Improved biological age', 'Enhanced immunity', 'Better sleep'],
-    duration: 'Ongoing / Annual Cycle',
-  },
-  {
-    id: 'neural',
-    name: 'The Neural Edge',
-    tagline: 'Peak cognitive performance',
-    desc: 'Optimize the cognitive dimension of looks maxing — mental sharpness, confidence, and presence that convert physical transformation into total magnetism.',
-    badge: 'Cognitive',
-    accent: '#40c0ff',
-    compounds: [
-      { slug: 'semax',     role: 'BDNF & Cognitive Performance', timing: '1–2× daily (nasal)' },
-      { slug: 'selank',    role: 'Anxiolytic & Confidence',      timing: '1–2× daily (nasal)' },
-      { slug: 'dsip',      role: 'Deep Sleep Architecture',      timing: 'Pre-sleep' },
-      { slug: 'epithalon', role: 'Neuroprotection',              timing: 'Cycle protocol' },
-    ],
-    outcomes: ['Enhanced focus', 'Reduced anxiety', 'Deeper sleep', 'Social confidence'],
-    duration: '6–8 weeks',
-  },
-]
 
 export default function StacksPage() {
   return (
@@ -112,14 +30,14 @@ export default function StacksPage() {
             </span>
           </h1>
           <p className="text-[#8888a0] text-xl max-w-2xl leading-relaxed">
-            Individual peptides are powerful. Strategically designed stacks are transformative. Each protocol combines compounds with complementary mechanisms for synergistic effects.
+            Individual peptides are powerful. Strategically designed stacks are transformative. Each protocol combines compounds with complementary mechanisms for synergistic effects that exceed what any single compound can achieve.
           </p>
         </div>
       </section>
 
       <div className="rule" />
 
-      {/* STACKS */}
+      {/* STACKS GRID */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-10 space-y-8">
           {stacks.map((stack, si) => {
@@ -136,7 +54,7 @@ export default function StacksPage() {
                     <div>
                       <div className="flex items-center gap-3 mb-3">
                         <span className="mono text-[11px]" style={{ color: stack.accent }}>
-                          Protocol {String(si + 1).padStart(2, '0')}
+                          Protocol {String(si + 1).padStart(2, '0')} · {stack.difficulty}
                         </span>
                         <span className="tag-gold text-[10px]">{stack.badge}</span>
                       </div>
@@ -146,11 +64,17 @@ export default function StacksPage() {
                       <p className="font-['Playfair_Display'] italic text-xl mb-4" style={{ color: stack.accent }}>
                         {stack.tagline}
                       </p>
-                      <p className="text-[#8888a0] text-[15px] leading-relaxed max-w-2xl">{stack.desc}</p>
+                      <p className="text-[#8888a0] text-[15px] leading-relaxed max-w-2xl">{stack.shortDesc}</p>
                     </div>
-                    <div className="flex-shrink-0 text-right">
-                      <p className="label mb-1">Duration</p>
-                      <p className="text-white font-600 text-[15px]">{stack.duration}</p>
+                    <div className="flex-shrink-0 text-right space-y-3">
+                      <div>
+                        <p className="label mb-1">Duration</p>
+                        <p className="text-white font-600 text-[15px]">{stack.duration}</p>
+                      </div>
+                      <div>
+                        <p className="label mb-1">Goal</p>
+                        <p className="text-white font-600 text-[13px]">{stack.goal}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -193,22 +117,26 @@ export default function StacksPage() {
                   </div>
 
                   {/* Results + CTA */}
-                  <div className="space-y-6">
+                  <div className="space-y-5">
                     <div>
                       <p className="label mb-4">Expected Outcomes</p>
-                      <div className="space-y-2.5">
+                      <div className="space-y-2">
                         {stack.outcomes.map(o => (
                           <div key={o} className="flex items-center gap-3">
                             <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none">
                               <circle cx="8" cy="8" r="7" stroke="#d4a043" strokeWidth="1" opacity="0.3"/>
                               <path d="M5 8l2 2 4-4" stroke="#d4a043" strokeWidth="1.5" strokeLinecap="round"/>
                             </svg>
-                            <span className="text-[#8888a0] text-[14px]">{o}</span>
+                            <span className="text-[#8888a0] text-[13px]">{o}</span>
                           </div>
                         ))}
                       </div>
                     </div>
 
+                    <Link href={`/stacks/${stack.id}`}
+                      className="btn-secondary w-full justify-center py-3 text-[13px] block text-center">
+                      View Full Protocol Guide
+                    </Link>
                     <a href="https://pantheonpeptides.com/partner/AmentiAI/"
                       target="_blank" rel="noopener noreferrer"
                       className="btn-primary w-full justify-center py-3.5 text-[13px] block text-center">
@@ -232,10 +160,10 @@ export default function StacksPage() {
           </h2>
           <div className="space-y-4">
             {[
-              { n: '01', title: 'Start with a Foundation', body: 'Begin every stack with BPC-157 or TB-500 — they optimize the cellular environment so other peptides work most effectively. These repair underlying damage and reduce inflammation.' },
-              { n: '02', title: 'Layer by System', body: 'Add compounds that address your primary goals in order of importance. Each layer should have a clear, non-redundant mechanism to avoid diminishing returns from receptor overlap.' },
-              { n: '03', title: 'Time Your Doses Strategically', body: 'GH peptides are most effective at night and post-workout. Cognitive peptides perform best in the morning. Strategic timing compounds effectiveness significantly.' },
-              { n: '04', title: 'Cycle Intelligently', body: 'Most protocols benefit from structured cycles: 3 months on, 1 month off for GH peptides. Cycling maintains receptor sensitivity and allows continuous assessment.' },
+              { n: '01', title: 'Start with a Foundation', body: 'Begin every stack with BPC-157 or TB-500 — they optimize the cellular environment so other peptides work most effectively. These repair underlying damage and reduce inflammation that would otherwise limit every other compound\'s efficacy.' },
+              { n: '02', title: 'Layer by System', body: 'Add compounds that address your primary goals in order of importance. Each layer should have a clear, non-redundant mechanism to avoid diminishing returns from receptor overlap. The stacks on this page are pre-designed with non-competing mechanisms.' },
+              { n: '03', title: 'Time Your Doses Strategically', body: 'GH peptides are most effective at night and post-workout. Cognitive peptides perform best in the morning. GLP-1 weight loss peptides work once weekly. Strategic timing compounds the effectiveness of every compound in the protocol significantly.' },
+              { n: '04', title: 'Cycle Intelligently', body: 'Most protocols benefit from structured cycles: 3 months on, 1 month off for GH peptides. Cycling maintains receptor sensitivity, allows continuous assessment of results, and prevents the adaptation that reduces compound effectiveness over time.' },
             ].map(s => (
               <div key={s.n} className="card rounded-2xl p-6 flex gap-6">
                 <p className="mono text-[#d4a043] text-[12px] flex-shrink-0 mt-0.5">{s.n}</p>
@@ -257,14 +185,14 @@ export default function StacksPage() {
             Ready to start your stack?
           </h2>
           <p className="text-[#8888a0] text-[16px] mb-8">
-            All compounds available through our partner Pantheon Peptides.
+            All compounds available through our partner Pantheon Peptides. Every stack, every protocol — sourced from the highest-quality peptide supplier available.
           </p>
           <a href="https://pantheonpeptides.com/partner/AmentiAI/"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary text-[13px] px-8 py-4 inline-flex">
             Shop at Pantheon Peptides
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>
           </a>
         </div>
