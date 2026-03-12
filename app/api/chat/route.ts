@@ -98,7 +98,8 @@ export async function POST(req: NextRequest) {
     // No tool call — straight text reply
     return NextResponse.json({ reply: msg.content ?? '', products: [] })
   } catch (err) {
-    console.error('Chat API error:', err)
-    return NextResponse.json({ reply: 'Something went wrong. Please try again.' }, { status: 500 })
+    const msg = err instanceof Error ? err.message : String(err)
+    console.error('Chat API error:', msg, err)
+    return NextResponse.json({ reply: `Error: ${msg}` }, { status: 500 })
   }
 }
