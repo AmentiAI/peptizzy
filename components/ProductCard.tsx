@@ -32,18 +32,19 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
   if (variant === 'compact') {
     return (
       <Link href={`/products/${product.slug}`}>
-        <div className="card flex items-center gap-5 p-4 group hover:scale-[1.01] transition-all duration-200">
-          <div className="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-[#16161c]">
+        <div className="card flex items-center gap-4 p-4 group hover:scale-[1.02] transition-all duration-300">
+          {/* Square image — full product, no crop */}
+          <div className="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 img-shimmer"
+            style={{ background: `radial-gradient(circle at 50% 60%, ${accent}12, #0d0d11)` }}>
             <Image src={product.image} alt={product.name} fill
-              className="object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              className="object-contain p-1.5 group-hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-white font-700 text-[15px] leading-tight truncate">{product.name}</p>
+            <p className="text-white font-700 text-[14px] leading-tight truncate">{product.name}</p>
             <p className="text-[#8888a0] text-[12px] mt-0.5 truncate">{product.tagline}</p>
           </div>
           <div className="flex-shrink-0 text-right">
-            <p className="font-700 text-[14px]" style={{ color: accent }}>{product.price}</p>
+            <p className="font-700 text-[13px]" style={{ color: accent }}>{product.price}</p>
             <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all mt-1 ml-auto"
               fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
@@ -54,17 +55,19 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
     )
   }
 
-  /* ─── WIDE horizontal card (for featured sections) ─── */
+  /* ─── WIDE horizontal card ─── */
   if (variant === 'wide') {
     return (
       <div className="card group overflow-hidden relative">
         <Link href={`/products/${product.slug}`} className="flex flex-col sm:flex-row h-full">
-          {/* Image */}
-          <div className="relative w-full sm:w-64 h-56 sm:h-auto flex-shrink-0 overflow-hidden bg-[#0f0f13]">
+          {/* Full-product image panel */}
+          <div className="relative w-full sm:w-64 h-56 sm:h-auto flex-shrink-0 overflow-hidden img-shimmer"
+            style={{ background: `radial-gradient(ellipse at 50% 70%, ${accent}18, #0d0d11)` }}>
             <Image src={product.image} alt={product.name} fill
-              className="object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f0f13]/80 hidden sm:block" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13]/80 to-transparent sm:hidden" />
+              className="object-contain p-5 group-hover:scale-105 transition-transform duration-700" />
+            {/* Side fade on desktop */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f0f13]/70 hidden sm:block" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13]/60 to-transparent sm:hidden" />
             {product.badge && (
               <div className="absolute top-4 left-4">
                 <span className="tag-gold">{product.badge}</span>
@@ -109,14 +112,20 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
     return (
       <div className="card-product group overflow-hidden relative flex flex-col h-full">
         <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
-          {/* Image — big */}
-          <div className="relative overflow-hidden bg-[#0f0f13]" style={{ height: '360px' }}>
+          {/* Full product image — no crop */}
+          <div className="relative overflow-hidden img-shimmer" style={{ height: '360px',
+            background: `radial-gradient(ellipse at 50% 75%, ${accent}20, #0a0a0e 70%)` }}>
             <Image src={product.image} alt={product.name} fill priority
-              className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c10] via-[rgba(12,12,16,0.15)] to-transparent" />
-            {/* Accent glow bottom */}
-            <div className="absolute bottom-0 left-0 right-0 h-24 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ background: `linear-gradient(to top, ${accent}18, transparent)` }} />
+              className="object-contain p-6 group-hover:scale-105 transition-transform duration-700" />
+            {/* Subtle bottom vignette so body text doesn't clash */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#0f0f13] to-transparent" />
+            {/* Scan line on hover */}
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="scan-line" />
+            </div>
+            {/* Accent glow ring */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ background: `radial-gradient(ellipse at 50% 90%, ${accent}15, transparent 70%)` }} />
             {/* Badge */}
             {product.badge && (
               <div className="absolute top-5 left-5">
@@ -127,10 +136,10 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
             <div className="absolute top-5 right-5 mono text-[12px] text-[#50505e]">
               {String(index + 1).padStart(2, '0')}
             </div>
-            {/* Category pill on image */}
+            {/* Category pill */}
             <div className="absolute bottom-5 left-5">
               <span className="text-[11px] font-600 tracking-widest uppercase px-3 py-1.5 rounded-full"
-                style={{ background: `${accent}20`, color: accent, border: `1px solid ${accent}35` }}>
+                style={{ background: `${accent}22`, color: accent, border: `1px solid ${accent}40` }}>
                 {product.category}
               </span>
             </div>
@@ -138,7 +147,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
 
           {/* Body */}
           <div className="p-7 flex flex-col flex-1">
-            <h3 className="font-['Playfair_Display'] font-900 text-white text-[26px] leading-tight mb-2 group-hover:text-[#e8c060] transition-colors">
+            <h3 className="font-['Playfair_Display'] font-900 text-white text-[26px] leading-tight mb-2 group-hover:text-[#e8c060] transition-colors duration-300">
               {product.name}
             </h3>
             <p className="text-[#8888a0] text-[14px] leading-relaxed line-clamp-3 mb-5 flex-1">
@@ -168,15 +177,20 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
     <div className="card-product group overflow-hidden flex flex-col h-full relative">
       <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
 
-        {/* Image — bigger */}
-        <div className="relative overflow-hidden bg-[#0f0f13]" style={{ height: '300px' }}>
+        {/* Full product image — object-contain so nothing gets cut */}
+        <div className="relative overflow-hidden img-shimmer" style={{ height: '300px',
+          background: `radial-gradient(ellipse at 50% 75%, ${accent}18, #0a0a0e 70%)` }}>
           <Image src={product.image} alt={product.name} fill
-            className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-106 transition-all duration-600" />
-          {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c10] via-transparent to-transparent" />
+            className="object-contain p-5 group-hover:scale-105 transition-transform duration-600" />
+          {/* Bottom fade into card body */}
+          <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[#0f0f13] to-transparent" />
+          {/* Hover scan line */}
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="scan-line" />
+          </div>
           {/* Hover accent glow */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
-            style={{ background: `linear-gradient(to top, ${accent}20, transparent)` }} />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: `radial-gradient(ellipse at 50% 90%, ${accent}12, transparent 65%)` }} />
           {/* Badge */}
           {product.badge && (
             <div className="absolute top-4 left-4">
@@ -190,7 +204,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
           {/* Category on image */}
           <div className="absolute bottom-4 left-4">
             <span className="text-[10px] font-600 tracking-wider uppercase px-2.5 py-1 rounded-full"
-              style={{ background: `${accent}22`, color: accent, border: `1px solid ${accent}30` }}>
+              style={{ background: `${accent}22`, color: accent, border: `1px solid ${accent}35` }}>
               {product.category}
             </span>
           </div>
@@ -198,7 +212,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
 
         {/* Body */}
         <div className="p-6 flex flex-col flex-1">
-          <h3 className="font-['Playfair_Display'] font-900 text-white text-[22px] leading-snug mb-2 group-hover:text-[#e8c060] transition-colors">
+          <h3 className="font-['Playfair_Display'] font-900 text-white text-[22px] leading-snug mb-2 group-hover:text-[#e8c060] transition-colors duration-300">
             {product.name}
           </h3>
           <p className="text-[#8888a0] text-[14px] leading-relaxed line-clamp-3 flex-1 mb-4">

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import ProductCard from '@/components/ProductCard'
+import AnimateIn from '@/components/AnimateIn'
 import { products, getFeaturedProducts } from '@/lib/products'
 
 /* ─── Marquee ─── */
@@ -53,6 +54,18 @@ function FAQ({ q, a }: { q: string; a: string }) {
 
 const TABS = ['All', 'Looks Maxing', 'Body Composition', 'Recovery & Healing', 'Anti-Aging', 'Cognitive Performance']
 
+const CATEGORY_ACCENT: Record<string, string> = {
+  'Looks Maxing':           '#d4a043',
+  'Body Composition':       '#6090ff',
+  'Weight Management':      '#e05080',
+  'Recovery & Healing':     '#40c090',
+  'Anti-Aging':             '#a060ff',
+  'Cognitive Performance':  '#40c0ff',
+  'Immune & Vitality':      '#60d090',
+  'Performance & Vitality': '#ff8040',
+}
+function accentFor(cat: string) { return CATEGORY_ACCENT[cat] ?? '#d4a043' }
+
 export default function Home() {
   const [tab, setTab] = useState('All')
   const featured = getFeaturedProducts()
@@ -67,29 +80,29 @@ export default function Home() {
           1. HERO
       ══════════════════════════════════════════ */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="spot w-[560px] h-[400px] bg-[#d4a043] opacity-[0.055] -top-20 left-[15%]" />
-        <div className="spot w-[400px] h-[400px] bg-[#6030d0] opacity-[0.04] top-[35%] right-[5%]" />
+        <div className="spot spot-pulse w-[560px] h-[400px] bg-[#d4a043] opacity-[0.055] -top-20 left-[15%]" />
+        <div className="spot spot-pulse-2 w-[400px] h-[400px] bg-[#6030d0] opacity-[0.04] top-[35%] right-[5%]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-32 pb-16 w-full">
           <div className="grid lg:grid-cols-[1fr_420px] gap-16 xl:gap-24 items-center min-h-[70vh]">
 
             <div>
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-8 hero-sub" style={{ animationDelay: '0s', opacity: 0 }}>
                 <div className="w-6 h-[1px] bg-[#d4a043]" />
                 <p className="mono text-[#d4a043] text-[12px] tracking-[0.2em] uppercase">Elite Peptide Protocols</p>
               </div>
               <h1 className="mb-8">
-                <span className="display block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Peak</span>
-                <span className="display-italic block gold-shimmer" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Physical</span>
-                <span className="display block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Form.</span>
+                <span className="display hero-line hero-line-1 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Peak</span>
+                <span className="display-italic hero-line hero-line-2 block gold-shimmer" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Physical</span>
+                <span className="display hero-line hero-line-3 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Form.</span>
               </h1>
-              <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-10">
+              <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-10 hero-sub">
                 The most advanced peptide protocols for looks maximization, body composition, and cellular longevity. Premium compounds. Documented results.
               </p>
-              <div className="flex flex-wrap gap-3 mb-12">
+              <div className="flex flex-wrap gap-3 mb-12 hero-cta">
                 <a href="https://pantheonpeptides.com/partner/AmentiAI/"
                   target="_blank" rel="noopener noreferrer"
-                  className="btn-primary text-[13px] px-7 py-3.5">
+                  className="btn-primary text-[13px] px-7 py-3.5 glow-pulse">
                   Shop All Peptides
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
@@ -99,8 +112,8 @@ export default function Home() {
                   Looks Maxing Guide
                 </Link>
               </div>
-              <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.05]">
-                {[{ n: '16+', l: 'Peptides' },{ n: '99%', l: 'Purity' },{ n: '10K+', l: 'Customers' },{ n: '48h', l: 'Dispatch' }].map(s => (
+              <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.05] hero-stats">
+                {[{ n: '35+', l: 'Peptides' },{ n: '99%', l: 'Purity' },{ n: '10K+', l: 'Customers' },{ n: '48h', l: 'Dispatch' }].map(s => (
                   <div key={s.l}>
                     <p className="font-['Playfair_Display'] font-900 text-white leading-none" style={{ fontSize: '32px' }}>{s.n}</p>
                     <p className="text-[#8888a0] text-[13px] mt-1">{s.l}</p>
@@ -109,42 +122,104 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col gap-3">
-              {featured.slice(0, 4).map(p => (
-                <Link key={p.slug} href={`/products/${p.slug}`}>
-                  <div className="card flex items-center gap-4 p-4 group">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-[#16161c]">
-                      <Image src={p.image} alt={p.name} width={64} height={64}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <p className="text-white font-600 text-[15px] truncate">{p.name}</p>
-                        {p.badge && <span className="tag-gold text-[9px] py-0.5 px-2 flex-shrink-0">{p.badge}</span>}
+            {/* Hero image grid — 2×2 large product cards */}
+            <div className="hidden lg:grid grid-cols-2 gap-3 hero-grid">
+              {featured.slice(0, 4).map((p, i) => {
+                const accent = accentFor(p.category)
+                return (
+                  <Link key={p.slug} href={`/products/${p.slug}`}>
+                    <div className="relative rounded-2xl overflow-hidden group cursor-pointer"
+                      style={{ height: '215px' }}>
+                      <Image src={p.image} alt={p.name} fill priority={i < 2}
+                        className="object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                      {/* Accent glow on hover */}
+                      <div className="absolute bottom-0 left-0 right-0 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{ background: `linear-gradient(to top, ${accent}30, transparent)` }} />
+                      {p.badge && (
+                        <div className="absolute top-3 left-3">
+                          <span className="tag-gold text-[9px]">{p.badge}</span>
+                        </div>
+                      )}
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <p className="text-[10px] font-600 tracking-widest uppercase mb-1" style={{ color: accent }}>
+                          {p.category}
+                        </p>
+                        <p className="text-white font-700 text-[15px] leading-tight">{p.name}</p>
+                        <div className="flex items-center justify-between mt-1.5">
+                          <p className="font-700 text-[13px]" style={{ color: accent }}>{p.price}</p>
+                          <svg className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </div>
                       </div>
-                      <p className="text-[#8888a0] text-[13px] truncate">{p.tagline}</p>
                     </div>
-                    <div className="text-right flex-shrink-0">
-                      <p className="text-[#d4a043] font-600 text-[14px]">{p.price}</p>
-                      <svg className="w-4 h-4 text-[#50505e] group-hover:text-[#d4a043] group-hover:translate-x-1 transition-all mt-1 ml-auto"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-              <a href="https://pantheonpeptides.com/partner/AmentiAI/"
-                target="_blank" rel="noopener noreferrer"
-                className="btn-primary text-[13px] py-3.5 text-center">
-                View Full Catalog →
-              </a>
+                  </Link>
+                )
+              })}
+              <div className="col-span-2">
+                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                  target="_blank" rel="noopener noreferrer"
+                  className="btn-primary text-[13px] py-3.5 w-full text-center inline-flex justify-center">
+                  Shop All 35 Peptides
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <Marquee />
+
+      {/* ══════════════════════════════════════════
+          1b. VISUAL PRODUCT SHOWCASE
+      ══════════════════════════════════════════ */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-5 h-[1px] bg-[#d4a043]" />
+                <p className="label-gold">Staff Picks</p>
+              </div>
+              <h2 className="font-['Playfair_Display'] font-900 text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', lineHeight: '1.05' }}>
+                The Most Powerful<br />
+                <span className="italic gold-text">Peptides Available</span>
+              </h2>
+            </div>
+            <Link href="/products" className="btn-ghost text-[14px] flex-shrink-0">
+              Full Catalog — 35 Compounds
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </div>
+
+          {/* Large hero cards row */}
+          <div className="grid md:grid-cols-3 gap-5 mb-5">
+            {featured.slice(0, 3).map((p, i) => (
+              <AnimateIn key={p.slug} type="up" delay={i * 120}>
+                <ProductCard product={p} variant="hero" index={i} />
+              </AnimateIn>
+            ))}
+          </div>
+
+          {/* Secondary row — wide horizontal cards */}
+          <div className="grid sm:grid-cols-2 gap-5">
+            {featured.slice(3, 5).map((p, i) => (
+              <AnimateIn key={p.slug} type="up" delay={i * 150}>
+                <ProductCard product={p} variant="wide" index={i + 3} />
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="rule" />
 
       {/* ══════════════════════════════════════════
           2. HOW IT WORKS
@@ -188,15 +263,17 @@ export default function Home() {
                   body: 'Follow the protocol consistently. Most peptides show initial effects within 2–4 weeks, with compounding results over 3–6 months. Track your outcomes — body composition, skin quality, sleep depth, energy levels.',
                   detail: 'Stack intelligently for synergistic effects across multiple biological systems.',
                 },
-              ].map(s => (
-                <div key={s.step} className="card rounded-2xl p-6 flex gap-5">
-                  <p className="mono text-[#d4a043] text-[13px] flex-shrink-0 mt-0.5 font-500">{s.step}</p>
-                  <div>
-                    <p className="text-white font-700 text-[17px] mb-2">{s.title}</p>
-                    <p className="text-[#8888a0] text-[14px] leading-relaxed mb-2">{s.body}</p>
-                    <p className="text-[#50505e] text-[13px] italic">{s.detail}</p>
+              ].map((s, i) => (
+                <AnimateIn key={s.step} type="left" delay={i * 130}>
+                  <div className="card rounded-2xl p-6 flex gap-5">
+                    <p className="mono text-[#d4a043] text-[13px] flex-shrink-0 mt-0.5 font-500">{s.step}</p>
+                    <div>
+                      <p className="text-white font-700 text-[17px] mb-2">{s.title}</p>
+                      <p className="text-[#8888a0] text-[14px] leading-relaxed mb-2">{s.body}</p>
+                      <p className="text-[#50505e] text-[13px] italic">{s.detail}</p>
+                    </div>
                   </div>
-                </div>
+                </AnimateIn>
               ))}
             </div>
           </div>
@@ -208,18 +285,21 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-24 bg-[#0a0a0e]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-5 h-[1px] bg-[#d4a043]" />
-            <p className="label-gold">The Science</p>
-          </div>
-          <h2 className="mb-5" style={{ fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: '1.05' }}>
-            <span className="display text-white">Looks Maxing at the</span>
-            <span className="display-italic gold-text block">Molecular Level</span>
-          </h2>
-          <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-14">
-            Physical attractiveness has a biological code. Skin collagen density, body fat percentage, hormonal markers, pigmentation, telomere length — all measurable, all optimizable with the right peptide protocols.
-          </p>
+          <AnimateIn type="up">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-5 h-[1px] bg-[#d4a043]" />
+              <p className="label-gold">The Science</p>
+            </div>
+            <h2 className="mb-5" style={{ fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: '1.05' }}>
+              <span className="display text-white">Looks Maxing at the</span>
+              <span className="display-italic gold-text block">Molecular Level</span>
+            </h2>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-14">
+              Physical attractiveness has a biological code. Skin collagen density, body fat percentage, hormonal markers, pigmentation, telomere length — all measurable, all optimizable with the right peptide protocols.
+            </p>
+          </AnimateIn>
 
+          <AnimateIn type="scale" delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
             <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
               <Image src="https://pantheonpeptides.com/wp-content/uploads/2024/09/GHKCU-50mg-scaled.jpg"
@@ -275,6 +355,7 @@ export default function Home() {
               </div>
             </Link>
           </div>
+          </AnimateIn>
         </div>
       </section>
 
@@ -283,16 +364,18 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-5 h-[1px] bg-[#d4a043]" />
-            <p className="label-gold">Find Your Protocol</p>
-          </div>
-          <h2 className="display text-white mb-5" style={{ fontSize: 'clamp(34px, 5vw, 62px)' }}>
-            Peptides by Goal
-          </h2>
-          <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-xl mb-14">
-            Every optimization goal has a corresponding peptide protocol. Find yours below.
-          </p>
+          <AnimateIn type="up">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-5 h-[1px] bg-[#d4a043]" />
+              <p className="label-gold">Find Your Protocol</p>
+            </div>
+            <h2 className="display text-white mb-5" style={{ fontSize: 'clamp(34px, 5vw, 62px)' }}>
+              Peptides by Goal
+            </h2>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-xl mb-14">
+              Every optimization goal has a corresponding peptide protocol. Find yours below.
+            </p>
+          </AnimateIn>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
@@ -300,90 +383,85 @@ export default function Home() {
                 goal: 'Looks Maxing',
                 desc: 'Comprehensive physical optimization — skin, tan, hormones, and cellular age addressed simultaneously.',
                 peptides: ['GHK-Cu', 'Melanotan 2', 'Ipamorelin', 'Epithalon'],
-                href: '/looks-maxing',
-                icon: '◈',
-                keywords: 'looks max, looksmaxxing, physical appearance optimization',
+                href: '/looks-maxing', icon: '◈', accent: '#d4a043',
               },
               {
                 goal: 'Fat Loss',
                 desc: 'Peptides that target visceral fat, improve metabolic function, and create a lean physique without muscle loss.',
                 peptides: ['Tesamorelin', 'CJC-1295', 'Ipamorelin', 'AOD-9604'],
-                href: '/products?category=Body+Composition',
-                icon: '◆',
-                keywords: 'fat loss peptides, peptides for weight loss, lean body',
+                href: '/products?category=Body+Composition', icon: '◆', accent: '#e05080',
               },
               {
                 goal: 'Muscle Growth',
                 desc: 'GH secretagogues and IGF-1 modulators that create continuous anabolic signaling for lean mass development.',
                 peptides: ['IGF-1 LR3', 'CJC-1295', 'Ipamorelin', 'MK-677'],
-                href: '/products?category=Body+Composition',
-                icon: '◉',
-                keywords: 'peptides for muscle growth, anabolic peptides, lean mass',
+                href: '/products?category=Body+Composition', icon: '◉', accent: '#6090ff',
               },
               {
                 goal: 'Skin & Anti-Aging',
                 desc: 'Collagen-stimulating and gene-resetting peptides that reverse the visible markers of skin aging.',
                 peptides: ['GHK-Cu', 'Epithalon', 'BPC-157', 'MOTS-c'],
-                href: '/products?category=Anti-Aging',
-                icon: '✦',
-                keywords: 'anti-aging peptides, skin peptides, collagen peptides',
+                href: '/products?category=Anti-Aging', icon: '✦', accent: '#a060ff',
               },
               {
                 goal: 'Recovery & Healing',
                 desc: 'The fastest tissue repair compounds available — muscle, tendon, ligament, and gut healing accelerated.',
                 peptides: ['BPC-157', 'TB-500', 'GHK-Cu', 'Thymosin Alpha-1'],
-                href: '/products?category=Recovery+%26+Healing',
-                icon: '⬡',
-                keywords: 'recovery peptides, healing peptides, injury recovery',
+                href: '/products?category=Recovery+%26+Healing', icon: '⬡', accent: '#40c090',
               },
               {
                 goal: 'Cognitive Performance',
                 desc: 'BDNF-boosting nootropic peptides that enhance focus, reduce anxiety, and optimize neural performance.',
                 peptides: ['Semax', 'Selank', 'DSIP', 'Epithalon'],
-                href: '/products?category=Cognitive+Performance',
-                icon: '◎',
-                keywords: 'nootropic peptides, cognitive peptides, brain peptides',
+                href: '/products?category=Cognitive+Performance', icon: '◎', accent: '#40c0ff',
               },
               {
                 goal: 'Sleep Optimization',
                 desc: 'Delta-wave sleep inducers that transform recovery quality and maximize overnight GH secretion.',
                 peptides: ['DSIP', 'Ipamorelin', 'MK-677', 'Selank'],
-                href: '/products',
-                icon: '◐',
-                keywords: 'sleep peptides, recovery sleep, deep sleep peptides',
+                href: '/products', icon: '◐', accent: '#60d090',
               },
               {
                 goal: 'Sexual Health & Libido',
                 desc: 'Melanocortin agonists that work on the central nervous system to enhance desire and performance.',
                 peptides: ['PT-141', 'Melanotan 2', 'Kisspeptin-10', 'BPC-157'],
-                href: '/products',
-                icon: '◑',
-                keywords: 'libido peptides, sexual health peptides, PT-141',
+                href: '/products', icon: '◑', accent: '#ff8040',
               },
               {
                 goal: 'Immune & Longevity',
                 desc: 'Thymic peptides and mitochondrial compounds for bulletproof immunity and biological age reversal.',
                 peptides: ['Thymosin Alpha-1', 'Epithalon', 'MOTS-c', 'GHK-Cu'],
-                href: '/products?category=Anti-Aging',
-                icon: '◫',
-                keywords: 'longevity peptides, immune peptides, anti-aging',
+                href: '/products?category=Anti-Aging', icon: '◫', accent: '#60d090',
               },
-            ].map(g => (
-              <Link key={g.goal} href={g.href}>
-                <div className="card rounded-2xl p-6 h-full group">
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    <p className="text-[#d4a043] text-2xl opacity-60 group-hover:opacity-100 transition-opacity">{g.icon}</p>
-                    <svg className="w-4 h-4 text-[#50505e] group-hover:text-[#d4a043] group-hover:translate-x-1 transition-all mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            ].map((g, i) => (
+              <AnimateIn key={g.goal} type="up" delay={i * 70}>
+              <Link href={g.href} className="h-full block">
+                <div className="card rounded-2xl p-6 h-full group transition-all duration-200">
+                  <div className="flex items-start justify-between gap-3 mb-5">
+                    <div className="w-11 h-11 rounded-xl flex items-center justify-center text-lg transition-colors"
+                      style={{ background: `${g.accent}18`, color: g.accent }}>
+                      {g.icon}
+                    </div>
+                    <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all mt-1 flex-shrink-0"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
                     </svg>
                   </div>
-                  <h3 className="text-white font-700 text-[18px] mb-2 group-hover:text-[#e8c060] transition-colors leading-tight">{g.goal}</h3>
+                  <h3 className="text-white font-700 text-[18px] mb-2 leading-tight group-hover:opacity-80 transition-opacity">
+                    {g.goal}
+                  </h3>
                   <p className="text-[#8888a0] text-[14px] leading-relaxed mb-4">{g.desc}</p>
                   <div className="flex flex-wrap gap-1.5">
-                    {g.peptides.map(p => <span key={p} className="tag text-[11px]">{p}</span>)}
+                    {g.peptides.map(p => (
+                      <span key={p} className="tag text-[11px]"
+                        style={{ color: g.accent, borderColor: `${g.accent}25`, background: `${g.accent}08` }}>
+                        {p}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </Link>
+              </AnimateIn>
             ))}
           </div>
         </div>
@@ -424,11 +502,15 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {grid.map((p, i) => <ProductCard key={p.slug} product={p} index={i} />)}
+            {grid.map((p, i) => (
+              <AnimateIn key={p.slug} type="up" delay={i * 60}>
+                <ProductCard product={p} index={i} />
+              </AnimateIn>
+            ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/products" className="btn-secondary text-[13px] px-8 py-3.5">View All 16 Peptides</Link>
+            <Link href="/products" className="btn-secondary text-[13px] px-8 py-3.5">View All 35 Peptides</Link>
           </div>
         </div>
       </section>
@@ -474,7 +556,7 @@ export default function Home() {
             Every Protocol Available
           </h2>
           <p className="text-[#8888a0] text-[17px] mb-12 max-w-xl leading-relaxed">
-            16 elite peptide compounds covering every dimension of physical and cognitive optimization — all available through Pantheon Peptides.
+            35 elite peptide compounds covering every dimension of physical and cognitive optimization — all available through Pantheon Peptides.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             {products.map((p, i) => (
@@ -594,35 +676,46 @@ export default function Home() {
                 type: 'Athletes & Competitors',
                 desc: 'BPC-157 and TB-500 for accelerated injury recovery. Ipamorelin for lean body composition. Higher training frequency, faster adaptation.',
                 protocols: ['BPC-157', 'TB-500', 'Ipamorelin', 'IGF-1 LR3'],
-                icon: '◆',
+                icon: '◆', accent: '#40c090',
               },
               {
                 type: 'Looks Maxers',
                 desc: 'GHK-Cu for skin quality. MT-2 for optimal pigmentation. Hormonal optimization for body composition. The complete physical transformation stack.',
                 protocols: ['GHK-Cu', 'MT-2', 'Epithalon', 'Ipamorelin'],
-                icon: '◈',
+                icon: '◈', accent: '#d4a043',
               },
               {
                 type: 'Biohackers',
                 desc: 'Epithalon for telomere extension. MOTS-c for mitochondrial optimization. Comprehensive multi-system optimization with measurable biomarkers.',
                 protocols: ['Epithalon', 'MOTS-c', 'GHK-Cu', 'Thymosin A1'],
-                icon: '◉',
+                icon: '◉', accent: '#a060ff',
               },
               {
                 type: 'High Performers',
                 desc: 'Semax and Selank for cognitive edge. DSIP for optimal sleep architecture. The neural and recovery stack for sustained peak output.',
                 protocols: ['Semax', 'Selank', 'DSIP', 'MK-677'],
-                icon: '◎',
+                icon: '◎', accent: '#40c0ff',
               },
-            ].map(u => (
-              <div key={u.type} className="card rounded-2xl p-6">
-                <p className="text-[#d4a043] text-2xl mb-4 opacity-70">{u.icon}</p>
-                <h3 className="text-white font-700 text-[17px] mb-3 leading-tight">{u.type}</h3>
-                <p className="text-[#8888a0] text-[14px] leading-relaxed mb-4">{u.desc}</p>
-                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.05]">
-                  {u.protocols.map(p => <span key={p} className="tag text-[11px]">{p}</span>)}
+            ].map((u, i) => (
+              <AnimateIn key={u.type} type="up" delay={i * 100}>
+              <div className="card rounded-2xl overflow-hidden flex flex-col h-full">
+                {/* Colored header bar */}
+                <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${u.accent}, transparent)` }} />
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-lg"
+                    style={{ background: `${u.accent}15`, color: u.accent }}>
+                    {u.icon}
+                  </div>
+                  <h3 className="text-white font-700 text-[17px] mb-3 leading-tight">{u.type}</h3>
+                  <p className="text-[#8888a0] text-[14px] leading-relaxed mb-4 flex-1">{u.desc}</p>
+                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.05]">
+                    {u.protocols.map(p => (
+                      <span key={p} className="tag text-[11px]" style={{ color: u.accent, borderColor: `${u.accent}25`, background: `${u.accent}08` }}>{p}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
+              </AnimateIn>
             ))}
           </div>
         </div>
@@ -731,11 +824,12 @@ export default function Home() {
             ].map((item, i) => {
               const isEven = i % 2 === 0
               return (
-                <div key={item.slug} className="card rounded-2xl overflow-hidden">
-                  <div className={`grid md:grid-cols-[280px_1fr] ${!isEven ? 'md:grid-cols-[1fr_280px]' : ''}`}>
-                    <div className={`relative h-56 md:h-auto overflow-hidden bg-[#0f0f13] ${!isEven ? 'md:order-2' : ''}`}>
-                      <Image src={item.image} alt={item.name} fill className="object-cover opacity-70" />
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0f0f13]/60" />
+                <AnimateIn key={item.slug} type={isEven ? 'left' : 'right'} delay={100}>
+                <div className="card rounded-2xl overflow-hidden">
+                  <div className={`grid md:grid-cols-[300px_1fr] ${!isEven ? 'md:grid-cols-[1fr_300px]' : ''}`}>
+                    <div className={`relative h-64 md:h-auto overflow-hidden img-shimmer ${!isEven ? 'md:order-2' : ''}`}
+                      style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.12), #0a0a0e)' }}>
+                      <Image src={item.image} alt={item.name} fill className="object-contain p-6" />
                     </div>
                     <div className={`p-7 ${!isEven ? 'md:order-1' : ''}`}>
                       <h3 className="text-white font-700 text-xl mb-3">{item.name}</h3>
@@ -764,6 +858,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                </AnimateIn>
               )
             })}
           </div>
@@ -782,13 +877,42 @@ export default function Home() {
           <h2 className="display text-white mb-14" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
             Real Transformations
           </h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
+          {/* Featured testimonial — full width */}
+          <AnimateIn type="up">
+          <div className="card-elevated rounded-2xl p-8 md:p-10 mb-6 relative overflow-hidden border-glow">
+            <div className="spot w-[300px] h-[200px] bg-[#d4a043] opacity-[0.04] top-0 right-0" />
+            <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-8 items-center">
+              <div>
+                <div className="flex gap-1 mb-5">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-5 h-5 text-[#d4a043]" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <p className="font-['Playfair_Display'] italic text-white text-[22px] md:text-[26px] leading-relaxed mb-6">
+                  "GHK-Cu completely transformed my skin. Within 8 weeks I was getting compliments I had not received in years. The collagen density change is real and visible — my skin looks a decade younger."
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center text-[#07070a] font-800 text-[16px]"
+                    style={{ background: 'linear-gradient(135deg, #c08020, #f0c858)' }}>M</div>
+                  <div>
+                    <p className="text-white font-700 text-[15px]">Marcus T.</p>
+                    <p className="text-[#8888a0] text-[13px]">Biohacker & Athlete</p>
+                  </div>
+                  <span className="tag-gold text-[10px] ml-auto">GHK-Cu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          </AnimateIn>
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
             {[
-              { q: 'GHK-Cu completely transformed my skin. Within 8 weeks I was getting compliments I had not received in years. The collagen density change is real and visible — my skin looks a decade younger.', name: 'Marcus T.', role: 'Biohacker & Athlete', peptide: 'GHK-Cu' },
-              { q: 'The Ipamorelin + CJC-1295 stack is game changing. Sleep quality improved immediately and after 3 months the body composition shift was dramatic — leaner and more muscular simultaneously.', name: 'Jordan K.', role: 'Performance Coach', peptide: 'Ipamorelin Stack' },
-              { q: 'Epithalon is on another level. The sleep improvement was profound. Anti-aging effects became visible over months. My bloodwork markers improved across the board — testosterone up, inflammation markers down.', name: 'Alex M.', role: 'Longevity Practitioner', peptide: 'Epithalon' },
+              { q: 'The Ipamorelin + CJC-1295 stack is game changing. Sleep quality improved immediately and after 3 months the body composition shift was dramatic — leaner and more muscular simultaneously.', name: 'Jordan K.', role: 'Performance Coach', peptide: 'Ipamorelin Stack', initial: 'J', color: '#6090ff' },
+              { q: 'Epithalon is on another level. The sleep improvement was profound. Anti-aging effects became visible over months. My bloodwork markers improved across the board — testosterone up, inflammation markers down.', name: 'Alex M.', role: 'Longevity Practitioner', peptide: 'Epithalon', initial: 'A', color: '#a060ff' },
             ].map((t, i) => (
-              <div key={i} className="card p-7 flex flex-col">
+              <AnimateIn key={i} type="up" delay={i * 150}>
+              <div className="card p-7 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, j) => (
@@ -797,14 +921,21 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <span className="tag text-[11px]">{t.peptide}</span>
+                  <span className="tag text-[11px]" style={{ color: t.color, borderColor: `${t.color}30`, background: `${t.color}10` }}>{t.peptide}</span>
                 </div>
                 <p className="text-[#c0c0d0] text-[15px] leading-relaxed flex-1 mb-6">"{t.q}"</p>
-                <div className="pt-5 border-t border-white/[0.05]">
-                  <p className="text-white font-600 text-[14px]">{t.name}</p>
-                  <p className="text-[#8888a0] text-[13px] mt-0.5">{t.role}</p>
+                <div className="flex items-center gap-3 pt-5 border-t border-white/[0.05]">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-700 text-[14px] flex-shrink-0"
+                    style={{ background: `${t.color}25`, border: `1px solid ${t.color}40`, color: t.color }}>
+                    {t.initial}
+                  </div>
+                  <div>
+                    <p className="text-white font-600 text-[14px]">{t.name}</p>
+                    <p className="text-[#8888a0] text-[13px]">{t.role}</p>
+                  </div>
                 </div>
               </div>
+              </AnimateIn>
             ))}
           </div>
         </div>

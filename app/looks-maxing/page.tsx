@@ -183,9 +183,10 @@ export default function LooksMaxingPage() {
 
                 {/* Image side */}
                 <div className={`relative ${isEven ? '' : 'lg:order-1'}`}>
-                  <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#0f0f13]">
-                    <Image src={product.image} alt={product.name} fill className="object-cover opacity-80" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#07070a]/60 to-transparent" />
+                  <div className="relative aspect-square rounded-2xl overflow-hidden img-shimmer"
+                    style={{ background: 'radial-gradient(ellipse at 50% 65%, rgba(212,160,67,0.15), #0a0a0e)' }}>
+                    <Image src={product.image} alt={product.name} fill className="object-contain p-8" />
+                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#07070a]/80 to-transparent" />
                     <div className="absolute bottom-6 left-6">
                       {product.badge && <span className="tag-gold mb-2 inline-block">{product.badge}</span>}
                       <p className="font-['Playfair_Display'] font-900 text-white text-2xl">{product.name}</p>

@@ -92,9 +92,10 @@ export default function StacksPage() {
                         return (
                           <Link key={item.slug} href={`/products/${item.slug}`}>
                             <div className="card flex items-center gap-4 p-4 group">
-                              <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-[#16161c]">
+                              <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0"
+                                style={{ background: `radial-gradient(circle, ${stack.accent}18, #0d0d11)` }}>
                                 <Image src={p.image} alt={p.name} width={48} height={48}
-                                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-400" />
+                                  className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-400" />
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center gap-2.5 mb-0.5">

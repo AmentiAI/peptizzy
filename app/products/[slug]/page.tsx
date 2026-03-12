@@ -48,11 +48,10 @@ export default function ProductPage({ params }: Props) {
 
           {/* Image */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl bg-[#0f0f13]"
-              style={{ aspectRatio: '1/1' }}>
+            <div className="relative overflow-hidden rounded-2xl img-shimmer"
+              style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(212,160,67,0.15), #0a0a0e)` }}>
               <Image src={product.image} alt={product.name} fill
-                className="object-cover" priority />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#07070a]/40 to-transparent" />
+                className="object-contain p-8" priority />
             </div>
             {product.badge && (
               <div className="absolute top-5 left-5">
@@ -169,9 +168,10 @@ export default function ProductPage({ params }: Props) {
                     if (sp) return (
                       <Link key={syn} href={`/products/${sp.slug}`}>
                         <div className="flex items-center gap-3 py-3 border-b border-white/[0.05] hover:border-[#d4a043]/20 group transition-colors">
-                          <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-[#16161c]">
+                          <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0"
+                            style={{ background: 'radial-gradient(circle, rgba(212,160,67,0.1), #0d0d11)' }}>
                             <Image src={sp.image} alt={sp.name} width={40} height={40}
-                              className="w-full h-full object-cover" />
+                              className="w-full h-full object-contain p-1" />
                           </div>
                           <div className="flex-1">
                             <p className="text-white text-[14px] font-500 group-hover:text-[#d4a043] transition-colors">{sp.name}</p>

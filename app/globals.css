@@ -128,12 +128,28 @@ body {
   overflow: hidden;
 }
 .card-product:hover {
-  border-color: rgba(212,160,67,0.35);
+  border-color: rgba(212,160,67,0.4);
   box-shadow:
-    0 0 0 1px rgba(212,160,67,0.08) inset,
-    0 30px 80px rgba(0,0,0,0.6),
-    0 0 120px rgba(212,160,67,0.04);
-  transform: translateY(-8px);
+    0 0 0 1px rgba(212,160,67,0.10) inset,
+    0 32px 90px rgba(0,0,0,0.65),
+    0 0 160px rgba(212,160,67,0.06);
+  transform: translateY(-10px);
+}
+
+/* Glowing elevated card (used for featured testimonials, hero panels) */
+.card-glow {
+  background: var(--elevated);
+  border: 1px solid rgba(212,160,67,0.15);
+  border-radius: var(--radius);
+  box-shadow: 0 0 60px rgba(212,160,67,0.05), 0 24px 64px rgba(0,0,0,0.4);
+}
+
+/* Number stat display */
+.stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 /* ─────────────────────────────────────
@@ -286,12 +302,134 @@ body {
   letter-spacing: 0.08em;
 }
 
-/* Fade-up entry */
+/* ─────────────────────────────────────
+   SCROLL-TRIGGER ANIMATION SYSTEM
+───────────────────────────────────── */
+
+/* Base states — hidden until .ani-in added by IntersectionObserver */
+.ani-up    { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2); }
+.ani-fade  { opacity: 0;                               transition: opacity 0.7s ease; }
+.ani-scale { opacity: 0; transform: scale(0.93);       transition: opacity 0.65s ease, transform 0.65s cubic-bezier(.22,.68,0,1.1); }
+.ani-left  { opacity: 0; transform: translateX(-32px); transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2); }
+.ani-right { opacity: 0; transform: translateX(32px);  transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2); }
+
+/* Revealed state */
+.ani-in { opacity: 1 !important; transform: none !important; }
+
+/* Stagger helpers */
+.d100 { transition-delay: 0.10s; }
+.d150 { transition-delay: 0.15s; }
+.d200 { transition-delay: 0.20s; }
+.d300 { transition-delay: 0.30s; }
+.d400 { transition-delay: 0.40s; }
+.d500 { transition-delay: 0.50s; }
+.d600 { transition-delay: 0.60s; }
+
+/* ─────────────────────────────────────
+   ON-LOAD (HERO) ANIMATIONS
+───────────────────────────────────── */
 @keyframes fadeUp {
-  from { opacity:0; transform:translateY(24px); }
+  from { opacity:0; transform:translateY(28px); }
   to   { opacity:1; transform:translateY(0); }
 }
 .fade-up { animation: fadeUp 0.6s ease forwards; }
+
+@keyframes heroLine {
+  from { opacity:0; transform: translateY(48px) skewY(1.5deg); }
+  to   { opacity:1; transform: translateY(0) skewY(0); }
+}
+.hero-line { opacity:0; animation: heroLine 0.9s cubic-bezier(.22,.68,0,1.1) forwards; }
+.hero-line-1 { animation-delay: 0.05s; }
+.hero-line-2 { animation-delay: 0.20s; }
+.hero-line-3 { animation-delay: 0.35s; }
+.hero-sub    { opacity:0; animation: fadeUp 0.8s ease 0.55s forwards; }
+.hero-cta    { opacity:0; animation: fadeUp 0.8s ease 0.75s forwards; }
+.hero-stats  { opacity:0; animation: fadeUp 0.8s ease 0.95s forwards; }
+.hero-grid   { opacity:0; animation: fadeUp 0.9s cubic-bezier(.22,.68,0,1.1) 0.30s forwards; }
+
+/* ─────────────────────────────────────
+   AMBIENT / LOOP ANIMATIONS
+───────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.float { animation: float 6s ease-in-out infinite; }
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-6px) rotate(1deg); }
+  66%       { transform: translateY(4px) rotate(-0.5deg); }
+}
+.float-slow { animation: floatSlow 9s ease-in-out infinite; }
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.04; transform: scale(1); }
+  50%       { opacity: 0.08; transform: scale(1.08); }
+}
+.spot-pulse { animation: pulseSlow 7s ease-in-out infinite; }
+.spot-pulse-2 { animation: pulseSlow 9s ease-in-out 2s infinite; }
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 24px rgba(212,160,67,0.35); }
+  50%       { box-shadow: 0 0 50px rgba(212,160,67,0.65), 0 0 80px rgba(212,160,67,0.2); }
+}
+.glow-pulse { animation: glowPulse 3s ease-in-out infinite; }
+
+/* ─────────────────────────────────────
+   IMAGE SHIMMER (skeleton loader feel)
+───────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.img-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.04) 50%, transparent 80%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ─────────────────────────────────────
+   CARD HOVER RIPPLE
+───────────────────────────────────── */
+@keyframes rippleIn {
+  from { transform: scale(0.6); opacity: 0.4; }
+  to   { transform: scale(2.4); opacity: 0; }
+}
+
+/* ─────────────────────────────────────
+   BORDER GLOW TRACE
+───────────────────────────────────── */
+@keyframes borderGlow {
+  0%   { border-color: rgba(212,160,67,0.1); box-shadow: none; }
+  50%  { border-color: rgba(212,160,67,0.45); box-shadow: 0 0 24px rgba(212,160,67,0.15); }
+  100% { border-color: rgba(212,160,67,0.1); box-shadow: none; }
+}
+.border-glow { animation: borderGlow 4s ease-in-out infinite; }
+
+/* ─────────────────────────────────────
+   SCAN LINE (for bento/image panels)
+───────────────────────────────────── */
+@keyframes scanDown {
+  0%   { transform: translateY(-100%) scaleX(1); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(400%) scaleX(1); opacity: 0; }
+}
+.scan-line {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,160,67,0.5), transparent);
+  animation: scanDown 5s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
 
 /* Input */
 .input {

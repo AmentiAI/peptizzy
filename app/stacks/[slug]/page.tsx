@@ -140,7 +140,7 @@ export default function StackPage({ params }: Props) {
                       {product && (
                         <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-[#16161c]">
                           <Image src={product.image} alt={product.name} width={40} height={40}
-                            className="w-full h-full object-cover" />
+                            className="w-full h-full object-contain p-1" />
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
