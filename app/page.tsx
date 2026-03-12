@@ -433,36 +433,60 @@ export default function Home() {
                 peptides: ['Thymosin Alpha-1', 'Epithalon', 'MOTS-c', 'GHK-Cu'],
                 href: '/products?category=Anti-Aging', icon: '◫', accent: '#60d090',
               },
-            ].map((g, i) => (
-              <AnimateIn key={g.goal} type="up" delay={i * 70}>
-              <Link href={g.href} className="h-full block">
-                <div className="card rounded-2xl p-6 h-full group transition-all duration-200">
-                  <div className="flex items-start justify-between gap-3 mb-5">
-                    <div className="w-11 h-11 rounded-xl flex items-center justify-center text-lg transition-colors"
-                      style={{ background: `${g.accent}18`, color: g.accent }}>
-                      {g.icon}
+            ].map((g, i) => {
+              const repImage = products.find(p => p.name === g.peptides[0])?.image
+              return (
+                <AnimateIn key={g.goal} type="up" delay={i * 70}>
+                  <Link href={g.href} className="h-full block">
+                    <div className="card rounded-2xl overflow-hidden h-full group flex flex-col transition-all duration-200">
+
+                      {/* ── Product image thumbnail ── */}
+                      {repImage && (
+                        <div className="relative overflow-hidden flex-shrink-0" style={{ height: '140px',
+                          background: `radial-gradient(ellipse at 50% 70%, ${g.accent}28, #0a0a0e 75%)` }}>
+                          <Image src={repImage} alt={g.goal} fill
+                            className="object-contain p-5 group-hover:scale-108 transition-transform duration-600" />
+                          {/* Hover accent glow */}
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                            style={{ background: `radial-gradient(ellipse at 50% 100%, ${g.accent}20, transparent 65%)` }} />
+                          {/* Bottom fade into card */}
+                          <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0f0f13] to-transparent" />
+                          {/* Category accent top-left line */}
+                          <div className="absolute top-0 left-0 right-0 h-0.5"
+                            style={{ background: `linear-gradient(90deg, ${g.accent}80, transparent)` }} />
+                        </div>
+                      )}
+
+                      {/* ── Body ── */}
+                      <div className="p-5 flex flex-col flex-1">
+                        <div className="flex items-start justify-between gap-3 mb-4">
+                          <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0"
+                            style={{ background: `${g.accent}18`, color: g.accent }}>
+                            {g.icon}
+                          </div>
+                          <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all mt-0.5 flex-shrink-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </div>
+                        <h3 className="text-white font-700 text-[16px] mb-2 leading-tight group-hover:opacity-80 transition-opacity">
+                          {g.goal}
+                        </h3>
+                        <p className="text-[#8888a0] text-[13px] leading-relaxed mb-4 flex-1">{g.desc}</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {g.peptides.map(p => (
+                            <span key={p} className="tag text-[10px]"
+                              style={{ color: g.accent, borderColor: `${g.accent}25`, background: `${g.accent}08` }}>
+                              {p}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all mt-1 flex-shrink-0"
-                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
-                    </svg>
-                  </div>
-                  <h3 className="text-white font-700 text-[18px] mb-2 leading-tight group-hover:opacity-80 transition-opacity">
-                    {g.goal}
-                  </h3>
-                  <p className="text-[#8888a0] text-[14px] leading-relaxed mb-4">{g.desc}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {g.peptides.map(p => (
-                      <span key={p} className="tag text-[11px]"
-                        style={{ color: g.accent, borderColor: `${g.accent}25`, background: `${g.accent}08` }}>
-                        {p}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-              </AnimateIn>
-            ))}
+                  </Link>
+                </AnimateIn>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -696,18 +720,41 @@ export default function Home() {
                 protocols: ['Semax', 'Selank', 'DSIP', 'MK-677'],
                 icon: '◎', accent: '#40c0ff',
               },
-            ].map((u, i) => (
+            ].map((u, i) => {
+              // First 2 matching product images for the mini thumbnail strip
+              const thumbImgs = u.protocols
+                .map(name => products.find(p => p.name === name)?.image)
+                .filter(Boolean).slice(0, 2) as string[]
+              const heroImg = thumbImgs[0]
+              return (
               <AnimateIn key={u.type} type="up" delay={i * 100}>
-              <div className="card rounded-2xl overflow-hidden flex flex-col h-full">
-                {/* Colored header bar */}
-                <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${u.accent}, transparent)` }} />
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-lg"
-                    style={{ background: `${u.accent}15`, color: u.accent }}>
-                    {u.icon}
+              <div className="card rounded-2xl overflow-hidden flex flex-col h-full group">
+                {/* Product image header */}
+                {heroImg && (
+                  <div className="relative overflow-hidden flex-shrink-0" style={{ height: '120px',
+                    background: `radial-gradient(ellipse at 50% 70%, ${u.accent}25, #0a0a0e 70%)` }}>
+                    <Image src={heroImg} alt={u.type} fill
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-600" />
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#0f0f13] to-transparent" />
+                    <div className="absolute top-0 left-0 right-0 h-0.5"
+                      style={{ background: `linear-gradient(90deg, ${u.accent}80, transparent)` }} />
+                    {/* Second product ghosted to the right */}
+                    {thumbImgs[1] && (
+                      <div className="absolute right-2 top-1/2 -translate-y-1/2 w-14 h-14 opacity-30">
+                        <Image src={thumbImgs[1]} alt="" fill className="object-contain" />
+                      </div>
+                    )}
                   </div>
-                  <h3 className="text-white font-700 text-[17px] mb-3 leading-tight">{u.type}</h3>
-                  <p className="text-[#8888a0] text-[14px] leading-relaxed mb-4 flex-1">{u.desc}</p>
+                )}
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-lg flex items-center justify-center text-base flex-shrink-0"
+                      style={{ background: `${u.accent}15`, color: u.accent }}>
+                      {u.icon}
+                    </div>
+                    <h3 className="text-white font-700 text-[16px] leading-tight">{u.type}</h3>
+                  </div>
+                  <p className="text-[#8888a0] text-[13px] leading-relaxed mb-4 flex-1">{u.desc}</p>
                   <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.05]">
                     {u.protocols.map(p => (
                       <span key={p} className="tag text-[11px]" style={{ color: u.accent, borderColor: `${u.accent}25`, background: `${u.accent}08` }}>{p}</span>
@@ -716,7 +763,8 @@ export default function Home() {
                 </div>
               </div>
               </AnimateIn>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
