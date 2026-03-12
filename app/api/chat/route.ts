@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
-import { getAllPeptides, searchPeptides, type PeptideRow } from '@/lib/db'
+import { searchPeptides, type PeptideRow } from '@/lib/db'
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
@@ -8,7 +8,7 @@ const SYSTEM_PROMPT = `You are Max — the looks maxing and peptide optimization
 
 Your role: help users find the right peptide or stack for their specific goals. Ask clarifying questions if needed (goal, experience level, budget, injection-averse?), then give a focused, confident recommendation.
 
-You have access to the "search_peptides" tool — use it to pull real product data from the database whenever you want to recommend specific peptides. Always call this tool when making recommendations so you can attach product cards.
+You have access to the "search_peptides" tool — use it to pull real product data from the database whenever you want to recommend specific peptides. Always call this tool ONCE per response when making recommendations.
 
 When recommending peptides:
 1. Call search_peptides with relevant keywords (e.g. "skin collagen", "fat loss", "sleep", "muscle growth")
@@ -54,6 +54,7 @@ export async function POST(req: NextRequest) {
       messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
       tools,
       tool_choice: 'auto',
+      parallel_tool_calls: false, // ensure at most one tool call at a time
       max_tokens: 700,
       temperature: 0.7,
     })
@@ -61,38 +62,51 @@ export async function POST(req: NextRequest) {
     const msg = response.choices[0].message
     let products: PeptideRow[] = []
 
-    // If OpenAI called search_peptides, execute it
+    // If OpenAI called search_peptides, execute all tool calls and respond to each
     if (msg.tool_calls?.length) {
-      const call = msg.tool_calls[0]
-      const fn = (call as { function: { name: string; arguments: string } }).function
-      if (fn.name === 'search_peptides') {
-        const { query } = JSON.parse(fn.arguments) as { query: string }
-        products = await searchPeptides(query)
+      // Run all tool calls (should only be one with parallel_tool_calls: false)
+      const toolMessages: OpenAI.Chat.ChatCompletionToolMessageParam[] = []
 
-        // Second pass — give OpenAI the search results to form its final reply
-        const toolResult = products.map(p =>
-          `${p.name} (${p.price}) — ${p.tagline}. ${p.short_description.slice(0, 120)}...`
-        ).join('\n')
+      for (const call of msg.tool_calls) {
+        if (call.function.name === 'search_peptides') {
+          const { query } = JSON.parse(call.function.arguments) as { query: string }
+          const results = await searchPeptides(query)
+          if (results.length > products.length) products = results
 
-        const followUp = await openai.chat.completions.create({
-          model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: SYSTEM_PROMPT },
-            ...messages,
-            msg,
-            {
-              role: 'tool',
-              tool_call_id: (call as { id: string }).id,
-              content: toolResult || 'No matching peptides found.',
-            },
-          ],
-          max_tokens: 700,
-          temperature: 0.7,
-        })
+          const toolResult = results.map(p =>
+            `${p.name} (${p.price}) — ${p.tagline}. ${p.short_description.slice(0, 120)}...`
+          ).join('\n')
 
-        const reply = followUp.choices[0].message.content ?? ''
-        return NextResponse.json({ reply, products })
+          toolMessages.push({
+            role: 'tool',
+            tool_call_id: call.id,
+            content: toolResult || 'No matching peptides found.',
+          })
+        } else {
+          // Unknown tool — respond with empty to satisfy the requirement
+          toolMessages.push({
+            role: 'tool',
+            tool_call_id: call.id,
+            content: 'Tool not available.',
+          })
+        }
       }
+
+      // Second pass — give OpenAI the search results to form its final reply
+      const followUp = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          ...messages,
+          msg,
+          ...toolMessages,
+        ],
+        max_tokens: 700,
+        temperature: 0.7,
+      })
+
+      const reply = followUp.choices[0].message.content ?? ''
+      return NextResponse.json({ reply, products })
     }
 
     // No tool call — straight text reply
