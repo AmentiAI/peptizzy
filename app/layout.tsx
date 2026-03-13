@@ -8,6 +8,13 @@ export const metadata: Metadata = {
   title: 'PeptiZzy | Elite Peptide Protocols for Peak Physical Optimization',
   description: 'The definitive resource for peptide-based physical optimization. Shop premium peptides for looks maxing, body composition, longevity, and cognitive performance.',
   keywords: 'peptides, looks maxing, body composition, anti-aging, BPC-157, GHK-Cu, ipamorelin, CJC-1295, physical optimization',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: 'PeptiZzy | Elite Peptide Protocols',
     description: 'Premium peptide protocols for looks maximization, body composition, and longevity.',
