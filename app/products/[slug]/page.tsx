@@ -91,7 +91,7 @@ export default function ProductPage({ params }: Props) {
                 </div>
                 <div className="text-right">
                   <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Sold By</p>
-                  <p className="text-white font-500 text-[15px]">Pantheon Peptides</p>
+                  <p className="text-white font-500 text-[15px]">Apollo Peptide Sciences</p>
                 </div>
               </div>
               <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
@@ -100,7 +100,7 @@ export default function ProductPage({ params }: Props) {
               </a>
               <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
                 className="btn-secondary w-full justify-center py-3 text-[13px]">
-                View on Pantheon Peptides ↗
+                View on Apollo Peptide Sciences ↗
               </a>
             </div>
 

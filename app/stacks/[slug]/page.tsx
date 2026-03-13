@@ -65,7 +65,7 @@ export default function StackPage({ params }: Props) {
               <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-8">{stack.shortDesc}</p>
 
               <div className="flex flex-wrap gap-3">
-                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary text-[13px] px-7 py-3.5">
                   Shop This Stack
@@ -233,10 +233,10 @@ export default function StackPage({ params }: Props) {
                   )
                 })}
               </div>
-              <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+              <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                 target="_blank" rel="noopener noreferrer"
                 className="btn-primary w-full justify-center py-3.5 text-[13px]">
-                Buy at Pantheon Peptides
+                Buy at Apollo Peptide Sciences
               </a>
             </div>
 

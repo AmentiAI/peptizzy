@@ -100,7 +100,7 @@ export default function Home() {
                 The most advanced peptide protocols for looks maximization, body composition, and cellular longevity. Premium compounds. Documented results.
               </p>
               <div className="flex flex-wrap gap-3 mb-12 hero-cta">
-                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary text-[13px] px-7 py-3.5 glow-pulse">
                   Shop All Peptides
@@ -159,7 +159,7 @@ export default function Home() {
                 )
               })}
               <div className="col-span-2">
-                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary text-[13px] py-3.5 w-full text-center inline-flex justify-center">
                   Shop All 35 Peptides
@@ -253,8 +253,8 @@ export default function Home() {
                 },
                 {
                   step: '02',
-                  title: 'Order Through Pantheon Peptides',
-                  body: 'All peptides on this site are sourced through our partner Pantheon Peptides — one of the most trusted suppliers for premium grade compounds with third-party purity verification.',
+                  title: 'Order Through Apollo Peptide Sciences',
+                  body: 'All peptides on this site are sourced through our partner Apollo Peptide Sciences — one of the most trusted suppliers for premium grade compounds with third-party purity verification.',
                   detail: 'Fast shipping, pharmaceutical-grade quality, and comprehensive product support.',
                 },
                 {
@@ -302,7 +302,7 @@ export default function Home() {
           <AnimateIn type="scale" delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
             <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
-              <Image src="https://pantheonpeptides.com/wp-content/uploads/2024/09/GHKCU-50mg-scaled.jpg"
+              <Image src="https://apollopeptidesciences.com/wp-content/uploads/2025/01/ghk-cu_50mg.webp"
                 alt="GHK-Cu collagen peptide" fill
                 className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07070a] via-[#07070a]/30 to-transparent" />
@@ -327,11 +327,11 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/products/ipamorelin" className="card flex flex-col justify-between p-5 group block">
+            <Link href="/products/cjc-1295-ipamorelin" className="card flex flex-col justify-between p-5 group block">
               <p className="label-gold">Body Composition</p>
               <div>
                 <h3 className="text-white font-700 text-lg group-hover:text-[#e8c060] transition-colors mb-1">GH Optimization</h3>
-                <p className="text-[#8888a0] text-[13px] leading-relaxed">Ipamorelin triggers clean GH pulses — lean mass and fat loss simultaneously. No cortisol elevation.</p>
+                <p className="text-[#8888a0] text-[13px] leading-relaxed">CJC-1295/Ipamorelin triggers clean dual GH pulses — lean mass and fat loss simultaneously. No cortisol elevation.</p>
               </div>
             </Link>
 
@@ -343,15 +343,15 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/products/melanotan-2" className="col-span-2 card overflow-hidden relative group block">
-              <Image src="https://pantheonpeptides.com/wp-content/uploads/2024/09/MT2-10mg-scaled.jpg"
-                alt="Melanotan 2 tanning peptide" fill
+            <Link href="/products/tirzepatide" className="col-span-2 card overflow-hidden relative group block">
+              <Image src="https://apollopeptidesciences.com/wp-content/uploads/2024/04/tirzepatide_15mg-1.webp"
+                alt="Tirzepatide fat loss peptide" fill
                 className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07070a] via-[#07070a]/60 to-transparent" />
               <div className="absolute bottom-5 left-5">
-                <span className="tag-gold mb-2 inline-block">Top Seller</span>
-                <h3 className="text-white font-700 text-xl">Melanotan 2 — The Bronze Protocol</h3>
-                <p className="text-[#8888a0] text-[13px] mt-1">Deep eumelanin tan. Libido enhancement. Appetite suppression. One peptide, three looks maxing benefits.</p>
+                <span className="tag-gold mb-2 inline-block">Clinical Grade</span>
+                <h3 className="text-white font-700 text-xl">Tirzepatide — The Metabolic Reset</h3>
+                <p className="text-[#8888a0] text-[13px] mt-1">Dual GLP-1/GIP agonist. Up to 22.5% body weight reduction. The compound behind Mounjaro and Zepbound.</p>
               </div>
             </Link>
           </div>
@@ -580,7 +580,7 @@ export default function Home() {
             Every Protocol Available
           </h2>
           <p className="text-[#8888a0] text-[17px] mb-12 max-w-xl leading-relaxed">
-            35 elite peptide compounds covering every dimension of physical and cognitive optimization — all available through Pantheon Peptides.
+            35 elite peptide compounds covering every dimension of physical and cognitive optimization — all available through Apollo Peptide Sciences.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             {products.map((p, i) => (
@@ -588,10 +588,10 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
               target="_blank" rel="noopener noreferrer"
               className="btn-primary text-[13px] px-8 py-3.5 inline-flex">
-              Shop All at Pantheon Peptides
+              Shop All at Apollo
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
               </svg>
@@ -664,7 +664,7 @@ export default function Home() {
                 </div>
               ))}
               <div className="p-5">
-                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary w-full justify-center py-3.5 text-[13px]">
                   Start Your Protocol
@@ -836,7 +836,7 @@ export default function Home() {
               {
                 name: 'BPC-157 — The Foundation Peptide',
                 slug: 'bpc-157',
-                image: 'https://pantheonpeptides.com/wp-content/uploads/2024/09/BPC-157-2mg-scaled.jpg',
+                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/09/bpc157_10mg.webp',
                 mechanism: 'Promotes angiogenesis, upregulates growth factor receptors, modulates nitric oxide synthesis',
                 keyBenefit: 'Heals tendons, ligaments, gut, and neural tissue simultaneously. The single most versatile recovery peptide.',
                 timeline: '2–4 weeks for injury recovery, 4–8 weeks for gut healing',
@@ -845,16 +845,16 @@ export default function Home() {
               {
                 name: 'GHK-Cu — The Skin and Anti-Aging Peptide',
                 slug: 'ghk-cu',
-                image: 'https://pantheonpeptides.com/wp-content/uploads/2024/09/GHKCU-50mg-scaled.jpg',
+                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/01/ghk-cu_50mg.webp',
                 mechanism: 'Activates 4,000+ genes involved in skin repair, stimulates fibroblast collagen production, remodels scar tissue',
                 keyBenefit: 'The only peptide that resets skin gene expression to a younger profile. Up to 121% increase in skin density documented.',
                 timeline: '4–8 weeks for visible skin improvement, compounding over 6+ months',
                 keywords: 'GHK-Cu benefits, copper peptide skin, collagen peptide GHK',
               },
               {
-                name: 'Ipamorelin + CJC-1295 — The GH Stack',
-                slug: 'ipamorelin',
-                image: 'https://pantheonpeptides.com/wp-content/uploads/2024/09/IPAMORELIN-2mg-scaled.jpg',
+                name: 'CJC-1295 / Ipamorelin — The GH Stack',
+                slug: 'cjc-1295-ipamorelin',
+                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/01/cjc1295_5-5mg.webp',
                 mechanism: 'CJC-1295 stimulates GHRH receptors; Ipamorelin activates GHSR — double-stimulus GH pulse without cortisol elevation',
                 keyBenefit: 'The cleanest, most effective GH optimization available. Body composition transformation over 3–6 months of consistent use.',
                 timeline: 'Sleep improvements in week 1–2, body composition changes visible at 8–12 weeks',
@@ -863,7 +863,7 @@ export default function Home() {
               {
                 name: 'Epithalon — The Longevity Peptide',
                 slug: 'epithalon',
-                image: 'https://pantheonpeptides.com/wp-content/uploads/2024/09/EPITALON-10mg-scaled.jpg',
+                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/09/epithalon_50mg.webp',
                 mechanism: 'Activates telomerase enzyme to rebuild telomere caps on chromosomes — the only known compound to achieve this',
                 keyBenefit: 'Measurable telomere lengthening. Profound sleep quality improvements. Biological age reversal at the cellular level.',
                 timeline: '10–20 day cycle twice yearly. Sleep effects within days, biological aging markers over months.',
@@ -897,7 +897,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-3">
                         <Link href={`/products/${item.slug}`} className="btn-secondary text-[12px] py-2.5 px-5">Full Details</Link>
-                        <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                        <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                           target="_blank" rel="noopener noreferrer"
                           className="btn-primary text-[12px] py-2.5 px-5">
                           Buy Now
@@ -1009,7 +1009,7 @@ export default function Home() {
             <FAQ q="What exactly are peptides and how do they differ from supplements?"
               a="Peptides are short chains of amino acids — typically 2–50 in length — that function as biological signaling molecules. Unlike conventional supplements that provide nutrients, peptides communicate directly with cellular receptors to trigger specific biological responses: collagen synthesis, growth hormone release, melanin production, tissue regeneration. The key difference is precision. A peptide doesn't improve conditions that may support a response — it directly triggers the response itself." />
             <FAQ q="Are peptides safe to use?"
-              a="The peptides featured here have well-characterized safety profiles with years of clinical and community use. Most, like BPC-157 and GHK-Cu, are naturally occurring in the human body or are close analogues of endogenous compounds. Side effect profiles are typically minimal when used within established dosing ranges. Always source from quality suppliers like Pantheon Peptides to ensure purity, and consult your healthcare provider before beginning any new protocol." />
+              a="The peptides featured here have well-characterized safety profiles with years of clinical and community use. Most, like BPC-157 and GHK-Cu, are naturally occurring in the human body or are close analogues of endogenous compounds. Side effect profiles are typically minimal when used within established dosing ranges. Always source from quality suppliers like Apollo Peptide Sciences to ensure purity, and consult your healthcare provider before beginning any new protocol." />
             <FAQ q="How long until I see results from peptide protocols?"
               a="Timeline varies significantly by peptide and goal. BPC-157 for acute injuries can produce noticeable effects within 1–2 weeks. GHK-Cu shows skin improvements at 4–8 weeks with compounding results over 6 months. Ipamorelin + CJC-1295 produces sleep improvements within the first week and body composition changes visible at 8–12 weeks. Epithalon's anti-aging effects accumulate over months. Most protocols require consistent use of 3–6 months to fully appreciate the depth of transformation." />
             <FAQ q="Can peptides be stacked together?"
@@ -1021,7 +1021,7 @@ export default function Home() {
             <FAQ q="What peptides are best for looks maxing specifically?"
               a="The core looks maxing peptide stack includes: GHK-Cu for collagen synthesis and skin quality, Melanotan 2 for deep eumelanin pigmentation and libido, Ipamorelin + CJC-1295 for GH-optimized body composition, and Epithalon for cellular anti-aging. BPC-157 serves as a foundation compound to optimize the cellular environment. This combination addresses all four pillars of physical optimization: skin structure, pigmentation, hormones, and cellular age." />
             <FAQ q="Where can I buy the peptides featured on this site?"
-              a="All peptides on PeptiZzy are available through our partner Pantheon Peptides — a premium supplier with third-party purity verification and fast shipping. Use our affiliate link to shop the complete catalog with full product information and support." />
+              a="All peptides on PeptiZzy are available through our partner Apollo Peptide Sciences — a premium supplier with third-party purity verification and fast shipping. Use our affiliate link to shop the complete catalog with full product information and support." />
           </div>
 
           <div className="text-center mt-10">
@@ -1050,10 +1050,10 @@ export default function Home() {
             Elite peptide protocols. Premium quality compounds. One protocol separates you from your best physical form.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
               target="_blank" rel="noopener noreferrer"
               className="btn-primary text-[14px] px-10 py-4">
-              Shop Pantheon Peptides
+              Shop Apollo Peptides
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
               </svg>

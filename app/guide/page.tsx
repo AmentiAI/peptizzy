@@ -174,7 +174,7 @@ export default function GuidePage() {
                 ))}
               </div>
               <div className="p-5 border-t border-white/[0.05]">
-                <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                   target="_blank" rel="noopener noreferrer"
                   className="btn-primary w-full justify-center py-3.5 text-[13px]">
                   Shop This Protocol

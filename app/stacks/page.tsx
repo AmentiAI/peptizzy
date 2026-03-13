@@ -138,7 +138,7 @@ export default function StacksPage() {
                       className="btn-secondary w-full justify-center py-3 text-[13px] block text-center">
                       View Full Protocol Guide
                     </Link>
-                    <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+                    <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                       target="_blank" rel="noopener noreferrer"
                       className="btn-primary w-full justify-center py-3.5 text-[13px] block text-center">
                       Shop This Stack
@@ -186,12 +186,12 @@ export default function StacksPage() {
             Ready to start your stack?
           </h2>
           <p className="text-[#8888a0] text-[16px] mb-8">
-            All compounds available through our partner Pantheon Peptides. Every stack, every protocol — sourced from the highest-quality peptide supplier available.
+            All compounds available through our partner Apollo Peptide Sciences. Every stack, every protocol — sourced from the highest-quality peptide supplier available.
           </p>
-          <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary text-[13px] px-8 py-4 inline-flex">
-            Shop at Pantheon Peptides
+            Shop at Apollo Peptide Sciences
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>

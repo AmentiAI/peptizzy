@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'pantheonpeptides.com',
+        hostname: 'apollopeptidesciences.com',
         pathname: '/wp-content/uploads/**',
       },
     ],

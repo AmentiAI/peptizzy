@@ -55,7 +55,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary text-[12px] py-2.5 px-5">
             Shop Now
@@ -81,10 +81,10 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
-          <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary w-full mt-6 text-center">
-            Shop Pantheon Peptides
+            Shop Apollo Peptides
           </a>
         </div>
       )}

@@ -37,7 +37,7 @@ export default function Footer() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5 max-w-[220px]">
               Elite peptide protocols for looks maximization, body composition, and longevity.
             </p>
-            <p className="text-[11px] text-[#50505e] uppercase tracking-widest">Powered by Pantheon Peptides</p>
+            <p className="text-[11px] text-[#50505e] uppercase tracking-widest">Powered by Apollo Peptide Sciences</p>
           </div>
 
           {/* Peptides */}
@@ -72,9 +72,9 @@ export default function Footer() {
           <div>
             <p className="label mb-5">Start Your Protocol</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">
-              Premium grade peptides shipped to your door through our partner Pantheon Peptides.
+              Premium grade peptides shipped to your door through our partner Apollo Peptide Sciences.
             </p>
-            <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
               target="_blank" rel="noopener noreferrer"
               className="btn-primary text-[12px] py-3 px-5">
               Shop Now
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="rule mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#50505e] text-[13px]">© 2025 PeptiZzy. Affiliate partner of Pantheon Peptides.</p>
+          <p className="text-[#50505e] text-[13px]">© 2025 PeptiZzy. Affiliate partner of Apollo Peptide Sciences.</p>
           <p className="text-[#50505e] text-[13px] text-right max-w-sm">
             For personal use only. Individual results may vary.
           </p>

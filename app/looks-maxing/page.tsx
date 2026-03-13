@@ -116,7 +116,7 @@ export default function LooksMaxingPage() {
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
             Looks maximization has entered a new era — targeting the biological foundations of physical attractiveness at the molecular level.
           </p>
-          <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary text-[13px] px-7 py-3.5 inline-flex">
             Start Your Protocol
@@ -233,10 +233,10 @@ export default function LooksMaxingPage() {
               ))}
             </div>
             <div className="p-6 border-t border-white/[0.05]">
-              <a href="https://pantheonpeptides.com/partner/AmentiAI/"
+              <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
                 target="_blank" rel="noopener noreferrer"
                 className="btn-primary w-full justify-center py-4 text-[13px]">
-                Shop This Stack at Pantheon Peptides
+                Shop This Stack at Apollo Peptide Sciences
               </a>
             </div>
           </div>

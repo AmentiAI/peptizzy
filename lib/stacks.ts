@@ -32,524 +32,331 @@ export interface Stack {
   faqs: { q: string; a: string }[]
 }
 
+export function getStackById(id: string): Stack | undefined {
+  return stacks.find(s => s.id === id)
+}
+
 export const stacks: Stack[] = [
   {
     id: 'looks-max',
     name: 'The Looks Max Stack',
-    tagline: 'Comprehensive physical transformation — all four pillars',
-    shortDesc: 'Addresses all four pillars of physical optimization: skin quality, pigmentation, body composition, and cellular longevity. The definitive looks maximization protocol.',
+    tagline: 'Comprehensive skin, collagen & cellular optimization',
+    shortDesc: 'Addresses the biological pillars of physical appearance: skin collagen architecture, anti-wrinkle neuromuscular signaling, tissue repair, and cellular longevity.',
     badge: 'Most Popular',
     accent: '#d4a043',
     difficulty: 'Intermediate',
     goal: 'Full looks maximization',
     duration: '12 weeks',
-    outcomes: ['Deep, even eumelanin tan', 'Increased skin thickness & collagen', 'Leaner body composition', 'Accelerated recovery', 'Improved skin luminosity'],
+    outcomes: ['Increased skin density & collagen', 'Reduced expression lines', 'Accelerated tissue recovery', 'Cellular anti-aging', 'Improved skin luminosity'],
     compounds: [
       {
         slug: 'ghk-cu',
         role: 'Skin & Collagen Foundation',
-        timing: '1–2mg SubQ, 3× weekly',
-        why: 'GHK-Cu is the structural architect of the stack. While other compounds optimize hormones and pigmentation, GHK-Cu operates directly on dermal fibroblasts — the cells responsible for collagen and elastin synthesis. It activates 4,000+ skin-related genes, increases skin density by up to 121%, and creates the luminous skin quality that no training or nutrition protocol can achieve alone.',
+        timing: '1–2mg SubQ, 3–5× weekly',
+        why: 'GHK-Cu is the structural architect of the stack. It operates directly on dermal fibroblasts — the cells responsible for collagen and elastin synthesis — activating over 4,000 skin-related genes and producing up to a 121% increase in skin density. This is the compound that changes the underlying architecture of your skin rather than just its surface appearance. No other peptide comes close to GHK-Cu\'s breadth of skin optimization data.',
       },
       {
-        slug: 'melanotan-2',
-        role: 'Pigmentation & Melanocortin Activation',
-        timing: '0.25–0.5mg SubQ, loading then maintenance',
-        why: 'Melanotan 2 provides the pigmentation dimension that makes every other physical improvement more visible. Deeper eumelanin pigmentation creates higher contrast with muscles, enhances perceived symmetry, and delivers the health signals that are universally associated with attractiveness. Its additional MC4R activation provides libido enhancement, appetite suppression, and mood elevation — making it one of the most comprehensively beneficial looks maxing compounds available.',
+        slug: 'snap-8',
+        role: 'Anti-Wrinkle Neuromuscular Inhibitor',
+        timing: 'Applied topically twice daily to target areas',
+        why: 'SNAP-8 complements GHK-Cu by targeting the second major category of wrinkle formation: dynamic expression lines. While GHK-Cu rebuilds the dermal collagen structure, SNAP-8 blocks the neuromuscular mechanism that etches expression lines into the skin — reducing wrinkle depth by up to 63%. Together, the two compounds address both structural collagen decline and neuromuscular expression damage simultaneously.',
       },
       {
         slug: 'bpc-157',
-        role: 'Foundation Recovery & Cellular Optimization',
+        role: 'Cellular Repair & Anti-Inflammatory Foundation',
         timing: '200–300mcg SubQ, daily',
-        why: 'BPC-157 is the foundation layer that makes everything else work better. It optimizes the cellular environment by reducing inflammation, healing gut lining for better peptide absorption, and ensuring connective tissue integrity. Without this foundation, GH peptides and skin peptides operate in a suboptimal inflammatory environment. BPC-157 removes this limitation and accelerates recovery so training can be both consistent and intense.',
+        why: 'BPC-157 is the foundation layer that makes everything else work better. It reduces systemic inflammation — creating the optimal cellular environment in which GHK-Cu stimulates collagen and SNAP-8 softens expression lines. BPC-157 also directly supports skin healing, wound repair, and connective tissue integrity, while optimizing gut function for better absorption of all compounds.',
       },
       {
-        slug: 'ipamorelin',
-        role: 'GH Optimization & Body Composition',
-        timing: '200–300mcg SubQ, 2–3× daily',
-        why: 'Ipamorelin provides the hormonal engine driving body composition transformation. Clean GH pulses — without cortisol or prolactin elevation — drive lipolysis, muscle protein synthesis, improved skin thickness via IGF-1, and dramatically better sleep. GH optimization is the single most impactful hormonal intervention for physical appearance, and Ipamorelin is its most selective and safe delivery mechanism.',
+        slug: 'epithalon',
+        role: 'Telomere & Cellular Longevity Layer',
+        timing: '5–10mg SubQ, daily × 10–20 days (cycle within cycle)',
+        why: 'Epithalon addresses the cellular aging dimension — telomere shortening — that underlies the progressive decline in skin quality, regenerative capacity, and hormonal output that drives visible aging. By activating telomerase and restoring melatonin-driven sleep architecture, Epithalon amplifies the cellular renewal environment that GHK-Cu and BPC-157 create at the tissue level. The combination produces both structural and biological age improvements simultaneously.',
       },
     ],
-    fullDescription: `The Looks Max Stack is the most comprehensive and widely adopted peptide protocol for physical optimization. It was designed around a fundamental insight: physical attractiveness is not a single variable but a composite of four distinct biological pillars — skin quality, pigmentation, body composition, and cellular health. Optimizing one without the others produces suboptimal results. This stack addresses all four simultaneously.
+    fullDescription: `The Looks Max Stack is the most comprehensive peptide protocol for physical appearance optimization available through Apollo Peptide Sciences. It was designed around a fundamental insight: physical attractiveness is not a single variable but a composite of distinct biological pillars — skin collagen architecture, neuromuscular expression line formation, tissue repair capacity, and cellular aging at the chromosomal level. Optimizing one without the others produces suboptimal results. This stack addresses all four simultaneously.
 
 Skin quality is the most immediately visible component of physical appearance, and it declines measurably from the mid-20s as collagen and elastin production slow. GHK-Cu reverses this trajectory at the gene expression level — activating over 4,000 genes associated with skin repair, collagen synthesis, and cellular renewal. The result is skin that is structurally denser, more elastic, and more luminous than it would be at the same chronological age without intervention.
 
-Pigmentation is the multiplier that amplifies every other physical improvement. Deep, even eumelanin-based tan is consistently rated among the strongest attractiveness signals across cultures — it creates muscle definition contrast, signals metabolic health and UV resilience, and produces the bronzed aesthetic associated with peak physical condition. Melanotan 2 delivers this through the body's own melanocyte biology rather than UV damage, with the added benefits of libido enhancement, appetite suppression, and mood elevation via the melanocortin system.
+Expression lines represent the second major aesthetic concern for most individuals. SNAP-8's neuromuscular mechanism is fundamentally different from GHK-Cu's structural approach — it reduces the repetitive muscle contraction intensity that engrave permanent lines into the skin over years. The result is a natural softening of crow's feet, forehead lines, and glabellar creases without the frozen appearance of neurotoxin overuse.
 
-Body composition is the structural foundation. The Ipamorelin component drives the hormonal environment in which lean muscle develops and fat diminishes — not through supraphysiological manipulation but through restoring the high GH pulsatility associated with youth. Simultaneously, BPC-157 ensures the recovery capacity to train with the intensity and frequency that body composition transformation requires, while reducing the inflammation that would otherwise blunt GH signaling.
+BPC-157 operates as the infrastructure layer: its systemic anti-inflammatory and healing effects create the biological environment where GHK-Cu's fibroblast activation and SNAP-8's neuromuscular inhibition work most effectively. It also directly accelerates skin wound healing, scar remodeling, and gut health optimization — improving absorption of all compounds in the stack.
 
-The four compounds create a system where each supports the others: BPC-157 optimizes the environment for all other peptides, Ipamorelin drives the hormonal basis of skin quality and body composition, GHK-Cu executes the structural skin transformation, and Melanotan 2 provides the pigmentation and melanocortin activation that completes the physical picture.`,
-    synergy: `The synergy in this stack is architectural. BPC-157 reduces systemic inflammation, improving the cellular environment in which GHK-Cu stimulates collagen and in which Ipamorelin's GH pulses drive IGF-1 signaling. Ipamorelin's GH elevation in turn amplifies skin thickness and elasticity independently of GHK-Cu — creating two parallel collagen-stimulating pathways simultaneously. Melanotan 2's appetite suppression makes the caloric management required for lean body composition effortless, while its MC4R activation improves mood and motivation — sustaining protocol adherence over the full 12 weeks. No compound is redundant; each operates through a distinct receptor mechanism to produce effects the others cannot.`,
-    whoIsItFor: `This stack is designed for anyone who wants comprehensive, measurable physical transformation across all dimensions of appearance. Ideal for those who have plateaued on training and nutrition alone and are ready to address the underlying biological variables — hormonal GH levels, skin collagen architecture, melanin production — that training cannot change. Works exceptionally well for men in their mid-20s to 40s seeking the full looks maxing protocol, and women seeking skin quality, body composition, and confidence optimization.`,
+Epithalon provides the longevity dimension that surface-level skin compounds cannot address: it activates telomerase to rebuild the chromosomal telomere caps whose progressive shortening drives the biological aging that underpins every visible aging marker. The annual Epithalon cycle within the larger protocol is the compound that works at the deepest biological level — cellular DNA.`,
+    synergy: `The synergy in this stack operates across multiple levels. GHK-Cu drives collagen synthesis from the outside in — directly stimulating the fibroblasts that produce structural skin proteins. BPC-157 optimizes the cellular environment by reducing inflammation that would otherwise blunt GHK-Cu's receptor signaling. SNAP-8 operates through an entirely orthogonal mechanism (neuromuscular, not structural), meaning it adds wrinkle reduction without competing with or displacing GHK-Cu's collagen benefits. Epithalon's telomerase activation creates the chromosomal environment for long-term cellular renewal — amplifying the collagen stimulation initiated by GHK-Cu by ensuring the skin cells doing the work are themselves biologically younger. The result is a layered, non-redundant protocol where each compound addresses a dimension the others cannot.`,
+    whoIsItFor: `Designed for anyone who wants measurable, comprehensive physical appearance optimization beyond what training and nutrition can produce. Particularly effective for those in their late 20s and beyond who are beginning to notice skin quality changes — reduced elasticity, fine lines, loss of luminosity. Also highly relevant for anyone focused on looks maxing as a primary goal, or those who want to maintain their physical peak for as long as possible. Works for men and women equally with appropriate dose adjustments.`,
     timeline: [
-      { range: 'Weeks 1–2', title: 'Foundation & Early Signals', what: 'BPC-157 begins reducing inflammation and healing gut lining, improving absorption of all compounds. MT-2 loading initiates melanin production — some users notice subtle darkening by end of week 2. Ipamorelin improves sleep quality within the first week.' },
-      { range: 'Weeks 3–4', title: 'Pigmentation & Sleep Transformation', what: 'Melanotan 2 tan becomes clearly visible, deepening progressively. Sleep quality dramatically improved with Ipamorelin — users report significantly deeper, more restorative sleep. GHK-Cu skin improvements begin — subtle but measurable increase in skin hydration and elasticity.' },
-      { range: 'Weeks 5–8', title: 'Skin Quality & Body Composition Shift', what: 'GHK-Cu collagen remodeling becomes visible — improved skin texture, reduced fine lines, and the distinctive healthy luminosity that collagen density produces. Body composition begins shifting measurably: reduced body fat, improved muscle definition. Tan is fully saturated and maintained on low-dose maintenance.' },
-      { range: 'Weeks 9–12', title: 'Full Protocol Compounding', what: 'All compounds reach full effect. Skin thickness increases are measurable. Body composition transformation is significant and visible. Recovery from training is substantially faster. Overall physical presentation is comprehensively optimized — the composite transformation across all four pillars becomes undeniable.' },
+      { range: 'Weeks 1–2', title: 'Foundation Activation', what: 'BPC-157 begins reducing inflammation and optimizing the healing environment. Epithalon cycle initiated — melatonin normalization begins improving sleep quality within the first week. GHK-Cu and SNAP-8 application begins.' },
+      { range: 'Weeks 3–6', title: 'Early Structural Changes', what: 'GHK-Cu collagen remodeling becomes measurable — improved skin hydration, elasticity, and the beginning of increased skin density. SNAP-8 effects on expression line softening become noticeable with consistent twice-daily application. Epithalon cycle typically completes within this phase.' },
+      { range: 'Weeks 7–10', title: 'Visible Transformation', what: 'Collagen density improvements from GHK-Cu are clearly visible — improved skin texture, reduced fine lines, and the characteristic luminous quality that structural collagen density produces. Expression line reduction from SNAP-8 is significant. Overall skin appearance is measurably younger and healthier.' },
+      { range: 'Weeks 11–12', title: 'Full Protocol Compounding', what: 'All compounds have reached full expression. Skin quality represents the outcome of 12 weeks of active collagen stimulation, neuromuscular wrinkle inhibition, and anti-inflammatory optimization. Results from this phase typically persist for months after the cycle concludes.' },
     ],
     keyBenefits: [
-      'Addresses all four pillars of physical attractiveness in a single protocol',
-      'GHK-Cu collagen stimulation increases skin thickness by up to 121%',
-      'Eumelanin-based tan from Melanotan 2 with 80% less UV exposure',
-      'Ipamorelin GH pulses drive simultaneous fat loss and lean mass development',
-      'BPC-157 enables the training intensity and consistency transformation requires',
-      'Improved sleep quality within 1–2 weeks — deeper, more restorative recovery',
-      'Appetite suppression from MT-2 makes caloric management effortless',
-      'All four compounds operate through distinct, non-competing receptor mechanisms',
+      'GHK-Cu produces up to 121% increase in skin density with consistent use',
+      'SNAP-8 reduces expression line depth by up to 63%',
+      'BPC-157 creates the optimal inflammatory environment for all skin compounds',
+      'Epithalon telomerase activation works at the cellular aging level',
+      'All four compounds operate through distinct, non-competing mechanisms',
+      'Improved sleep quality from Epithalon amplifies cellular repair overnight',
+      'Dual collagen + neuromuscular wrinkle approach addresses both wrinkle types',
+      'Results compound progressively over the full 12-week protocol',
     ],
-    cycleProtocol: '12 weeks on. After the cycle: 4–6 weeks off Ipamorelin (maintaining MT-2 maintenance doses and GHK-Cu if desired). Most users run 2–3 cycles per year with excellent results. BPC-157 can be run for 8 weeks on, 4 weeks off within the larger cycle.',
+    cycleProtocol: '12 weeks total. GHK-Cu and BPC-157: 8 weeks on, 4 weeks off within the cycle. SNAP-8: continuous daily topical use. Epithalon: 10–20 day intensive cycle within the first 4 weeks, then optionally repeated once more mid-cycle. Most run 2 full cycles per year.',
     faqs: [
-      { q: 'Can I run this stack as a beginner?', a: 'Yes, with a caveat: start with Ipamorelin and BPC-157 for the first 4 weeks before adding GHK-Cu and Melanotan 2. This lets you learn injection technique on the more forgiving compounds first and assess baseline response.' },
-      { q: 'What does the Melanotan 2 tan look like?', a: 'Natural, deep, and even — identical to a genuine sun tan because it uses the same eumelanin biology. The color is not orange (like self-tanner) or red (like UV burn). Users with lighter skin tones typically reach a Mediterranean/olive tone. The tan lasts significantly longer than UV-induced tans.' },
-      { q: 'Will I lose the results when I stop the cycle?', a: 'Structural results (skin collagen, body composition) are maintained significantly longer than the cycle duration, especially with continued training. GHK-Cu collagen gains can persist for months. Body composition gains from GH optimization are maintained with continued training and nutrition. MT-2 tan fades over weeks as melanin naturally degrades.' },
-      { q: 'Can women run this stack?', a: 'Yes. GHK-Cu, BPC-157, and Ipamorelin are appropriate for women with standard dosing. Melanotan 2 dosing for women is typically lower (0.1–0.25mg loading doses) due to higher sensitivity to the melanocortin system. PT-141 effects are also applicable for women with MT-2.' },
+      { q: 'Can I run this stack without the injections?', a: 'Yes, partially. SNAP-8 is effective topically. GHK-Cu also has topical research applications. BPC-157 and Epithalon require subcutaneous injection for full bioavailability. If you\'re injection-averse, starting with SNAP-8 and topical GHK-Cu provides meaningful benefits before progressing to injectable protocols.' },
+      { q: 'How quickly does GHK-Cu show results?', a: 'Measurable hydration and elasticity improvements typically appear within 4–6 weeks. Structural collagen density increases take the full 8–12 weeks to become clearly visible. The characteristic luminous skin quality is usually noticeable around weeks 6–8.' },
+      { q: 'When should I run the Epithalon cycle?', a: 'Start the Epithalon 10–20 day cycle during weeks 1–3 of the broader stack. This creates the cellular anti-aging environment early in the protocol. A second Epithalon cycle in the middle of the 12-week stack is optional but recommended for maximum effect.' },
+      { q: 'Can women run all the compounds in this stack?', a: 'Yes — GHK-Cu, SNAP-8, BPC-157, and Epithalon are all appropriate for women at standard dosing. There are no hormonal compounds in this stack. GHK-Cu and SNAP-8 are particularly popular among female researchers due to their skin-specific mechanisms.' },
     ],
   },
 
   {
     id: 'body-comp',
     name: 'The Body Sculptor',
-    tagline: 'Elite lean mass and visceral fat elimination',
-    shortDesc: 'Growth hormone optimization stacked for maximum body composition transformation. Build lean muscle while stripping fat — the dual recomposition effect.',
+    tagline: 'GH optimization + direct anabolism for elite body composition',
+    shortDesc: 'Dual growth hormone axis stimulation combined with direct IGF-1 delivery — the most comprehensive natural body composition transformation protocol.',
     badge: 'Advanced',
     accent: '#6090ff',
     difficulty: 'Advanced',
     goal: 'Maximum lean muscle + fat loss',
-    duration: '16 weeks',
-    outcomes: ['Significant lean muscle mass gains', 'Visceral fat reduction', 'Sharper muscle definition', 'Enhanced recovery capacity', 'Improved sleep quality'],
+    duration: '12 weeks',
+    outcomes: ['Significant lean muscle gains', 'Reduced body fat', 'Sharper muscle definition', 'Enhanced recovery capacity', 'Dramatically improved sleep quality'],
     compounds: [
       {
-        slug: 'ipamorelin',
-        role: 'GH Pulse Foundation',
-        timing: '200–300mcg SubQ, 2–3× daily',
-        why: 'Ipamorelin provides the clean, selective GH pulse foundation of the entire stack. Its extraordinary selectivity — triggering potent GH release without cortisol, prolactin, or ACTH elevation — means the full anabolic and lipolytic benefit of GH optimization is captured without the hormonal interference that blunts results. It is the most critical compound in the stack and the one that must not be skipped.',
-      },
-      {
-        slug: 'cjc-1295',
-        role: 'Sustained GH Elevation Amplifier',
-        timing: '100–200mcg SubQ with Ipamorelin',
-        why: 'CJC-1295 operates through the GHRH receptor — a completely different mechanism than Ipamorelin\'s ghrelin receptor. When the two are combined, the simultaneous activation of both pathways produces GH elevations far greater than either compound alone — sometimes approaching pharmaceutical GH levels. This "double stimulus" is the defining feature of the Body Sculptor\'s GH component and the reason body composition results are so significant.',
-      },
-      {
-        slug: 'tesamorelin',
-        role: 'Visceral Fat Elimination',
-        timing: '1–2mg SubQ, daily (evening)',
-        why: 'Tesamorelin is the only GH peptide with clinical evidence specifically for visceral fat reduction — the deep abdominal fat that no diet or training protocol can fully address. Added to a stack already optimizing GH levels through Ipamorelin/CJC-1295, Tesamorelin creates a redundant lipolytic signal specifically targeting visceral adiposity for elimination. The result is abdominal definition that reflects what\'s actually underneath.',
+        slug: 'cjc-1295-ipamorelin',
+        role: 'GH Axis Foundation — Dual Receptor Stimulation',
+        timing: '100mcg each component, 2–3× daily (from blended vial)',
+        why: 'The CJC-1295/Ipamorelin blend is the cornerstone of this stack — simultaneously activating the GHRH receptor (CJC-1295) and the ghrelin receptor (Ipamorelin) to produce GH pulses greater than either compound alone. Ipamorelin\'s selectivity is critical: zero cortisol, prolactin, or ACTH elevation means the full anabolic and lipolytic benefit of GH optimization is captured without hormonal interference. The pre-blended 5mg/5mg vial eliminates the complexity of managing two separate compounds.',
       },
       {
         slug: 'igf-1-lr3',
-        role: 'Cellular Muscle Hyperplasia',
+        role: 'Direct Anabolic Signal — Muscle Cell Level',
         timing: '20–50mcg SubQ or IM, post-workout',
-        why: 'IGF-1 LR3 is the downstream executor of GH\'s anabolic effects — the compound that actually tells muscle cells to grow at the cellular level. Where Ipamorelin and CJC-1295 drive GH production (and therefore IGF-1), direct IGF-1 LR3 administration bypasses the axis entirely and delivers the growth signal directly to muscle tissue. The result is muscle hyperplasia — actual creation of new muscle fibers — that GH peptides alone cannot produce. This is the advanced compound that separates The Body Sculptor from a standard GH protocol.',
+        why: 'IGF-1 LR3 is the downstream executor of GH\'s anabolic effects — the compound that directly tells muscle cells to grow at the cellular level. Where CJC-1295/Ipamorelin drives GH production (and therefore endogenous IGF-1 throughout the day), direct IGF-1 LR3 delivers a concentrated anabolic signal post-workout when muscle cells are maximally receptive. This produces muscle hyperplasia — actual new fiber formation — that GH peptides alone cannot achieve. It\'s the advanced compound that separates this stack from a standard GH protocol.',
+      },
+      {
+        slug: 'bpc-157',
+        role: 'Recovery Infrastructure',
+        timing: '200–300mcg SubQ, daily',
+        why: 'The higher training intensity enabled by GH optimization creates proportionally higher structural stress. BPC-157 addresses this by accelerating the repair of micro-tears, reducing tendon and ligament inflammation, and optimizing gut integrity for maximum nutrient absorption. It is the compound that makes the training intensity and frequency required for elite body composition transformation sustainable over a 12-week cycle — and the one that protects the connective tissue under heavy loads that serious training demands.',
       },
     ],
-    fullDescription: `The Body Sculptor is the definitive peptide protocol for those who have made their commitment to elite physique development and want the biological support to match that ambition. It is not a maintenance stack — it is a transformation protocol designed for those who want to make the most significant body composition changes possible within 16 weeks.
+    fullDescription: `The Body Sculptor is the definitive peptide protocol for those committed to elite physique development. It is built around the GH/IGF-1 axis — the most important hormonal system for simultaneous lean mass accumulation and fat reduction — and designed to maximize this axis through compounds available through Apollo Peptide Sciences.
 
-The stack operates through two complementary mechanisms working simultaneously. The first is GH axis maximization: Ipamorelin and CJC-1295 create the most potent GH elevation achievable through peptide protocols — the "double stimulus" of simultaneous GHRP and GHRH activation. This elevated GH environment drives fat mobilization across all depots, preserves and builds lean muscle, improves sleep quality, and enhances the recovery that makes consistent high-intensity training sustainable.
+The stack operates through two complementary mechanisms working simultaneously. The first is GH axis maximization: the CJC-1295/Ipamorelin blend creates the most potent GH elevation achievable through peptide protocols by stimulating two independent receptor pathways simultaneously. This elevated GH environment drives fat mobilization, preserves and builds lean muscle, improves sleep quality (in which GH is predominantly secreted), and enhances the recovery capacity that makes consistent high-intensity training sustainable.
 
-The second mechanism is direct cellular anabolism through IGF-1 LR3. While GH optimization drives IGF-1 production endogenously, direct IGF-1 LR3 administration delivers a concentrated, extended-duration IGF-1 signal directly to muscle cells post-workout — triggering hyperplasia (new fiber formation) and dramatically amplifying hypertrophy. This is the compound that creates the muscle density and fullness that defines elite physique development at the structural cellular level.
+The second mechanism is direct cellular anabolism through IGF-1 LR3. While GH optimization drives endogenous IGF-1 production throughout the day, direct IGF-1 LR3 post-workout delivers a concentrated, extended-duration IGF-1 signal directly to muscle cells — triggering the PI3K/Akt/mTOR cascade that drives both hypertrophy and hyperplasia. This is the compound that creates the muscle density and fullness defining elite physique development at the structural cellular level.
 
-Tesamorelin adds the third dimension: visceral fat elimination. Even with optimal GH levels and excellent body composition, deep abdominal fat can resist reduction. Tesamorelin's clinical evidence specifically for visceral fat reduction makes it the targeted solution for the final frontier of abdominal definition — creating the sharp, detailed midsection that represents the pinnacle of body composition achievement.
+BPC-157 provides the infrastructure layer that makes everything sustainable — reducing training-related inflammation, protecting connective tissue, and ensuring the recovery capacity to maintain the training intensity that body composition transformation demands.
 
-The combined effect over 16 weeks is a body composition transformation that is qualitatively different from what training and nutrition alone can produce: leaner, harder, and with better recovery capacity than the body has experienced at any previous stage of development.`,
-    synergy: `The synergy architecture is layered and precise. Ipamorelin provides the pulse; CJC-1295 amplifies and extends it through a separate receptor pathway — producing compound GH elevation. This elevated GH drives endogenous IGF-1 production throughout the day. Post-workout IGF-1 LR3 then augments this with a direct, concentrated anabolic signal to the muscles that just trained, capitalizing on the anabolic window when muscle cells are maximally receptive. Tesamorelin's GHRH activity adds a separate daily GH pulse specifically in the evening, maintaining a lipolytic metabolic environment overnight. The four compounds occupy non-overlapping mechanisms within the GH/IGF-1 axis — each contributing a distinct anabolic or lipolytic signal that the others do not fully duplicate.`,
-    whoIsItFor: `Designed for intermediate to advanced physique athletes who have a solid training foundation and want to accelerate past what training and nutrition can achieve alone. Ideal for those in body recomposition phases — simultaneously building lean mass and losing fat. Also well-suited for those who have visible visceral fat and want targeted elimination alongside overall body composition improvement. Not recommended as a first peptide protocol — run Ipamorelin + CJC-1295 alone for one cycle first.`,
+The combined effect over 12 weeks is a body composition transformation qualitatively different from what training and nutrition alone produce: leaner, harder, with measurably better recovery, and with the structural integrity to sustain the training frequency the results require.`,
+    synergy: `The synergy architecture is precise and layered. CJC-1295/Ipamorelin provides both the GHRH and GHRP stimulation — producing GH pulses that drive endogenous IGF-1 production and fat mobilization throughout the day and during sleep. Post-workout IGF-1 LR3 then augments this with a direct, concentrated anabolic signal to the muscles that just trained, capitalizing on the post-exercise window when muscle cells are maximally insulin-sensitive and IGF-1-receptor upregulated. BPC-157 simultaneously clears the inflammatory environment that would otherwise blunt IGF-1 receptor signaling and prevents the connective tissue breakdown that limits training volume. The three compounds occupy non-overlapping mechanisms — each contributing a distinct signal the others cannot duplicate.`,
+    whoIsItFor: `Designed for intermediate to advanced physique athletes who have a solid training foundation and want to accelerate past what training and nutrition can achieve alone. Ideal for those in body recomposition phases — simultaneously building lean mass and losing fat. Not recommended as a first peptide protocol — run CJC-1295/Ipamorelin alone for one cycle first to establish baseline GH response before adding IGF-1 LR3.`,
     timeline: [
-      { range: 'Weeks 1–3', title: 'Foundation Activation', what: 'GH optimization via Ipamorelin + CJC-1295 begins. Sleep quality improves significantly within the first week. Appetite may increase slightly as GH levels rise. Body weight may remain similar while composition begins to shift — fat decreasing, muscle increasing.' },
-      { range: 'Weeks 4–8', title: 'Visible Body Composition Shift', what: 'Body fat reduction becomes clearly visible — particularly around the abdomen from Tesamorelin\'s visceral fat targeting. Muscle fullness and pumps during training improve noticeably. Recovery between sessions is markedly faster. Add IGF-1 LR3 post-workout during this phase for maximum hyperplastic effect.' },
-      { range: 'Weeks 9–12', title: 'Peak Transformation Phase', what: 'Compound effects of all four protocols reach maximum expression. Muscle definition is significantly improved. Visceral fat reduction creates visible abdominal definition. Recovery capacity allows for training volume and frequency that would be unsustainable without peptide support.' },
-      { range: 'Weeks 13–16', title: 'Consolidation & Peak Results', what: 'IGF-1 LR3 cycle concludes at week 12–14 (maximum 6-week run). Maintain Ipamorelin + CJC-1295 + Tesamorelin through week 16. Final body composition represents the full transformation potential of the protocol — lean mass and definition changes are significant and lasting.' },
+      { range: 'Weeks 1–2', title: 'Foundation Activation', what: 'GH optimization via CJC-1295/Ipamorelin begins. Sleep quality improves within the first week — deeper, more restorative sleep within days. Appetite may increase as GH levels rise. Body weight may remain similar while composition begins shifting.' },
+      { range: 'Weeks 3–6', title: 'Visible Body Composition Shift', what: 'Body fat reduction becomes clearly visible — particularly the characteristic "drying out" effect of GH optimization. Muscle fullness and training pumps improve noticeably. Add IGF-1 LR3 post-workout beginning week 3–4. Recovery between sessions is markedly faster.' },
+      { range: 'Weeks 7–10', title: 'Peak Transformation Phase', what: 'Compound effects of all three protocols reach maximum expression. Muscle definition is significantly improved. Recovery capacity allows for training volume and frequency that would be unsustainable without peptide support. The recomposition effect — building muscle while losing fat — is clearly measurable.' },
+      { range: 'Weeks 11–12', title: 'Consolidation & Results', what: 'IGF-1 LR3 cycle concludes (maximum 6 consecutive weeks). Maintain CJC-1295/Ipamorelin and BPC-157 through week 12. Final body composition represents the full transformation potential — lean mass and definition changes are significant and lasting.' },
     ],
     keyBenefits: [
-      'Dual GHRH + GHRP stimulation produces maximum GH elevation',
-      'IGF-1 LR3 creates actual new muscle fibers through hyperplasia',
-      'Tesamorelin specifically eliminates visceral abdominal fat',
-      'Simultaneous lean mass gain and fat loss — true recomposition',
-      'Dramatically faster recovery enabling higher training frequency',
-      'Improved sleep quality amplifies all hormonal benefits overnight',
-      'Progressive body composition changes compound over the full 16 weeks',
-      'Creates a metabolic environment that favors lean tissue over fat storage',
+      'Dual GHRH + GHRP stimulation produces maximum achievable GH elevation',
+      'IGF-1 LR3 creates new muscle fibers through hyperplasia — beyond what GH alone achieves',
+      'True simultaneous lean mass gain and fat loss — recomposition effect',
+      'Dramatically improved sleep quality — the hormonal environment compounds overnight',
+      'BPC-157 enables the training intensity and consistency transformation requires',
+      'Progressive body composition changes compound over the full 12 weeks',
+      'Pre-blended CJC/Ipa vial eliminates complexity of two-compound management',
+      'Creates a lasting metabolic environment that favors lean tissue over fat storage',
     ],
-    cycleProtocol: '16 weeks total. IGF-1 LR3: 4–6 weeks within the cycle, then pause (max 6 consecutive weeks). Ipamorelin + CJC-1295 + Tesamorelin: full 16 weeks. After the cycle: 4–6 weeks off all GH peptides before repeating. Most run 1–2 full Body Sculptor cycles per year.',
+    cycleProtocol: '12 weeks total. IGF-1 LR3: maximum 6 consecutive weeks — start at week 3, conclude by week 8 or 9, then reassess. CJC-1295/Ipamorelin and BPC-157: full 12 weeks. After the cycle: 4–6 weeks off GH peptides before repeating. Most run 1–2 full Body Sculptor cycles per year.',
     faqs: [
-      { q: 'How much muscle can I expect to gain?', a: 'Results vary with training quality, nutrition, and individual response. Users consistently report 5–10+ lbs of lean mass over 16 weeks, with simultaneous fat loss of similar magnitude. The recomposition effect — gaining muscle while losing fat — is the defining outcome of this protocol.' },
-      { q: 'Is IGF-1 LR3 safe to use?', a: 'IGF-1 LR3 is safe within recommended doses and cycle lengths. The critical parameter is cycle length: do not exceed 6 consecutive weeks due to receptor desensitization. Start at 20mcg post-workout and assess response before increasing. Monitor for hypoglycemia (low blood sugar) especially when taking it post-workout without food.' },
-      { q: 'When should I take the Tesamorelin injection?', a: 'Evening (6–9pm) injection is optimal for Tesamorelin — it aligns the GH pulse with the body\'s natural nocturnal GH elevation window and maximizes overnight lipolysis. This is separate from your Ipamorelin + CJC-1295 doses, which are best at pre-sleep and post-workout.' },
-      { q: 'Can I add BPC-157 to this stack?', a: 'Absolutely — BPC-157 is an excellent addition to any Body Sculptor cycle. It will reduce the inflammation from high-volume training, protect connective tissue under heavy loads, and optimize the cellular environment for IGF-1\'s anabolic effects. Many advanced users run BPC-157 as a permanent foundation layer.' },
+      { q: 'How much lean mass can I expect to gain?', a: 'Results vary with training quality, nutrition, and individual response. Users consistently report 5–10+ lbs of lean mass over 12 weeks, with simultaneous fat loss. The recomposition effect — gaining muscle while losing fat — is the defining outcome of this protocol.' },
+      { q: 'Is IGF-1 LR3 safe?', a: 'IGF-1 LR3 is safe within recommended doses and cycle lengths. The critical parameter is cycle length: do not exceed 6 consecutive weeks due to receptor desensitization. Start at 20mcg and assess response before increasing. Monitor for hypoglycemia post-workout without food.' },
+      { q: 'When should I take the CJC-1295/Ipamorelin?', a: 'The three most effective times: upon waking (taking advantage of the natural GH pulse), pre-workout (to prime the anabolic environment), and 30–60 minutes before bed (the most important dose — aligns with the body\'s primary nocturnal GH pulse).' },
+      { q: 'Can I add more compounds to this stack?', a: 'TB-500 is an excellent addition for anyone with chronic injuries or high training volume — it adds systemic healing that BPC-157\'s more local mechanism doesn\'t fully cover. For those also focused on body weight, adding semaglutide creates a powerful fat loss amplification layer on top of the GH optimization.' },
     ],
   },
 
   {
     id: 'wolverine',
     name: 'The Wolverine Stack',
-    tagline: 'Maximum tissue repair — near-superhuman recovery',
-    shortDesc: 'Near-superhuman recovery properties. Combines the two most powerful tissue repair peptides with GH optimization for training frequency otherwise unattainable.',
+    tagline: 'Maximum tissue repair — local + systemic recovery',
+    shortDesc: 'Combines the two most powerful tissue repair peptides for comprehensive local and systemic healing — enabling training frequency otherwise unattainable.',
     badge: 'Elite Recovery',
     accent: '#40c090',
-    difficulty: 'Intermediate',
+    difficulty: 'Beginner',
     goal: 'Maximum recovery & injury healing',
     duration: '8 weeks',
-    outcomes: ['Dramatically accelerated healing', 'Reduced inflammation', 'Greater training frequency', 'Joint & connective tissue health', 'Injury resolution'],
+    outcomes: ['Dramatically accelerated healing', 'Reduced chronic inflammation', 'Greater training frequency', 'Joint & connective tissue health', 'Injury resolution'],
     compounds: [
       {
         slug: 'bpc-157',
         role: 'Local & Systemic Tissue Repair',
         timing: '200–500mcg SubQ, daily',
-        why: 'BPC-157 is the cornerstone of every serious recovery protocol. Its multi-mechanism approach — angiogenesis promotion, nitric oxide modulation, growth factor receptor upregulation — creates the most comprehensive local healing environment available. For specific injuries, injection near the site dramatically concentrates the healing signal. For systemic recovery optimization, abdominal SubQ provides whole-body anti-inflammatory and repair benefits.',
+        why: 'BPC-157 is the cornerstone of every serious recovery protocol. Its multi-mechanism approach — angiogenesis promotion, nitric oxide modulation, growth factor receptor upregulation — creates the most comprehensive healing environment available. For specific injuries, injection near the site dramatically concentrates the healing signal. For systemic optimization, abdominal SubQ provides whole-body anti-inflammatory and repair benefits that protect the entire system.',
       },
       {
         slug: 'tb-500',
         role: 'Systemic Regeneration & Flexibility',
         timing: '2–2.5mg SubQ, 2–3× weekly',
-        why: 'TB-500 provides the systemic healing dimension that BPC-157\'s local mechanism cannot fully cover. As a derivative of Thymosin Beta-4, it circulates throughout the body — upregulating actin expression to accelerate cell migration and tissue reconstruction wherever damage exists. The result is whole-body regeneration rather than site-specific repair, and dramatic improvements in flexibility and range of motion that prevent future injury.',
-      },
-      {
-        slug: 'ipamorelin',
-        role: 'GH-Driven Recovery Amplification',
-        timing: '200–300mcg SubQ, pre-sleep',
-        why: 'Growth hormone is the body\'s master recovery hormone — it orchestrates tissue repair, protein synthesis, and cellular regeneration during sleep. Adding Ipamorelin to the recovery stack amplifies the GH signal during the nighttime repair window, essentially extending and deepening the recovery that BPC-157 and TB-500 initiate. The combination produces overnight tissue repair that would take the body multiple nights to achieve unassisted.',
-      },
-      {
-        slug: 'ghk-cu',
-        role: 'Connective Tissue & Collagen Repair',
-        timing: '1–2mg SubQ, 2× weekly',
-        why: 'Connective tissue — tendons, ligaments, and fascia — is the most commonly limiting factor in injury recovery and training longevity. GHK-Cu directly stimulates the collagen synthesis in these tissues that determines whether they rebuild stronger or merely scar over. By adding collagen quality to the comprehensive repair environment created by BPC-157 and TB-500, GHK-Cu ensures that repaired tissue is structurally superior to what it replaced.',
+        why: 'TB-500 provides the systemic healing dimension that BPC-157\'s mechanism cannot fully cover. Where BPC-157 excels locally, TB-500 travels through the bloodstream to reach injury sites throughout the body — upregulating actin expression to accelerate cell migration and tissue reconstruction everywhere damage exists. The combination creates complete coverage: BPC-157 handles the local environment with precision while TB-500 addresses full-body healing from a single injection.',
       },
     ],
-    fullDescription: `The Wolverine Stack is named for a simple reason: it produces recovery properties that feel superhuman to those accustomed to conventional recovery methods. Injuries that normally sideline athletes for weeks resolve in days. Training volumes that should produce overuse injuries are sustained without breakdown. The body rebuilds faster, stronger, and more completely than biology normally permits.
+    fullDescription: `The Wolverine Stack is the gold standard recovery protocol — combining the two most studied and widely used tissue repair peptides in a complementary local-systemic pairing. It is ideal as a standalone recovery protocol, as an injury rehabilitation program, or as the recovery foundation layer beneath a more complex stack.
 
-This is not hyperbole — it is the predictable outcome of combining the two most powerful tissue repair peptides in existence (BPC-157 and TB-500) with GH optimization for overnight amplification and GHK-Cu for connective tissue collagen quality. Each compound addresses a different dimension of the recovery problem; together they create a comprehensive repair system with no gaps.
+BPC-157 and TB-500 are the two most popular recovery peptides in the biohacking community for good reason: their mechanisms are complementary rather than redundant. BPC-157 provides concentrated local healing — angiogenesis, growth factor receptor upregulation, anti-inflammatory modulation — with the strongest effect near the injection site. TB-500's systemic distribution via actin upregulation and cell migration provides full-body healing that a locally-acting peptide cannot replicate.
 
-BPC-157 is the fastest-acting component. Within days of initiating the protocol, its angiogenic effects increase blood flow to damaged tissue, its anti-inflammatory actions reduce the swelling and pain that limit movement, and its growth factor receptor upregulation begins the structural repair process. Users with acute injuries frequently report pain reduction within the first week — not masking of pain, but actual structural resolution.
+Together, they create a recovery environment that addresses every type of tissue damage: acute injuries (strains, sprains, tears), chronic overuse injuries, gut lining dysfunction, neurological recovery, and the general structural wear that training and daily life accumulate. The speed of recovery in both acute and chronic injury contexts is the most consistent finding in user research.
 
-TB-500's systemic reach means the entire body benefits simultaneously. Rather than targeting a specific injury site, it identifies damaged tissue throughout the body and accelerates healing across all of them. This is particularly valuable for athletes with multiple chronic injury sites — the compound effectively rehabilitates the whole body in parallel. The flexibility improvements from TB-500's actin upregulation also directly prevent new injuries by improving range of motion and tissue extensibility.
-
-Ipamorelin transforms the nighttime rest period into a maximally productive repair window. GH's role in tissue regeneration is well-established — it drives protein synthesis, activates satellite cells for muscle fiber repair, and coordinates the hormonal environment for healing. Pre-sleep Ipamorelin ensures that during the 7–9 hours of sleep, the body is operating with maximally elevated GH — compressing days of normal repair into each night.
-
-GHK-Cu completes the protocol by ensuring the quality of repaired tissue. Connective tissue injuries are notorious for healing with inferior scar tissue — weaker, less elastic, and more prone to re-injury than the original structure. GHK-Cu's collagen stimulation drives the production of type I and III collagen in tendons and ligaments, ensuring that repaired tissue rebuilds with proper structural integrity.`,
-    synergy: `BPC-157 and TB-500 have been described as the "perfect healing pair" because their mechanisms are entirely complementary rather than overlapping. BPC-157 operates through VEGF, EGF, and nitric oxide pathways; TB-500 operates through actin upregulation and cell migration. Together they address every stage of the healing cascade: inflammation resolution, cellular migration, tissue reconstruction, and vascularization. Ipamorelin then amplifies this entire process by elevating GH during sleep — essentially multiplying the repair rate achieved by BPC-157 and TB-500 during waking hours. GHK-Cu targets the collagen quality of the final repair product, ensuring longevity of the healed tissue.`,
-    whoIsItFor: `Essential for anyone dealing with acute injuries, chronic overuse conditions, or post-surgical recovery. Ideal for strength athletes, CrossFit competitors, martial artists, and anyone whose training involves significant tissue stress. Also highly valuable as a preventive protocol for athletes who train intensively and want to maintain connective tissue health long-term. The Wolverine Stack is the protocol that lets serious athletes train as hard as they want without the injuries that would otherwise impose limits.`,
+For physique athletes, the practical benefit is stark: the Wolverine Stack enables training frequency and volume that would otherwise produce cumulative structural breakdown. It is the foundation that makes sustainable high-intensity training possible — allowing the body to absorb more stress than it can generate on its own.`,
+    synergy: `BPC-157 and TB-500 occupy complementary anatomical and mechanistic niches. BPC-157 creates a superior healing environment locally — concentrated near the injection site for targeted repair of specific injuries, while also providing systemic anti-inflammatory benefits via abdominal SubQ. TB-500's actin-mediated mechanism drives cell migration to injury sites systemically — reaching areas that local BPC-157 injection cannot adequately address. The two peptides share no receptor pathways and do not compete — they are additive across every tissue type and injury presentation. Where one has gaps, the other fills them.`,
+    whoIsItFor: `Ideal for: active athletes dealing with chronic or acute injuries; anyone who has exceeded their body's natural recovery capacity; individuals returning from injury who want to accelerate rehabilitation; and those who simply want to maintain the structural integrity required for consistent, high-frequency training. The Wolverine Stack is also the recommended starting point for peptide newcomers — both compounds are well-characterized, the protocol is simple, and the benefits are rapid and clearly measurable.`,
     timeline: [
-      { range: 'Days 1–7', title: 'Rapid Inflammation Control', what: 'BPC-157 produces the fastest results of any compound in the stack. Pain and swelling from acute injuries typically reduce significantly within the first week. Gut health improvements are often noticed within days. Sleep quality improves from Ipamorelin within the first week.' },
-      { range: 'Weeks 2–3', title: 'Structural Repair Initiated', what: 'TB-500 systemic effects become apparent — flexibility noticeably improves, multiple injury sites begin to resolve simultaneously. BPC-157 continues accelerating healing at primary injury sites. GHK-Cu collagen synthesis begins rebuilding connective tissue quality.' },
-      { range: 'Weeks 4–6', title: 'Training Capacity Restoration', what: 'Most acute injuries are substantially resolved. Training volume and intensity can be progressively restored. Recovery between sessions is dramatically faster. The combination of resolved injuries and improved tissue quality creates a training capacity that exceeds what was possible before the protocol.' },
-      { range: 'Weeks 7–8', title: 'Full Recovery & Tissue Optimization', what: 'Connective tissue quality is at its highest point of the cycle — GHK-Cu collagen gains are significant. Flexibility and range of motion are maximized. Athletes at this stage often report that their body feels better than it did before whatever injury initiated the protocol. End the cycle; maintain training at elevated capacity.' },
+      { range: 'Week 1–2', title: 'Anti-Inflammatory Foundation', what: 'BPC-157 begins reducing local and systemic inflammation within days. Gut health improvements are often the first noticed effect. TB-500 loading phase begins — 2 injections per week to saturate tissue levels.' },
+      { range: 'Weeks 3–4', title: 'Accelerated Tissue Repair', what: 'Injury healing accelerates measurably. Users with chronic injuries typically notice significant pain reduction and improved range of motion during this phase. Training recovery between sessions improves noticeably.' },
+      { range: 'Weeks 5–6', title: 'Structural Restoration', what: 'Tendon, ligament, and muscle repair progresses into consolidation phase. Flexibility and range of motion improvements from TB-500 become pronounced. Overall body feels structurally "younger" and more resilient.' },
+      { range: 'Weeks 7–8', title: 'Peak Recovery State', what: 'Full protocol effects realized. Injuries that prompted the stack are typically resolved or significantly improved. Training capacity is at a new high — recovery between sessions is fast enough to sustain the frequency optimization requires.' },
     ],
     keyBenefits: [
-      'BPC-157 and TB-500 combined address every stage of the healing cascade',
-      'Pain and inflammation reduction from acute injuries within days',
-      'Systemic TB-500 healing rehabilitates multiple injury sites simultaneously',
-      'Ipamorelin GH optimization amplifies overnight repair rate',
-      'GHK-Cu ensures connective tissue rebuilds with superior structural quality',
-      'Flexibility and range of motion improvements prevent future injuries',
-      'Training capacity fully restored — often exceeds pre-injury baseline',
-      'Connective tissue durability improvements persist beyond the cycle',
+      'Complementary local (BPC-157) + systemic (TB-500) healing for complete coverage',
+      'Accelerates healing of tendons, ligaments, muscle, gut, and neural tissue',
+      'Dramatically reduces chronic inflammation across all tissue types',
+      'Enables higher training frequency by removing the recovery bottleneck',
+      'Improves flexibility and range of motion — TB-500\'s defining benefit',
+      'Simplest protocol in the catalog — two compounds, two injection schedules',
+      'Ideal foundation stack for peptide protocol beginners',
+      'Benefits are rapid — often measurable improvements within the first 2 weeks',
     ],
-    cycleProtocol: '8 weeks on, 4 weeks off. BPC-157: daily throughout. TB-500: 2–2.5mg 2–3x weekly for 4 weeks (loading), then 2.5mg weekly for final 4 weeks (maintenance). Ipamorelin: pre-sleep throughout. GHK-Cu: 2x weekly throughout. For severe injuries, a second 8-week cycle can follow the 4-week break.',
+    cycleProtocol: '8 weeks on. BPC-157: 200–500mcg daily throughout. TB-500: loading phase of 2–2.5mg 2–3× per week for weeks 1–4, then maintenance of 2–2.5mg every 2 weeks for weeks 5–8. After the 8-week cycle, 4 weeks off before repeating. For chronic injury management, some researchers run lower-dose maintenance protocols continuously.',
     faqs: [
-      { q: 'Should I inject BPC-157 near the injury site?', a: 'For specific injury sites (tendon, ligament, muscle), injecting within a few centimeters of the injury produces more concentrated local healing effects. For systemic benefits and gut health, abdominal SubQ works well. Many users do both — a local injection near the injury and a systemic abdominal injection — during the same protocol.' },
-      { q: 'Can I train through injuries while on this stack?', a: 'The stack does not eliminate the need for smart training modification. It accelerates healing dramatically, but tissues under continuous excessive load cannot heal optimally. Reduce load on injured structures, maintain mobility work, and allow the peptides to work. You can typically maintain higher training volume than you could without the stack, but still respect genuine tissue damage signals.' },
-      { q: 'How quickly does the pain reduction happen?', a: 'Most users report measurable pain reduction within 3–7 days of starting BPC-157. The speed depends on injury severity and location. Tendon injuries near the site of injection typically respond fastest. Systemic inflammation reduction is also rapid. TB-500\'s flexibility improvements become noticeable at 1–2 weeks.' },
-      { q: 'Is this stack appropriate for post-surgical recovery?', a: 'Yes — the Wolverine Stack is one of the most valuable protocols for post-surgical recovery. The tissue repair mechanisms are identical to what benefits non-surgical injuries. Many users begin BPC-157 and TB-500 immediately post-surgery (with medical awareness). The accelerated healing can compress months of typical recovery into weeks.' },
+      { q: 'Where should I inject BPC-157?', a: 'For specific injuries: subcutaneous or intramuscular injection near the injury site concentrates the healing signal locally. For general gut, anti-inflammatory, and systemic benefits: abdominal subcutaneous injection. Many researchers use multiple injection sites to address both specific injuries and systemic optimization simultaneously.' },
+      { q: 'How quickly does BPC-157 work?', a: 'Anti-inflammatory and gut healing effects are often noticeable within the first week. Structural tissue repair (tendons, ligaments) takes longer — typically 3–6 weeks of consistent use. Acute injuries heal significantly faster than chronic ones.' },
+      { q: 'Can I add CJC-1295/Ipamorelin to this stack?', a: 'Absolutely — GH optimization amplifies BPC-157\'s healing effects because elevated GH drives IGF-1 production, which directly accelerates tissue repair. Adding CJC-1295/Ipamorelin creates the full Body Sculptor stack with a recovery foundation. This is the protocol for serious athletes.' },
+      { q: 'Is this stack appropriate for non-athletes?', a: 'Yes — BPC-157 and TB-500 benefit anyone dealing with chronic pain, inflammation, gut dysfunction, or accelerated aging-related tissue decline. The recovery benefits extend well beyond athletic performance to quality of life.' },
+    ],
+  },
+
+  {
+    id: 'weight-loss',
+    name: 'The Metabolic Reset',
+    tagline: 'GLP-1 receptor agonist fat loss — clinical-grade results',
+    shortDesc: 'Semaglutide or tirzepatide-based fat loss protocol producing clinically documented weight reductions of 15–22%+ through powerful appetite suppression and metabolic optimization.',
+    badge: 'Clinical Results',
+    accent: '#e05080',
+    difficulty: 'Beginner',
+    goal: 'Significant fat loss and metabolic improvement',
+    duration: '24 weeks',
+    outcomes: ['15–22%+ body weight reduction', 'Powerful appetite suppression', 'Improved insulin sensitivity', 'Reduced visceral fat', 'Improved metabolic markers'],
+    compounds: [
+      {
+        slug: 'tirzepatide',
+        role: 'Primary Fat Loss Agent — Dual GLP-1/GIP Agonist',
+        timing: '2.5–15mg SubQ, once weekly',
+        why: 'Tirzepatide is the most effective single-compound fat loss peptide available through Apollo — demonstrated 22.5% average weight reduction at the highest dose in clinical trials, exceeding semaglutide\'s outcomes. Dual GLP-1 and GIP receptor activation produces both the powerful appetite suppression of GLP-1 agonism and the metabolic improvements of GIP activation. For those who have never used a GLP-1-class compound, tirzepatide delivers the most impressive fat loss outcomes available.',
+      },
+      {
+        slug: 'bpc-157',
+        role: 'GI Tolerance & Gut Health Support',
+        timing: '200–300mcg SubQ, daily during ramp-up',
+        why: 'The most common side effects of tirzepatide and other GLP-1-class compounds are gastrointestinal: nausea, discomfort, and altered gut motility during dose escalation. BPC-157 directly addresses these through its profound gut-healing and anti-inflammatory effects. Running BPC-157 concurrently — especially during the first 8–12 weeks of dose escalation — significantly reduces GI side effects, improves tolerability, and allows for faster dose progression to therapeutic fat loss ranges.',
+      },
+    ],
+    fullDescription: `The Metabolic Reset is the peptide protocol for significant, clinically-grounded fat loss. It is built around tirzepatide — the compound behind Mounjaro and Zepbound — which represents the current peak of GLP-1-class fat loss efficacy with its dual GLP-1/GIP receptor activation and 22.5% average weight reduction in clinical trials.
+
+The protocol addresses the most important practical obstacle to GLP-1-class compound success: GI tolerability during dose escalation. The standard dose escalation approach (starting at 2.5mg weekly and increasing every 4 weeks) minimizes side effects for most users, but BPC-157 as a concurrent gut optimization compound dramatically reduces the nausea and GI discomfort that causes protocol abandonment. The result is a significantly more manageable escalation process and faster achievement of therapeutic dosing ranges.
+
+Fat loss with tirzepatide occurs through multiple mechanisms simultaneously: appetite suppression via hypothalamic GLP-1 receptor activation, slowed gastric emptying extending meal satiety, improved peripheral insulin sensitivity reducing fat storage signals, and potential direct fat oxidation effects via GIP receptor activation in adipose tissue. The weight that is lost is predominantly fat — visceral fat in particular, which poses the greatest metabolic health risk and is the most resistant to diet and exercise alone.
+
+For individuals who want a more aggressive protocol or have found semaglutide alone insufficient, Retatrutide (triple GLP-1/GIP/Glucagon agonist) can be substituted as the primary compound for the highest efficacy available — documented 24.2% weight reduction in Phase 2 trials.`,
+    synergy: `BPC-157 and tirzepatide work synergistically through their respective GI mechanisms. Tirzepatide's slowed gastric emptying and altered gut motility creates the GI environment most prone to side effects during dose escalation. BPC-157's anti-inflammatory, mucosal healing, and nitric oxide modulating effects directly address the gut tissue changes that cause these symptoms — reducing nausea, improving motility regulation, and healing any mucosal irritation that GLP-1 receptor activation produces. The result is better tolerability, faster dose progression, and fewer protocol interruptions due to side effects.`,
+    whoIsItFor: `Designed for anyone with significant excess body fat who wants clinical-grade fat loss outcomes. Ideal for those who have tried conventional diet and exercise protocols and encountered the metabolic adaptation that limits results, those with metabolic health concerns (insulin resistance, elevated triglycerides, high blood pressure), and those who want the most efficient path to substantial body fat reduction. Not suitable as a body composition "finisher" protocol — this is for those with meaningful fat loss goals.`,
+    timeline: [
+      { range: 'Weeks 1–4', title: 'Escalation Phase 1', what: 'Tirzepatide at 2.5mg weekly. BPC-157 daily for GI support. Appetite reduction begins — most users notice meaningful hunger reduction within the first 1–2 weeks. Body weight reduction of 1–3% typical in this phase.' },
+      { range: 'Weeks 5–12', title: 'Dose Progression', what: 'Escalating tirzepatide: 5mg (weeks 5–8), 7.5mg (weeks 9–12). Fat loss accelerates with each dose increase. Appetite suppression deepens. Visceral fat reduction becomes visible — particularly reduced abdominal circumference.' },
+      { range: 'Weeks 13–20', title: 'Therapeutic Range', what: 'Tirzepatide at 10–15mg weekly. Peak fat loss rate. Most users find this phase produces the most dramatic visible body composition changes. BPC-157 can be reduced to intermittent use if GI tolerance is established.' },
+      { range: 'Weeks 21–24', title: 'Consolidation', what: 'Maintaining therapeutic dose. Fat loss continues, pace may moderate. Focus on establishing nutritional habits that will maintain results long-term. Total body weight reduction of 15–22%+ achievable across the full protocol.' },
+    ],
+    keyBenefits: [
+      'Up to 22.5% body weight reduction demonstrated in clinical trials',
+      'Dual GLP-1/GIP mechanism outperforms semaglutide in head-to-head comparison',
+      'BPC-157 inclusion dramatically improves GI tolerability during escalation',
+      'Visceral fat reduction is the primary outcome — the most metabolically important fat',
+      'Improves insulin sensitivity, lipid profiles, and blood pressure simultaneously',
+      'Once-weekly injection — minimal administration burden',
+      'Dose escalation protocol minimizes side effects during the tolerance-building phase',
+      'Option to upgrade to retatrutide for maximum efficacy if plateau occurs',
+    ],
+    cycleProtocol: 'Continuous protocol: tirzepatide is used at maintenance dosing until target weight is achieved. Unlike cycle-based compounds, GLP-1-class peptides are typically used continuously for the duration of the research period. After achieving target weight, dose can be tapered to the lowest dose that maintains outcomes. BPC-157 cycles 8 weeks on, 4 weeks off within the larger protocol.',
+    faqs: [
+      { q: 'What is the difference between semaglutide and tirzepatide for this protocol?', a: 'Semaglutide activates only GLP-1 receptors and produces ~15% weight loss. Tirzepatide activates both GLP-1 and GIP receptors and produces ~22.5% weight loss at peak dosing. Tirzepatide is the recommended primary compound for this protocol due to superior efficacy. Semaglutide is a good starting point for those who prefer to begin with the simpler compound.' },
+      { q: 'Why does this stack include BPC-157?', a: 'GLP-1-class compounds frequently cause GI side effects (nausea, bloating, discomfort) especially during dose escalation. BPC-157\'s gut-healing and anti-inflammatory effects directly reduce these side effects, improve tolerability, and prevent protocol abandonment. It is one of the most practical additions to any GLP-1 protocol.' },
+      { q: 'Will I lose muscle mass on this protocol?', a: 'GLP-1-class compounds primarily mobilize fat rather than muscle. Adding CJC-1295/Ipamorelin to the stack preserves and builds lean mass while the fat loss occurs — creating a superior body composition outcome vs. fat loss alone.' },
+      { q: 'Can I use retatrutide instead of tirzepatide?', a: 'Yes — retatrutide (triple GLP-1/GIP/Glucagon agonist) is the most potent fat loss compound available through Apollo, with 24.2% average weight reduction in Phase 2 trials. It requires a more gradual escalation protocol due to its potency. Substituting retatrutide for tirzepatide is appropriate for those seeking maximum efficacy.' },
     ],
   },
 
   {
     id: 'longevity',
-    name: 'The Longevity Protocol',
-    tagline: 'Comprehensive biological age reversal',
-    shortDesc: 'The most comprehensive anti-aging protocol available. Combines telomere extension, mitochondrial optimization, immune enhancement, and skin rejuvenation.',
-    badge: 'Longevity',
+    name: 'The Longevity Stack',
+    tagline: 'Telomere lengthening, cellular energy & collagen — biological age reversal',
+    shortDesc: 'Targets the three primary mechanisms of biological aging: telomere shortening, NAD+ depletion, and dermal collagen decline. The comprehensive anti-aging protocol.',
+    badge: 'Anti-Aging',
     accent: '#a060ff',
     difficulty: 'Intermediate',
-    goal: 'Biological age reversal & longevity',
-    duration: 'Ongoing / Annual Cycle',
-    outcomes: ['Measurable telomere lengthening', 'Improved biological age markers', 'Enhanced immune function', 'Better sleep depth', 'Improved skin quality', 'Mitochondrial optimization'],
+    goal: 'Biological age reversal and longevity',
+    duration: '12 weeks',
+    outcomes: ['Telomere lengthening (Epithalon)', 'Restored cellular energy (NAD+)', 'Improved skin structure (GHK-Cu)', 'Enhanced sleep architecture', 'Reduced biological aging markers'],
     compounds: [
       {
         slug: 'epithalon',
-        role: 'Telomere Extension & Cellular Age Reversal',
-        timing: '5–10mg SubQ, daily for 10–20 day cycles, 2× per year',
-        why: 'Epithalon is the cornerstone of the Longevity Protocol because it addresses aging at the most fundamental level: telomere length. By activating telomerase, it enables cells throughout the body to rebuild their telomeres — reversing the chromosomal clock that determines biological age. No other compound in existence does this. Without Epithalon, this protocol addresses symptoms and biomarkers of aging; with it, the stack addresses the root cause at the chromosomal level.',
+        role: 'Telomere Lengthening & Pineal Restoration',
+        timing: '5–10mg SubQ daily × 10–20 days (cyclical)',
+        why: 'Epithalon is the foundational compound of any serious longevity protocol — the only compound with human data demonstrating measurable telomere lengthening. Telomere shortening is one of the primary molecular mechanisms of aging; Epithalon\'s telomerase activation directly addresses this. Its pineal gland-derived origin also makes it the most effective compound for restoring age-related melatonin decline — dramatically improving sleep architecture, which is itself one of the most powerful levers for biological age reversal.',
+      },
+      {
+        slug: 'nad-plus',
+        role: 'Cellular Energy Restoration & Sirtuin Activation',
+        timing: '250–500mg IV or SubQ, 2–5× weekly',
+        why: 'NAD+ depletion is the second major mechanism of biological aging — by age 50, NAD+ levels have often declined by 50% or more, impairing mitochondrial energy production, DNA repair, and sirtuin-regulated gene expression. Direct NAD+ supplementation restores the coenzyme that drives every energy-producing reaction in the cell, activates the SIRT1–7 longevity proteins, and provides the substrate for PARP-mediated DNA damage repair. The combination of Epithalon (telomere biology) + NAD+ (mitochondrial and sirtuin biology) covers the two most critical intracellular aging mechanisms simultaneously.',
       },
       {
         slug: 'ghk-cu',
-        role: 'Skin Rejuvenation & Gene Expression Reset',
-        timing: '1–2mg SubQ, 3× weekly',
-        why: 'GHK-Cu addresses aging from the gene expression dimension — resetting the activity of 4,000+ genes from an aged profile toward a youthful one. This is the most visible component of the Longevity Protocol: skin that thickens, firms, and develops the luminosity of younger biological age. GHK-Cu also provides powerful antioxidant protection against the oxidative damage that is a primary driver of aging across all tissues.',
-      },
-      {
-        slug: 'thymosin-alpha-1',
-        role: 'Immune System Optimization',
-        timing: '1.6mg SubQ, 2–3× weekly',
-        why: 'Immune function is a critical dimension of biological aging. The thymus atrophies with age, reducing T-cell production and quality — leading to increased susceptibility to infection, reduced cancer surveillance, and chronic immune dysregulation. Thymosin Alpha-1 restores the thymic signaling that drives T-cell optimization, directly reversing this immune aging component. A strong, well-regulated immune system is also a prerequisite for the other compounds\' full effectiveness — inflammation from immune dysregulation blunts every other optimization.',
-      },
-      {
-        slug: 'mots-c',
-        role: 'Mitochondrial Health & Metabolic Optimization',
-        timing: '5–10mg SubQ, 3–5× weekly',
-        why: 'Mitochondrial function is the energetic dimension of aging. Mitochondria accumulate damage with age — producing less energy, generating more reactive oxygen species, and triggering the cellular stress responses that accelerate senescence. MOTS-c, as a mitochondrially-encoded peptide, directly communicates with mitochondria to activate the repair, biogenesis, and efficiency programs that restore youthful energy metabolism. Combined with Epithalon\'s chromosomal optimization, MOTS-c addresses aging from both the genomic and energetic dimensions simultaneously.',
+        role: 'Dermal & Tissue Anti-Aging',
+        timing: '1–2mg SubQ, 3–5× weekly',
+        why: 'GHK-Cu addresses the most visible dimension of biological aging: the structural decline of dermal collagen and elastin. Its activation of 4,000+ skin-related genes includes pathways involved in wound healing, antioxidant defense, and cellular renewal that extend beyond skin into multiple tissue types. GHK-Cu\'s documented 121% increase in skin density represents visible biological age reversal — the external manifestation of the cellular renewal that Epithalon and NAD+ drive at the molecular level.',
       },
     ],
-    fullDescription: `The Longevity Protocol is built on a principle that distinguishes it from every anti-aging product ever marketed: it addresses the actual biological mechanisms of aging rather than merely masking its symptoms. Moisturizers, antioxidants, and even most supplements manage the appearance of aging. The Longevity Protocol reverses its underlying biology.
+    fullDescription: `The Longevity Stack targets the three primary mechanisms of biological aging that modern peptide and coenzyme research has identified as most amenable to intervention: telomere shortening (Epithalon), NAD+ depletion (NAD+), and dermal collagen decline (GHK-Cu). Each compound addresses a distinct level of biological aging — chromosomal, mitochondrial, and structural — creating a comprehensive anti-aging protocol that operates at every level simultaneously.
 
-Aging occurs through four primary mechanisms: telomere shortening (the chromosomal clock), mitochondrial dysfunction (the energetic decline), immune deterioration (the loss of cellular surveillance), and epigenetic drift (the shift in gene expression toward aged patterns). The Longevity Protocol addresses all four simultaneously with the only compounds known to intervene at each level.
+Epithalon is the centerpiece — the only compound with published human data demonstrating measurable telomere lengthening. Dr. Vladimir Khavinson's 12-year follow-up study showed reduced cancer incidence and all-cause mortality in elderly subjects receiving periodic Epithalon treatment, making it the most compelling human longevity data for any peptide compound. Its pineal gland origin also makes it uniquely effective for restoring melatonin production — the age-related decline of which is responsible for much of the deterioration in sleep architecture that accelerates biological aging after 40.
 
-Epithalon's telomerase activation is the most remarkable intervention in the entire protocol — and in anti-aging science generally. Telomere lengthening has been the theoretical goal of longevity science for decades. Epithalon makes it pharmacologically achievable. Measurable telomere lengthening has been demonstrated in clinical work, and the downstream effects — improved cellular replication quality, reduced senescent cell burden, better sleep and immune function — are consistent with genuine biological rejuvenation.
+NAD+ addresses the second pillar: the mitochondrial and sirtuin biology of aging. The sirtuins — particularly SIRT1 and SIRT3 — regulate hundreds of age-related gene expression pathways, and their activity is directly limited by NAD+ availability. Restoring NAD+ to youthful levels activates these longevity proteins, enhances mitochondrial biogenesis, improves DNA damage repair capacity, and creates the metabolic environment associated with cellular youth.
 
-MOTS-c addresses the mitochondrial dimension with equal precision. Mitochondrial dysfunction is not merely an energy problem — it is an aging accelerant that produces oxidative stress, triggers inflammatory signaling, and directly damages the cellular machinery that all other systems depend on. MOTS-c's AMPK activation and mitochondrial biogenesis effects restore the metabolic efficiency of younger cells, creating the energy foundation that allows every other biological process to function at its optimum.
-
-GHK-Cu completes the visible component: while Epithalon and MOTS-c work at the cellular and chromosomal level, GHK-Cu produces the aesthetic expression of rejuvenation — skin that visibly thickens, firms, and brightens as its gene expression profile resets toward youth. The convergence of cellular age reversal and visible skin rejuvenation creates a comprehensive anti-aging transformation.`,
-    synergy: `The Longevity Protocol's synergy is additive at every level. Epithalon and MOTS-c address aging from complementary dimensions — chromosomal (telomere length) and energetic (mitochondrial function) — so each operates on aging mechanisms the other does not directly target. Thymosin Alpha-1 ensures that the immune system is fully functional to take advantage of the cellular rejuvenation that Epithalon and MOTS-c drive — a rejuvenated cell in an inflammatory immune environment cannot fully express its improved biology. GHK-Cu translates the cellular-level rejuvenation into visible, measurable skin improvements that provide both feedback on the protocol's progress and tangible aesthetic reward for the investment in long-term biological health.`,
-    whoIsItFor: `Designed for those who think long-term about their biological trajectory — people in their 30s–50s (and beyond) who want to actively manage their aging process rather than accept it. Ideal for those already optimizing their physical appearance who want to address the deep biological substrate that determines how well they age over the coming decades. Also valuable for anyone with specific longevity goals: improved energy and vitality, maintained immune function, preserved cognitive capacity, and the sustained physical quality associated with a younger biological age.`,
+GHK-Cu provides the connective tissue and skin dimension — the visible, external expression of biological age. Its collagen stimulation, wound healing acceleration, and antioxidant protection create the dermal architecture associated with physical youth, while its broader gene expression effects extend anti-aging benefits to multiple tissue systems beyond skin alone.`,
+    synergy: `The three compounds create a cross-level anti-aging system. Epithalon's telomerase activation and melatonin restoration work at the chromosomal and neuroendocrine levels — ensuring the cellular machinery is capable of sustained renewal. NAD+ provides the metabolic fuel for the sirtuin-regulated DNA repair and mitochondrial maintenance that cellular renewal requires. GHK-Cu executes structural renewal at the tissue level — stimulating the collagen synthesis and cellular regeneration that is the visible output of the cellular environment Epithalon and NAD+ create. Each compound addresses aging at a different biological level, and the combination produces effects at all levels simultaneously.`,
+    whoIsItFor: `Designed for individuals who are serious about biological age optimization — those who want to address aging at its mechanisms rather than merely its symptoms. Particularly relevant from age 35+ when telomere shortening accelerates, NAD+ decline becomes measurable, and skin collagen loss becomes visible. Also highly relevant for anyone with strong longevity goals regardless of age. The stack is appropriate for both men and women with no hormonal or sex-specific contraindications.`,
     timeline: [
-      { range: 'Cycle 1 (Months 1–2)', title: 'Foundation Establishment', what: 'MOTS-c and Thymosin Alpha-1 begin continuously. Epithalon 10-day cycle completed. GHK-Cu ongoing 3× weekly. Initial improvements: sleep quality (Epithalon), energy and metabolic efficiency (MOTS-c), reduced illness susceptibility (TA1). Skin quality begins visibly improving from GHK-Cu.' },
-      { range: 'Months 3–6', title: 'Compounding Biological Benefits', what: 'GHK-Cu skin improvements become significant — collagen density increases are visible. MOTS-c metabolic optimization produces improved body composition. Immune markers improve measurably. Sleep quality sustained at elevated baseline from first Epithalon cycle.' },
-      { range: 'Month 6+ (Second Epithalon Cycle)', title: 'Second Telomere Cycle & Deepening', what: 'Second Epithalon 10–20 day cycle. If bloodwork or telomere testing was done at baseline, comparison at this point may show measurable changes. All compounds have had 6 months to compound their effects — the biological transformation is now comprehensive rather than individual-compound effects.' },
-      { range: 'Ongoing', title: 'Annual Protocol Maintenance', what: 'Continue MOTS-c, GHK-Cu, and Thymosin Alpha-1 with appropriate cycling. Epithalon run twice yearly. Annual bloodwork baseline provides measurable tracking of biological age markers. The protocol is designed to run indefinitely — its value compounds with time.' },
+      { range: 'Weeks 1–3', title: 'Epithalon Cycle + Foundation', what: 'Epithalon 10–20 day cycle initiated. NAD+ and GHK-Cu begin simultaneously. Sleep improvements from melatonin normalization are typically the first noticed effect — often dramatic within the first week. Energy and cognitive clarity improvements from NAD+ begin within 2–3 weeks.' },
+      { range: 'Weeks 4–6', title: 'Cellular Energy Restoration', what: 'NAD+ effects compound — improved energy metabolism, better stress tolerance, cognitive improvements. GHK-Cu skin improvements begin — hydration, elasticity, and early luminosity changes. Epithalon cycle complete.' },
+      { range: 'Weeks 7–10', title: 'Structural Transformation', what: 'GHK-Cu collagen remodeling produces clearly visible skin quality improvements. NAD+ maintenance at twice-weekly provides sustained cellular energy and sirtuin activation. Overall physical presentation reflects improved biological age markers.' },
+      { range: 'Weeks 11–12', title: 'Full Protocol Expression', what: 'Complete stack effects realized. Optional second Epithalon 10-day cycle in weeks 11–12 for enhanced telomere benefit. Skin quality, energy levels, and sleep quality represent the compound output of 12 weeks of three-level anti-aging intervention.' },
     ],
     keyBenefits: [
-      'Epithalon activates telomerase for measurable telomere lengthening',
-      'MOTS-c restores mitochondrial function and metabolic youth',
-      'Thymosin Alpha-1 reverses immune aging through thymic restoration',
-      'GHK-Cu produces visible skin rejuvenation through gene expression reset',
-      'Addresses four distinct mechanisms of aging simultaneously',
-      'Improved sleep quality — one of the first and most consistent outcomes',
-      'Enhanced energy and vitality from mitochondrial optimization',
-      'The only stack that intervenes at the chromosomal level of aging',
+      'Epithalon: the only compound with human data showing measurable telomere lengthening',
+      'NAD+ restoration activates SIRT1–7 longevity proteins for comprehensive anti-aging',
+      'GHK-Cu 121% skin density increase — visible biological age reversal',
+      'Three-level intervention: chromosomal, mitochondrial, and structural aging addressed',
+      'Dramatic sleep quality improvement from Epithalon melatonin normalization',
+      'Improved cognitive function and energy from NAD+ metabolic restoration',
+      'Antioxidant protection at both cellular (NAD+/sirtuins) and dermal (GHK-Cu) levels',
+      'Aligned with published human longevity research — not theoretical',
     ],
-    cycleProtocol: 'MOTS-c: 5–10mg 3–5× weekly, ongoing with 1-month breaks every 3 months. GHK-Cu: 1–2mg 3× weekly, ongoing. Thymosin Alpha-1: 1.6mg 2–3× weekly, 4–8 week cycles with breaks. Epithalon: 10–20 day cycles at 5–10mg/day, repeated twice yearly (e.g., spring and autumn). Annual bloodwork recommended to track biological age markers.',
+    cycleProtocol: '12-week protocol. Epithalon: 10–20 day intensive cycle at weeks 1–3, optional repeat at weeks 11–12. 1–2 Epithalon cycles per year aligns with the Khavinson research protocol. NAD+: 2–5× per week loading for 4 weeks, then 1–2× per week maintenance. GHK-Cu: 3–5× per week throughout. Most run this protocol 1–2× per year.',
     faqs: [
-      { q: 'How do I know the protocol is working?', a: 'The most accessible markers are subjective: sleep quality improvement, energy levels, skin quality, and frequency of illness. For objective measurement: telomere length testing (available through commercial labs) before and after cycles provides direct data. IGF-1, inflammatory markers (CRP, IL-6), and immune panels also show measurable changes within 3–6 months.' },
-      { q: 'At what age should I start a Longevity Protocol?', a: 'Biological aging begins in the mid-20s. The earlier the intervention, the more accumulated damage is prevented rather than reversed. Many practitioners recommend starting a basic Longevity Protocol (GHK-Cu + MOTS-c) in the 30s. Epithalon becomes particularly valuable from the mid-30s onward when telomere shortening rate accelerates.' },
-      { q: 'Is there any risk to the Epithalon cycles?', a: 'Epithalon has an extraordinary safety profile — it is a naturally occurring tetrapeptide that restores telomerase activity toward normal rather than supraphysiological levels. Decades of clinical research have not identified significant adverse effects. The primary consideration is that the 10–20 day cycle structure should be respected rather than running it continuously.' },
-      { q: 'Can I add other peptides to this stack?', a: 'Yes — the Longevity Protocol is a foundation that pairs well with other protocols. Adding Ipamorelin for GH optimization is the most common addition (GH declines with age and GH optimization has significant longevity benefits). BPC-157 is also complementary for the anti-inflammatory and tissue repair benefits. Build the longevity foundation first, then layer goal-specific compounds.' },
-    ],
-  },
-
-  {
-    id: 'neural',
-    name: 'The Neural Edge',
-    tagline: 'Peak cognitive performance & unshakeable confidence',
-    shortDesc: 'Optimize the cognitive dimension of looks maxing — mental sharpness, confidence, and presence that converts physical transformation into total magnetism.',
-    badge: 'Cognitive',
-    accent: '#40c0ff',
-    difficulty: 'Beginner',
-    goal: 'Cognitive peak performance & confidence',
-    duration: '6–8 weeks',
-    outcomes: ['Enhanced focus and processing speed', 'Eliminated anxiety', 'Deeper sleep architecture', 'Improved social confidence', 'Enhanced memory and learning'],
-    compounds: [
-      {
-        slug: 'semax',
-        role: 'BDNF Elevation & Cognitive Performance',
-        timing: '200–600mcg intranasal, 1–2× daily',
-        why: 'Semax provides the cognitive performance elevation through a mechanism no conventional nootropic matches: dramatic BDNF (Brain-Derived Neurotrophic Factor) increase. BDNF is the growth factor for neurons — the protein responsible for neuroplasticity, memory formation, and the maintenance of cognitive capacity. By elevating BDNF, Semax doesn\'t just improve function today; it actively builds neural infrastructure for sustained cognitive improvement.',
-      },
-      {
-        slug: 'selank',
-        role: 'Anxiety Elimination & Confidence',
-        timing: '250–500mcg intranasal, 1–2× daily',
-        why: 'Selank addresses the anxiety dimension that Semax alone cannot. Where Semax drives cognitive performance, Selank removes the interference — the chronic anxiety, social stress, and cortisol burden that prevent full cognitive capacity from deploying in high-stakes situations. Its GABA-modulating, serotonin-stabilizing mechanism produces genuine anxiolysis without the sedation or blunting of pharmaceutical alternatives. The result is calm, confident, socially present performance.',
-      },
-      {
-        slug: 'dsip',
-        role: 'Deep Sleep Architecture Optimization',
-        timing: '100–200mcg SubQ, pre-sleep',
-        why: 'Sleep is where cognitive performance is built. BDNF elevation from Semax, synaptic potentiation from learning, and the emotional regulation improved by Selank — all of these are consolidated, optimized, and made permanent during deep sleep. DSIP ensures this deep sleep window is maximized every night, turning overnight recovery into the most productive phase of the cognitive optimization protocol. Without optimal sleep, the daytime cognitive gains from Semax and Selank are partially lost each night.',
-      },
-      {
-        slug: 'epithalon',
-        role: 'Neuroprotection & Long-Term Neural Health',
-        timing: '10–20 day cycle protocol',
-        why: 'Cognitive optimization has a long-term and a short-term dimension. Semax and Selank address the immediate daily performance; Epithalon addresses the long-term health of the neural architecture they\'re optimizing. Epithalon\'s neuroprotective effects — antioxidant protection, telomere maintenance in neural cells, sleep regulation — create the biological foundation that makes cognitive peak performance sustainable over years rather than months.',
-      },
-    ],
-    fullDescription: `The Neural Edge is built on a recognition that looks maxing and cognitive optimization are the same project: the goal is to become the most compelling, high-performing version of yourself. Physical transformation gets noticed; cognitive and emotional excellence creates the actual impact. The Neural Edge addresses the brain with the same precision and biological sophistication that other protocols apply to the body.
-
-The cognitive performance component is anchored by Semax — not because it produces the most immediate stimulant effect (it doesn't, and that's the point) but because it builds cognitive capacity rather than merely borrowing against it. By elevating BDNF, Semax actually increases the density and plasticity of neural connections. Working memory, processing speed, and verbal fluency improve because the underlying neural infrastructure is genuinely strengthened, not just temporarily stimulated.
-
-Selank provides the emotional dimension that turns cognitive capability into actual performance. The most common bottleneck for high cognitive output is not insufficient intelligence — it is the anxiety, social stress, and cortisol overload that prevents existing intelligence from deploying. Selank eliminates this interference with the precision of a pharmaceutical anxiolytic but without any of the drawbacks: no sedation, no dependency, no tolerance, no cognitive blunting. What remains after Selank clears the anxiety interference is the user's full, unimpeded cognitive capacity, deployed with social ease and confidence.
-
-DSIP's role in the stack is both supportive and foundational. Sleep is not a passive recovery process — it is the period when everything the Neural Edge protocol builds is consolidated, organized, and made permanent. Deep delta wave sleep is when BDNF-mediated synaptic changes are stabilized, when cortisol from the day is cleared, and when the neural architecture optimized by Semax and Selank is restructured for the next day's performance. Without optimal deep sleep, even the best daytime cognitive protocol produces inconsistent results.
-
-Epithalon completes the Neural Edge with a long-term neuroprotective dimension. It maintains telomere length in neural cells, provides powerful antioxidant protection against neurological oxidative stress, and regulates the circadian rhythm that governs all of sleep's restorative functions. The four compounds together produce a cognitive optimization protocol that is simultaneously immediate (Semax + Selank within 20–30 minutes) and foundational (DSIP + Epithalon building a superior long-term neural platform).`,
-    synergy: `Semax and Selank have been described as the most synergistic nootropic pair available because their mechanisms address completely different aspects of cognitive performance: Semax elevates capability (BDNF, processing speed, memory); Selank removes interference (anxiety, cortisol, social stress). Neither overlap, both compound. DSIP then maximizes the overnight consolidation of everything Semax and Selank accomplished during the day — turning what would be partially lost during disrupted sleep into permanently strengthened neural patterns. Epithalon's neuroprotective effects preserve the brain that all three other compounds are optimizing, ensuring the cognitive improvements compound over months rather than decaying.`,
-    whoIsItFor: `Designed for anyone for whom cognitive performance, social confidence, and mental presence are as important as physical optimization. Ideal for professionals in high-stakes environments, performers, public speakers, and anyone who experiences performance-limiting anxiety in social or professional contexts. Also valuable for those experiencing cognitive fatigue, burnout, or the diffuse mental slowness that comes from chronic stress. The Neural Edge is the protocol that aligns mental performance with whatever physical optimization is already underway.`,
-    timeline: [
-      { range: 'Day 1–3', title: 'Immediate Cognitive Shift', what: 'Semax and Selank are among the fastest-acting peptides available — intranasal administration produces effects within 20–30 minutes. Users typically notice improved focus, reduced background anxiety, and enhanced social ease from the first doses. DSIP improves sleep quality immediately — deeper sleep is often noticeable on night one.' },
-      { range: 'Week 1–2', title: 'Consistent Performance Foundation', what: 'Daily Semax builds BDNF levels progressively — cognitive performance improvement deepens with continued use as neural infrastructure builds. Selank\'s anxiety reduction becomes consistent and reliable. Sleep quality is measurably improved. Cognitive and emotional performance are both elevated and stable.' },
-      { range: 'Weeks 3–6', title: 'Peak Cognitive State', what: 'Full BDNF elevation from consistent Semax use. The combination of enhanced cognitive performance and eliminated anxiety creates a mental state users describe as "operating at full capacity." Social confidence and presence are at their highest. Epithalon cycle can be run during this phase for neuroprotective foundation.' },
-      { range: 'Weeks 7–8', title: 'Consolidation', what: 'Complete the Semax/Selank cycle and take 1–2 weeks off before resuming. The neural improvements from BDNF elevation are not immediately lost during the break — the structural synaptic changes persist significantly beyond the active dosing period. DSIP can be continued for ongoing sleep optimization.' },
-    ],
-    keyBenefits: [
-      'Semax BDNF elevation builds neural capacity rather than just borrowing against it',
-      'Selank eliminates anxiety without sedation, dependency, or cognitive blunting',
-      'DSIP optimizes deep sleep where cognitive gains are consolidated nightly',
-      'Intranasal administration provides rapid onset within 20–30 minutes',
-      'Epithalon provides long-term neuroprotection for the brain being optimized',
-      'Social confidence and presence enhanced without pharmaceutical side effects',
-      'Cognitive improvements compound over the full cycle as BDNF rises',
-      'Stress cortisol reduction protects body composition and physical optimization',
-    ],
-    cycleProtocol: 'Semax + Selank: 3–4 weeks on, 1–2 weeks off. DSIP: ongoing 3–5× weekly for sleep optimization (no cycling required). Epithalon: run one 10–20 day cycle within the Neural Edge protocol or separately. Most users run 2–3 Neural Edge cycles per year, often timing them with demanding professional or social periods.',
-    faqs: [
-      { q: 'Can I use Semax and Selank together in one intranasal dose?', a: 'Yes — Pantheon offers a pre-mixed Selank + Semax vial specifically for this purpose. Administering them together is convenient and the complementary mechanisms work simultaneously. Alternatively, some users dose Semax in the morning (for cognitive activation) and Selank mid-day or before social situations (for anxiety management).' },
-      { q: 'Will I feel different immediately?', a: 'Most users notice effects from Semax and Selank within 20–60 minutes of their first intranasal dose — a combination of mental clarity, reduced anxiety, and improved focus. The initial effect is often described as removing a fog that wasn\'t noticed until it lifted. DSIP\'s sleep effects are typically noticed on the first night of use.' },
-      { q: 'Does Selank cause sedation?', a: 'No — this is Selank\'s defining feature. It produces powerful anxiolytic effects through GABA and serotonin modulation without any sedation. Users can and should dose it during the day in demanding professional and social contexts. The result is calm alertness, not tranquilized performance.' },
-      { q: 'Can I run the Neural Edge alongside a body composition stack?', a: 'Absolutely — the Neural Edge compounds do not interact with GH peptides, recovery peptides, or body composition compounds. Running Semax + Selank + DSIP alongside an Ipamorelin + CJC-1295 body composition protocol is a common and highly effective combination. Optimizing both body and mind simultaneously is the definition of comprehensive looks maxing.' },
-    ],
-  },
-
-  {
-    id: 'slim',
-    name: 'The Slim Protocol',
-    tagline: 'Next-generation peptide fat loss — the GLP-1 recomposition stack',
-    shortDesc: 'The most advanced fat loss peptide protocol available. Combines next-gen GLP-1 weight management with direct lipolysis activation for dramatic, sustainable body transformation.',
-    badge: 'Fat Loss',
-    accent: '#e05080',
-    difficulty: 'Beginner',
-    goal: 'Maximum fat loss & weight management',
-    duration: '12–24 weeks',
-    outcomes: ['Significant body fat reduction', 'Reduced appetite', 'Improved metabolic health', 'Preserved lean muscle', 'Better insulin sensitivity'],
-    compounds: [
-      {
-        slug: 'tirzepatide',
-        role: 'Dual GIP/GLP-1 Appetite & Metabolic Control',
-        timing: '2.5–15mg SubQ, once weekly',
-        why: 'Tirzepatide provides the primary fat loss driver through the most clinically validated GLP-1-based mechanism available. Its dual GIP/GLP-1 activation produces powerful appetite suppression through central mechanisms — reducing caloric intake naturally rather than through willpower — while simultaneously improving insulin sensitivity and fat metabolism at the cellular level. Clinical evidence demonstrates 15–22% body weight reduction, making it the most effective pharmaceutical-grade fat loss compound documented.',
-      },
-      {
-        slug: 'aod-9604',
-        role: 'Direct Lipolysis Activation',
-        timing: '300–500mcg SubQ, daily',
-        why: 'AOD-9604 adds the direct lipolysis dimension that GLP-1 agonists alone do not provide. As the isolated fat-burning fragment of growth hormone, it directly activates beta-3 adrenergic receptors on fat cells — triggering the release of stored fat for oxidation independently of the caloric deficit created by Tirzepatide. The combination of reduced caloric intake (Tirzepatide) and direct fat cell activation (AOD-9604) creates a synergistic fat loss environment that exceeds what either achieves alone.',
-      },
-      {
-        slug: 'bpc-157',
-        role: 'Metabolic Health Foundation & GI Support',
-        timing: '200–300mcg SubQ or oral, daily',
-        why: 'GLP-1 agonists can cause gastrointestinal side effects — nausea, reduced gastric motility, and digestive discomfort. BPC-157 directly addresses this by healing and protecting the gut lining, reducing GI inflammation, and improving gut motility. Beyond GI support, BPC-157\'s systemic anti-inflammatory effects address the metabolic inflammation that accompanies obesity and fat loss — creating a healthier metabolic environment in which the other compounds work more effectively.',
-      },
-      {
-        slug: '5-amino-1mq',
-        role: 'NNMT Inhibition & Metabolic Resistance Reversal',
-        timing: '5–10mg SubQ, daily',
-        why: 'The defining feature of fat loss resistance — the plateau that defeats even aggressive caloric restriction — is often driven by upregulated NNMT activity in fat cells. 5-Amino-1MQ inhibits NNMT, shifting fat cells from their defensive, storage-dominant state toward a metabolism-dominant state. This directly addresses the most common reason fat loss plateaus and makes the caloric deficit created by Tirzepatide produce proportionally greater fat loss.',
-      },
-    ],
-    fullDescription: `The Slim Protocol is the most scientifically advanced fat loss peptide stack available — designed for those who want dramatic, medically-informed body transformation that goes beyond what any previous generation of fat loss tools could achieve. It combines next-generation GLP-1 pharmacology with direct lipolysis activation and metabolic resistance reversal.
-
-The protocol's design philosophy is mechanistic coverage: most fat loss efforts fail not because they don't create a caloric deficit, but because the body's adaptive responses — reduced metabolic rate, increased appetite, upregulated fat storage — eventually overcome the deficit. The Slim Protocol addresses these adaptive mechanisms directly rather than just increasing the caloric deficit indefinitely.
-
-Tirzepatide's dual GLP-1/GIP activation drives the most powerful and sustained appetite suppression available — not through stimulant mechanisms that fade and produce rebounds, but through genuine hormonal satiety signaling that the body does not habituate to in the same way. Clinical participants maintained weight loss through 72 weeks of treatment, suggesting the mechanism is resistant to the short-term adaptation that defeats most approaches.
-
-AOD-9604 adds a direct cellular activation that bypasses the entire hormonal calorie-in-calorie-out framework. By directly signaling fat cells to release their stored contents for oxidation, it creates fat burning that is not dependent on caloric deficit alone. This is particularly valuable for stubborn fat deposits — areas where receptors are downregulated and conventional deficit approaches produce minimal lipolysis.
-
-5-Amino-1MQ addresses the mechanistic root of metabolic resistance. NNMT upregulation in obese adipose tissue is one of the most thoroughly documented reasons why body fat "defends itself" — why the same caloric deficit produces less fat loss as time goes on and why some fat seems essentially immune to conventional interventions. By inhibiting NNMT, the protocol removes this defensive mechanism, making the body's fat stores as metabolically accessible as they were before metabolic adaptation occurred.
-
-BPC-157 completes the protocol as the safety and effectiveness foundation, ensuring GI health during GLP-1 treatment and providing the anti-inflammatory environment in which metabolic transformation occurs most completely.`,
-    synergy: `The four compounds attack fat loss from four distinct angles simultaneously. Tirzepatide reduces caloric intake through hormonal appetite suppression. AOD-9604 directly activates fat oxidation independently of caloric deficit. 5-Amino-1MQ removes the NNMT-driven metabolic resistance that would otherwise limit the effectiveness of both. BPC-157 ensures GI health and reduces the metabolic inflammation that accompanies significant fat loss and GLP-1 treatment. Each compound's mechanism remains active regardless of the others — there is no receptor competition, no diminishing returns from duplication, and no single point of failure.`,
-    whoIsItFor: `Designed for those who want the most effective, science-backed fat loss protocol available — particularly those who have tried conventional approaches (caloric restriction, cardio, standard weight loss medications) and found them insufficient or unsustainable. Highly valuable for those with significant amounts of fat to lose who want to use the most powerful tools available. Also excellent for those who have plateaued at a body fat level they cannot push past through diet and training alone — the metabolic resistance reversal mechanism makes this protocol uniquely effective for plateau-breaking.`,
-    timeline: [
-      { range: 'Weeks 1–4', title: 'Appetite Reset & Initiation', what: 'Tirzepatide titration from 2.5mg weekly to 5mg weekly. Appetite suppression becomes noticeable within the first 1–2 weeks. AOD-9604 and 5-Amino-1MQ begin shifting fat cell metabolism. BPC-157 addresses any initial GI adjustment from Tirzepatide. Body weight begins declining measurably.' },
-      { range: 'Weeks 5–12', title: 'Accelerated Fat Loss Phase', what: 'Tirzepatide dose optimized for maximum effect. AOD-9604 direct lipolysis compounds with the caloric deficit from appetite suppression. 5-Amino-1MQ NNMT inhibition ensures metabolic rate remains elevated. Body fat reduction accelerates — particularly in visceral and stubborn subcutaneous deposits.' },
-      { range: 'Weeks 12–24', title: 'Sustained Transformation', what: 'The compound protocol continues producing fat loss without the metabolic adaptation plateau that defeats conventional approaches. Lean mass is preserved through 5-Amino-1MQ\'s muscle-protective effects. Metabolic health markers (insulin sensitivity, blood glucose, lipids) improve measurably. Body recomposition — fat loss while maintaining or building lean mass — becomes the defining outcome.' },
-    ],
-    keyBenefits: [
-      'Tirzepatide clinical evidence: 15–22% body weight reduction over 72 weeks',
-      'AOD-9604 directly activates fat cell lipolysis independently of caloric deficit',
-      '5-Amino-1MQ removes the metabolic resistance that causes fat loss plateaus',
-      'BPC-157 prevents and resolves GI side effects of GLP-1 treatment',
-      'Four non-overlapping mechanisms create cumulative fat loss effect',
-      'Lean muscle mass preserved throughout the fat loss protocol',
-      'Insulin sensitivity improvement creates lasting metabolic health',
-      'Weekly Tirzepatide dosing makes the protocol practical and adherent',
-    ],
-    cycleProtocol: 'Tirzepatide: once weekly, titrate 2.5mg → 5mg → 7.5mg → 10mg over 8–12 weeks based on response. AOD-9604: daily throughout. 5-Amino-1MQ: daily throughout. BPC-157: daily throughout. Continue for 12–24 weeks. Maintenance protocol after goal weight: reduced Tirzepatide dose 1× every 2 weeks plus AOD-9604 to prevent rebound.',
-    faqs: [
-      { q: 'Will I regain the weight when I stop?', a: 'The weight loss mechanism of GLP-1 agonists is hormonal — appetite returns toward baseline when the compound is discontinued. The key to maintaining results is transitioning to a maintenance protocol (lower dose, less frequent) rather than abrupt cessation, combined with the metabolic improvements that 5-Amino-1MQ creates in fat cell biology. Body composition improvements from the recomposition effect also make weight maintenance easier than the starting point.' },
-      { q: 'What about nausea from Tirzepatide?', a: 'Nausea is the most common initial side effect, particularly during dose escalation. BPC-157 (especially the oral format) directly reduces this by protecting gut lining. Starting at the lowest dose (2.5mg weekly) and titrating slowly also minimizes GI side effects. Most users find that nausea resolves as the body adjusts over 2–4 weeks at each dose level.' },
-      { q: 'How much fat can I expect to lose?', a: 'Clinical data for Tirzepatide shows average weight loss of 15–22% of starting body weight over 72 weeks. With the addition of AOD-9604 and 5-Amino-1MQ for direct lipolysis and metabolic resistance reversal, results can exceed clinical trial outcomes in individuals who optimize the protocol with appropriate nutrition and training.' },
-      { q: 'Do I need to change my diet?', a: 'The protocol creates powerful natural appetite suppression — most users find their caloric intake reduces effortlessly rather than through willpower. Supporting this with a high-protein diet (1.6–2g per kg body weight) preserves lean mass during fat loss. You do not need to follow a specific restrictive diet, but protein prioritization makes results significantly better.' },
-    ],
-  },
-
-  {
-    id: 'glow',
-    name: 'The Glow Protocol',
-    tagline: 'Total skin rejuvenation from within',
-    shortDesc: 'The most comprehensive skin quality protocol available. GHK-Cu collagen restoration, BPC-157 anti-inflammatory foundation, and Epithalon cellular age reversal for exceptional skin at any age.',
-    badge: 'Skin & Glow',
-    accent: '#e8c060',
-    difficulty: 'Beginner',
-    goal: 'Maximum skin quality & rejuvenation',
-    duration: '8–12 weeks',
-    outcomes: ['Increased collagen density', 'Reduced fine lines & wrinkles', 'Improved skin thickness', 'Even skin tone', 'Luminous skin quality', 'Improved hair density'],
-    compounds: [
-      {
-        slug: 'ghk-cu',
-        role: 'Collagen Synthesis & Skin Architecture Rebuilding',
-        timing: '1–3mg SubQ, 3× weekly',
-        why: 'GHK-Cu is the most evidence-backed skin optimization compound in existence. Its ability to activate 4,000+ skin-related genes, stimulate type I and III collagen, increase skin thickness by up to 121%, and reset aged gene expression toward youthful profiles makes it the irreplaceable cornerstone of any serious skin protocol. The Glow Protocol is built around GHK-Cu because no other single compound produces comparable structural skin transformation.',
-      },
-      {
-        slug: 'bpc-157',
-        role: 'Anti-Inflammatory Foundation & Healing',
-        timing: '200–300mcg SubQ, daily',
-        why: 'Skin quality is dramatically impaired by chronic systemic inflammation — the same inflammatory environment that creates gut permeability, joint inflammation, and accelerated aging produces elevated cortisol and inflammatory cytokines that directly degrade collagen and impair skin barrier function. BPC-157 addresses this at the root, creating the anti-inflammatory environment in which GHK-Cu\'s collagen synthesis operates at maximum efficacy. It also directly accelerates wound healing and scar remodeling for active skin concerns.',
-      },
-      {
-        slug: 'epithalon',
-        role: 'Cellular Age Reversal & Antioxidant Protection',
-        timing: '5–10mg/day, 10–20 day cycle within protocol',
-        why: 'The deepest cause of skin aging is cellular: shortened telomeres produce lower-quality cell replication, senescent cells accumulate and secrete inflammatory signals, and the entire tissue regeneration machinery becomes less efficient. Epithalon addresses this at the chromosomal level — telomere lengthening improves the quality of all subsequent cell divisions, creating skin cells that divide with the accuracy and energy of younger biology. Its antioxidant protection also prevents the oxidative stress that is the primary environmental driver of skin aging.',
-      },
-      {
-        slug: 'ipamorelin',
-        role: 'GH-Driven Skin Thickness & Overnight Repair',
-        timing: '200–300mcg SubQ, pre-sleep',
-        why: 'GH has a well-documented role in skin quality: it stimulates IGF-1, which directly drives dermal fibroblast activity and collagen production independently of GHK-Cu\'s mechanism. Ipamorelin adds the endocrine dimension to what GHK-Cu provides through direct topical and injectable application — creating parallel collagen-stimulating pathways that together produce results neither achieves alone. Pre-sleep dosing ensures GH-driven overnight skin repair occurs during the period of maximum skin regeneration.',
-      },
-    ],
-    fullDescription: `The Glow Protocol is the most scientifically rigorous and comprehensive skin rejuvenation protocol ever assembled — designed for those who treat skin quality as a genuine priority and want to address it with the precision and depth that only peptide-based interventions can provide.
-
-Skin aging is not a single process — it is the cumulative result of four distinct mechanisms: structural deterioration (collagen and elastin loss), cellular aging (telomere shortening, senescent cell accumulation), inflammatory damage (cortisol, inflammatory cytokines), and hormonal decline (reduced GH and IGF-1 driving less fibroblast activity). The Glow Protocol addresses all four.
-
-GHK-Cu is the protocol's structural cornerstone because its evidence base for skin is unmatched in the entire field of anti-aging science. Over 50 years of research have established its ability to stimulate collagen and elastin synthesis, activate skin remodeling enzymes, reduce hyperpigmentation, enlarge hair follicles, and reset the gene expression of aging skin cells toward youthful profiles. The practical results are measurable: increased skin thickness, reduced wrinkle depth, improved skin elasticity, and the luminous quality that high collagen density produces.
-
-BPC-157 provides the inflammatory dimension — often the most overlooked but most impactful component of skin quality. Chronic systemic inflammation accelerates collagen degradation, impairs skin barrier function, and creates the dull, inflamed appearance that skin care products address superficially rather than structurally. BPC-157 resolves this inflammation systemically, creating the clear, healthy internal environment that allows skin to function and appear optimally.
-
-Epithalon contributes the deepest level of skin rejuvenation by addressing the cellular quality of every skin cell being produced. When telomeres are shortened and cells are aged, new skin cells are lower-quality replications of impaired templates. Epithalon's telomerase activation improves the template itself — meaning every subsequent skin cell division produces higher-quality cells. This is the difference between patching an aging structure and replacing its blueprint.
-
-Ipamorelin completes the protocol with the GH dimension: growth hormone is a fundamental regulator of skin quality and thickness, and its decline with age is a primary driver of the "aged skin" appearance. Ipamorelin's pre-sleep GH pulse drives overnight IGF-1 signaling in dermal fibroblasts, adding an endocrine collagen stimulation that compounds with GHK-Cu's direct mechanism.`,
-    synergy: `GHK-Cu and Ipamorelin create two parallel, non-competing collagen synthesis pathways: GHK-Cu acts directly on fibroblasts through gene expression; Ipamorelin acts through GH/IGF-1 signaling to the same fibroblasts through a different receptor system. The two pathways together produce greater collagen synthesis than either alone. BPC-157's anti-inflammatory effects remove the inflammatory interference that limits how much collagen synthesis actually becomes permanent versus degraded by MMPs (matrix metalloproteinases). Epithalon ensures the quality of the cells executing all of this synthesis — improved telomere length means fibroblasts that divide with greater accuracy for longer, extending the duration and quality of the structural improvements the other compounds initiate.`,
-    whoIsItFor: `Designed for anyone who prioritizes exceptional skin quality and wants to address it at a biological level beyond what topical skincare can achieve. Ideal for people in their 30s and 40s beginning to notice visible collagen loss and wanting to proactively reverse it. Also highly valuable for those in their 20s who want to build the collagen infrastructure that prevents visible aging from developing. Works for both men and women — collagen-based skin quality is equally important for male attractiveness (tight, clear skin) and female appearance.`,
-    timeline: [
-      { range: 'Weeks 1–2', title: 'Foundation & Early Signals', what: 'BPC-157 begins systemic inflammation reduction immediately. Ipamorelin improves sleep quality within days. Subtle improvements in skin hydration and barrier function from early GHK-Cu signaling. Epithalon cycle can be completed during this phase.' },
-      { range: 'Weeks 3–5', title: 'Collagen Remodeling Begins', what: 'GHK-Cu collagen synthesis is building — users begin noticing improved skin texture and the subtle brightness that increased collagen density produces. Skin feels firmer and more hydrated without topical products. Fine lines become visibly reduced in the periorbital and perioral areas first.' },
-      { range: 'Weeks 6–9', title: 'Visible Skin Transformation', what: 'Collagen density improvements are clearly visible and measurable. Skin thickness increases are significant. The luminous quality associated with high collagen density develops. Hair quality often improves from GHK-Cu\'s hair follicle stimulation. Hyperpigmentation and uneven tone have reduced. Skin looks noticeably younger than at baseline.' },
-      { range: 'Weeks 10–12', title: 'Full Protocol Expression', what: 'All compounds have reached full effect. The composite outcome — structurally denser, brighter, firmer, and more even skin — is the product of all four pathways working together. Results at this stage represent the maximum achievable through peptide optimization and persist significantly beyond the active cycle.' },
-    ],
-    keyBenefits: [
-      'GHK-Cu activates 4,000+ skin genes for comprehensive rejuvenation',
-      'Collagen density increases up to 121% with consistent GHK-Cu use',
-      'Epithalon cellular age reversal improves the quality of all new skin cells',
-      'BPC-157 removes inflammatory interference that limits collagen permanence',
-      'Parallel collagen pathways from GHK-Cu and Ipamorelin compound results',
-      'Hair follicle stimulation improves hair density alongside skin quality',
-      'Hyperpigmentation and uneven tone reduced through gene expression reset',
-      'Results persist significantly after cycle completion due to structural collagen gains',
-    ],
-    cycleProtocol: '8–12 weeks. GHK-Cu: 3× weekly throughout. BPC-157: daily throughout. Ipamorelin: pre-sleep throughout. Epithalon: complete one 10–20 day cycle within the protocol (typically weeks 1–2 or 5–6). After completion: GHK-Cu can be maintained at reduced frequency (2× weekly) indefinitely for sustained collagen support.',
-    faqs: [
-      { q: 'Can I use topical GHK-Cu alongside the injectable protocol?', a: 'Yes — topical GHK-Cu (at 1–5% concentration in a serum) is an excellent complement to injectable GHK-Cu. Injectable reaches dermal fibroblasts systemically; topical provides surface-level penetration for fine lines and skin texture. The combination addresses both levels of skin architecture simultaneously. Microneedling before topical application dramatically improves penetration depth.' },
-      { q: 'How is this different from regular anti-aging skincare?', a: 'Topical skincare operates in the epidermis — the surface layer. GHK-Cu injectable penetrates to the dermis where collagen is actually synthesized. The difference is structural rather than cosmetic: skin becomes physically thicker and denser, not just temporarily moisturized or plumped. The results are measurable by ultrasound and persist after the protocol — not dependent on continued product application.' },
-      { q: 'Will the results last after I stop the protocol?', a: 'Collagen is a structural protein with a half-life measured in months to years. Collagen synthesized during the protocol persists significantly after cycle completion. GHK-Cu results are not immediately lost when dosing stops — structural skin improvements typically persist for 3–6+ months. Running maintenance doses (2× weekly GHK-Cu) after the full cycle extends results indefinitely.' },
-      { q: 'Is this protocol appropriate for acne-prone skin?', a: 'Yes — and often highly beneficial. BPC-157\'s anti-inflammatory effects directly reduce the acne-driving inflammation, while GHK-Cu\'s wound healing and barrier repair mechanisms improve the skin repair that follows active breakouts. The scar remodeling properties of GHK-Cu are also relevant for post-acne scarring. Some users with inflammatory acne see significant improvement from BPC-157 alone.' },
+      { q: 'How does Epithalon actually lengthen telomeres?', a: 'Epithalon activates telomerase — the enzyme that adds telomere repeat sequences (TTAGGG) back to chromosome ends. Telomerase is normally active in stem cells and germline cells but suppressed in somatic cells. Epithalon restores partial telomerase activity in differentiated cells, slowing the telomere shortening that otherwise accumulates with each cell division.' },
+      { q: 'What does NAD+ feel like when it works?', a: 'Most users report improved energy without the jitteriness of stimulants — a cleaner, more sustainable vitality. Cognitive clarity improvements are common. Some users notice enhanced exercise performance and faster recovery. The flush sensation during IV NAD+ administration is normal and indicates the compound is active.' },
+      { q: 'How long do the results from this stack last after the cycle?', a: 'Telomere lengthening from Epithalon persists — the chromosomal changes are stable. NAD+ levels gradually decline back to baseline within weeks of stopping, which is why maintenance dosing is recommended. GHK-Cu collagen gains persist for months but require ongoing cycles to maintain the elevated collagen density.' },
+      { q: 'Can I combine the Longevity Stack with the Body Sculptor?', a: 'Yes — they complement well. Epithalon and NAD+ are fully compatible with CJC-1295/Ipamorelin. The GH optimization from the Body Sculptor compounds adds an additional longevity dimension (GH and IGF-1 are directly anti-aging at the cellular level). Running GHK-Cu across both stacks is redundant but harmless.' },
     ],
   },
 ]
-
-export function getStackById(id: string): Stack | undefined {
-  return stacks.find(s => s.id === id)
-}
