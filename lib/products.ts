@@ -14,6 +14,7 @@ export interface Product {
   synergies: string[]
   badge?: string
   featured?: boolean
+  seoTitle?: string
 }
 
 const AFF = (slug: string) => `https://apollopeptidesciences.com/product/${slug}/?rfsn=9016964.3f1b1e`
@@ -25,6 +26,7 @@ export const products: Product[] = [
   {
     slug: 'bpc-157',
     name: 'BPC-157',
+    seoTitle: 'BPC-157 | The Best Peptide for Healing Injuries, Joints & Gut Problems | PeptiZzy',
     tagline: 'The Universal Healing Peptide',
     price: '$59.99',
     category: 'Recovery & Healing',
@@ -60,6 +62,7 @@ Available in 10mg vials from Apollo Peptide Sciences — pharmaceutical-grade ly
   {
     slug: 'tb-500',
     name: 'TB-500',
+    seoTitle: 'TB-500 | Heal Your Whole Body at Once — The Systemic Recovery Peptide | PeptiZzy',
     tagline: 'Systemic Tissue Regeneration',
     price: '$59.99',
     category: 'Recovery & Healing',
@@ -91,6 +94,7 @@ For physique development, TB-500 addresses the full-body recovery limitation tha
   {
     slug: 'bacteriostatic-water',
     name: 'Bacteriostatic Water 10ml',
+    seoTitle: 'Bacteriostatic Water | How to Reconstitute Peptides Safely | 10ml Sterile Solution | PeptiZzy',
     tagline: 'Essential Peptide Reconstitution Solution',
     price: '$9.99',
     category: 'Recovery & Healing',
@@ -124,6 +128,7 @@ No serious peptide research protocol is complete without it. Whether working wit
   {
     slug: 'ghk-cu',
     name: 'GHK-Cu',
+    seoTitle: 'GHK-Cu | The Best Peptide for Skin, Collagen & Looking Younger | PeptiZzy',
     tagline: 'The Collagen & Skin Optimizer',
     price: '$50.00',
     category: 'Looks Maxing',
@@ -157,6 +162,7 @@ For looks maximization, GHK-Cu addresses the structural variable that no diet, h
   {
     slug: 'snap-8',
     name: 'SNAP-8',
+    seoTitle: 'SNAP-8 | The Peptide That Works Like Botox — Without the Needles in Your Face | PeptiZzy',
     tagline: 'The Anti-Wrinkle Peptide',
     price: '$45.00',
     category: 'Looks Maxing',
@@ -188,6 +194,7 @@ Available in 10mg vials from Apollo Peptide Sciences for research applications.`
   {
     slug: 'snap-8-2-pack',
     name: 'SNAP-8 (2-Pack)',
+    seoTitle: 'SNAP-8 2-Pack | Double Your Anti-Wrinkle Supply and Save | PeptiZzy',
     tagline: 'Double Supply — Best Value for Extended Wrinkle Research',
     price: '$80.00',
     category: 'Looks Maxing',
@@ -219,6 +226,7 @@ The economics are simple: two vials at the bundle price represent a meaningful s
   {
     slug: 'cjc-1295-ipamorelin',
     name: 'CJC-1295 / Ipamorelin',
+    seoTitle: 'CJC-1295 / Ipamorelin | The Most Popular Growth Hormone Peptide Stack | PeptiZzy',
     tagline: 'The Gold Standard GH Stack',
     price: '$50.00',
     category: 'Body Composition',
@@ -252,6 +260,7 @@ The downstream effects of optimized GH pulsatility are comprehensive: enhanced f
   {
     slug: 'igf-1-lr3',
     name: 'IGF-1 LR3',
+    seoTitle: 'IGF-1 LR3 | The Most Anabolic Peptide for Building Muscle | PeptiZzy',
     tagline: 'Direct Anabolic Signal',
     price: '$79.99',
     category: 'Body Composition',
@@ -285,6 +294,7 @@ Stacked with CJC-1295/Ipamorelin, IGF-1 LR3 creates a comprehensive anabolic env
   {
     slug: 'semaglutide',
     name: 'Semaglutide',
+    seoTitle: 'Semaglutide | The Peptide Behind Ozempic — Start Losing Weight Here | PeptiZzy',
     tagline: 'GLP-1 Fat Loss Compound',
     price: '$79.99',
     category: 'Weight Management',
@@ -318,6 +328,7 @@ Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5
   {
     slug: 'semaglutide-10mg',
     name: 'Semaglutide 10mg',
+    seoTitle: 'Semaglutide 10mg | More Supply, Lower Cost Per mg — Step Up Your Protocol | PeptiZzy',
     tagline: 'Intermediate Dose — Where Real Results Begin',
     price: '$99.99',
     category: 'Weight Management',
@@ -349,6 +360,7 @@ For those running the standard dose escalation from 0.25mg to 2.4mg, the 10mg vi
   {
     slug: 'semaglutide-15mg',
     name: 'Semaglutide 15mg',
+    seoTitle: 'Semaglutide 15mg | Best Value for Long-Term Weight Loss — 6+ Weeks of Supply | PeptiZzy',
     tagline: 'Maximum Dose — Long-Term Maintenance Format',
     price: '$159.99',
     category: 'Weight Management',
@@ -380,6 +392,7 @@ For cost-conscious researchers running multi-month protocols, the 15mg vial offe
   {
     slug: 'tirzepatide',
     name: 'Tirzepatide',
+    seoTitle: 'Tirzepatide | The Mounjaro Peptide — Works Better Than Ozempic for Weight Loss | PeptiZzy',
     tagline: 'Dual GLP-1/GIP Agonist',
     price: '$149.99',
     category: 'Weight Management',
@@ -415,6 +428,7 @@ Available from Apollo Peptide Sciences in 15mg vials.`,
   {
     slug: 'tirzepatide-15mg-4-pack',
     name: 'Tirzepatide 15mg (4-Pack)',
+    seoTitle: 'Tirzepatide 4-Pack | 4 Months of Tirzepatide — Serious Weight Loss, Serious Savings | PeptiZzy',
     tagline: 'Multi-Vial Bundle — Best Value for Sustained Research',
     price: '$569.99',
     category: 'Weight Management',
@@ -444,6 +458,7 @@ Tirzepatide's dual GLP-1/GIP receptor mechanism — the compound behind Mounjaro
   {
     slug: 'tirzepatide-15mg-10-pack',
     name: 'Tirzepatide 15mg (10-Pack)',
+    seoTitle: 'Tirzepatide 10-Pack | Lowest Price Per Vial — Stock Up and Never Run Out | PeptiZzy',
     tagline: 'Maximum Bundle — Lowest Cost Per Vial',
     price: '$1,399.99',
     category: 'Weight Management',
@@ -473,6 +488,7 @@ The per-vial cost at the 10-pack tier is substantially lower than any smaller bu
   {
     slug: 'tirzepatide-20mg-5-pack',
     name: 'Tirzepatide 20mg (5-Pack)',
+    seoTitle: 'Tirzepatide 20mg 5-Pack | High-Dose Bundle for Serious Weight Loss Protocols | PeptiZzy',
     tagline: 'High-Dose Bundle — Extended Maintenance Supply',
     price: '$699.99',
     category: 'Weight Management',
@@ -502,6 +518,7 @@ Tirzepatide's dual GLP-1/GIP mechanism produces its metabolic and body compositi
   {
     slug: 'tirzepatide-30mg',
     name: 'Tirzepatide 30mg',
+    seoTitle: 'Tirzepatide 30mg | Bigger Vial, Fewer Reorders, More Savings | PeptiZzy',
     tagline: 'Bulk Format — Extended Protocol Supply',
     price: '$279.99',
     category: 'Weight Management',
@@ -533,6 +550,7 @@ Paired with bacteriostatic water for reconstitution, the 30mg vial accommodates 
   {
     slug: 'tirzepatide-60mg',
     name: 'Tirzepatide 60mg',
+    seoTitle: 'Tirzepatide 60mg | The Biggest Vial Available — Lowest Price Per mg | PeptiZzy',
     tagline: 'Maximum Bulk — Lowest Cost Per Mg',
     price: '$489.99',
     category: 'Weight Management',
@@ -564,6 +582,7 @@ Reconstitution with bacteriostatic water at precise concentrations enables the 6
   {
     slug: 'retatrutide',
     name: 'Retatrutide',
+    seoTitle: 'Retatrutide | The Strongest Weight Loss Peptide Ever Studied — Up to 24% Body Weight Lost | PeptiZzy',
     tagline: 'Triple Agonist — Maximum Fat Loss',
     price: '$189.99',
     category: 'Weight Management',
@@ -595,6 +614,7 @@ The compound also demonstrated significant reductions in liver fat (critical for
   {
     slug: 'retatrutide-10mg',
     name: 'Retatrutide 10mg',
+    seoTitle: 'Retatrutide 10mg | Start with the Strongest Fat Loss Peptide Available | PeptiZzy',
     tagline: 'Entry Point for Triple Agonist Research',
     price: '$149.99',
     category: 'Weight Management',
@@ -627,6 +647,7 @@ For researchers transitioning from semaglutide or tirzepatide who want to explor
   {
     slug: 'retatrutide-30mg',
     name: 'Retatrutide 30mg',
+    seoTitle: 'Retatrutide 30mg | Bulk Supply for Serious Long-Term Weight Loss | PeptiZzy',
     tagline: 'Intermediate Bulk — Therapeutic Maintenance Supply',
     price: '$349.99',
     category: 'Weight Management',
@@ -658,6 +679,7 @@ The glucagon component of retatrutide's mechanism creates an ongoing fat oxidati
   {
     slug: 'retatrutide-60mg',
     name: 'Retatrutide 60mg',
+    seoTitle: 'Retatrutide 60mg | Maximum Supply, Lowest Price — For Long-Term Weight Loss | PeptiZzy',
     tagline: 'Maximum Bulk — The Most Advanced Compound at Scale',
     price: '$589.99',
     category: 'Weight Management',
@@ -689,6 +711,7 @@ For the serious long-term retatrutide researcher, the per-milligram cost at the 
   {
     slug: 'cagrilintide-semaglutide',
     name: 'Cagrilintide + Semaglutide',
+    seoTitle: 'Cagrilintide + Semaglutide | Two Appetite Suppressants in One Vial — More Weight Loss | PeptiZzy',
     tagline: 'Dual-Mechanism Satiety Stack',
     price: '$109.99',
     category: 'Weight Management',
@@ -722,6 +745,7 @@ Apollo supplies this as a 5mg/5mg blended vial, providing both compounds in a si
   {
     slug: 'epithalon',
     name: 'Epithalon',
+    seoTitle: 'Epithalon | The Anti-Aging Peptide That Actually Lengthens Your Telomeres | PeptiZzy',
     tagline: 'The Telomere Lengthening Protocol',
     price: '$139.99',
     category: 'Anti-Aging',
@@ -755,6 +779,7 @@ Human data from Russian longevity researcher Vladimir Khavinson's 12-year study 
   {
     slug: 'nad-plus',
     name: 'NAD+',
+    seoTitle: 'NAD+ | Boost Energy, Slow Aging and Repair Your DNA at the Cell Level | PeptiZzy',
     tagline: 'Cellular Energy & Longevity Coenzyme',
     price: '$69.99',
     category: 'Anti-Aging',
