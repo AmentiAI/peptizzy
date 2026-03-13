@@ -54,7 +54,7 @@ Available in 10mg vials from Apollo Peptide Sciences — pharmaceutical-grade ly
       'Synergizes with every training protocol to push past recovery plateaus',
     ],
     protocol: 'Typical protocols range from 200–500mcg per day, administered subcutaneously or intramuscularly near the site of injury. For systemic benefits, abdominal SubQ injection is standard. Cycles of 4–8 weeks on, 4 weeks off.',
-    synergies: ['TB-500', 'GHK-Cu', 'CJC-1295 / Ipamorelin'],
+    synergies: ['tb-500', 'ghk-cu', 'cjc-1295-ipamorelin'],
   },
 
   {
@@ -85,7 +85,38 @@ For physique development, TB-500 addresses the full-body recovery limitation tha
       'Synergizes powerfully with BPC-157 for complete recovery coverage',
     ],
     protocol: 'Loading phase: 2–2.5mg twice per week for 4–6 weeks. Maintenance: 2–2.5mg every 2 weeks. SubQ injection — systemic distribution means injection site is not critical. Often cycled 8 weeks on, 4 weeks off.',
-    synergies: ['BPC-157', 'CJC-1295 / Ipamorelin', 'IGF-1 LR3'],
+    synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'igf-1-lr3'],
+  },
+
+  {
+    slug: 'bacteriostatic-water',
+    name: 'Bacteriostatic Water 10ml',
+    tagline: 'Essential Peptide Reconstitution Solution',
+    price: '$9.99',
+    category: 'Recovery & Healing',
+    tags: ['Reconstitution', 'Essential', 'Injectable', 'Peptide Prep'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/reconsitution_solution_10ml.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/bacteriostatic-water-reconstitution-solution-10ml/?rfsn=9016964.3f1b1e',
+    shortDescription: 'The non-negotiable companion for every injectable peptide. Pharmaceutical-grade 0.9% benzyl alcohol solution that reconstitutes lyophilized peptides and preserves them across multiple uses.',
+    fullDescription: `Bacteriostatic Water is the foundational tool that makes every injectable peptide protocol possible. Before any lyophilized (freeze-dried) peptide — semaglutide, tirzepatide, BPC-157, CJC-1295/Ipamorelin, or any other compound in this catalog — can be administered, it must be reconstituted with a sterile, preservative-containing solution. Bacteriostatic Water is the pharmaceutical standard for exactly this purpose.
+
+The critical distinction from plain sterile water is the 0.9% benzyl alcohol content. This bacteriostatic preservative prevents microbial growth in the vial between uses, maintaining sterility across multiple draws over 28+ days when stored correctly. Standard water for injection offers no such protection — each use risks contaminating the entire vial. For multi-dose protocols involving weekly or daily administration, bacteriostatic water is not optional.
+
+Pharmaceutical-grade manufacture ensures the absence of pyrogens, endotoxins, and particulate contamination that would compromise research integrity or safety. Apollo Peptide Sciences supplies this in a 10ml sterile vial — sufficient to reconstitute multiple peptide vials with careful technique. Each 10ml vial allows precise dosing calculations by adjusting the volume added to achieve the desired concentration per unit of the reconstituted compound.
+
+No serious peptide research protocol is complete without it. Whether working with GLP-1 compounds requiring weekly dosing over months-long protocols, or short-cycle performance peptides dosed multiple times per day, bacteriostatic water ensures every injection draws from a sterile, stable, accurately concentrated solution. Add one to every order — it is the one consumable no protocol can function without.`,
+    benefits: [
+      'Preserves reconstituted peptides across 28+ days of multi-dose use',
+      '0.9% benzyl alcohol content inhibits bacterial growth between draws',
+      'Pharmaceutical-grade manufacture — pyrogen and endotoxin tested',
+      'Compatible with all lyophilized injectable peptides in this catalog',
+      'Enables precise concentration calculation by adjusting reconstitution volume',
+      'Maintains chemical stability of reconstituted peptides under refrigeration',
+      'Single 10ml vial reconstitutes multiple peptide vials efficiently',
+      'The non-negotiable foundation for every injectable peptide protocol',
+    ],
+    protocol: 'Add 1–2ml of bacteriostatic water per 5mg peptide vial as a starting point — adjust volume based on desired injection concentration. Use a clean alcohol-wiped septum before each draw. Inject the water slowly down the inside of the peptide vial wall to avoid disrupting the lyophilized powder. Swirl gently — do not shake. Store reconstituted vials refrigerated at 2–8°C.',
+    synergies: ['bpc-157', 'semaglutide', 'tirzepatide'],
   },
 
   // ── LOOKS MAXING ────────────────────────────────────────────────────────────
@@ -120,7 +151,7 @@ For looks maximization, GHK-Cu addresses the structural variable that no diet, h
       'Improves hair follicle health and may slow hair thinning',
     ],
     protocol: 'SubQ injection: 1–2mg per injection, 3–5× weekly. Many researchers also use topically at lower concentrations. Cycles of 8–12 weeks produce the most significant structural results. Can be run year-round at lower frequency.',
-    synergies: ['SNAP-8', 'BPC-157', 'Epithalon'],
+    synergies: ['snap-8', 'bpc-157', 'epithalon'],
   },
 
   {
@@ -151,7 +182,36 @@ Available in 10mg vials from Apollo Peptide Sciences for research applications.`
       'Research peptide with documented cosmetic efficacy in laboratory settings',
     ],
     protocol: 'Typically dissolved and applied topically to target areas twice daily, or used in research formulations at 4–10 ppm concentration. Some researchers use diluted SubQ injection near target muscle groups. Consistent daily use for 4+ weeks produces measurable results.',
-    synergies: ['GHK-Cu', 'Epithalon', 'BPC-157'],
+    synergies: ['ghk-cu', 'epithalon', 'bpc-157'],
+  },
+
+  {
+    slug: 'snap-8-2-pack',
+    name: 'SNAP-8 (2-Pack)',
+    tagline: 'Double Supply — Best Value for Extended Wrinkle Research',
+    price: '$80.00',
+    category: 'Looks Maxing',
+    tags: ['Skin', 'Anti-Wrinkle', 'Looks Maxing', 'Collagen', 'Bundle'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/01/snap-8_10mg_2pack.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/snap-8-2-pack/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Two 10mg SNAP-8 vials at a reduced bundle price. The practical format for researchers running the 4+ week protocols required to see measurable wrinkle depth reduction results.',
+    fullDescription: `The SNAP-8 2-Pack bundles two 10mg vials of Acetyl Glutamyl Heptapeptide-3 — delivering double the research supply at a price that reflects the bundle discount. It is the practical supply format for researchers who understand that SNAP-8's wrinkle-reduction mechanism requires sustained, consistent application over 4+ weeks to produce the measurable results documented in research — and who want the supply continuity to execute a full protocol without a mid-course reorder.
+
+SNAP-8's mechanism of action — competitive inhibition of the SNARE protein complex to reduce neuromuscular signal intensity behind expression-line formation — is time-dependent. A single vial supports initial research but falls short of the consistent, multi-week exposure required to observe wrinkle depth reductions of the magnitude (up to 63%) documented in laboratory settings. The 2-pack provides the supply bridge between a single exploratory dose and a complete protocol cycle.
+
+The economics are simple: two vials at the bundle price represent a meaningful saving over two individual purchases, while delivering twice the research material in a single order. For researchers combining SNAP-8 with GHK-Cu in a comprehensive skin optimization protocol — targeting both collagen architecture (GHK-Cu) and neuromuscular wrinkle formation (SNAP-8) simultaneously — the 2-pack is the natural SNAP-8 entry point for sustained parallel use.`,
+    benefits: [
+      '2x the SNAP-8 supply in a single bundle purchase at a reduced per-vial price',
+      'Supports the 4+ week consistent application required for measurable wrinkle reduction',
+      'Eliminates mid-protocol reorder gaps that disrupt cumulative SNARE inhibition effects',
+      'Ideal for researchers running SNAP-8 alongside GHK-Cu in a dual skin protocol',
+      'Blocks SNARE complex mechanism behind crow\'s feet, forehead lines, and glabellar creases',
+      'Each vial contains 10mg Acetyl Glutamyl Heptapeptide-3 (CAS 868844-74-0)',
+      'Cost-effective format for the sustained daily application that produces documented results',
+      'Practical supply for researchers testing both topical and SubQ research protocols',
+    ],
+    protocol: 'Dissolve and apply topically to target areas twice daily, or use in formulations at 4–10 ppm concentration. Some researchers use diluted SubQ injection near target muscle groups. Consistent daily use for 4+ weeks produces measurable results. The 2-pack provides approximately 8+ weeks of research supply depending on application method.',
+    synergies: ['snap-8', 'ghk-cu', 'epithalon', 'bpc-157'],
   },
 
   // ── BODY COMPOSITION ────────────────────────────────────────────────────────
@@ -186,7 +246,7 @@ The downstream effects of optimized GH pulsatility are comprehensive: enhanced f
       'Pre-blended 5mg/5mg ratio eliminates the need for two separate compounds',
     ],
     protocol: '100mcg CJC-1295 + 100mcg Ipamorelin per injection (from blended vial), 2–3× daily. Best timed: upon waking, pre-workout, and 30–60 min before bed. The bedtime dose leverages the natural GH pulse during sleep. Cycles of 12–16 weeks on, 4–8 weeks off.',
-    synergies: ['IGF-1 LR3', 'BPC-157', 'Epithalon'],
+    synergies: ['igf-1-lr3', 'bpc-157', 'epithalon'],
   },
 
   {
@@ -217,7 +277,7 @@ Stacked with CJC-1295/Ipamorelin, IGF-1 LR3 creates a comprehensive anabolic env
       'Improves nitrogen retention and amino acid uptake in muscle cells',
     ],
     protocol: '20–50mcg SubQ or IM, administered post-workout when muscle cells are maximally insulin-sensitive and IGF-1 receptor-upregulated. Short cycles recommended: 4–6 weeks on, 4–6 weeks off to maintain receptor sensitivity. Not suitable for continuous long-term use.',
-    synergies: ['CJC-1295 / Ipamorelin', 'BPC-157', 'TB-500'],
+    synergies: ['cjc-1295-ipamorelin', 'bpc-157', 'tb-500'],
   },
 
   // ── WEIGHT MANAGEMENT ───────────────────────────────────────────────────────
@@ -240,7 +300,7 @@ The mechanism of action is multi-dimensional. At the hypothalamic level, semaglu
 
 Clinical data from the STEP trial program demonstrated an average of 14.9% body weight reduction over 68 weeks in research subjects — the most significant weight loss outcomes ever documented for a pharmaceutical compound until the subsequent emergence of dual and triple receptor agonists. For individuals with significant excess body fat, semaglutide produces metabolic improvements (reduced HbA1c, improved lipid profiles, lower blood pressure) that extend well beyond aesthetics.
 
-Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5mg vial is the standard entry point for research protocols; the 10mg and 15mg vials offer better value for longer-term research.`,
+Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5mg vial is the standard entry point for research protocols — ideal for dose escalation and establishing individual tolerance before moving to higher-volume formats.`,
     benefits: [
       'Average 14.9% body weight reduction demonstrated in clinical research',
       'Powerful appetite suppression via hypothalamic GLP-1 receptor activation',
@@ -252,7 +312,69 @@ Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5
       'Available in 5mg, 10mg, and 15mg formats for different research durations',
     ],
     protocol: 'Dose escalation protocol: start at 0.25mg weekly for 4 weeks, increase to 0.5mg, then 1mg, then up to 2.4mg at maintenance. Subcutaneous injection once weekly. Reconstitute with bacteriostatic water. The escalation protocol minimizes GI side effects during adaptation.',
-    synergies: ['Cagrilintide + Semaglutide', 'BPC-157', 'CJC-1295 / Ipamorelin'],
+    synergies: ['cagrilintide-semaglutide', 'bpc-157', 'cjc-1295-ipamorelin'],
+  },
+
+  {
+    slug: 'semaglutide-10mg',
+    name: 'Semaglutide 10mg',
+    tagline: 'Intermediate Dose — Where Real Results Begin',
+    price: '$99.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'Appetite', 'Intermediate'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/10/semaglutide_10mg-1.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-1s-10mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'The intermediate format for researchers who have completed the escalation from 5mg and are now in the therapeutic range where meaningful, sustained fat loss occurs.',
+    fullDescription: `The 10mg semaglutide vial represents the pivot point in any serious research protocol — the transition from dose escalation into the therapeutic range where clinically significant fat loss is achieved and sustained. Researchers who have completed the initial 5mg escalation protocol have already adapted to the compound's GI profile; the 10mg vial provides the volume needed to operate confidently at doses of 1–2mg weekly without the pressure of a smaller vial running short mid-protocol.
+
+At therapeutic doses of 1–2mg weekly, semaglutide's GLP-1 receptor engagement reaches the level demonstrated in the STEP trial program to drive meaningful, clinically significant weight reduction. The 10mg vial provides approximately 5–10 weeks of research supply at 1–2mg weekly dosing — the sustained duration needed for the compound's cumulative appetite-modulating effects to produce measurable body composition changes.
+
+The cost advantage over purchasing two 5mg vials for the same total volume is meaningful for longer research programs. A single 10mg vial is not only more economical per milligram but also more practical: fewer reconstitution events mean less handling, fewer opportunities for contamination, and a cleaner protocol management workflow. Paired with bacteriostatic water, it reconstitutes cleanly to any desired concentration.
+
+For those running the standard dose escalation from 0.25mg to 2.4mg, the 10mg vial serves as the ideal bridge between the entry-level 5mg and the long-term maintenance 15mg format — covering the critical months where the body's response to semaglutide is most actively established.`,
+    benefits: [
+      'Covers the full therapeutic dose range (1–2mg weekly) for 5–10 weeks of research',
+      'Lower cost per milligram than two separate 5mg vials',
+      'Fewer reconstitution events reduce handling and contamination risk',
+      'Ideal transition format from entry-level 5mg escalation protocols',
+      'Supports dosing flexibility — concentrate adjustment for any target dose',
+      'The dose range where STEP trial fat loss outcomes were meaningfully achieved',
+      'Efficient single-vial management for mid-protocol research continuity',
+      'Bridges the gap between 5mg starter and 15mg long-term maintenance vials',
+    ],
+    protocol: 'Intended for researchers who have completed dose escalation on the 5mg vial and are dosing at 1–2mg weekly. Reconstitute with 1–2ml bacteriostatic water for a working concentration of 5–10mg/ml. SubQ injection once weekly. Continue escalation to 2.4mg maintenance as tolerated.',
+    synergies: ['semaglutide', 'cagrilintide-semaglutide', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'semaglutide-15mg',
+    name: 'Semaglutide 15mg',
+    tagline: 'Maximum Dose — Long-Term Maintenance Format',
+    price: '$159.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'Maintenance', 'Long-Term'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/semaglutide_15mg.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-1s-15mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'The maximum volume format — 15mg matches the complete STEP trial maintenance dose (2.4mg weekly × 6 weeks+). Best value per mg for serious long-term research protocols.',
+    fullDescription: `The 15mg semaglutide vial is engineered for the serious long-term researcher: it provides the maximum vial volume available, delivers the lowest cost per milligram across all three semaglutide formats, and contains enough compound to sustain the maximum 2.4mg weekly maintenance dose — exactly as used in the STEP trials — for more than six weeks of uninterrupted research.
+
+The STEP trial program's pivotal 2.4mg weekly maintenance dose is the reference standard for semaglutide's full therapeutic potential. Achieving and sustaining this dose is where the 14.9% average body weight reduction data was generated. The 15mg vial is precisely sized for this phase — not dose escalation, not experimentation, but full-scale maintenance-phase research where the compound's metabolic and body composition effects are most completely expressed.
+
+At the 2.4mg weekly maintenance dose, semaglutide's hypothalamic GLP-1 engagement is at maximum intensity: appetite suppression is profound and consistent, gastric emptying is significantly slowed, and the hormonal environment driving fat mobilization is continuously maintained between weekly injections. The 15mg vial's supply duration at this dose — approximately 6 weeks — aligns with the natural assessment intervals for body composition response.
+
+For cost-conscious researchers running multi-month protocols, the 15mg vial offers the most rational economics: a single vial costs less per milligram than any other semaglutide format in the Apollo catalog. Combined with the logistical simplicity of fewer vials to manage, reconstitute, and track, the 15mg format is the standard choice for established, ongoing semaglutide research.`,
+    benefits: [
+      'Lowest cost per milligram across all three semaglutide vial sizes',
+      'Matches the 2.4mg weekly STEP trial maintenance dose for 6+ weeks',
+      'Optimal for established protocols at full therapeutic maintenance dosing',
+      'Fewer vials to manage for multi-month research programs',
+      'Maximum uninterrupted supply duration — avoids mid-protocol gaps',
+      'Full expression of semaglutide\'s appetite suppression and metabolic effects',
+      'Ideal for researchers who have completed escalation and confirmed tolerability',
+      'Best format for comparing long-term body composition outcomes across time',
+    ],
+    protocol: 'For researchers at established maintenance dose of 1.7–2.4mg weekly. Reconstitute with 1.5–2ml bacteriostatic water. SubQ injection once weekly at consistent intervals for stable plasma levels. Store refrigerated; use within 28 days of reconstitution.',
+    synergies: ['semaglutide-10mg', 'cagrilintide-semaglutide', 'bacteriostatic-water'],
   },
 
   {
@@ -287,7 +409,156 @@ Available from Apollo Peptide Sciences in 15mg vials.`,
       'Weekly subcutaneous injection protocol — minimal administration burden',
     ],
     protocol: 'Dose escalation: 2.5mg weekly for 4 weeks, then 5mg for 4 weeks, then 7.5mg, 10mg, 12.5mg, and 15mg at 4-week intervals. Slower escalation reduces GI side effects. Maintenance at 10–15mg weekly. SubQ injection once weekly.',
-    synergies: ['BPC-157', 'CJC-1295 / Ipamorelin', 'NAD+'],
+    synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'nad-plus'],
+  },
+
+  {
+    slug: 'tirzepatide-15mg-4-pack',
+    name: 'Tirzepatide 15mg (4-Pack)',
+    tagline: 'Multi-Vial Bundle — Best Value for Sustained Research',
+    price: '$569.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'GIP', 'Bundle', 'Cost-Effective'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/tirzepatide_15mg_multi.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2t-15mg-4-pack/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Four 15mg tirzepatide vials bundled for maximum value. Provides a 4-month supply at 15mg weekly maintenance dosing — the most cost-effective format for sustained dual GLP-1/GIP research.',
+    fullDescription: `The Tirzepatide 15mg 4-Pack delivers four standard 15mg vials as a single bundled purchase — the optimal format for researchers who have completed dose escalation and are committed to sustained maintenance-phase protocols. At 15mg weekly dosing (the peak dose from the SURMOUNT-1 trial documenting 22.5% average body weight reduction), this 4-pack provides a full 4 weeks of uninterrupted supply per vial, translating to approximately 4 months of research continuity from a single order.
+
+The bundle economics are straightforward: four vials purchased together cost meaningfully less per milligram than four individual 15mg purchases, reducing the per-dose cost at the most effective maintenance tier. For serious tirzepatide researchers who have established tolerability and are executing long-term protocols, the 4-pack eliminates the reordering friction that interrupts protocol continuity.
+
+Tirzepatide's dual GLP-1/GIP receptor mechanism — the compound behind Mounjaro and Zepbound — produces its most significant metabolic and body composition effects through sustained, uninterrupted dosing. Each vial reconstituted with bacteriostatic water provides a precise working concentration for weekly SubQ injections, maintaining the consistent hormonal signaling environment required for compounding metabolic benefit over time.`,
+    benefits: [
+      '4 vials of 15mg tirzepatide — approximately 4 months of supply at maintenance dosing',
+      'Lower cost per milligram vs. four individual 15mg purchases',
+      'Eliminates reordering gaps that interrupt sustained protocol continuity',
+      'Supports full maintenance-phase research at the SURMOUNT-1 peak efficacy dose',
+      'Each vial individually sealed for storage integrity across the multi-month supply',
+      'Dual GLP-1/GIP mechanism delivers 22.5% average body weight reduction in clinical data',
+      'Single order manages the full supply horizon for a sustained research program',
+      'Compatible with bacteriostatic water for precise reconstitution at any working concentration',
+    ],
+    protocol: 'For researchers at confirmed 15mg weekly maintenance dose. Reconstitute one vial at a time with 1.5ml bacteriostatic water (10mg/ml) or 3ml (5mg/ml). SubQ injection once weekly. Store unopened vials at room temperature or refrigerated; refrigerate reconstituted vials immediately and use within 28 days.',
+    synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'tirzepatide-15mg-10-pack',
+    name: 'Tirzepatide 15mg (10-Pack)',
+    tagline: 'Maximum Bundle — Lowest Cost Per Vial',
+    price: '$1,399.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'GIP', 'Bundle', 'Long-Term'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/tirzepatide_15mg_multi.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2t-15mg-10-pack/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Ten 15mg vials — the maximum bundle for serious long-term tirzepatide research programs. Over 2 months of supply at 15mg weekly. Deepest per-vial discount available.',
+    fullDescription: `The Tirzepatide 15mg 10-Pack is the apex of the Apollo tirzepatide bundle lineup — ten standard 15mg vials at the deepest per-vial discount available for this compound. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to execute multi-month maintenance-phase protocols without supply interruption or reordering overhead.
+
+At 15mg weekly maintenance dosing — the maximum dose from the SURMOUNT-1 trial that documented 22.5% average body weight reduction — ten vials deliver approximately 10 weeks of uninterrupted research supply from a single order. For researchers running tirzepatide as a primary, sustained metabolic intervention, this represents the most financially efficient and operationally streamlined way to supply a serious long-term program.
+
+The per-vial cost at the 10-pack tier is substantially lower than any smaller bundle or individual purchase, making the economics compelling for researchers who have confirmed tirzepatide tolerability and are committed to the extended protocol duration required to observe the compound's full body composition and metabolic effects. Tirzepatide's dual GLP-1/GIP mechanism produces compounding benefits over months — not weeks — and the 10-pack ensures the supply continuity required to realize those cumulative outcomes.`,
+    benefits: [
+      '10 vials of 15mg tirzepatide — approximately 10 weeks of supply at 15mg weekly',
+      'Deepest per-vial discount in the Apollo tirzepatide catalog',
+      'Eliminates all supply management overhead for a full research program cycle',
+      'Supports sustained protocols at the SURMOUNT-1 peak efficacy maintenance dose',
+      'Maximum cost efficiency for researchers committed to long-term tirzepatide use',
+      'Single order covers the supply horizon for a serious multi-month protocol',
+      'Each vial individually sealed to maintain stability across the extended supply',
+      'Lowest cost-per-dose for dual GLP-1/GIP receptor research at scale',
+    ],
+    protocol: 'For experienced researchers at confirmed 15mg weekly maintenance dose. Reconstitute one vial at a time with bacteriostatic water; refrigerate immediately after reconstitution. Store remaining sealed vials at room temperature or refrigerated. Use each reconstituted vial within 28 days before opening the next. SubQ injection once weekly.',
+    synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'tirzepatide-20mg-5-pack',
+    name: 'Tirzepatide 20mg (5-Pack)',
+    tagline: 'High-Dose Bundle — Extended Maintenance Supply',
+    price: '$699.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'GIP', 'Bundle', 'High-Dose'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/tirzepatide_20mg_multi.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2t-20mg-5-pack/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Five 20mg tirzepatide vials — higher-dose format for researchers who have titrated above the standard 15mg ceiling. Exceptional value for advanced maintenance-phase research programs.',
+    fullDescription: `The Tirzepatide 20mg 5-Pack delivers five higher-volume 20mg vials in a single bundled purchase, designed for researchers whose maintenance protocols operate above the standard 15mg dose ceiling explored in SURMOUNT-1. Each 20mg vial provides greater per-vial supply flexibility for researchers at 10–20mg weekly dosing, enabling precise reconstitution at higher concentrations or accommodating protocol flexibility without the overhead of managing multiple smaller vials simultaneously.
+
+At 10mg weekly dosing, each 20mg vial provides two weeks of supply; at 15mg weekly, each vial covers approximately 10 days; at higher experimental doses, the 20mg vial delivers a meaningful single-vial supply buffer. The 5-pack consolidates five of these high-dose vials into a single order — eliminating frequent reordering and delivering cost savings over individual 20mg purchases.
+
+Tirzepatide's dual GLP-1/GIP mechanism produces its metabolic and body composition effects through sustained, consistent dosing. The 5-pack's extended supply horizon ensures that researchers at any dose within the 10–20mg weekly range can maintain uninterrupted protocol continuity — the prerequisite for observing tirzepatide's cumulative effects on visceral fat, insulin sensitivity, and metabolic markers.`,
+    benefits: [
+      '5 high-dose 20mg vials — flexible supply for researchers at 10–20mg weekly dosing',
+      'Greater per-vial compound volume vs. standard 15mg format for extended single-vial use',
+      'Bundle pricing provides cost savings vs. five individual 20mg purchases',
+      'Accommodates higher-dose research protocols above the standard 15mg ceiling',
+      'Supports 2+ weeks of supply per vial at 10mg weekly dosing',
+      'Single order eliminates reordering overhead across a sustained research block',
+      'Compatible with bacteriostatic water for any working concentration',
+      'Dual GLP-1/GIP receptor agonism for comprehensive metabolic research',
+    ],
+    protocol: 'For researchers operating at 10–20mg weekly dosing. Reconstitute with bacteriostatic water to desired working concentration (e.g., 2ml per vial for 10mg/ml). SubQ injection once weekly. Refrigerate reconstituted vials immediately; store sealed vials at room temperature or refrigerated. Use reconstituted vials within 28 days.',
+    synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'tirzepatide-30mg',
+    name: 'Tirzepatide 30mg',
+    tagline: 'Bulk Format — Extended Protocol Supply',
+    price: '$279.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'GIP', 'Bulk', 'Cost-Effective'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/tirzepatide_30mg.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2t-30mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Double the standard 15mg vial in a single container. The most practical bulk format for researchers at maintenance dosing who need supply continuity without repeat ordering.',
+    fullDescription: `The 30mg tirzepatide vial delivers exactly double the compound volume of the standard 15mg vial in a single unit — designed for researchers who have established their maintenance dose and need extended supply without the friction of frequent reordering. At 10–15mg weekly maintenance dosing, a single 30mg vial provides approximately 2–3 weeks of uninterrupted research supply, making it the preferred format for sustained protocols.
+
+Tirzepatide's dual GLP-1/GIP mechanism — responsible for the SURMOUNT-1 trial's landmark 22.5% body weight reduction — is at its most consistently expressed during long, uninterrupted maintenance-phase research. Protocol interruptions caused by vial shortages compromise both research continuity and the sustained hormonal signaling environment that produces tirzepatide's cumulative metabolic effects. The 30mg format directly addresses this operational risk.
+
+The economics are compelling: the 30mg vial costs meaningfully less per milligram than two individual 15mg vials, and the reduction in reconstitution events cuts both handling time and the cumulative contamination risk that comes with managing multiple vials across a multi-week protocol. For researchers running tirzepatide as a primary fat loss compound — rather than a starter protocol — the 30mg vial is the natural operating format.
+
+Paired with bacteriostatic water for reconstitution, the 30mg vial accommodates precise concentration targeting regardless of the researcher's specific maintenance dose within the 10–15mg weekly range. Whether the target is 10mg (yielding 3 weeks of supply) or 15mg (yielding 2 weeks), a single vial covers the full interval cleanly.`,
+    benefits: [
+      '2x the volume of the standard 15mg vial in a single unit',
+      'Lower cost per milligram than two separate 15mg vials',
+      'Provides 2–3 weeks of supply at 10–15mg weekly maintenance dosing',
+      'Reduces reconstitution frequency and associated handling risk',
+      'Eliminates mid-protocol supply gaps that compromise research continuity',
+      'Ideal for researchers who have established tirzepatide tolerability and maintenance dose',
+      'Fewer total vials to track, store, and manage across extended protocols',
+      'Best value entry point for bulk tirzepatide research supply',
+    ],
+    protocol: 'For researchers at established maintenance dose of 10–15mg weekly. Reconstitute with 2–3ml bacteriostatic water for a working concentration of 10–15mg/ml. SubQ injection once weekly. Store reconstituted vial refrigerated; draw from the same vial across multiple weeks of dosing.',
+    synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'tirzepatide-60mg',
+    name: 'Tirzepatide 60mg',
+    tagline: 'Maximum Bulk — Lowest Cost Per Mg',
+    price: '$489.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'GLP-1', 'GIP', 'Bulk', 'Long-Term'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/12/tirzepatide_60mg-1.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2-t-60mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'The maximum bulk format — 4x the standard 15mg vial. Lowest cost per milligram available for tirzepatide, designed for serious long-term research programs at therapeutic maintenance doses.',
+    fullDescription: `The 60mg tirzepatide vial is the apex of the Apollo tirzepatide lineup — four times the volume of the standard 15mg, and representing the single lowest cost-per-milligram available for this compound in any format. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to run weeks-long maintenance-phase protocols without operational interruption.
+
+At 15mg weekly maintenance dosing — the maximum dose at which SURMOUNT-1 documented 22.5% average body weight reduction — a single 60mg vial provides four full weeks of research supply. At 10mg weekly, that extends to six weeks. For researchers treating tirzepatide as a sustained metabolic intervention rather than a short-cycle experiment, the 60mg vial eliminates the administrative overhead of multi-vial management entirely.
+
+The financial calculus is straightforward. The 60mg vial's per-milligram cost is substantially lower than the 15mg, 30mg, or multiple-vial combinations that would be required to achieve the same total compound volume. Over the course of a six-month research program — a realistic minimum for observing tirzepatide's full body composition and metabolic effects — the cost differential between 60mg bulk purchasing and smaller vial formats is significant.
+
+Reconstitution with bacteriostatic water at precise concentrations enables the 60mg vial to serve any maintenance dose within the 10–15mg weekly range with equal precision. Stored refrigerated and drawn from methodically, the vial maintains stability across the multi-week protocols it is designed to support. The 60mg tirzepatide vial is not for the curious beginner — it is the supply format of the serious long-term tirzepatide researcher.`,
+    benefits: [
+      'Lowest cost per milligram of any tirzepatide format in the Apollo catalog',
+      '4x the volume of the standard 15mg vial in a single unit',
+      'Provides 4 weeks at 15mg weekly or 6 weeks at 10mg weekly',
+      'Eliminates multi-vial management complexity for long-term protocols',
+      'Minimum reordering frequency — reduces protocol disruption risk',
+      'Bacteriostatic water reconstitution maintains stability across multi-week use',
+      'Designed for researchers at confirmed maintenance dose with established tolerance',
+      'The most cost-efficient way to supply a serious long-term tirzepatide program',
+    ],
+    protocol: 'For experienced researchers at confirmed 10–15mg weekly maintenance dose. Reconstitute with 4–6ml bacteriostatic water for manageable working concentrations. SubQ injection once weekly. Refrigerate immediately after reconstitution; stable for 28+ days when stored correctly. Pair with fresh bacteriostatic water for each new vial.',
+    synergies: ['tirzepatide-30mg', 'bpc-157', 'bacteriostatic-water'],
   },
 
   {
@@ -315,10 +586,104 @@ The compound also demonstrated significant reductions in liver fat (critical for
       'Improves cardiovascular risk markers across all measured parameters',
       'Maintains lean muscle mass during fat loss phase better than diet alone',
       'Weekly injection protocol — same convenience as semaglutide/tirzepatide',
-      'Available in 10mg, 15mg, and 30mg vials from Apollo',
+      'Available in 10mg, 15mg, 30mg, and 60mg vials from Apollo',
     ],
     protocol: 'Dose escalation: 1mg weekly for 4 weeks, increasing gradually to target doses of 4–12mg weekly over 12–24 weeks. The extended escalation is essential with retatrutide due to its potency. Maintenance at 8–12mg weekly. SubQ injection once weekly.',
-    synergies: ['BPC-157', 'CJC-1295 / Ipamorelin', 'NAD+'],
+    synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'nad-plus'],
+  },
+
+  {
+    slug: 'retatrutide-10mg',
+    name: 'Retatrutide 10mg',
+    tagline: 'Entry Point for Triple Agonist Research',
+    price: '$149.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'Triple Agonist', 'GLP-1', 'Glucagon', 'Entry Level'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/04/retatrutide_10mg-1.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-3r-10mg/?rfsn=9016964.3f1b1e',
+    badge: 'Out of Stock',
+    shortDescription: 'The lower-cost entry point for retatrutide research. Designed for the very gradual dose escalation that the most potent triple agonist demands — start slow, build carefully.',
+    fullDescription: `Retatrutide is the most potent fat loss compound in research — and that potency demands respect. The 10mg vial exists for a specific and important purpose: to provide a lower-cost entry point that enables the gradual, careful dose escalation that every new retatrutide researcher requires before reaching therapeutic maintenance doses.
+
+Unlike semaglutide, where researchers commonly reach 1mg weekly within the first 4 weeks, retatrutide's triple receptor activation — engaging GLP-1, GIP, and glucagon simultaneously — requires an extended, conservative escalation protocol. The starting dose of 1mg weekly may seem trivial, but the compound's glucagon agonism creates GI sensitivity profiles distinct from pure GLP-1 or dual GLP-1/GIP compounds. Rushing escalation produces avoidable side effects; patience during the escalation phase determines long-term protocol success.
+
+The 10mg vial accommodates the full initial escalation phase: at 1mg weekly escalating to 2–4mg weekly over the first 8–12 weeks, a 10mg vial covers the critical adaptation window at a price point appropriate for exploratory research. Researchers learn how their physiology responds to retatrutide's unique triple-mechanism action before committing to the higher-volume 15mg, 30mg, or 60mg formats for maintenance-phase work.
+
+For researchers transitioning from semaglutide or tirzepatide who want to explore the compound that produced the highest fat loss outcomes in clinical history without a large upfront investment, the 10mg vial is the rational starting point. The Phase 2 NEJM data showing 24.2% body weight reduction at 12mg weekly remains the most compelling finding in obesity pharmacology — and the 10mg vial is the entry ticket for that research journey.`,
+    benefits: [
+      'Lower-cost entry format for first-time retatrutide researchers',
+      'Covers the full initial escalation phase at 1–4mg weekly dosing',
+      'Appropriate supply volume for the 8–12 week GI adaptation window',
+      'Reduces financial commitment during the exploratory phase of triple agonist research',
+      'Ideal for researchers transitioning from semaglutide or tirzepatide protocols',
+      'Allows careful assessment of glucagon agonist sensitivity before scaling dose',
+      'Aligns with clinical escalation protocols from the Phase 2 NEJM study',
+      'The starting point for accessing the highest documented fat loss efficacy in research',
+    ],
+    protocol: 'Escalation entry: 1mg weekly for 4 weeks, then 2mg for 4 weeks, then 4mg for 4 weeks. The 10mg vial covers approximately 8–10 weeks of gradual escalation. SubQ injection once weekly. Monitor GI response carefully at each dose step. Transition to 15mg or 30mg vials for continuation toward maintenance dosing at 8–12mg weekly.',
+    synergies: ['retatrutide', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'retatrutide-30mg',
+    name: 'Retatrutide 30mg',
+    tagline: 'Intermediate Bulk — Therapeutic Maintenance Supply',
+    price: '$349.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'Triple Agonist', 'GLP-1', 'Glucagon', 'Bulk'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/12/retatrutide_30mg.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-3-r-30mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'Double the standard 15mg vial. Purpose-built for researchers who have completed escalation and are operating at the 8–12mg weekly maintenance range where retatrutide\'s peak efficacy is expressed.',
+    fullDescription: `The 30mg retatrutide vial is the operational format for researchers who have completed the escalation phase and arrived at therapeutic maintenance dosing. At 8–12mg weekly — the range where Phase 2 clinical data documented 22.8–24.2% body weight reduction — a single 30mg vial provides approximately 2.5–4 weeks of uninterrupted supply. It represents the natural volume step up from the 15mg starter format, and the intermediate bulk tier before the full-scale 60mg.
+
+Retatrutide's triple receptor mechanism — GLP-1, GIP, and glucagon agonism simultaneously — produces its most impressive metabolic effects during sustained, uninterrupted maintenance-phase research. The compound's cumulative effects on hepatic fat, visceral adiposity, and cardiovascular risk markers are time-dependent; protocol interruptions during the maintenance phase undermine the sustained hormonal signaling environment that drives these outcomes. The 30mg vial's extended supply buffer directly reduces this risk.
+
+At 2x the volume of the standard 15mg vial and available at a lower cost per milligram than two separate 15mg purchases, the 30mg format offers genuine economic and operational advantages for researchers who have confirmed their maintenance dose and tolerability. The 30mg is the efficient choice: enough volume for meaningful research continuity, at a cost level appropriate for the intermediate researcher who has validated the protocol and is now optimizing for sustained results.
+
+The glucagon component of retatrutide's mechanism creates an ongoing fat oxidation drive between weekly doses that neither semaglutide nor tirzepatide produces — but only when dosing continuity is maintained. The 30mg vial supports the protocol consistency that allows this third-receptor mechanism to fully express itself over time.`,
+    benefits: [
+      '2x the volume of the standard 15mg retatrutide vial',
+      'Provides 2.5–4 weeks of supply at 8–12mg weekly maintenance dosing',
+      'Lower cost per milligram than two individual 15mg vials',
+      'Supports the sustained dosing continuity required for glucagon-mediated fat oxidation',
+      'Ideal for researchers who have confirmed tolerability and maintenance dose',
+      'Reduces reconstitution frequency and protocol management burden',
+      'Intermediate bulk format between 15mg and 60mg for flexible commitment scaling',
+      'Aligns with the 8–12mg weekly range from Phase 2 NEJM efficacy data',
+    ],
+    protocol: 'For researchers at established maintenance dose of 8–12mg weekly. Reconstitute with 2–3ml bacteriostatic water. SubQ injection once weekly at consistent intervals. Refrigerate immediately after reconstitution. Do not freeze. The 30mg vial supports 2–4 consecutive weekly injections from a single reconstituted source.',
+    synergies: ['retatrutide-60mg', 'bpc-157', 'bacteriostatic-water'],
+  },
+
+  {
+    slug: 'retatrutide-60mg',
+    name: 'Retatrutide 60mg',
+    tagline: 'Maximum Bulk — The Most Advanced Compound at Scale',
+    price: '$589.99',
+    category: 'Weight Management',
+    tags: ['Weight Loss', 'Fat Loss', 'Triple Agonist', 'GLP-1', 'Glucagon', 'Long-Term'],
+    image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/12/retatrutide_60mg.webp',
+    affiliateUrl: 'https://apollopeptidesciences.com/product/glp-3-r-60mg/?rfsn=9016964.3f1b1e',
+    shortDescription: 'The maximum bulk format for retatrutide — lowest cost per milligram available, designed for serious long-term research at the frontier of fat loss pharmacology.',
+    fullDescription: `Retatrutide 60mg is the pinnacle of the Apollo weight management lineup — the maximum bulk format for the most pharmacologically advanced fat loss compound in research, carrying the lowest cost per milligram across all retatrutide vial sizes. It is the supply format for researchers who have moved beyond exploration and are executing sustained, long-term protocols with the compound that produced the highest documented fat loss outcomes in peer-reviewed clinical history.
+
+At 8–12mg weekly maintenance dosing, a single 60mg vial provides five to seven and a half weeks of uninterrupted research supply — a meaningful protocol block that enables proper assessment of retatrutide's cumulative effects on body composition, hepatic fat, visceral adiposity, and metabolic markers. The Phase 2 NEJM data documenting 24.2% average body weight reduction was generated over 48 weeks of sustained dosing; protocols of that ambition demand bulk supply logistics.
+
+Retatrutide's glucagon receptor component is what separates it categorically from semaglutide and tirzepatide. Glucagon receptor agonism creates active, continuous fat oxidation pressure between weekly doses — the liver is signaled to mobilize stored fat even in the absence of the caloric deficit that GLP-1 compounds depend on to work. Over weeks and months, this third mechanism produces visceral fat and hepatic fat reductions that exceed what appetite suppression alone can achieve. The 60mg vial exists to supply the duration required for this mechanism to fully express itself.
+
+For the serious long-term retatrutide researcher, the per-milligram cost at the 60mg tier versus repeated purchases of smaller vials is the strongest financial argument in the catalog. The compound itself represents the frontier of fat loss pharmacology; the 60mg vial ensures you can pursue that frontier without operational constraints.`,
+    benefits: [
+      'Lowest cost per milligram of any retatrutide format in the Apollo catalog',
+      'Provides 5–7.5 weeks of supply at 8–12mg weekly maintenance dosing',
+      'Supports the extended protocol duration required for full glucagon-mediated effects',
+      'Eliminates supply gaps that interrupt retatrutide\'s cumulative metabolic impact',
+      'The scale-appropriate format for protocols modeled on 48-week Phase 2 research design',
+      'Minimum reordering burden for researchers committed to long-term protocols',
+      'Best economics for multi-month retatrutide research programs',
+      'The most advanced compound in research, at the most efficient supply scale',
+    ],
+    protocol: 'Exclusively for experienced researchers at confirmed 8–12mg weekly maintenance dose. Reconstitute with 4–6ml bacteriostatic water for precise working concentrations. SubQ injection once weekly. Store reconstituted vial refrigerated; draw from the single vial across consecutive weeks. Maintain strict cold chain — do not allow the reconstituted vial to reach room temperature between uses.',
+    synergies: ['retatrutide-30mg', 'bpc-157', 'bacteriostatic-water'],
   },
 
   {
@@ -349,7 +714,7 @@ Apollo supplies this as a 5mg/5mg blended vial, providing both compounds in a si
       'Weekly dosing protocol maintains semaglutide\'s convenient administration schedule',
     ],
     protocol: 'Dose escalation: 0.25mg each component weekly for 4 weeks, escalating gradually. Target maintenance dose 1–2.4mg of each component weekly. SubQ injection once weekly. The slower escalation vs. semaglutide alone helps minimize GI side effects from dual receptor activation.',
-    synergies: ['BPC-157', 'Tirzepatide', 'CJC-1295 / Ipamorelin'],
+    synergies: ['semaglutide', 'tirzepatide', 'cjc-1295-ipamorelin'],
   },
 
   // ── ANTI-AGING ──────────────────────────────────────────────────────────────
@@ -384,7 +749,7 @@ Human data from Russian longevity researcher Vladimir Khavinson's 12-year study 
       'Available in 50mg vials — exceptional value for extended research protocols',
     ],
     protocol: 'Standard research protocol: 5–10mg per day for 10–20 consecutive days, 1–2× per year. Some researchers use 100mcg/kg body weight per day. SubQ injection. The annual or bi-annual cycle protocol is aligned with the original Khavinson research showing long-term benefits from periodic treatment.',
-    synergies: ['GHK-Cu', 'NAD+', 'CJC-1295 / Ipamorelin'],
+    synergies: ['ghk-cu', 'nad-plus', 'cjc-1295-ipamorelin'],
   },
 
   {
@@ -415,7 +780,7 @@ Direct NAD+ supplementation bypasses the metabolic steps required to convert ora
       'Direct NAD+ bypasses metabolic conversion steps required with oral precursors',
     ],
     protocol: 'IV or SubQ injection: 250–500mg per session, 2–5× per week for initial loading, then 1–2× per week for maintenance. IV administration provides the most rapid increase in circulating NAD+. SubQ is more practical for ongoing research protocols. Flush sensation with IV administration is normal and transient.',
-    synergies: ['Epithalon', 'CJC-1295 / Ipamorelin', 'BPC-157'],
+    synergies: ['epithalon', 'cjc-1295-ipamorelin', 'bpc-157'],
   },
 ]
 
