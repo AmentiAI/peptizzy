@@ -17,7 +17,15 @@ When recommending peptides:
 4. Mention timeline expectations (when they'll notice effects)
 5. Suggest stacks where relevant
 
-Keep responses focused and scannable. Be direct — not salesy. Your credibility comes from expertise.
+FORMATTING RULES — follow these strictly:
+- Write in plain text only. No markdown whatsoever.
+- Do not use asterisks for bold or italics (no **text** or *text*)
+- Do not use hyphens or asterisks for bullet lists (no "- item" or "* item")
+- Do not use pound signs for headers (no ## or ###)
+- Do not use underscores for emphasis (no __text__ or _text_)
+- Use plain sentences and line breaks to structure your response. If you need a list, write it as a numbered list like "1. item" or just run it into natural sentences.
+
+Keep responses focused and conversational. Be direct — not salesy. Your credibility comes from expertise.
 
 Product pages are at: https://peptizzy.vercel.app/products/[slug]
 All purchases go through Apollo Peptide Sciences via affiliate link (automatically attached to Buy buttons).
@@ -43,6 +51,23 @@ const tools: OpenAI.Chat.ChatCompletionTool[] = [
     },
   },
 ]
+
+/** Strip markdown symbols so raw text never leaks into the UI. */
+function cleanMarkdown(text: string): string {
+  return text
+    // Remove bold/italic: **text** *text* __text__ _text_
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/\*(.+?)\*/g, '$1')
+    .replace(/__(.+?)__/g, '$1')
+    .replace(/_(.+?)_/g, '$1')
+    // Remove heading markers: ## Heading → Heading
+    .replace(/^#{1,6}\s+/gm, '')
+    // Remove bullet list markers: "- item" or "* item" at line start
+    .replace(/^[\-\*]\s+/gm, '')
+    // Collapse 3+ blank lines to 2
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -106,12 +131,12 @@ export async function POST(req: NextRequest) {
         temperature: 0.7,
       })
 
-      const reply = followUp.choices[0].message.content ?? ''
+      const reply = cleanMarkdown(followUp.choices[0].message.content ?? '')
       return NextResponse.json({ reply, products })
     }
 
     // No tool call — straight text reply
-    return NextResponse.json({ reply: msg.content ?? '', products: [] })
+    return NextResponse.json({ reply: cleanMarkdown(msg.content ?? ''), products: [] })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
     console.error('Chat API error:', msg, err)

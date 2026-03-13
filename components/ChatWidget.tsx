@@ -191,9 +191,8 @@ export default function ChatWidget() {
         {/* Header */}
         <div className="flex items-center gap-3 px-5 py-4 border-b flex-shrink-0"
           style={{ borderColor: 'rgba(212,160,67,0.1)', background: '#0a0a0e' }}>
-          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 text-[#07070a] font-black text-[14px]"
-            style={{ background: 'linear-gradient(135deg, #c08020, #f0c858)' }}>
-            M
+          <div className="w-9 h-9 rounded-full flex-shrink-0 overflow-hidden border border-[#d4a043]/30">
+            <Image src="/max-avatar.png" alt="Max" width={36} height={36} className="w-full h-full object-cover object-top" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-white font-700 text-[14px] leading-tight">Max</p>
@@ -211,9 +210,8 @@ export default function ChatWidget() {
           {messages.map((m, i) => (
             <div key={i} className={`flex gap-2.5 ${m.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               {m.role === 'assistant' && (
-                <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-[#07070a] font-black text-[11px] mt-0.5"
-                  style={{ background: 'linear-gradient(135deg, #c08020, #f0c858)' }}>
-                  M
+                <div className="w-7 h-7 rounded-full flex-shrink-0 overflow-hidden border border-[#d4a043]/30 mt-0.5">
+                  <Image src="/max-avatar.png" alt="Max" width={28} height={28} className="w-full h-full object-cover object-top" />
                 </div>
               )}
               <div className="flex flex-col gap-2 max-w-[86%]">
@@ -249,9 +247,8 @@ export default function ChatWidget() {
           {/* Loading dots */}
           {loading && (
             <div className="flex gap-2.5">
-              <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-[#07070a] font-black text-[11px]"
-                style={{ background: 'linear-gradient(135deg, #c08020, #f0c858)' }}>
-                M
+              <div className="w-7 h-7 rounded-full flex-shrink-0 overflow-hidden border border-[#d4a043]/30">
+                <Image src="/max-avatar.png" alt="Max" width={28} height={28} className="w-full h-full object-cover object-top" />
               </div>
               <div className="px-4 py-3 rounded-2xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
                 <div className="flex gap-1.5 items-center h-5">
