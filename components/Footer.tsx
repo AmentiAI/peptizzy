@@ -3,8 +3,8 @@ import Link from 'next/link'
 const col1 = [
   { href: '/products/bpc-157',      label: 'BPC-157' },
   { href: '/products/ghk-cu',       label: 'GHK-Cu' },
-  { href: '/products/melanotan-2',   label: 'Melanotan 2' },
-  { href: '/products/ipamorelin',    label: 'Ipamorelin' },
+  { href: '/products/cjc-1295-ipamorelin', label: 'CJC-1295 / Ipamorelin' },
+  { href: '/products/tirzepatide',   label: 'Tirzepatide' },
   { href: '/products/epithalon',     label: 'Epithalon' },
   { href: '/products',               label: 'View All →' },
 ]
