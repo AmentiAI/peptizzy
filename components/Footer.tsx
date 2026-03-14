@@ -12,8 +12,8 @@ const col2 = [
   { href: '/looks-maxing', label: 'Looks Maxing Guide' },
   { href: '/stacks',       label: 'Stack Protocols' },
   { href: '/guide',        label: 'Protocol Guide' },
-  { href: '/products?category=Anti-Aging',        label: 'Anti-Aging' },
-  { href: '/products?category=Body+Composition',  label: 'Body Composition' },
+  { href: '/anti-aging',        label: 'Anti-Aging' },
+  { href: '/body-composition',  label: 'Body Composition' },
 ]
 
 export default function Footer() {
