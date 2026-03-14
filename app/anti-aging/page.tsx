@@ -319,26 +319,25 @@ export default function AntiAgingPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryProducts.map(p => (
-                <Link key={p.slug} href={`/products/${p.slug}`}>
-                  <div className="card-elevated rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
-                    <div className="relative h-48 img-shimmer"
-                      style={{ background: `radial-gradient(ellipse at 50% 70%, ${accent}18, #0a0a0e)` }}>
-                      <Image src={p.image} alt={p.name} fill className="object-contain p-6 group-hover:scale-105 transition-transform duration-500" />
-                    </div>
-                    <div className="p-5">
-                      <p className="text-white font-700 text-[16px] mb-1 group-hover:text-[#c4b5fd] transition-colors">{p.name}</p>
-                      <p className="text-[#8888a0] text-[13px] mb-4 line-clamp-2">{p.shortDescription}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="font-700 text-[15px]" style={{ color: accent }}>{p.price}</span>
-                        <a href={p.affiliateUrl} target="_blank" rel="noopener noreferrer"
-                          onClick={e => e.stopPropagation()}
-                          className="btn-primary py-2 px-4 text-[12px]">
-                          Buy Now
-                        </a>
-                      </div>
+                <div key={p.slug} className="card-elevated rounded-2xl overflow-hidden">
+                  <div className="relative h-48 img-shimmer"
+                    style={{ background: `radial-gradient(ellipse at 50% 70%, ${accent}18, #0a0a0e)` }}>
+                    <Image src={p.image} alt={p.name} fill className="object-contain p-6" />
+                  </div>
+                  <div className="p-5">
+                    <Link href={`/products/${p.slug}`}>
+                      <p className="text-white font-700 text-[16px] mb-1 hover:text-[#c4b5fd] transition-colors">{p.name}</p>
+                    </Link>
+                    <p className="text-[#8888a0] text-[13px] mb-4 line-clamp-2">{p.shortDescription}</p>
+                    <div className="flex items-center justify-between">
+                      <span className="font-700 text-[15px]" style={{ color: accent }}>{p.price}</span>
+                      <a href={p.affiliateUrl} target="_blank" rel="noopener noreferrer"
+                        className="btn-primary py-2 px-4 text-[12px]">
+                        Buy Now
+                      </a>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
