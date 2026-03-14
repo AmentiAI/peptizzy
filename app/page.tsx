@@ -115,7 +115,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.05] hero-stats">
                 {[{ n: '35+', l: 'Peptides' },{ n: '99%', l: 'Purity' },{ n: '10K+', l: 'Customers' },{ n: '48h', l: 'Dispatch' }].map(s => (
                   <div key={s.l}>
-                    <p className="font-['Playfair_Display'] font-900 text-white leading-none" style={{ fontSize: '32px' }}>{s.n}</p>
+                    <p className="font-['Playfair_Display'] font-900 text-white leading-none" style={{ fontSize: 'clamp(22px, 5vw, 32px)' }}>{s.n}</p>
                     <p className="text-[#8888a0] text-[13px] mt-1">{s.l}</p>
                   </div>
                 ))}
@@ -303,7 +303,7 @@ export default function Home() {
           </AnimateIn>
 
           <AnimateIn type="scale" delay={150}>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" style={{ gridAutoRows: 'clamp(140px, 25vw, 200px)' }}>
             <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
               <Image src="https://apollopeptidesciences.com/wp-content/uploads/2025/01/ghk-cu_50mg.webp"
                 alt="GHK-Cu collagen peptide" fill
@@ -645,25 +645,35 @@ export default function Home() {
 
             {/* Comparison table */}
             <div className="card-elevated rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-3 bg-[#16161c] p-4 border-b border-white/[0.05]">
-                <p className="label text-center">Metric</p>
-                <p className="label text-center text-[#d4a043]">Peptides</p>
-                <p className="label text-center">Conventional</p>
+              <div className="hidden sm:grid grid-cols-3 bg-[#16161c] p-4 border-b border-white/[0.05]">
+                <p className="label">Metric</p>
+                <p className="label text-[#d4a043]">Peptides</p>
+                <p className="label">Conventional</p>
               </div>
               {[
                 { metric: 'Collagen increase', peptide: 'Up to 121%', conv: '5–15%' },
                 { metric: 'GH elevation', peptide: 'Physiological pulse', conv: 'Indirect only' },
-                { metric: 'Tan without UV', peptide: 'Yes (MT-2)', conv: 'No' },
                 { metric: 'Telomere length', peptide: 'Measurable gain', conv: 'No known method' },
                 { metric: 'Fat loss target', peptide: 'Visceral specific', conv: 'Non-specific' },
                 { metric: 'Recovery speed', peptide: '2–4× faster', conv: 'Baseline only' },
                 { metric: 'Mechanism', peptide: 'Direct receptor', conv: 'Indirect systemic' },
                 { metric: 'Onset', peptide: '2–4 weeks', conv: '3–6+ months' },
               ].map((row, i) => (
-                <div key={i} className={`grid grid-cols-3 p-4 ${i % 2 === 0 ? '' : 'bg-white/[0.015]'} border-b border-white/[0.03]`}>
-                  <p className="text-[#8888a0] text-[13px]">{row.metric}</p>
-                  <p className="text-[#d4a043] text-[13px] font-600 text-center">{row.peptide}</p>
-                  <p className="text-[#50505e] text-[13px] text-center">{row.conv}</p>
+                <div key={i} className={`${i % 2 === 0 ? '' : 'bg-white/[0.015]'} border-b border-white/[0.03]`}>
+                  {/* Mobile layout */}
+                  <div className="sm:hidden p-4">
+                    <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-1">{row.metric}</p>
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-[#d4a043] text-[13px] font-600">{row.peptide}</p>
+                      <p className="text-[#50505e] text-[12px]">{row.conv}</p>
+                    </div>
+                  </div>
+                  {/* Desktop layout */}
+                  <div className="hidden sm:grid grid-cols-3 p-4">
+                    <p className="text-[#8888a0] text-[13px]">{row.metric}</p>
+                    <p className="text-[#d4a043] text-[13px] font-600">{row.peptide}</p>
+                    <p className="text-[#50505e] text-[13px]">{row.conv}</p>
+                  </div>
                 </div>
               ))}
               <div className="p-5">

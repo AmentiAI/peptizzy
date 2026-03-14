@@ -171,7 +171,7 @@ function Content() {
           <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
             target="_blank" rel="noopener noreferrer"
             className="btn-primary text-[12px] py-2.5 px-6">
-            Shop All at Pantheon
+            Shop All at Apollo
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
             </svg>

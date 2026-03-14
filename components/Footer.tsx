@@ -85,9 +85,14 @@ export default function Footer() {
         <div className="rule mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle. Affiliate partner of Apollo Peptide Sciences.</p>
-          <p className="text-[#50505e] text-[13px] text-right max-w-sm">
-            For personal use only. Individual results may vary.
-          </p>
+          <div className="flex items-center gap-5">
+            <a href="/sitemap.xml" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
+              Sitemap
+            </a>
+            <p className="text-[#50505e] text-[13px]">
+              For personal use only. Individual results may vary.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

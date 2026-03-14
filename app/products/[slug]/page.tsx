@@ -106,7 +106,7 @@ function BuyBox({ product }: { product: Product }) {
       <div className="flex items-center justify-between mb-5">
         <div>
           <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Starting From</p>
-          <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: '38px', lineHeight: '1' }}>
+          <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: 'clamp(28px, 8vw, 38px)', lineHeight: '1' }}>
             {product.price}
           </p>
         </div>
@@ -176,7 +176,7 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
-        <div className="grid lg:grid-cols-[460px_1fr] gap-14 items-center">
+        <div className="grid lg:grid-cols-[460px_1fr] gap-8 lg:gap-14 items-center">
 
           {/* Info — LEFT */}
           <div>
@@ -220,11 +220,11 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
       {/* Key stats strip */}
       <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-          <div className="grid grid-cols-3 divide-x divide-white/[0.06]">
+          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
             {stats.map((s, i) => (
-              <div key={i} className="px-6 first:pl-0 last:pr-0 text-center">
-                <p className="font-['Playfair_Display'] font-900 text-[#d4a043] text-2xl mb-1">{s.value}</p>
-                <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
+              <div key={i} className="px-3 sm:px-6 first:pl-0 last:pr-0 text-center">
+                <p className="font-['Playfair_Display'] font-900 text-[#d4a043] text-xl sm:text-2xl mb-1">{s.value}</p>
+                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
               </div>
             ))}
           </div>
@@ -288,11 +288,11 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
       {/* Stats bar */}
       <div className="border-b border-white/[0.06] bg-[#0a0a0e]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-3 divide-x divide-white/[0.06]">
+          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
             {stats.map((s, i) => (
-              <div key={i} className="px-6 py-5 first:pl-0 last:pr-0">
-                <p className="font-['Playfair_Display'] font-900 text-2xl mb-0.5" style={{ color: accent }}>{s.value}</p>
-                <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
+              <div key={i} className="px-3 sm:px-6 py-4 sm:py-5 first:pl-0 last:pr-0 text-center sm:text-left">
+                <p className="font-['Playfair_Display'] font-900 text-xl sm:text-2xl mb-0.5" style={{ color: accent }}>{s.value}</p>
+                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
               </div>
             ))}
           </div>
@@ -301,7 +301,7 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
 
       {/* Main split — image left, info right */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
-        <div className="grid lg:grid-cols-[1fr_460px] gap-14 items-start">
+        <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl"
               style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(192,132,252,0.14), #0a0a0e)` }}>
@@ -365,18 +365,18 @@ function BodyCompHero({ product, stats }: { product: Product; stats: StatItem[] 
         </div>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-3 gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-12">
           {stats.map((s, i) => (
-            <div key={i} className="card-elevated rounded-2xl p-6 text-center relative overflow-hidden">
+            <div key={i} className="card-elevated rounded-2xl p-5 sm:p-6 text-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-[0.04]" style={{ background: `radial-gradient(circle at 50% 110%, ${accent}, transparent)` }} />
-              <p className="font-['Playfair_Display'] font-900 text-3xl mb-1" style={{ color: accent }}>{s.value}</p>
+              <p className="font-['Playfair_Display'] font-900 text-2xl sm:text-3xl mb-1" style={{ color: accent }}>{s.value}</p>
               <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
             </div>
           ))}
         </div>
 
         {/* Product split */}
-        <div className="grid lg:grid-cols-[1fr_460px] gap-14 items-start">
+        <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl"
               style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(52,211,153,0.12), #0a0a0e)` }}>
@@ -452,7 +452,7 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
 
         {/* Hero split */}
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
-          <div className="grid lg:grid-cols-[1fr_460px] gap-14 items-start">
+          <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl"
                 style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(96,165,250,0.15), #0a0a0e)` }}>
@@ -499,11 +499,11 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
         {/* Stats strip */}
         <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-            <div className="grid grid-cols-3 divide-x divide-white/[0.06]">
+            <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
               {stats.map((s, i) => (
-                <div key={i} className="px-6 first:pl-0 last:pr-0 text-center">
-                  <p className="font-['Playfair_Display'] font-900 text-2xl mb-1" style={{ color: accent }}>{s.value}</p>
-                  <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
+                <div key={i} className="px-3 sm:px-6 py-2 sm:py-0 first:pl-0 last:pr-0 text-center">
+                  <p className="font-['Playfair_Display'] font-900 text-xl sm:text-2xl mb-1" style={{ color: accent }}>{s.value}</p>
+                  <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -544,8 +544,8 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
         </div>
 
         {/* Centered image with orbital ring */}
-        <div className="relative flex justify-center mb-12">
-          <div className="relative" style={{ width: 340, height: 340 }}>
+        <div className="relative flex justify-center mb-12 px-12 sm:px-0">
+          <div className="relative w-full max-w-[340px]" style={{ aspectRatio: '1/1' }}>
             {/* Outer orbital ring */}
             <div className="absolute rounded-full pointer-events-none animate-spin"
               style={{ inset: -48, border: `1px solid ${accent}15`, animationDuration: '25s' }} />
@@ -572,7 +572,7 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mb-12">
           {stats.map((s, i) => (
             <div key={i} className="card rounded-xl p-4 text-center">
               <p className="font-['Playfair_Display'] font-900 text-xl mb-1" style={{ color: accent }}>{s.value}</p>
@@ -781,7 +781,7 @@ export default function ProductPage({ params }: Props) {
 
       {/* ── DEEP DIVE ── */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 pb-20">
-        <div className="grid lg:grid-cols-[1fr_360px] gap-14">
+        <div className="grid lg:grid-cols-[1fr_360px] gap-8 lg:gap-14">
 
           {/* Main */}
           <div>

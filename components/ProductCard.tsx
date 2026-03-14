@@ -113,7 +113,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
       <div className="card-product group overflow-hidden relative flex flex-col h-full">
         <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
           {/* Full product image — no crop */}
-          <div className="relative overflow-hidden img-shimmer" style={{ height: '360px',
+          <div className="relative overflow-hidden img-shimmer" style={{ height: 'clamp(240px, 50vw, 360px)',
             background: `radial-gradient(ellipse at 50% 75%, ${accent}20, #0a0a0e 70%)` }}>
             <Image src={product.image} alt={product.name} fill priority
               className="object-contain p-6 group-hover:scale-105 transition-transform duration-700" />
@@ -178,7 +178,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
       <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
 
         {/* Full product image — object-contain so nothing gets cut */}
-        <div className="relative overflow-hidden img-shimmer" style={{ height: '300px',
+        <div className="relative overflow-hidden img-shimmer" style={{ height: 'clamp(200px, 45vw, 300px)',
           background: `radial-gradient(ellipse at 50% 75%, ${accent}18, #0a0a0e 70%)` }}>
           <Image src={product.image} alt={product.name} fill
             className="object-contain p-5 group-hover:scale-105 transition-transform duration-600" />

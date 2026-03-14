@@ -179,10 +179,10 @@ export default function ChatWidget() {
 
       {/* ── Chat panel ── */}
       <div
-        className="fixed bottom-24 right-6 z-50 flex flex-col"
+        className="fixed bottom-24 right-4 z-50 flex flex-col"
         style={{
-          width: 'min(420px, calc(100vw - 24px))',
-          height: '580px',
+          width: 'min(420px, calc(100vw - 32px))',
+          height: 'min(580px, calc(100dvh - 140px))',
           opacity: open ? 1 : 0,
           transform: open ? 'scale(1) translateY(0)' : 'scale(0.92) translateY(16px)',
           transition: 'opacity 0.25s ease, transform 0.25s cubic-bezier(.22,.68,0,1.2)',
@@ -274,7 +274,7 @@ export default function ChatWidget() {
           <div className="px-4 py-2 flex flex-wrap gap-1.5 flex-shrink-0">
             {STARTERS.map(s => (
               <button key={s} onClick={() => send(s)} disabled={loading}
-                className="text-[11px] px-3 py-1.5 rounded-full transition-all duration-150 hover:scale-105 disabled:opacity-50"
+                className="text-[12px] px-3 py-2 rounded-full transition-all duration-150 hover:scale-105 disabled:opacity-50"
                 style={{
                   background: 'rgba(212,160,67,0.08)',
                   border: '1px solid rgba(212,160,67,0.2)',
@@ -288,7 +288,7 @@ export default function ChatWidget() {
 
         {/* Input area */}
         <div className="px-4 pb-4 pt-3 border-t flex-shrink-0" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-          <div className="flex gap-2 items-center rounded-2xl px-4 py-2.5 transition-all"
+          <div className="flex gap-2 items-center rounded-2xl px-4 py-3 transition-all"
             style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
             <input
               ref={inputRef}
@@ -298,7 +298,8 @@ export default function ChatWidget() {
               onKeyDown={e => e.key === 'Enter' && !e.shiftKey && send()}
               placeholder="Ask about peptides, goals, stacks..."
               disabled={loading}
-              className="flex-1 bg-transparent text-[13px] text-white outline-none placeholder:text-[#50505e] disabled:opacity-50"
+              className="flex-1 bg-transparent text-[15px] text-white outline-none placeholder:text-[#50505e] disabled:opacity-50"
+              style={{ fontSize: '16px' }}
             />
             <button
               onClick={() => send()}
