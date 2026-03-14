@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const stack = getStackById(params.slug)
   if (!stack) return {}
   return {
-    title: `${stack.name} | PeptiZzy Stack Protocols`,
+    title: `${stack.name} | PeptidesMuscle Stack Protocols`,
     description: stack.shortDesc,
   }
 }

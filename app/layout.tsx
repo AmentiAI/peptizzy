@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import ChatWidget from '@/components/ChatWidget'
 
 export const metadata: Metadata = {
-  title: 'PeptiZzy | Elite Peptide Protocols for Peak Physical Optimization',
+  title: 'PeptidesMuscle | Elite Peptide Protocols for Peak Physical Optimization',
   description: 'The definitive resource for peptide-based physical optimization. Shop premium peptides for looks maxing, body composition, longevity, and cognitive performance.',
   keywords: 'peptides, looks maxing, body composition, anti-aging, BPC-157, GHK-Cu, ipamorelin, CJC-1295, physical optimization',
   icons: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
   },
   openGraph: {
-    title: 'PeptiZzy | Elite Peptide Protocols',
+    title: 'PeptidesMuscle | Elite Peptide Protocols',
     description: 'Premium peptide protocols for looks maximization, body composition, and longevity.',
     type: 'website',
   },

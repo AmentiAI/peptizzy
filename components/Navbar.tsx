@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group" aria-label="PeptiZzy home">
+        <Link href="/" className="flex items-center gap-3 group" aria-label="PeptidesMuscle home">
           {/* Hex icon */}
           <div className="relative w-8 h-8 flex-shrink-0">
             <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -39,7 +39,7 @@ export default function Navbar() {
             </svg>
           </div>
           <span className="font-['Playfair_Display'] text-[20px] font-900 tracking-tight text-white">
-            Pepti<span className="gold-shimmer">Zzy</span>
+            Peptides<span className="gold-shimmer">Muscle</span>
           </span>
         </Link>
 

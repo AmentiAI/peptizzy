@@ -196,7 +196,7 @@ export default function ChatWidget() {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-white font-700 text-[14px] leading-tight">Max</p>
-            <p className="text-[11px]" style={{ color: '#d4a043' }}>Peptide Optimization Expert · PeptiZzy AI</p>
+            <p className="text-[11px]" style={{ color: '#d4a043' }}>Peptide Optimization Expert · PeptidesMuscle AI</p>
           </div>
           <div className="flex items-center gap-1.5 flex-shrink-0">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -305,7 +305,7 @@ export default function ChatWidget() {
             </button>
           </div>
           <p className="text-[10px] text-[#50505e] text-center mt-2">
-            Powered by PeptiZzy AI · Not medical advice
+            Powered by PeptidesMuscle AI · Not medical advice
           </p>
         </div>
       </div>

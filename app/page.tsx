@@ -129,25 +129,26 @@ export default function Home() {
                 return (
                   <Link key={p.slug} href={`/products/${p.slug}`}>
                     <div className="relative rounded-2xl overflow-hidden group cursor-pointer"
-                      style={{ height: '215px' }}>
+                      style={{ height: '300px' }}>
                       <Image src={p.image} alt={p.name} fill priority={i < 2}
-                        className="object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                        className="object-contain p-5 group-hover:scale-105 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
                       {/* Accent glow on hover */}
-                      <div className="absolute bottom-0 left-0 right-0 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        style={{ background: `linear-gradient(to top, ${accent}30, transparent)` }} />
+                      <div className="absolute bottom-0 left-0 right-0 h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{ background: `linear-gradient(to top, ${accent}35, transparent)` }} />
                       {p.badge && (
-                        <div className="absolute top-3 left-3">
-                          <span className="tag-gold text-[9px]">{p.badge}</span>
+                        <div className="absolute top-4 left-4">
+                          <span className="tag-gold text-[10px]">{p.badge}</span>
                         </div>
                       )}
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <p className="text-[10px] font-600 tracking-widest uppercase mb-1" style={{ color: accent }}>
+                      <div className="absolute bottom-0 left-0 right-0 p-5">
+                        <p className="text-[11px] font-600 tracking-widest uppercase mb-1.5" style={{ color: accent }}>
                           {p.category}
                         </p>
-                        <p className="text-white font-700 text-[15px] leading-tight">{p.name}</p>
-                        <div className="flex items-center justify-between mt-1.5">
-                          <p className="font-700 text-[13px]" style={{ color: accent }}>{p.price}</p>
+                        <p className="text-white font-700 text-[17px] leading-tight mb-1">{p.name}</p>
+                        <p className="text-[#8888a0] text-[12px] leading-snug mb-2 line-clamp-2">{p.tagline}</p>
+                        <div className="flex items-center justify-between">
+                          <p className="font-700 text-[15px]" style={{ color: accent }}>{p.price}</p>
                           <svg className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
@@ -1021,7 +1022,7 @@ export default function Home() {
             <FAQ q="What peptides are best for looks maxing specifically?"
               a="The core looks maxing peptide stack includes: GHK-Cu for collagen synthesis and skin quality, Melanotan 2 for deep eumelanin pigmentation and libido, Ipamorelin + CJC-1295 for GH-optimized body composition, and Epithalon for cellular anti-aging. BPC-157 serves as a foundation compound to optimize the cellular environment. This combination addresses all four pillars of physical optimization: skin structure, pigmentation, hormones, and cellular age." />
             <FAQ q="Where can I buy the peptides featured on this site?"
-              a="All peptides on PeptiZzy are available through our partner Apollo Peptide Sciences — a premium supplier with third-party purity verification and fast shipping. Use our affiliate link to shop the complete catalog with full product information and support." />
+              a="All peptides on PeptidesMuscle are available through our partner Apollo Peptide Sciences — a premium supplier with third-party purity verification and fast shipping. Use our affiliate link to shop the complete catalog with full product information and support." />
           </div>
 
           <div className="text-center mt-10">

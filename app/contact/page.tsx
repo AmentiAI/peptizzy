@@ -27,7 +27,7 @@ export default function ContactPage() {
             <div className="text-4xl mb-4">📧</div>
             <h3 className="text-2xl font-bold text-white mb-2">Email Us</h3>
             <p className="text-white/70 mb-4">
-              support@peptizzy.com
+              support@peptidesmuscle.com
             </p>
             <p className="text-white/60 text-sm">
               Response within 24 hours

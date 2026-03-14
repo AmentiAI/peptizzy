@@ -5,7 +5,7 @@ import { stacks } from '@/lib/stacks'
 import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Stack Protocols | PeptiZzy',
+  title: 'Stack Protocols | PeptidesMuscle',
   description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance. Full detail pages for each stack.',
 }
 

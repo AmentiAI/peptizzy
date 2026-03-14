@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Looks Maxing Guide | PeptiZzy',
+  title: 'Looks Maxing Guide | PeptidesMuscle',
   description: 'The definitive guide to peptide-based looks maximization. GHK-Cu, Melanotan 2, BPC-157, and the complete protocol for peak physical appearance.',
 }
 

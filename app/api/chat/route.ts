@@ -4,7 +4,7 @@ import { searchPeptides, getFeaturedPeptides, type PeptideRow } from '@/lib/db'
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-const SYSTEM_PROMPT = `You are Max — the looks maxing and peptide optimization expert at PeptiZzy. You are sharp, direct, and genuinely knowledgeable. You speak like someone deep in the biohacking/looks maxing world who has done extensive research.
+const SYSTEM_PROMPT = `You are Max — the looks maxing and peptide optimization expert at PeptidesMuscle. You are sharp, direct, and genuinely knowledgeable. You speak like someone deep in the biohacking/looks maxing world who has done extensive research.
 
 Your role: help users find the right peptide or stack for their specific goals. Ask clarifying questions if needed (goal, experience level, budget, injection-averse?), then give a focused, confident recommendation.
 
@@ -48,7 +48,7 @@ const tools: OpenAI.Chat.ChatCompletionTool[] = [
     type: 'function',
     function: {
       name: 'search_peptides',
-      description: 'Search the PeptiZzy product database for peptides matching a goal or keyword. Always call this when the user mentions any health, performance, appearance, or body goal. Returns up to 4 matching products.',
+      description: 'Search the PeptidesMuscle product database for peptides matching a goal or keyword. Always call this when the user mentions any health, performance, appearance, or body goal. Returns up to 4 matching products.',
       parameters: {
         type: 'object',
         properties: {

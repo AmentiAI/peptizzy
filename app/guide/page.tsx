@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Protocol Guide | PeptiZzy',
+  title: 'Protocol Guide | PeptidesMuscle',
   description: 'The complete guide to peptide protocols — from beginner fundamentals to advanced stacking strategies.',
 }
 

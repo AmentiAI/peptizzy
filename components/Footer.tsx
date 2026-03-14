@@ -31,7 +31,7 @@ export default function Footer() {
                 <circle cx="16" cy="16" r="3.5" fill="#d4a043" opacity="0.9"/>
               </svg>
               <span className="font-['Playfair_Display'] text-[18px] font-900 text-white">
-                Pepti<span className="gold-text">Zzy</span>
+                Peptides<span className="gold-text">Muscle</span>
               </span>
             </div>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5 max-w-[220px]">
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="rule mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#50505e] text-[13px]">© 2025 PeptiZzy. Affiliate partner of Apollo Peptide Sciences.</p>
+          <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle. Affiliate partner of Apollo Peptide Sciences.</p>
           <p className="text-[#50505e] text-[13px] text-right max-w-sm">
             For personal use only. Individual results may vary.
           </p>
