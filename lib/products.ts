@@ -15,6 +15,8 @@ export interface Product {
   badge?: string
   featured?: boolean
   seoTitle?: string
+  deepDiveTitle: string
+  highlights: { label: string; title: string; body: string }[]
 }
 
 const AFF = (slug: string) => `https://apollopeptidesciences.com/product/${slug}/?rfsn=9016964.3f1b1e`
@@ -57,6 +59,24 @@ Available in 10mg vials from Apollo Peptide Sciences — pharmaceutical-grade ly
     ],
     protocol: 'Typical protocols range from 200–500mcg per day, administered subcutaneously or intramuscularly near the site of injury. For systemic benefits, abdominal SubQ injection is standard. Cycles of 4–8 weeks on, 4 weeks off.',
     synergies: ['tb-500', 'ghk-cu', 'cjc-1295-ipamorelin'],
+    deepDiveTitle: 'The Peptide That Actually Fixes What\'s Broken — Not Just the Pain',
+    highlights: [
+      {
+        label: 'How It Works',
+        title: 'Angiogenesis, Nitric Oxide, and Why BPC-157 Heals 7+ Tissue Types at Once',
+        body: 'BPC-157 works by upregulating nitric oxide synthesis and directly promoting angiogenesis — the growth of new blood vessels into damaged tissue. More blood vessels means more oxygen, more growth factors, and faster cellular repair. This single mechanism is why BPC-157 works on tendons, ligaments, gut lining, muscle, cartilage, nerves, and bone simultaneously. It doesn\'t target one tissue type — it creates the biological conditions where all tissue types heal faster.',
+      },
+      {
+        label: 'The Gut Connection',
+        title: 'Why Hard Training Destroys Your Gut — And How BPC-157 Fixes It',
+        body: 'High-intensity training, NSAIDs, and caloric restriction all damage the gastric mucosal lining — the barrier that keeps your gut working properly. Intestinal permeability ("leaky gut") triggers systemic inflammation that undermines everything from recovery to sleep quality. BPC-157 was originally derived from a gastric protein sequence for exactly this reason: it heals the mucosal lining, reduces gut inflammation, and restores the intestinal barrier that high-performance training tends to compromise.',
+      },
+      {
+        label: 'Stacking Logic',
+        title: 'Why BPC-157 Goes in Nearly Every Advanced Stack — And What It Does for the Other Compounds',
+        body: 'BPC-157\'s role in a stack isn\'t just personal recovery — it optimizes the biological environment for every other compound. It reduces systemic inflammation that would blunt growth hormone signaling, it heals the connective tissue damage that limits training intensity, and it supports the gut health that determines how well anything else gets processed. Whether you\'re running GHK-Cu for skin, CJC-1295/Ipamorelin for GH, or semaglutide for fat loss, BPC-157 is the compound that keeps the foundation intact.',
+      },
+    ],
   },
 
   {
@@ -89,6 +109,24 @@ For physique development, TB-500 addresses the full-body recovery limitation tha
     ],
     protocol: 'Loading phase: 2–2.5mg twice per week for 4–6 weeks. Maintenance: 2–2.5mg every 2 weeks. SubQ injection — systemic distribution means injection site is not critical. Often cycled 8 weeks on, 4 weeks off.',
     synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'igf-1-lr3'],
+    deepDiveTitle: 'The Peptide That Travels to Every Injury Site — Without You Having to Inject Into Each One',
+    highlights: [
+      {
+        label: 'What Makes It Different',
+        title: 'Systemic Distribution: Why TB-500 Reaches Injuries That Local Injection Can\'t',
+        body: 'Most healing peptides work locally — you inject near the injury and that\'s where the effects concentrate. TB-500 breaks this rule entirely. As a synthetic analogue of Thymosin Beta-4, it distributes through the bloodstream to injured tissue throughout the body, regardless of injection site. This matters most for athletes with multiple concurrent issues — a shoulder issue, an overused knee, and general systemic inflammation can all be addressed from a single abdominal SubQ injection.',
+      },
+      {
+        label: 'The Actin Mechanism',
+        title: 'How Actin Sequestration Moves Repair Cells to Where They\'re Needed',
+        body: 'TB-500\'s mechanism centers on actin, a structural protein found in every cell. By upregulating actin expression and sequestering G-actin (the monomeric form), TB-500 promotes cell migration — specifically, it directs repair cells, growth factors, and new blood vessel formation toward sites of damage. This isn\'t just anti-inflammatory: it actively recruits the biological machinery of repair and routes it to injured tissue, accelerating the structural repair process significantly.',
+      },
+      {
+        label: 'BPC-157 vs. TB-500',
+        title: 'Local Precision vs. Systemic Coverage — Why the Best Protocols Use Both',
+        body: 'BPC-157 is exceptional at healing specific, targeted areas — particularly gut lining, tendons, and acute injury sites when injected locally. TB-500 is exceptional at systemic, full-body recovery — reaching all tissues via bloodstream distribution. Together, they create complementary coverage: BPC-157 handles the precise, acute repair; TB-500 handles the broader, systemic inflammatory burden and multi-site recovery that every hard-training athlete accumulates. Most serious recovery protocols use both simultaneously.',
+      },
+    ],
   },
 
   {
@@ -121,6 +159,24 @@ No serious peptide research protocol is complete without it. Whether working wit
     ],
     protocol: 'Add 1–2ml of bacteriostatic water per 5mg peptide vial as a starting point — adjust volume based on desired injection concentration. Use a clean alcohol-wiped septum before each draw. Inject the water slowly down the inside of the peptide vial wall to avoid disrupting the lyophilized powder. Swirl gently — do not shake. Store reconstituted vials refrigerated at 2–8°C.',
     synergies: ['bpc-157', 'semaglutide', 'tirzepatide'],
+    deepDiveTitle: 'The One Thing Every Injectable Peptide Protocol Has in Common',
+    highlights: [
+      {
+        label: 'Why Not Plain Sterile Water',
+        title: '0.9% Benzyl Alcohol: The Difference Between a Safe Vial and a Contaminated One',
+        body: 'Standard water for injection is sterile when sealed — but the moment you pierce the septum and draw a dose, you introduce the risk of microbial contamination. Plain sterile water offers no protection against bacterial growth in the vial between uses. Bacteriostatic water\'s 0.9% benzyl alcohol content actively inhibits microbial growth, keeping every draw from a reconstituted vial as clean as the first — for up to 28 days under proper refrigeration. For any multi-dose protocol, this distinction isn\'t minor: it\'s the difference between a safe protocol and a risky one.',
+      },
+      {
+        label: 'Reconstitution Math',
+        title: 'How the Volume You Add Determines the Dose You Draw — Getting It Right Every Time',
+        body: 'The amount of bacteriostatic water you add to a peptide vial determines your working concentration and, consequently, every dose you draw. For a 5mg peptide vial: add 1ml of BAC water = 5mg/ml (1mg per 0.2ml draw). Add 2ml = 2.5mg/ml (1mg per 0.4ml draw). The math is simple but the stakes are high — imprecise reconstitution means imprecise dosing across every injection for weeks. Most researchers find 1–2ml per 5mg vial a practical starting point, adjusted to keep injection volumes manageable.',
+      },
+      {
+        label: 'Storage & Stability',
+        title: '28 Days Properly Refrigerated: What Peptide Stability Actually Requires',
+        body: 'Reconstituted peptides are stable for up to 28 days when refrigerated at 2–8°C — but only when bacteriostatic water is used for reconstitution. Room temperature storage, repeated freeze-thaw cycles, or exposure to light all accelerate peptide degradation. Best practice: reconstitute one vial at a time, label with the reconstitution date, refrigerate immediately, and keep away from the door (where temperature fluctuates). Lyophilized (unreconstituted) peptides are far more stable and should be stored at room temperature or in the freezer until needed.',
+      },
+    ],
   },
 
   // ── LOOKS MAXING ────────────────────────────────────────────────────────────
@@ -157,6 +213,24 @@ For looks maximization, GHK-Cu addresses the structural variable that no diet, h
     ],
     protocol: 'SubQ injection: 1–2mg per injection, 3–5× weekly. Many researchers also use topically at lower concentrations. Cycles of 8–12 weeks produce the most significant structural results. Can be run year-round at lower frequency.',
     synergies: ['snap-8', 'bpc-157', 'epithalon'],
+    deepDiveTitle: 'What Actually Changes When 4,000 Genes Get Switched On in Your Skin',
+    highlights: [
+      {
+        label: 'Genomic Remodeling',
+        title: '4,000 Genes — What That Number Actually Means for Skin Quality',
+        body: 'When researchers say GHK-Cu "activates 4,000 genes," it sounds abstract. In practice, those genes govern: collagen and elastin synthesis, antioxidant enzyme production, anti-inflammatory signaling, wound repair machinery, and the cellular turnover rate that keeps skin looking young. GHK-Cu doesn\'t have one target — it resets a massive portion of the skin\'s gene expression profile toward a younger, more regenerative baseline. No topical cream or serum reaches this level of biological influence. This is structural remodeling at the cellular instruction level.',
+      },
+      {
+        label: 'The Collagen Paradox',
+        title: 'How GHK-Cu Both Breaks Down Old Collagen and Builds New — Why That Matters',
+        body: 'Most collagen-boosting products focus only on stimulating new collagen production. GHK-Cu does something more sophisticated: it activates matrix metalloproteinases (MMPs) that break down damaged, cross-linked, and disorganized collagen — the fibrous tangles that accumulate with age and cause skin to look thick and dull — while simultaneously stimulating fibroblasts to synthesize fresh, organized collagen. This dual action is why GHK-Cu produces measurable improvements in skin density rather than just surface hydration. You\'re not adding on top of damaged architecture; you\'re replacing it.',
+      },
+      {
+        label: 'SubQ vs. Topical',
+        title: 'Two Delivery Methods, Different Depths — Which Protocol Achieves Which Goal',
+        body: 'SubQ injection delivers GHK-Cu systemically, reaching the deeper dermal layers where fibroblasts live and where structural collagen changes actually occur. Topical application works at the epidermal and upper dermal level — useful for surface quality, hydration, and barrier repair, but limited in penetration depth. Serious looks maximizers typically combine both: SubQ for structural remodeling and topical for surface refinement. If choosing one, SubQ produces more significant measurable changes in skin density and collagen architecture over an 8–12 week cycle.',
+      },
+    ],
   },
 
   {
@@ -189,6 +263,24 @@ Available in 10mg vials from Apollo Peptide Sciences for research applications.`
     ],
     protocol: 'Typically dissolved and applied topically to target areas twice daily, or used in research formulations at 4–10 ppm concentration. Some researchers use diluted SubQ injection near target muscle groups. Consistent daily use for 4+ weeks produces measurable results.',
     synergies: ['ghk-cu', 'epithalon', 'bpc-157'],
+    deepDiveTitle: 'How a Peptide Blocks the Molecular Machinery Behind Every Expression Line You Have',
+    highlights: [
+      {
+        label: 'The SNARE Mechanism',
+        title: 'What SNARE Proteins Are, Why They Cause Wrinkles, and How SNAP-8 Interrupts Them',
+        body: 'SNARE proteins (Soluble NSF Attachment Protein Receptors) are the molecular docking machinery that allows neurotransmitter-containing vesicles to fuse with the nerve terminal membrane — releasing acetylcholine to trigger muscle contraction. SNAP-8 is a synthetic octapeptide that mimics part of this complex and competitively binds to it, reducing the efficiency of vesicle fusion. The result: the same nerve signal produces a weaker muscle contraction. Less contraction intensity over time means less groove-formation in the overlying skin. It\'s not paralysis — it\'s a modulation of the signal that creates wrinkles in the first place.',
+      },
+      {
+        label: 'SNAP-8 vs. Botox',
+        title: 'The Difference Between Competitive Inhibition and Complete Neurotoxic Blockade',
+        body: 'Botulinum toxin cleaves SNARE proteins entirely — completely blocking neuromuscular transmission in the injected area. This is why Botox produces the "frozen" appearance when overdone: the muscle literally cannot contract. SNAP-8 doesn\'t block — it reduces. The SNARE complex still functions; acetylcholine is still released; muscles still contract. But the signal is dampened, producing a gradual softening of expression lines rather than immobility. For researchers who want wrinkle reduction without the risks, cost, or aesthetic concerns of neurotoxin injections, SNAP-8 is the research alternative with documented efficacy.',
+      },
+      {
+        label: 'Consistency Over Time',
+        title: 'Why 4 Weeks Is the Minimum — and How Cumulative SNARE Inhibition Builds Results',
+        body: 'SNAP-8\'s mechanism requires consistent, sustained application. A single use doesn\'t visibly reduce wrinkles — you\'re not blocking muscles for the next three months like Botox does. Instead, SNAP-8\'s effect is cumulative: each daily application maintains a degree of SNARE inhibition, and over 4–8 weeks, the reduced average contraction intensity begins to translate into measurable reductions in wrinkle depth. The 63% wrinkle reduction figure comes from consistent application across the full research window — not a single use or a two-week trial.',
+      },
+    ],
   },
 
   {
@@ -219,6 +311,24 @@ The economics are simple: two vials at the bundle price represent a meaningful s
     ],
     protocol: 'Dissolve and apply topically to target areas twice daily, or use in formulations at 4–10 ppm concentration. Some researchers use diluted SubQ injection near target muscle groups. Consistent daily use for 4+ weeks produces measurable results. The 2-pack provides approximately 8+ weeks of research supply depending on application method.',
     synergies: ['snap-8', 'ghk-cu', 'epithalon', 'bpc-157'],
+    deepDiveTitle: 'Running SNAP-8 Long Enough to Actually See What It Can Do',
+    highlights: [
+      {
+        label: 'The Protocol Continuity Problem',
+        title: 'Why Stopping SNAP-8 Mid-Protocol Resets Your Progress',
+        body: 'SNAP-8\'s wrinkle reduction is maintained by continuous SNARE inhibition — not stored as a structural change the way collagen remodeling is. If you run SNAP-8 for three weeks and stop, the competitive inhibition effect fades within days as the peptide clears, and the expression lines return to their pre-protocol depth. The 63% wrinkle depth reduction documented in research requires both reaching and maintaining the protocol window. The 2-pack exists for researchers who understand this: two vials means you never have to interrupt a working protocol because the first vial ran out.',
+      },
+      {
+        label: 'The Dual Skin Stack',
+        title: 'SNAP-8 + GHK-Cu: What Happens When You Target Both Structural and Neuromuscular Causes',
+        body: 'GHK-Cu and SNAP-8 address wrinkles through completely different mechanisms. GHK-Cu rebuilds the collagen architecture underneath the skin — the structural scaffold that determines skin density and firmness. SNAP-8 reduces the muscle contraction intensity that carves expression lines into that architecture. Used together, you\'re simultaneously strengthening the structural base while reducing the mechanical force that degrades it. This is why looks maximizers running both compounds report results that neither achieves alone — they\'re working on two fundamentally separate problems at the same time.',
+      },
+      {
+        label: 'Getting the Formulation Right',
+        title: 'Concentration, Carrier, and Application: The Variables That Determine SNAP-8 Results',
+        body: 'SNAP-8 at 4–10 parts per million is the documented research concentration range for topical efficacy. Too low and the competitive inhibition is insufficient; too high doesn\'t necessarily improve results and wastes material. The carrier matters too — SNAP-8 needs a water-based formulation; oil-based carriers reduce penetration. Application to clean, dry skin at the target areas (crow\'s feet, forehead, glabellar) twice daily is standard. Morning and evening applications maintain consistent compound availability at the SNARE complex throughout the day.',
+      },
+    ],
   },
 
   // ── BODY COMPOSITION ────────────────────────────────────────────────────────
@@ -255,6 +365,24 @@ The downstream effects of optimized GH pulsatility are comprehensive: enhanced f
     ],
     protocol: '100mcg CJC-1295 + 100mcg Ipamorelin per injection (from blended vial), 2–3× daily. Best timed: upon waking, pre-workout, and 30–60 min before bed. The bedtime dose leverages the natural GH pulse during sleep. Cycles of 12–16 weeks on, 4–8 weeks off.',
     synergies: ['igf-1-lr3', 'bpc-157', 'epithalon'],
+    deepDiveTitle: 'Why Two Receptors Produce More Than Twice the Growth Hormone of Either Alone',
+    highlights: [
+      {
+        label: 'The Dual Receptor Advantage',
+        title: 'GHRH + GHRP Simultaneously: The Synergy That Makes This Stack the Gold Standard',
+        body: 'CJC-1295 activates the GHRH receptor on pituitary somatotrophs — the cells that produce growth hormone. Ipamorelin activates the ghrelin receptor (GHS-R) through an entirely separate pathway. When both receptors are stimulated simultaneously, the GH pulse isn\'t just additive — it\'s synergistic. Research has described this as a "double stimulus" effect: the combined receptor activation produces GH pulsatility that approaches pharmaceutical GH levels while remaining entirely within the body\'s own feedback mechanisms. Neither compound alone achieves what both achieve together — which is exactly why this stack became the standard.',
+      },
+      {
+        label: 'Ipamorelin\'s Selectivity',
+        title: 'Zero Cortisol. Zero Prolactin. Just Clean GH Elevation — Here\'s Why That Matters',
+        body: 'Older GHRPs like GHRP-6 and GHRP-2 produce significant GH elevation but come with a cost: they also raise cortisol and prolactin. Cortisol is catabolic — it breaks down muscle, promotes fat storage, and undermines every result you\'re trying to achieve with a GH protocol. Ipamorelin\'s extraordinary selectivity means you get the full GH-stimulating benefit of GHRP activation with zero cortisol or prolactin response. This is the core reason Ipamorelin replaced other GHRPs as the standard in premium GH protocols — it\'s not just effective, it\'s clean.',
+      },
+      {
+        label: 'The Bedtime Dose',
+        title: 'Why the Last Injection of the Day Is the Most Important One You\'ll Take',
+        body: 'Growth hormone release is highest during the first deep sleep cycle — the body\'s natural nocturnal GH pulse. Injecting CJC-1295/Ipamorelin 30–60 minutes before bed amplifies this natural pulse rather than creating an artificial one at an arbitrary time. The result is a larger, more physiological GH release during the deepest, most restorative phase of sleep — which also happens to be when the majority of tissue repair and growth signaling occurs. Users consistently report improved sleep quality within the first week of use, and this isn\'t a side effect: it\'s the compound doing exactly what it\'s supposed to do.',
+      },
+    ],
   },
 
   {
@@ -287,6 +415,24 @@ Stacked with CJC-1295/Ipamorelin, IGF-1 LR3 creates a comprehensive anabolic env
     ],
     protocol: '20–50mcg SubQ or IM, administered post-workout when muscle cells are maximally insulin-sensitive and IGF-1 receptor-upregulated. Short cycles recommended: 4–6 weeks on, 4–6 weeks off to maintain receptor sensitivity. Not suitable for continuous long-term use.',
     synergies: ['cjc-1295-ipamorelin', 'bpc-157', 'tb-500'],
+    deepDiveTitle: 'The Most Direct Anabolic Signal You Can Deliver to a Muscle Cell',
+    highlights: [
+      {
+        label: 'Bypassing the GH Axis',
+        title: 'Why Acting at the Terminal Effector Level Changes Everything About the Result',
+        body: 'Growth hormone peptides like CJC-1295/Ipamorelin work upstream: they stimulate the pituitary to release GH, which then travels to the liver to produce IGF-1, which then signals muscles to grow. IGF-1 LR3 skips every step in that chain. It delivers the anabolic signal directly to muscle tissue — the same signal the body produces at the end of that long pathway, but without the lag, without the signal loss at each conversion step, and without dependence on pituitary function or liver IGF-1 production. The result is a more direct, more concentrated anabolic stimulus than any upstream compound can produce.',
+      },
+      {
+        label: 'The LR3 Modification',
+        title: 'How Three Structural Changes Gave This Molecule a 30-Hour Half-Life',
+        body: 'Native IGF-1 has a half-life measured in minutes — it\'s immediately bound by IGF-binding proteins (IGFBPs) that sequester it and limit its activity. IGF-1 LR3\'s modifications change this completely: an arginine substitution at position 3 reduces IGFBP binding affinity by roughly 1000-fold, and an extended 13 amino acid N-terminal sequence provides additional steric interference with binding protein attachment. The result is a modified molecule with a 20–30 hour half-life that circulates freely, reaches all muscle groups systemically, and activates mTOR and protein synthesis at every delivery point — not just near the injection site.',
+      },
+      {
+        label: 'Timing and the Post-Workout Window',
+        title: 'Why the Hour After Training Is the Only Rational Time to Use IGF-1 LR3',
+        body: 'Post-workout, muscle cells are in a uniquely receptive state: insulin sensitivity is elevated (improving glucose and amino acid uptake), IGF-1 receptor expression is upregulated by the mechanical stress of training, and protein synthesis machinery is primed for activation. Injecting IGF-1 LR3 into this window means the anabolic signal arrives when the receiving cells are most capable of responding to it. Pre-workout or fasted dosing wastes much of the compound\'s potential — the receptors aren\'t upregulated and the cellular environment isn\'t optimized for the growth signal being delivered.',
+      },
+    ],
   },
 
   // ── WEIGHT MANAGEMENT ───────────────────────────────────────────────────────
@@ -323,6 +469,24 @@ Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5
     ],
     protocol: 'Dose escalation protocol: start at 0.25mg weekly for 4 weeks, increase to 0.5mg, then 1mg, then up to 2.4mg at maintenance. Subcutaneous injection once weekly. Reconstitute with bacteriostatic water. The escalation protocol minimizes GI side effects during adaptation.',
     synergies: ['cagrilintide-semaglutide', 'bpc-157', 'cjc-1295-ipamorelin'],
+    deepDiveTitle: 'How a Single Weekly Injection Changed the Entire Science of Weight Loss',
+    highlights: [
+      {
+        label: 'Three Mechanisms at Once',
+        title: 'Appetite Suppression, Gastric Emptying, Insulin Sensitivity — How Each Works',
+        body: 'Semaglutide\'s power comes from hitting three systems simultaneously. In the hypothalamus, GLP-1 receptor activation switches off hunger signals and amplifies satiety — you simply stop feeling driven to eat. In the stomach, it slows gastric emptying, meaning food sits in the stomach longer and the sensation of fullness lasts hours instead of minutes after a meal. In peripheral tissues, it improves insulin sensitivity, reducing the metabolic dysfunction that causes the body to store fat preferentially. No previous weight loss intervention addressed all three mechanisms with a single weekly injection.',
+      },
+      {
+        label: 'The Ozempic Molecule',
+        title: 'Same Active Compound as Ozempic and Wegovy — What Changed Is the Format',
+        body: 'Semaglutide is the active molecule in Ozempic (diabetes indication) and Wegovy (weight loss indication) — the identical GLP-1 receptor agonist with the same C18 fatty acid modification that extends half-life to approximately 7 days. What Apollo Peptide Sciences provides is the same compound in lyophilized research format, reconstituted with bacteriostatic water. The compound\'s pharmacology is identical; the difference is the delivery format, the price point, and the absence of the pharmaceutical brand markup that makes prescription Wegovy cost over $1,000/month for many users.',
+      },
+      {
+        label: 'The Escalation Protocol',
+        title: 'Why Starting at 0.25mg Is the Difference Between Tolerating Semaglutide and Quitting It',
+        body: 'Semaglutide\'s GI side effects — nausea, reduced appetite, occasional vomiting in the first weeks — are dose-dependent and adaptation-dependent. Researchers who jump straight to therapeutic doses (1mg+) experience the worst GI profile and often discontinue. The escalation protocol (0.25mg → 0.5mg → 1mg → 2.4mg at 4-week intervals) gives the GI tract time to adapt to slowed gastric emptying at each step. By the time you reach 1mg or above, the GI adaptation is largely complete and the dose is well tolerated. Patience during escalation is not a nice-to-have — it determines whether you complete the protocol.',
+      },
+    ],
   },
 
   {
@@ -355,6 +519,24 @@ For those running the standard dose escalation from 0.25mg to 2.4mg, the 10mg vi
     ],
     protocol: 'Intended for researchers who have completed dose escalation on the 5mg vial and are dosing at 1–2mg weekly. Reconstitute with 1–2ml bacteriostatic water for a working concentration of 5–10mg/ml. SubQ injection once weekly. Continue escalation to 2.4mg maintenance as tolerated.',
     synergies: ['semaglutide', 'cagrilintide-semaglutide', 'bacteriostatic-water'],
+    deepDiveTitle: 'Moving Into the Zone Where Semaglutide Actually Delivers What the Trials Showed',
+    highlights: [
+      {
+        label: 'The Therapeutic Range',
+        title: 'What Changes at 1–2mg Weekly vs. the Starter Escalation Doses',
+        body: 'At 0.25–0.5mg weekly during the escalation phase, you\'re adapting your GI tract — not yet in the dose range where semaglutide\'s full appetite-suppressing and metabolic effects are expressed. The shift happens in the 1–2mg weekly range: hypothalamic GLP-1 receptor engagement reaches the level where hunger signals are meaningfully suppressed, gastric emptying is consistently slowed, and the metabolic improvements in insulin sensitivity become measurable. The 10mg vial is the right format because it covers 5–10 weeks at this dose without the pressure of a smaller vial running short before you\'ve completed the transition.',
+      },
+      {
+        label: 'From 5mg to 10mg',
+        title: 'When You\'re Ready to Step Up — and How to Know',
+        body: 'The 5mg vial is the right starting format: it covers the full escalation from 0.25mg to 1mg weekly with supply to spare, and it keeps the financial commitment appropriate for a phase where you\'re still establishing tolerability. Once you\'ve completed that escalation and confirmed that semaglutide works for you — appetite is suppressed, GI side effects have settled — the 10mg vial is the natural next step. It\'s not more compound per injection; it\'s the same doses for longer, covering the weeks of consistent therapeutic-range dosing where measurable fat loss actually accumulates.',
+      },
+      {
+        label: 'Fewer Reconstitutions',
+        title: 'Why Single-Vial Supply Continuity Matters More Than It Sounds',
+        body: 'Every reconstitution is a handling event: you\'re introducing a needle, mixing compounds, and creating a window for contamination or measurement error. Two 5mg vials require two reconstitutions to cover the same total compound volume as one 10mg vial. For researchers running multi-week protocols, fewer reconstitution events means fewer opportunities for error and lower cumulative contamination risk. The 10mg vial also simplifies tracking — one vial, one reconstitution date, one refrigerated storage entry — for cleaner protocol management across a multi-month research timeline.',
+      },
+    ],
   },
 
   {
@@ -387,6 +569,24 @@ For cost-conscious researchers running multi-month protocols, the 15mg vial offe
     ],
     protocol: 'For researchers at established maintenance dose of 1.7–2.4mg weekly. Reconstitute with 1.5–2ml bacteriostatic water. SubQ injection once weekly at consistent intervals for stable plasma levels. Store refrigerated; use within 28 days of reconstitution.',
     synergies: ['semaglutide-10mg', 'cagrilintide-semaglutide', 'bacteriostatic-water'],
+    deepDiveTitle: 'The Long Game: What Consistent Semaglutide Dosing at Full Strength Actually Produces',
+    highlights: [
+      {
+        label: 'The STEP-1 Reference Dose',
+        title: '2.4mg Weekly: Where the 14.9% Average Weight Reduction Was Generated',
+        body: 'The STEP-1 trial\'s landmark 14.9% average body weight reduction over 68 weeks was produced at the 2.4mg weekly maintenance dose — the same dose this 15mg vial is designed to support. At 2.4mg weekly, hypothalamic GLP-1 receptor engagement is at maximum consistent intensity: hunger signals are substantially suppressed around the clock, gastric emptying is meaningfully slowed at every meal, and insulin sensitivity improvements are fully established. Below this dose, some of these effects are partial. At 2.4mg, they\'re complete — and the 15mg format is precisely calibrated to run there for 6+ uninterrupted weeks.',
+      },
+      {
+        label: 'What Changes Over Months',
+        title: 'Semaglutide\'s Effects Compound Over Time in Ways Week-4 Results Don\'t Show',
+        body: 'The first 4–6 weeks of semaglutide produce the initial adaptation and early fat loss as caloric intake drops. But the cumulative effects over months go deeper: the gut microbiome adapts to the changed eating patterns, food preferences shift (high-calorie foods become less appealing as the reward signaling around food dampens), and metabolic improvements in glucose handling and lipid profiles become measurable. The 14.9% average weight reduction wasn\'t achieved in the first 8 weeks — it accumulated over 68 weeks of sustained dosing. Long-format supply like the 15mg vial is the practical foundation for multi-month commitment.',
+      },
+      {
+        label: 'Best Value Logic',
+        title: 'When Cost Per Milligram Becomes the Right Metric — and When It\'s the 15mg Vial',
+        body: 'At maintenance dosing (2.4mg weekly), you\'re consuming semaglutide continuously. The math compounds: purchasing multiple 5mg vials to cover the same period costs significantly more per milligram than a single 15mg vial. For researchers in the exploratory phase, the 5mg vial is appropriate — you don\'t know yet if you\'ll complete the protocol. For researchers who have confirmed tolerability, established their maintenance dose, and are committed to multi-month research, the 15mg vial\'s per-milligram economics are the strongest argument for using it. Commitment to the protocol is the prerequisite; the 15mg is the supply format that reflects that commitment.',
+      },
+    ],
   },
 
   {
@@ -423,6 +623,24 @@ Available from Apollo Peptide Sciences in 15mg vials.`,
     ],
     protocol: 'Dose escalation: 2.5mg weekly for 4 weeks, then 5mg for 4 weeks, then 7.5mg, 10mg, 12.5mg, and 15mg at 4-week intervals. Slower escalation reduces GI side effects. Maintenance at 10–15mg weekly. SubQ injection once weekly.',
     synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'nad-plus'],
+    deepDiveTitle: 'Why Adding the Second Receptor Changed Everything About Weight Loss Pharmacology',
+    highlights: [
+      {
+        label: 'What GIP Adds',
+        title: 'The Glucose-Dependent Insulinotropic Polypeptide Effect — Why It Made Tirzepatide Better Than Semaglutide',
+        body: 'GIP (Glucose-dependent Insulinotropic Polypeptide) was initially thought to be lipogenic — a concern that made researchers skeptical about adding GIP agonism to a weight loss compound. Tirzepatide\'s Phase 3 data reversed that assumption entirely. GIP receptor activation in the context of GLP-1 co-agonism appears to enhance fat storage inhibition in adipose tissue, improve insulin sensitivity through a different pathway than GLP-1, and — critically — improve GI tolerability compared to pure GLP-1 agonism. The GIP component is what allowed tirzepatide to produce dramatically superior fat loss to semaglutide with comparable or better tolerability.',
+      },
+      {
+        label: 'The SURMOUNT-1 Numbers',
+        title: '22.5% Body Weight Reduction: What That Actually Looks Like and What the Data Shows',
+        body: '22.5% average body weight reduction at 72 weeks sounds like a percentage — but in practical terms, for a 220-pound person that\'s roughly 50 pounds of body weight loss. This was the highest fat loss efficacy ever documented in a large pharmaceutical clinical trial until retatrutide\'s Phase 2 data. Even at the lowest tested dose (5mg weekly), tirzepatide averaged 15% weight reduction — already exceeding semaglutide\'s maximum. The dose-response relationship is clear: more tirzepatide means more fat loss, up to the 15mg ceiling tested in SURMOUNT-1, with the metabolic improvements (HbA1c, triglycerides, blood pressure) scaling proportionally.',
+      },
+      {
+        label: 'Mounjaro vs. Research Tirzepatide',
+        title: 'Same Molecule, Different Format — What You Need to Know About How Tirzepatide Is Supplied',
+        body: 'Mounjaro and Zepbound contain tirzepatide — the identical compound supplied by Apollo Peptide Sciences in lyophilized research format. The pharmaceutical versions come in pre-filled pens at fixed dose increments, auto-injectors, and with the full pharmaceutical supply chain markup. Apollo\'s tirzepatide gives researchers access to the same active compound in a reconstitutable vial format, at a substantially lower cost per milligram, with full flexibility over concentration, dose, and protocol structure. The pharmacology is the same; the format and price point are different.',
+      },
+    ],
   },
 
   {
@@ -453,6 +671,24 @@ Tirzepatide's dual GLP-1/GIP receptor mechanism — the compound behind Mounjaro
     ],
     protocol: 'For researchers at confirmed 15mg weekly maintenance dose. Reconstitute one vial at a time with 1.5ml bacteriostatic water (10mg/ml) or 3ml (5mg/ml). SubQ injection once weekly. Store unopened vials at room temperature or refrigerated; refrigerate reconstituted vials immediately and use within 28 days.',
     synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'Planning for 4 Months of Continuous Tirzepatide Research — Done Right',
+    highlights: [
+      {
+        label: 'Why 4 Months Matters',
+        title: 'Tirzepatide\'s Benefits Compound Over Multi-Month Protocols in Ways Early Results Don\'t Show',
+        body: 'The first month of tirzepatide produces early fat loss as caloric intake decreases significantly. Months two and three are where the metabolic improvements deepen: insulin sensitivity continues improving, visceral fat reduction (which reduces ectopic fat deposition in organs) becomes measurable, and cardiovascular risk markers trend meaningfully. Month four and beyond show body composition settling into a new equilibrium — lean mass increasingly preserved as the body adapts to the new metabolic signaling environment. The 4-pack isn\'t about having backup supply; it\'s about having the supply continuity that allows these deeper, time-dependent benefits to fully express.',
+      },
+      {
+        label: 'Protocol Continuity',
+        title: 'Why Gaps in Tirzepatide Dosing Cost More Than Just a Week\'s Progress',
+        body: 'Tirzepatide maintains its effects through consistent weekly plasma levels. The compound\'s 5-day half-life means plasma concentration drops substantially if a weekly injection is missed — but the more important issue is the hormonal signaling environment. Consistent GLP-1 and GIP receptor engagement maintains the metabolic state that drives ongoing fat loss. A gap doesn\'t just pause results; it partially resets the hormonal suppression of appetite that the protocol has been building. Mid-protocol reorder gaps, where you\'re waiting days for a new vial to arrive, are the type of disruption the 4-pack eliminates entirely.',
+      },
+      {
+        label: 'Bundle Economics',
+        title: 'When Bulk Purchasing Reflects the Seriousness of the Protocol, Not Just the Savings',
+        body: 'The per-vial cost reduction in the 4-pack is meaningful — but the more important signal is what the purchase reflects: a commitment to a multi-month protocol rather than an exploratory single-vial approach. Researchers who buy a 4-pack have done the escalation, confirmed tolerability, and decided to pursue the sustained outcomes that tirzepatide\'s clinical data describes. The economics reinforce this commitment — having 4 months of supply on hand removes the friction points that cause protocol abandonment. Consistency is the variable that determines whether the SURMOUNT-1 outcomes apply to you.',
+      },
+    ],
   },
 
   {
@@ -483,6 +719,24 @@ The per-vial cost at the 10-pack tier is substantially lower than any smaller bu
     ],
     protocol: 'For experienced researchers at confirmed 15mg weekly maintenance dose. Reconstitute one vial at a time with bacteriostatic water; refrigerate immediately after reconstitution. Store remaining sealed vials at room temperature or refrigerated. Use each reconstituted vial within 28 days before opening the next. SubQ injection once weekly.',
     synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'What Sustained Tirzepatide Use Actually Produces Over 10+ Weeks',
+    highlights: [
+      {
+        label: 'Beyond the Initial Drop',
+        title: 'What the Research Shows About Extended Tirzepatide Duration Past 12 Weeks',
+        body: 'SURMOUNT-1 ran for 72 weeks, and the weight loss trajectory didn\'t plateau in the first 12. Fat loss continued accumulating through 36, 48, and 72 weeks — though the rate slowed as subjects approached a new metabolic set point. The 10-pack supports the sustained research duration where tirzepatide\'s most significant effects on visceral fat, hepatic fat, and systemic insulin resistance are observed. These are the outcomes that matter most for long-term metabolic health — and they require months of consistent dosing to fully express.',
+      },
+      {
+        label: 'Supply Management at Scale',
+        title: '10 Vials: How to Store, Track, and Rotate for Maximum Protocol Integrity',
+        body: 'Ten sealed vials should be stored at room temperature or refrigerated until needed — lyophilized peptides are stable well beyond their stated shelf life under proper conditions. Reconstitute one vial at a time, label it with the date, and refrigerate immediately. Draw from that single reconstituted vial for up to 28 days before opening the next sealed vial. This rotation system keeps handling minimal, maintains each vial\'s integrity, and eliminates the risk of using a degraded compound — the most common source of inconsistent results in multi-month peptide protocols.',
+      },
+      {
+        label: 'The Real Cost Calculation',
+        title: 'What a Serious Fat Loss Protocol Actually Costs Per Week — and Why This Format Makes Sense',
+        body: 'Ten 15mg vials at 15mg weekly = 10 weeks of supply. At the 10-pack price, divide by 10 to get the weekly cost of the protocol. Compare that to pharmaceutical Zepbound at $1,000+/month with insurance complications, prior authorization requirements, and supply shortages. For researchers committed to understanding tirzepatide\'s full metabolic impact, the 10-pack represents both the most economically efficient format and the most operationally streamlined approach to sustained dual GLP-1/GIP research.',
+      },
+    ],
   },
 
   {
@@ -513,6 +767,24 @@ Tirzepatide's dual GLP-1/GIP mechanism produces its metabolic and body compositi
     ],
     protocol: 'For researchers operating at 10–20mg weekly dosing. Reconstitute with bacteriostatic water to desired working concentration (e.g., 2ml per vial for 10mg/ml). SubQ injection once weekly. Refrigerate reconstituted vials immediately; store sealed vials at room temperature or refrigerated. Use reconstituted vials within 28 days.',
     synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'More Volume Per Vial, More Flexibility — High-Dose Tirzepatide Research Made Practical',
+    highlights: [
+      {
+        label: 'Above the Clinical Ceiling',
+        title: 'What Researchers Are Exploring Above the 15mg SURMOUNT-1 Maximum',
+        body: 'SURMOUNT-1 tested tirzepatide up to 15mg weekly — not because 15mg was believed to be the maximum effective dose, but because it was the maximum dose in the study protocol. Some researchers are exploring higher doses in individual protocols, hypothesizing that the GLP-1/GIP dual mechanism may continue to produce incremental benefits above 15mg in specific populations. The 20mg vial format exists precisely for this exploratory research — providing a single-vial supply for researchers at 15–20mg weekly without the inconvenience of drawing from two separate 15mg vials per dose.',
+      },
+      {
+        label: 'Vial Volume Flexibility',
+        title: 'How the 20mg Format Changes Your Reconstitution and Concentration Options',
+        body: 'The higher compound volume per vial means you can reconstitute to a wider range of working concentrations. At 2ml BAC water: 10mg/ml (flexible for both 10mg and 15mg weekly dosing). At 1ml: 20mg/ml (very concentrated, allows small injection volume at high doses). At 4ml: 5mg/ml (useful if working with researchers who prefer larger injection volumes). The 15mg vials are fixed at 15mg maximum per vial regardless of reconstitution — the 20mg format provides the additional headroom for precise concentration engineering across a wider dose range.',
+      },
+      {
+        label: 'Who This Format Is For',
+        title: 'When Standard 15mg Vials Are No Longer the Efficient Supply Choice',
+        body: 'If your established weekly dose is 10mg, the 15mg vial provides one and a half doses per vial — requiring half-vial bookkeeping and slightly awkward protocol math. The 20mg vial provides exactly two doses at 10mg weekly: cleaner math, cleaner protocol. If your dose is 15mg weekly, you\'re getting one injection per 15mg vial (the same as the standard format) but with 5mg of unused capacity unless you\'re cycling. The 20mg vial is the right format for researchers whose maintenance dose creates inefficiency or waste with the standard 15mg unit.',
+      },
+    ],
   },
 
   {
@@ -545,6 +817,24 @@ Paired with bacteriostatic water for reconstitution, the 30mg vial accommodates 
     ],
     protocol: 'For researchers at established maintenance dose of 10–15mg weekly. Reconstitute with 2–3ml bacteriostatic water for a working concentration of 10–15mg/ml. SubQ injection once weekly. Store reconstituted vial refrigerated; draw from the same vial across multiple weeks of dosing.',
     synergies: ['tirzepatide-60mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'Fewer Vials, More Continuity — The Operational Case for Bulk Tirzepatide Format',
+    highlights: [
+      {
+        label: 'The Reconstitution Argument',
+        title: 'Why Every Additional Vial Opening Is a Point of Failure — and How the 30mg Reduces Them',
+        body: 'Each time you reconstitute a new vial, you introduce a handling event: piercing the septum, injecting bacteriostatic water, swirling to dissolve, drawing the solution. Each step is an opportunity for measurement error, contamination, or degradation from excessive agitation. Two 15mg vials require two separate reconstitutions to cover the same compound volume as one 30mg vial. Over a multi-month protocol, those extra handling events accumulate. The 30mg vial cuts reconstitution frequency in half — and at 2–3 weeks of supply per vial at maintenance dosing, it means changing vials roughly twice per month instead of every week.',
+      },
+      {
+        label: 'What 2–3 Weeks of Single-Vial Supply Means Practically',
+        title: 'Protocol Simplicity: One Vial, Multiple Doses, Consistent Concentration Throughout',
+        body: 'Once a 30mg vial is reconstituted to your target concentration, every dose drawn from it is from the same solution — same concentration, same stability profile, same preparation. This is actually preferable to switching vials mid-protocol, where you\'re opening a new vial, reconstituting fresh, and potentially introducing slight concentration differences. A single reconstituted 30mg vial supports 2–3 consecutive weekly injections from one stable, precisely prepared source — which is as operationally clean as single-vial tirzepatide management gets.',
+      },
+      {
+        label: 'The Step Between 15mg and 60mg',
+        title: 'Why the 30mg Format Is the Right Commitment Level for Established Protocols',
+        body: 'The 15mg vial is the right starting format for researchers who haven\'t yet confirmed their exact maintenance dose. The 60mg bulk format is the right format for researchers executing extended 4–6 week single-vial protocols. The 30mg occupies the middle ground: you\'ve confirmed your protocol, you\'re not ready to commit to the full bulk format, but you want meaningfully more continuity and better economics than the standard 15mg vial provides. It\'s the format for researchers who know tirzepatide works for them and are optimizing their supply logistics accordingly.',
+      },
+    ],
   },
 
   {
@@ -577,6 +867,24 @@ Reconstitution with bacteriostatic water at precise concentrations enables the 6
     ],
     protocol: 'For experienced researchers at confirmed 10–15mg weekly maintenance dose. Reconstitute with 4–6ml bacteriostatic water for manageable working concentrations. SubQ injection once weekly. Refrigerate immediately after reconstitution; stable for 28+ days when stored correctly. Pair with fresh bacteriostatic water for each new vial.',
     synergies: ['tirzepatide-30mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'Maximum Volume. Minimum Interruption. This Is How You Run a Serious Tirzepatide Protocol.',
+    highlights: [
+      {
+        label: 'The 4–6 Week Window',
+        title: 'What a Single Reconstituted 60mg Vial Covers — and Why That Duration Matters',
+        body: 'At 15mg weekly maintenance dosing, a reconstituted 60mg vial provides exactly 4 weeks of uninterrupted supply — the equivalent of a full monthly cycle with no reorder, no new reconstitution, no handling event, and no variation in working concentration. At 10mg weekly, that extends to 6 weeks. This duration aligns with natural assessment intervals: 4–6 weeks is the window where body composition changes become visually and measurably apparent, making the 60mg vial not just operationally convenient but strategically timed for protocol assessment. You reconstitute, run the cycle, assess, and decide on next steps — all from a single vial.',
+      },
+      {
+        label: 'The Metabolic Case for Long-Term Dosing',
+        title: 'What Extended Dual GLP-1/GIP Agonism Does to Metabolic Health Beyond the Scale',
+        body: 'Six months of consistent tirzepatide research produces changes that aren\'t captured by bodyweight alone. Visceral fat — the metabolically active fat stored around organs, associated with insulin resistance, elevated triglycerides, and cardiovascular risk — is preferentially reduced by tirzepatide\'s GIP and GLP-1 co-activation. HbA1c improvements reflect improved average glucose handling over months. Lipid panels show reduced triglycerides and modest LDL improvements. These are the outcomes that matter for long-term health — and they require sustained, uninterrupted dosing to fully develop. The 60mg vial supports the protocol duration where these systemic effects are realized.',
+      },
+      {
+        label: 'Economics at This Scale',
+        title: 'The 60mg Format Is the Lowest Per-Milligram Cost in the Tirzepatide Catalog — Here\'s the Math',
+        body: 'Compare the per-milligram cost across formats: the 15mg vial, the 30mg vial, the 4-pack, the 10-pack, and the 60mg single vial. The 60mg unit consistently offers the lowest cost per milligram. Over a 6-month protocol at 15mg weekly — approximately 360mg of total compound consumed — the difference between 60mg bulk pricing and repeated 15mg purchases represents a significant total cost reduction. For researchers who have confirmed their protocol and are committed to sustained research, the 60mg vial is both the most economical and the most logistically clean format available.',
+      },
+    ],
   },
 
   {
@@ -609,6 +917,24 @@ The compound also demonstrated significant reductions in liver fat (critical for
     ],
     protocol: 'Dose escalation: 1mg weekly for 4 weeks, increasing gradually to target doses of 4–12mg weekly over 12–24 weeks. The extended escalation is essential with retatrutide due to its potency. Maintenance at 8–12mg weekly. SubQ injection once weekly.',
     synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'nad-plus'],
+    deepDiveTitle: 'The Third Receptor: How Adding Glucagon Broke the Fat Loss Ceiling',
+    highlights: [
+      {
+        label: 'What Glucagon Does',
+        title: 'The Missing Mechanism: How Glucagon Receptor Agonism Creates Active Fat Oxidation Between Doses',
+        body: 'GLP-1 suppresses appetite and slows gastric emptying. GIP improves insulin sensitivity and enhances fat storage inhibition. Glucagon does something categorically different: it signals the liver to mobilize stored fat and directly increases fat oxidation — the "fasting signal" that drives the body to burn rather than store. By combining all three, retatrutide creates a metabolic environment that simultaneously reduces caloric intake (GLP-1), improves how those calories are processed (GIP), and actively drives fat burning between meals (glucagon). No other compound in research achieves all three simultaneously, and this is why the Phase 2 outcomes exceeded everything before it.',
+      },
+      {
+        label: 'The Phase 2 Data',
+        title: '24.2% in 48 Weeks: What the NEJM Study Actually Showed — and What It Didn\'t',
+        body: 'The Phase 2 retatrutide data published in the New England Journal of Medicine (2023) showed 24.2% average body weight reduction at the 12mg dose over 48 weeks — the highest fat loss efficacy ever documented in peer-reviewed clinical research at that time. At 8mg, the average was 22.8%. These figures also came with significant reductions in liver fat, waist circumference reductions that exceeded the weight loss percentage (indicating disproportionate visceral fat loss), and cardiovascular marker improvements. What the Phase 2 didn\'t show: long-term safety beyond 48 weeks, since Phase 3 data is still emerging. Retatrutide is the most potent compound available — and demands the same serious approach any frontier compound does.',
+      },
+      {
+        label: 'Beyond Weight Loss',
+        title: 'Hepatic Fat, Visceral Adiposity, and Cardiovascular Risk: The Full Metabolic Profile',
+        body: 'Retatrutide\'s glucagon component drives liver-specific fat mobilization that semaglutide and tirzepatide cannot replicate at the same magnitude. Hepatic fat reduction is critical for metabolic health: liver fat accumulation is strongly associated with insulin resistance, cardiovascular risk, and progression to non-alcoholic fatty liver disease (NAFLD). Retatrutide\'s Phase 2 data showed hepatic fat reductions that exceeded body weight loss percentages — meaning the liver was being cleared of fat faster than overall body fat loss would predict. For researchers interested in metabolic health outcomes beyond aesthetics, this is retatrutide\'s most clinically significant differentiator.',
+      },
+    ],
   },
 
   {
@@ -642,6 +968,24 @@ For researchers transitioning from semaglutide or tirzepatide who want to explor
     ],
     protocol: 'Escalation entry: 1mg weekly for 4 weeks, then 2mg for 4 weeks, then 4mg for 4 weeks. The 10mg vial covers approximately 8–10 weeks of gradual escalation. SubQ injection once weekly. Monitor GI response carefully at each dose step. Transition to 15mg or 30mg vials for continuation toward maintenance dosing at 8–12mg weekly.',
     synergies: ['retatrutide', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'The Most Potent Fat Loss Compound in Research — Why You Start at 1mg and Go Slowly',
+    highlights: [
+      {
+        label: 'Glucagon Sensitivity',
+        title: 'Why Retatrutide\'s GI Profile Is Different From Semaglutide — and Demands More Patience',
+        body: 'Semaglutide\'s GI side effects come primarily from GLP-1 receptor activation slowing gastric emptying. Retatrutide adds glucagon receptor activation, which creates an additional and distinct GI sensitivity profile — including more pronounced nausea and GI motility effects that are less familiar to researchers coming from semaglutide or tirzepatide. Starting at 1mg weekly isn\'t conservative caution — it\'s the protocol that actually gets you to therapeutic doses. Researchers who escalate too quickly experience GI side effects severe enough to abandon the protocol before reaching the dose range where retatrutide\'s fat loss efficacy is documented.',
+      },
+      {
+        label: 'The Escalation Window',
+        title: '8–12 Weeks of Adaptation: What the Entry Dose Phase Is Actually Achieving',
+        body: 'The 8–12 weeks from 1mg to 4mg weekly aren\'t a waste of time waiting to reach "real" doses — they\'re an active adaptation phase. The body\'s GLP-1 and glucagon receptor systems are adjusting to sustained agonist stimulation, GI motility patterns are adapting, and the cardiovascular system is accommodating the changes in glycemic control and fat metabolism. By the time you reach 8mg or 12mg maintenance, the receptor systems are primed for the full triple-agonist effect without the overwhelming adaptation response that would occur if those doses were attempted at week one. The 10mg vial covers this phase completely.',
+      },
+      {
+        label: 'Transitioning to Higher Volumes',
+        title: 'How to Know When the 10mg Escalation Phase Is Complete — and What Comes Next',
+        body: 'The escalation phase is complete when you\'ve spent 4 weeks at 4mg weekly with manageable GI side effects and meaningful appetite suppression. At that point, the 10mg vial is largely consumed and you\'re ready for the 30mg or 60mg formats that support maintenance-phase dosing at 8–12mg weekly. The signal that you\'re ready: appetite suppression is consistent and significant, weekly injections are well-tolerated, and body weight is measurably declining. If GI tolerance is still difficult at 4mg, stay at that dose longer rather than escalating — the compound\'s potency requires respect, but the results for those who complete the escalation are unlike any other compound in research.',
+      },
+    ],
   },
 
   {
@@ -674,6 +1018,24 @@ The glucagon component of retatrutide's mechanism creates an ongoing fat oxidati
     ],
     protocol: 'For researchers at established maintenance dose of 8–12mg weekly. Reconstitute with 2–3ml bacteriostatic water. SubQ injection once weekly at consistent intervals. Refrigerate immediately after reconstitution. Do not freeze. The 30mg vial supports 2–4 consecutive weekly injections from a single reconstituted source.',
     synergies: ['retatrutide-60mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'Operating at Peak Efficacy: What Maintenance-Phase Retatrutide Actually Produces',
+    highlights: [
+      {
+        label: 'Arriving at Maintenance',
+        title: 'What Changes When You Reach 8–12mg Weekly After Proper Escalation',
+        body: 'Researchers who complete the escalation and arrive at 8–12mg weekly retatrutide describe a qualitatively different appetite suppression compared to semaglutide or tirzepatide. The glucagon component creates an active fat oxidation drive — a sense of the body running on stored energy rather than just feeling less hungry. Combined with the GLP-1 and GIP receptor effects at maintenance doses, the metabolic state at 8–12mg weekly is the environment in which the Phase 2 NEJM trial documented 22.8–24.2% body weight reduction. The 30mg vial is the supply format for operating in this range without interruption.',
+      },
+      {
+        label: 'The Glucagon Effect at Full Dose',
+        title: 'Active Fat Oxidation Between Weekly Doses: What Differentiates Retatrutide From the Others',
+        body: 'At maintenance dosing, retatrutide\'s glucagon receptor agonism creates continuous metabolic pressure that doesn\'t stop when the appetite-suppressing effects plateau. Even when caloric restriction has partially adapted (which happens with all GLP-1 compounds over time), the glucagon-driven fat oxidation mechanism continues independently. The liver is signaled to mobilize fat stores; fatty acid oxidation in peripheral tissues is upregulated; visceral fat is disproportionately targeted. This is the mechanism that explains why retatrutide continues producing body composition improvements in research subjects even when their caloric reduction has stabilized.',
+      },
+      {
+        label: '2.5–4 Weeks per Vial',
+        title: 'Why This Duration Aligns With the Natural Assessment Intervals of a Serious Protocol',
+        body: 'At 8mg weekly, a 30mg vial provides roughly 3.75 weeks of supply. At 12mg weekly, approximately 2.5 weeks. These durations align naturally with monthly check-ins: body weight, waist circumference, and subjective wellbeing assessments typically happen on a 2–4 week cycle in serious research protocols. Opening a new 30mg vial at each assessment interval creates a clean, structured protocol rhythm — reconstitute, run the cycle, assess, decide on any dose adjustments, open the next vial. Fewer vials than the 15mg format, more manageability than the 60mg bulk, and precisely aligned with how systematic metabolic research should be structured.',
+      },
+    ],
   },
 
   {
@@ -706,6 +1068,24 @@ For the serious long-term retatrutide researcher, the per-milligram cost at the 
     ],
     protocol: 'Exclusively for experienced researchers at confirmed 8–12mg weekly maintenance dose. Reconstitute with 4–6ml bacteriostatic water for precise working concentrations. SubQ injection once weekly. Store reconstituted vial refrigerated; draw from the single vial across consecutive weeks. Maintain strict cold chain — do not allow the reconstituted vial to reach room temperature between uses.',
     synergies: ['retatrutide-30mg', 'bpc-157', 'bacteriostatic-water'],
+    deepDiveTitle: 'The Full Scale of the Most Advanced Compound in Fat Loss Research',
+    highlights: [
+      {
+        label: 'Protocol Design at This Level',
+        title: '5–7.5 Weeks From a Single Vial: How to Structure Long-Duration Retatrutide Research',
+        body: 'At 8mg weekly, a reconstituted 60mg vial provides 7.5 weeks of uninterrupted supply. At 12mg weekly, 5 weeks. Both durations are meaningful blocks of sustained maintenance-phase research — long enough to observe measurable changes in body composition, hepatic fat, and metabolic markers. Structuring these 5–7.5 week blocks with consistent assessment at start, midpoint, and end creates the kind of systematic data that serious researchers need to evaluate the compound\'s effects on their specific physiology. The 60mg vial enables this structure without supply anxiety.',
+      },
+      {
+        label: 'Why Continuity Matters Most With Retatrutide',
+        title: 'Triple Agonism Depends on Sustained Signal — and Protocol Gaps Disrupt All Three Mechanisms',
+        body: 'With semaglutide, a one-week gap is suboptimal but recoverable — the compound\'s 7-day half-life means plasma levels don\'t crash immediately. Retatrutide\'s triple mechanism means a dosing gap simultaneously disrupts GLP-1 receptor engagement (appetite returns), GIP receptor signaling (insulin sensitivity partially reverts), and glucagon receptor activation (active fat oxidation pressure drops). The result of a multi-day gap is a more complete return to the pre-protocol metabolic state than with simpler compounds. The 60mg vial eliminates supply gaps as a variable entirely — which for the most mechanistically complex fat loss compound available, is precisely the point.',
+      },
+      {
+        label: 'The Economics of Frontier Research',
+        title: 'What the Lowest Per-Milligram Cost Means for a Protocol Built on the Best Data in Obesity Pharmacology',
+        body: 'Retatrutide\'s 24.2% body weight reduction Phase 2 data represents the strongest documented fat loss outcome in peer-reviewed clinical history to date. The 60mg vial at the lowest per-milligram cost is the supply format that makes sustained engagement with the most advanced compound financially rational. Over a 6-month protocol at 10mg weekly (approximately 260mg total), the per-milligram difference between 60mg bulk pricing and repeated 15mg or 30mg purchases compounds into a meaningful cost difference. For researchers committed to the frontier of fat loss pharmacology, the 60mg vial is both the most economical and the most serious supply format available.',
+      },
+    ],
   },
 
   {
@@ -738,6 +1118,24 @@ Apollo supplies this as a 5mg/5mg blended vial, providing both compounds in a si
     ],
     protocol: 'Dose escalation: 0.25mg each component weekly for 4 weeks, escalating gradually. Target maintenance dose 1–2.4mg of each component weekly. SubQ injection once weekly. The slower escalation vs. semaglutide alone helps minimize GI side effects from dual receptor activation.',
     synergies: ['semaglutide', 'tirzepatide', 'cjc-1295-ipamorelin'],
+    deepDiveTitle: 'Two Completely Different Satiety Systems. One Injection. Why CagriSema Outperforms Either Alone.',
+    highlights: [
+      {
+        label: 'The Amylin Mechanism',
+        title: 'What Cagrilintide Does That No GLP-1 Agonist Can Replicate — and Why That Matters',
+        body: 'GLP-1 receptor agonists (semaglutide, tirzepatide) produce satiety through the hypothalamus — the brain\'s energy regulation center. Cagrilintide works through an entirely different anatomical pathway: the amylin receptor in the hindbrain area postrema, a region that receives direct gut-brain signals about meal size and fullness. Amylin is co-secreted with insulin after meals and signals "enough food" — a separate circuit from the GLP-1 "stop eating" signal. By activating both pathways simultaneously, CagriSema creates satiety that\'s reinforced at two independent brain regions: the combination is genuinely more powerful than either compound alone.',
+      },
+      {
+        label: 'The Plateau Solution',
+        title: 'Why People Who Stop Responding to Semaglutide Often Respond to CagriSema',
+        body: 'Semaglutide tolerance — where appetite suppression diminishes after months of use — is a real phenomenon. The hypothalamic GLP-1 receptors down-regulate with sustained agonist exposure, reducing the appetite-suppressing effect over time. Cagrilintide\'s amylin pathway doesn\'t share this down-regulation pattern — it works through separate receptors that don\'t compete with or adapt to GLP-1 agonism. For researchers who\'ve experienced a plateau on semaglutide, adding cagrilintide engages a fresh satiety circuit that the body hasn\'t habituated to, producing renewed appetite suppression and resumed fat loss momentum.',
+      },
+      {
+        label: 'CagriSema vs. Tirzepatide',
+        title: 'Two Different Approaches to Improving on Semaglutide — What Makes Each Unique',
+        body: 'Tirzepatide improves on semaglutide by adding GIP receptor agonism — enhancing fat loss and insulin sensitivity through a complementary metabolic pathway. CagriSema improves on semaglutide by adding amylin-pathway satiety — a neurological complement rather than a metabolic one. They address different limitations. Tirzepatide is the superior choice for researchers primarily seeking maximum fat loss and metabolic improvement. CagriSema is uniquely valuable for researchers who have found semaglutide tolerable but insufficient, or who have experienced GI issues with tirzepatide\'s GIP component. The Phase 3 CagriSema data continues to emerge — but the mechanism alone makes it a compelling second-line alternative for serious weight management research.',
+      },
+    ],
   },
 
   // ── ANTI-AGING ──────────────────────────────────────────────────────────────
@@ -774,6 +1172,24 @@ Human data from Russian longevity researcher Vladimir Khavinson's 12-year study 
     ],
     protocol: 'Standard research protocol: 5–10mg per day for 10–20 consecutive days, 1–2× per year. Some researchers use 100mcg/kg body weight per day. SubQ injection. The annual or bi-annual cycle protocol is aligned with the original Khavinson research showing long-term benefits from periodic treatment.',
     synergies: ['ghk-cu', 'nad-plus', 'cjc-1295-ipamorelin'],
+    deepDiveTitle: 'Can You Actually Reverse Cellular Aging? What the Telomere Data on Epithalon Shows.',
+    highlights: [
+      {
+        label: 'The Telomere Problem',
+        title: 'Why Chromosomal End-Caps Are the Biological Clock — and What Happens When They Run Short',
+        body: 'Every time a cell divides, its telomeres — the protective caps at the end of each chromosome — shorten slightly. This isn\'t a design flaw; it\'s a built-in replication limit. When telomeres become critically short, cells enter senescence (they stop dividing and accumulate) or undergo apoptosis (programmed death). Senescent cells don\'t just stop working — they actively secrete inflammatory signals that impair surrounding healthy tissue, accelerating the aging process in surrounding cells. Telomere length is one of the most predictive biomarkers of biological age, and it naturally shortens with age, stress, and poor lifestyle — regardless of chronological age.',
+      },
+      {
+        label: 'Khavinson\'s Human Research',
+        title: 'The 12-Year Follow-Up Study That No Other Anti-Aging Peptide Has Replicated',
+        body: 'Russian longevity researcher Vladimir Khavinson\'s research on Epithalon — conducted over decades with human subjects, not just cell lines — represents the most substantial human longevity data available for any peptide compound. A 12-year follow-up study of elderly subjects who received periodic Epithalon treatment showed significantly reduced cancer incidence and all-cause mortality compared to controls. These aren\'t in-vitro observations; they\'re 12-year human outcome data. No other peptide in the anti-aging space has comparable published human longevity data. Epithalon\'s position as the cornerstone of serious longevity protocols reflects the depth of evidence behind it.',
+      },
+      {
+        label: 'Beyond Telomeres',
+        title: 'Melatonin Normalization, Antioxidant Activity, Immune Modulation — The Full Effect Profile',
+        body: 'Epithalon\'s anti-aging effects extend well beyond telomere biology. It normalizes melatonin production — which declines predictably with age, contributing to the deep sleep disruption that affects aging individuals. Researchers running Epithalon consistently report improved sleep quality and depth within the first week of a protocol, before any structural aging reversal would be measurable. The compound also demonstrates antioxidant activity (protecting cells from oxidative damage) and immune modulation (recalibrating age-related immune dysfunction toward a more youthful pattern). The sleep improvement is often the most immediately noticeable effect — and it\'s a reliable early signal that the compound is active.',
+      },
+    ],
   },
 
   {
@@ -806,6 +1222,24 @@ Direct NAD+ supplementation bypasses the metabolic steps required to convert ora
     ],
     protocol: 'IV or SubQ injection: 250–500mg per session, 2–5× per week for initial loading, then 1–2× per week for maintenance. IV administration provides the most rapid increase in circulating NAD+. SubQ is more practical for ongoing research protocols. Flush sensation with IV administration is normal and transient.',
     synergies: ['epithalon', 'cjc-1295-ipamorelin', 'bpc-157'],
+    deepDiveTitle: 'The Currency Every Cell in Your Body Runs On — and What Happens When It Runs Out',
+    highlights: [
+      {
+        label: 'Why NAD+ Declines',
+        title: 'The 50%+ Drop Between Youth and Middle Age — What Causes It and What It Costs',
+        body: 'NAD+ levels in most tissues drop by more than 50% between a person\'s 20s and 50s. This decline isn\'t a single-cause phenomenon — it reflects increased NAD+ consumption (more DNA damage with age means more PARP enzyme activity consuming NAD+ for repair), reduced biosynthesis efficiency, and increased activity of CD38, an enzyme that degrades NAD+. The cost of this decline is measurable: reduced mitochondrial efficiency (less ATP per unit of fuel), impaired DNA repair capacity (damaged DNA accumulates faster than it\'s fixed), and diminished sirtuin activity (the longevity proteins that regulate cellular health go quiet without adequate NAD+ to fuel them).',
+      },
+      {
+        label: 'Sirtuin Biology',
+        title: 'SIRT1-7: The Longevity Proteins That Only Work When NAD+ Is Abundant',
+        body: 'Sirtuins are a family of seven proteins (SIRT1–7) that regulate gene expression in response to cellular stress — controlling DNA repair, inflammation, mitochondrial biogenesis, and metabolic efficiency. They\'re described as "longevity proteins" because their activity is strongly associated with lifespan extension in multiple model organisms. The critical dependency: sirtuins are NAD+-dependent enzymes. They cannot function without adequate NAD+ as a substrate. This means that as NAD+ declines with age, sirtuin activity declines proportionally — the cellular maintenance and stress-response machinery that keeps cells healthy progressively shuts down. Restoring NAD+ is the key to restoring sirtuin function.',
+      },
+      {
+        label: 'IV vs. SubQ Delivery',
+        title: 'Two Routes, Different Speed Profiles — Which One Fits Your Research Protocol',
+        body: 'IV NAD+ administration produces the most rapid increase in plasma and cellular NAD+ levels — measurable within hours, with the familiar flush sensation (warmth, tingling) indicating rapid systemic distribution. It\'s the format used in clinical NAD+ IV therapy clinics. SubQ injection is slower to peak but more practical for ongoing protocols — no clinic required, manageable at home, and suitable for 2–5× weekly schedules that maintain elevated NAD+ between sessions. For researchers seeking an acute "reset" experience, IV is preferred. For sustained long-term NAD+ optimization as part of an ongoing anti-aging protocol, SubQ provides the practicality needed for consistent, frequent administration.',
+      },
+    ],
   },
 ]
 

@@ -597,6 +597,33 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
   )
 }
 
+// ── PRODUCT-SPECIFIC HIGHLIGHTS ─────────────────────────────────────────────
+
+function ProductHighlights({ product }: { product: Product }) {
+  if (!product.highlights?.length) return null
+  const accent =
+    product.category === 'Recovery & Healing' ? '#d4a043'
+    : product.category === 'Looks Maxing'     ? '#c084fc'
+    : product.category === 'Body Composition' ? '#34d399'
+    : product.category === 'Weight Management'? '#60a5fa'
+    : '#a78bfa'
+
+  return (
+    <div className="space-y-4 mb-10">
+      {product.highlights.map((h, i) => (
+        <div key={i} className="rounded-2xl p-6 relative overflow-hidden"
+          style={{ background: `${accent}06`, border: `1px solid ${accent}18` }}>
+          <div className="absolute top-0 left-0 right-0 h-0.5"
+            style={{ background: `linear-gradient(90deg, ${accent}70, transparent)` }} />
+          <p className="text-[10px] uppercase tracking-[0.22em] mb-2 font-600" style={{ color: accent }}>{h.label}</p>
+          <p className="text-white text-[15px] font-500 mb-3 leading-snug">{h.title}</p>
+          <p className="text-[#8888a0] text-[14px] leading-relaxed">{h.body}</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 // ── CATEGORY-SPECIFIC DEEP-DIVE CALLOUT SECTIONS ───────────────────────────
 
 function RecoveryCallout() {
@@ -759,22 +786,17 @@ export default function ProductPage({ params }: Props) {
           {/* Main */}
           <div>
             <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
-              style={{ fontSize: 'clamp(32px, 4vw, 52px)' }}>
-              The Science Behind{' '}
-              <span className="font-['Playfair_Display'] font-900 font-italic gold-text">{product.name}</span>
+              style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
+              {product.deepDiveTitle}
             </h2>
-            <div className="space-y-5 mb-12">
-              {product.fullDescription.split('\n\n').map((p, i) => (
-                <p key={i} className="text-[#8888a0] text-[16px] leading-relaxed">{p}</p>
+            <div className="space-y-5 mb-10">
+              {product.fullDescription.split('\n\n').map((para, i) => (
+                <p key={i} className={`leading-relaxed ${i === 0 ? 'text-[#aaaabc] text-[17px]' : 'text-[#8888a0] text-[16px]'}`}>{para}</p>
               ))}
             </div>
 
-            {/* Category-specific callout */}
-            {cat === 'Recovery & Healing'  && <RecoveryCallout />}
-            {cat === 'Looks Maxing'        && <LooksMaxingCallout />}
-            {cat === 'Body Composition'    && <BodyCompCallout />}
-            {cat === 'Weight Management'   && <WeightMgmtCallout trialData={trialData} />}
-            {cat === 'Anti-Aging'          && <AntiAgingCallout />}
+            {/* Product-specific highlights */}
+            <ProductHighlights product={product} />
 
             <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
               style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
