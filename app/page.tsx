@@ -128,28 +128,30 @@ export default function Home() {
                 const accent = accentFor(p.category)
                 return (
                   <Link key={p.slug} href={`/products/${p.slug}`}>
-                    <div className="relative rounded-2xl overflow-hidden group cursor-pointer"
-                      style={{ height: '300px' }}>
-                      <Image src={p.image} alt={p.name} fill priority={i < 2}
-                        className="object-contain p-5 group-hover:scale-105 transition-transform duration-700" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
-                      {/* Accent glow on hover */}
-                      <div className="absolute bottom-0 left-0 right-0 h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        style={{ background: `linear-gradient(to top, ${accent}35, transparent)` }} />
-                      {p.badge && (
-                        <div className="absolute top-4 left-4">
-                          <span className="tag-gold text-[10px]">{p.badge}</span>
-                        </div>
-                      )}
-                      <div className="absolute bottom-0 left-0 right-0 p-5">
-                        <p className="text-[11px] font-600 tracking-widest uppercase mb-1.5" style={{ color: accent }}>
+                    <div className="rounded-2xl overflow-hidden group cursor-pointer"
+                      style={{ background: '#0d0d12', border: '1px solid rgba(255,255,255,0.06)' }}>
+                      {/* Image area */}
+                      <div className="relative overflow-hidden" style={{ height: '200px' }}>
+                        <Image src={p.image} alt={p.name} fill priority={i < 2}
+                          className="object-contain p-5 group-hover:scale-105 transition-transform duration-700" />
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                          style={{ background: `radial-gradient(ellipse at 50% 80%, ${accent}18, transparent)` }} />
+                        {p.badge && (
+                          <div className="absolute top-3 left-3">
+                            <span className="tag-gold text-[10px]">{p.badge}</span>
+                          </div>
+                        )}
+                      </div>
+                      {/* Text below image */}
+                      <div className="p-4 border-t border-white/[0.05]">
+                        <p className="text-[10px] font-600 tracking-widest uppercase mb-1" style={{ color: accent }}>
                           {p.category}
                         </p>
-                        <p className="text-white font-700 text-[17px] leading-tight mb-1">{p.name}</p>
-                        <p className="text-[#8888a0] text-[12px] leading-snug mb-2 line-clamp-2">{p.tagline}</p>
+                        <p className="text-white font-700 text-[16px] leading-tight mb-1">{p.name}</p>
+                        <p className="text-[#8888a0] text-[12px] leading-snug mb-3">{p.tagline}</p>
                         <div className="flex items-center justify-between">
                           <p className="font-700 text-[15px]" style={{ color: accent }}>{p.price}</p>
-                          <svg className="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-1 transition-all"
+                          <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
                           </svg>
