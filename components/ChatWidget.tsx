@@ -105,6 +105,12 @@ export default function ChatWidget() {
   }, [open])
 
   useEffect(() => {
+    const handler = () => setOpen(true)
+    window.addEventListener('open-chat', handler)
+    return () => window.removeEventListener('open-chat', handler)
+  }, [])
+
+  useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, loading])
 
