@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function LearnPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-16">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 sm:pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
             Peptide Education Center
           </h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -15,8 +15,8 @@ export default function LearnPage() {
 
         {/* What Are Peptides */}
         <div className="mb-20">
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">What Are Peptides?</h2>
+          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-6 sm:p-12">
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-6">What Are Peptides?</h2>
             <div className="prose prose-invert prose-lg max-w-none">
               <p className="text-white/80 leading-relaxed mb-4">
                 Peptides are short chains of amino acids that act as signaling molecules in your body. They're smaller than proteins but incredibly powerful, telling your cells what to do and when to do it.
@@ -33,7 +33,7 @@ export default function LearnPage() {
 
         {/* Popular Categories */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Popular Peptide Categories</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold text-white mb-8 sm:mb-12 text-center">Popular Peptide Categories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {

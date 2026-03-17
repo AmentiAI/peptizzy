@@ -113,7 +113,7 @@ export default function AntiAgingPage() {
     <div className="min-h-screen bg-[#07070a]">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-20 sm:pt-32 pb-10 sm:pb-20 overflow-hidden">
         <div className="spot w-[700px] h-[500px] opacity-[0.05] -top-20 right-0"
           style={{ background: accent }} />
         <div className="spot w-[400px] h-[300px] opacity-[0.03] top-40 -left-20"

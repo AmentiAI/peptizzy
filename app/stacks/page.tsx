@@ -14,7 +14,7 @@ export default function StacksPage() {
     <div className="min-h-screen bg-[#07070a]">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-20 sm:pt-32 pb-10 sm:pb-20 overflow-hidden">
         <div className="spot w-[500px] h-[350px] bg-[#d4a043] opacity-[0.04] top-0 right-0" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex items-center gap-3 mb-5">
@@ -66,7 +66,7 @@ export default function StacksPage() {
                       </p>
                       <p className="text-[#8888a0] text-[15px] leading-relaxed max-w-2xl">{stack.shortDesc}</p>
                     </div>
-                    <div className="flex-shrink-0 text-right space-y-3">
+                    <div className="flex-shrink-0 md:text-right space-y-3">
                       <div>
                         <p className="label mb-1">Duration</p>
                         <p className="text-white font-600 text-[15px]">{stack.duration}</p>

@@ -42,7 +42,7 @@ export default function StackPage({ params }: Props) {
 
       {/* HERO */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-10">
-        <div className="relative rounded-2xl overflow-hidden card-elevated p-10 md:p-14">
+        <div className="relative rounded-2xl overflow-hidden card-elevated p-5 sm:p-10 md:p-14">
           <div className="absolute top-0 left-0 w-1.5 h-full rounded-l-2xl" style={{ background: stack.accent }} />
           <div className="absolute top-0 right-0 w-[500px] h-[300px] -z-0 opacity-[0.04] blur-[80px] rounded-full"
             style={{ background: `radial-gradient(ellipse, ${stack.accent}, transparent)` }} />
@@ -59,7 +59,7 @@ export default function StackPage({ params }: Props) {
                 style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}>
                 {stack.name}
               </h1>
-              <p className="font-['Playfair_Display'] italic text-2xl mb-6" style={{ color: stack.accent }}>
+              <p className="font-['Playfair_Display'] italic text-xl sm:text-2xl mb-4 sm:mb-6" style={{ color: stack.accent }}>
                 {stack.tagline}
               </p>
               <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-8">{stack.shortDesc}</p>

@@ -1,0 +1,23 @@
+import { MetadataRoute } from 'next';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/'],
+      },
+      { userAgent: 'Googlebot',    allow: '/' },
+      { userAgent: 'Bingbot',      allow: '/' },
+      { userAgent: 'Slurp',        allow: '/' },
+      { userAgent: 'DuckDuckBot',  allow: '/' },
+      { userAgent: 'Baiduspider',  allow: '/' },
+      { userAgent: 'YandexBot',    allow: '/' },
+      { userAgent: 'facebot',      allow: '/' },
+      { userAgent: 'Twitterbot',   allow: '/' },
+    ],
+    sitemap: 'https://peptizzy.com/sitemap.xml',
+    host: 'https://peptizzy.com',
+  };
+}

@@ -11,7 +11,7 @@ export default function GuidePage() {
     <div className="min-h-screen bg-[#07070a]">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20">
+      <section className="relative pt-20 sm:pt-32 pb-10 sm:pb-20">
         <div className="spot w-[500px] h-[300px] bg-[#d4a043] opacity-[0.04] top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex items-center gap-3 mb-5">

@@ -43,7 +43,7 @@ function Content() {
     <div className="min-h-screen bg-[#07070a]">
 
       {/* ── HERO ── */}
-      <div className="relative pt-32 pb-24 overflow-hidden">
+      <div className="relative pt-20 sm:pt-32 pb-12 sm:pb-24 overflow-hidden">
         <div className="spot w-[700px] h-[400px] bg-[#d4a043] opacity-[0.04] top-0 left-1/2 -translate-x-1/2" />
         <div className="spot w-[300px] h-[300px] bg-[#6090ff] opacity-[0.03] top-20 right-20" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
@@ -155,7 +155,7 @@ function Content() {
         </div>
 
         {/* Count bar */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-10">
           <div className="flex items-center gap-3">
             <p className="text-[#8888a0] text-[15px]">
               Showing <span className="text-white font-700">{filtered.length}</span> peptides
@@ -201,10 +201,10 @@ function Content() {
         )}
 
         {/* Bottom CTA */}
-        <div className="mt-24 relative overflow-hidden card-elevated rounded-3xl p-14 text-center">
+        <div className="mt-24 relative overflow-hidden card-elevated rounded-3xl p-8 sm:p-14 text-center">
           <div className="spot w-[500px] h-[200px] bg-[#d4a043] opacity-[0.05] top-0 left-1/2 -translate-x-1/2" />
           <p className="label-gold mb-4">Powered by Apollo Peptide Sciences</p>
-          <h3 className="font-['Playfair_Display'] font-900 text-white text-4xl mb-4 relative z-10">
+          <h3 className="font-['Playfair_Display'] font-900 text-white text-2xl sm:text-4xl mb-4 relative z-10">
             Shop the Complete Catalog
           </h3>
           <p className="text-[#8888a0] text-[16px] mb-8 max-w-lg mx-auto relative z-10">

@@ -83,7 +83,7 @@ export default function Home() {
         <div className="spot spot-pulse w-[560px] h-[400px] bg-[#d4a043] opacity-[0.055] -top-20 left-[15%]" />
         <div className="spot spot-pulse-2 w-[400px] h-[400px] bg-[#6030d0] opacity-[0.04] top-[35%] right-[5%]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-32 pb-16 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-20 sm:pt-32 pb-10 sm:pb-16 w-full">
           <div className="grid lg:grid-cols-[1fr_420px] gap-16 xl:gap-24 items-center min-h-[70vh]">
 
             <div>
@@ -1051,7 +1051,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════
           14. FINAL CTA
       ══════════════════════════════════════════ */}
-      <section className="py-32 md:py-40">
+      <section className="py-16 sm:py-24 md:py-40">
         <div className="max-w-4xl mx-auto px-6 md:px-10 text-center">
           <p className="label-gold mb-6">Begin Today</p>
           <h2 className="mb-7" style={{ fontSize: 'clamp(44px, 7vw, 96px)', lineHeight: '0.95' }}>

@@ -98,7 +98,7 @@ export default function LooksMaxingPage() {
     <div className="min-h-screen bg-[#07070a]">
 
       {/* HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-20 sm:pt-32 pb-10 sm:pb-20 overflow-hidden">
         <div className="spot w-[600px] h-[400px] bg-[#d4a043] opacity-[0.05] -top-10 right-0" />
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex items-center gap-3 mb-5">
