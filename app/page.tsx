@@ -910,7 +910,7 @@ export default function Home() {
                       </div>
                       <div className="flex gap-3">
                         <Link href={`/products/${item.slug}`} className="btn-secondary text-[12px] py-2.5 px-5">Full Details</Link>
-                        <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
+                        <a href={products.find(p => p.slug === item.slug)?.affiliateUrl ?? 'https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e'}
                           target="_blank" rel="noopener noreferrer"
                           className="btn-primary text-[12px] py-2.5 px-5">
                           Buy Now
