@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { getProductBySlug, products, type Product } from '@/lib/products'
 import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
+import FaqAccordion from '@/components/FaqAccordion'
 
 interface Props { params: { slug: string } }
 
@@ -15,9 +16,24 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProductBySlug(params.slug)
   if (!p) return {}
+  const url = `https://peptidesmuscle.com/products/${p.slug}`
   return {
     title: p.seoTitle ?? `${p.name} | PeptidesMuscle`,
     description: p.shortDescription,
+    alternates: { canonical: url },
+    openGraph: {
+      title: p.seoTitle ?? `${p.name} | PeptidesMuscle`,
+      description: p.shortDescription,
+      url,
+      type: 'website',
+      images: [{ url: p.image, alt: p.name }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: p.seoTitle ?? `${p.name} | PeptidesMuscle`,
+      description: p.shortDescription,
+      images: [p.image],
+    },
   }
 }
 
@@ -793,8 +809,52 @@ export default function ProductPage({ params }: Props) {
   const trialData = CLINICAL_TRIALS[product.slug]
   const cat = product.category
 
+  const jsonLdItems: object[] = [
+    {
+      '@type': 'Product',
+      name: product.name,
+      description: product.shortDescription,
+      image: product.image,
+      url: `https://peptidesmuscle.com/products/${product.slug}`,
+      brand: { '@type': 'Brand', name: 'Apollo Peptide Sciences' },
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'USD',
+        price: product.price.replace(/[^0-9.]/g, ''),
+        url: product.affiliateUrl,
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: 'Apollo Peptide Sciences' },
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://peptidesmuscle.com' },
+        { '@type': 'ListItem', position: 2, name: 'Peptides', item: 'https://peptidesmuscle.com/products' },
+        { '@type': 'ListItem', position: 3, name: product.name, item: `https://peptidesmuscle.com/products/${product.slug}` },
+      ],
+    },
+  ]
+
+  if (product.faqs?.length) {
+    jsonLdItems.push({
+      '@type': 'FAQPage',
+      mainEntity: product.faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })
+  }
+
+  const jsonLd = { '@context': 'https://schema.org', '@graph': jsonLdItems }
+
   return (
     <div className="min-h-screen bg-[#07070a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ── CATEGORY-SPECIFIC HERO ── */}
       {cat === 'Recovery & Healing'  && <RecoveryHero   product={product} stats={stats} />}
@@ -860,6 +920,17 @@ export default function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {product.faqs?.length && (
+        <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
+          <div className="rule mb-12" />
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-8" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+            Frequently Asked Questions
+          </h2>
+          <FaqAccordion faqs={product.faqs} />
+        </section>
+      )}
 
       {/* Further Reading */}
       <FurtherReading links={productInternalLinks[product.slug] ?? []} />

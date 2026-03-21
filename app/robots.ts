@@ -17,7 +17,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'facebot',      allow: '/' },
       { userAgent: 'Twitterbot',   allow: '/' },
     ],
-    sitemap: 'https://peptizzy.com/sitemap.xml',
-    host: 'https://peptizzy.com',
+    sitemap: 'https://peptidesmuscle.com/sitemap.xml',
+    host: 'https://peptidesmuscle.com',
   };
 }

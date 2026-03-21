@@ -1,4 +1,23 @@
 import Link from 'next/link';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Peptide Education Center | Learn About Peptides | PeptidesMuscle',
+  description: 'In-depth guides on peptide science, mechanisms of action, stacking strategies, injection protocols, and optimization frameworks for looks, performance, and longevity.',
+  alternates: { canonical: 'https://peptidesmuscle.com/learn' },
+  openGraph: {
+    title: 'Peptide Education Center | PeptidesMuscle',
+    description: 'In-depth guides on peptide science, stacking strategies, and optimization frameworks.',
+    url: 'https://peptidesmuscle.com/learn',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peptide Education Center | PeptidesMuscle',
+    description: 'In-depth guides on peptide science, stacking strategies, and optimization frameworks.',
+  },
+}
 
 export default function LearnPage() {
   return (

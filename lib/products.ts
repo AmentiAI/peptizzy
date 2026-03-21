@@ -17,6 +17,7 @@ export interface Product {
   seoTitle?: string
   deepDiveTitle: string
   highlights: { label: string; title: string; body: string }[]
+  faqs?: { q: string; a: string }[]
 }
 
 const AFF = (slug: string) => `https://apollopeptidesciences.com/product/${slug}/?rfsn=9016964.3f1b1e`
@@ -28,7 +29,7 @@ export const products: Product[] = [
   {
     slug: 'bpc-157',
     name: 'BPC-157',
-    seoTitle: 'BPC-157 | The Best Peptide for Healing Injuries, Joints & Gut Problems | PeptidesMuscle',
+    seoTitle: 'BPC-157 Benefits: Best Peptide for Injury Healing, Gut Health & Recovery | PeptidesMuscle',
     tagline: 'The Universal Healing Peptide',
     price: '$59.99',
     category: 'Recovery & Healing',
@@ -77,12 +78,18 @@ Available in 10mg vials from Apollo Peptide Sciences — pharmaceutical-grade ly
         body: 'BPC-157\'s role in a stack isn\'t just personal recovery — it optimizes the biological environment for every other compound. It reduces systemic inflammation that would blunt growth hormone signaling, it heals the connective tissue damage that limits training intensity, and it supports the gut health that determines how well anything else gets processed. Whether you\'re running GHK-Cu for skin, CJC-1295/Ipamorelin for GH, or semaglutide for fat loss, BPC-157 is the compound that keeps the foundation intact.',
       },
     ],
+    faqs: [
+      { q: 'What does BPC-157 do?', a: 'BPC-157 accelerates healing by promoting angiogenesis (new blood vessel formation), upregulating growth factor receptors, and modulating nitric oxide synthesis. It simultaneously heals tendons, ligaments, muscles, gut lining, cartilage, and nerves — making it one of the most comprehensive recovery peptides available.' },
+      { q: 'How long does BPC-157 take to work?', a: 'Most users notice initial results within 1–2 weeks of consistent use. Significant structural repair — particularly for tendon and ligament injuries — typically requires 4–6 weeks. Gut healing effects often appear faster, within the first 7–10 days of daily administration.' },
+      { q: 'What is the correct BPC-157 dosage?', a: 'Standard protocols range from 200–500mcg per day, administered subcutaneously or intramuscularly near the injury site. For systemic benefits including gut health, abdominal subcutaneous injection is standard. Cycles of 4–8 weeks on, followed by 4 weeks off.' },
+      { q: 'Can I stack BPC-157 with TB-500?', a: 'Yes — the BPC-157 and TB-500 combination is called the Wolverine Stack and is widely considered the gold standard for injury recovery. BPC-157 provides targeted localized healing while TB-500 distributes systemically, making the two peptides highly complementary with no overlap in mechanism.' },
+    ],
   },
 
   {
     slug: 'tb-500',
     name: 'TB-500',
-    seoTitle: 'TB-500 | Heal Your Whole Body at Once — The Systemic Recovery Peptide | PeptidesMuscle',
+    seoTitle: 'TB-500 Healing Protocol: Systemic Tissue Regeneration & Injury Recovery Peptide | PeptidesMuscle',
     tagline: 'Systemic Tissue Regeneration',
     price: '$59.99',
     category: 'Recovery & Healing',
@@ -126,6 +133,12 @@ For physique development, TB-500 addresses the full-body recovery limitation tha
         title: 'Local Precision vs. Systemic Coverage — Why the Best Protocols Use Both',
         body: 'BPC-157 is exceptional at healing specific, targeted areas — particularly gut lining, tendons, and acute injury sites when injected locally. TB-500 is exceptional at systemic, full-body recovery — reaching all tissues via bloodstream distribution. Together, they create complementary coverage: BPC-157 handles the precise, acute repair; TB-500 handles the broader, systemic inflammatory burden and multi-site recovery that every hard-training athlete accumulates. Most serious recovery protocols use both simultaneously.',
       },
+    ],
+    faqs: [
+      { q: 'What is TB-500?', a: 'TB-500 is a synthetic analogue of Thymosin Beta-4, a naturally occurring protein found in virtually every cell in the body. Unlike BPC-157 which works best locally, TB-500 distributes systemically through the bloodstream to repair tissue throughout the entire body simultaneously — making it ideal for athletes with multiple injury sites or chronic inflammation.' },
+      { q: 'How does TB-500 compare to BPC-157?', a: 'BPC-157 excels at targeted, localized healing — injecting near the injury site concentrates its effects. TB-500 travels systemically and reaches all injury sites through the bloodstream simultaneously. Most advanced protocols use both together (the Wolverine Stack) for complementary local and systemic recovery coverage.' },
+      { q: 'What is the TB-500 loading dose protocol?', a: 'A typical TB-500 protocol uses a loading phase of 4–8mg per week (split across 2 injections) for the first 4–6 weeks, followed by a maintenance dose of 2–4mg per week. Subcutaneous injection is most common. Some researchers use intramuscular injection for faster distribution to specific muscle groups.' },
+      { q: 'How long does TB-500 take to show results?', a: 'Acute pain reduction from injury sites often begins within 1–2 weeks. Structural tissue repair and flexibility improvements — particularly for tendons and chronic inflammation — typically require 4–8 weeks of consistent protocol. Full recovery from significant injuries is generally achieved within a complete 8–12 week cycle.' },
     ],
   },
 
@@ -184,7 +197,7 @@ No serious peptide research protocol is complete without it. Whether working wit
   {
     slug: 'ghk-cu',
     name: 'GHK-Cu',
-    seoTitle: 'GHK-Cu | The Best Peptide for Skin, Collagen & Looking Younger | PeptidesMuscle',
+    seoTitle: 'GHK-Cu Copper Peptide: Skin Benefits, Collagen Stimulation & Anti-Aging Results | PeptidesMuscle',
     tagline: 'The Collagen & Skin Optimizer',
     price: '$50.00',
     category: 'Looks Maxing',
@@ -231,12 +244,18 @@ For looks maximization, GHK-Cu addresses the structural variable that no diet, h
         body: 'SubQ injection delivers GHK-Cu systemically, reaching the deeper dermal layers where fibroblasts live and where structural collagen changes actually occur. Topical application works at the epidermal and upper dermal level — useful for surface quality, hydration, and barrier repair, but limited in penetration depth. Serious looks maximizers typically combine both: SubQ for structural remodeling and topical for surface refinement. If choosing one, SubQ produces more significant measurable changes in skin density and collagen architecture over an 8–12 week cycle.',
       },
     ],
+    faqs: [
+      { q: 'What are the skin benefits of GHK-Cu?', a: 'GHK-Cu activates over 4,000 genes related to skin repair and regeneration. It directly stimulates collagen and elastin synthesis in dermal fibroblasts, increases skin thickness by up to 121%, reduces wrinkle depth, improves skin firmness and luminosity, promotes wound healing, and reduces hyperpigmentation. It is the most clinically studied skin peptide available.' },
+      { q: 'How long before GHK-Cu shows results?', a: 'Improved skin hydration and early elasticity changes appear within 3–4 weeks. Measurable increases in skin density and collagen matrix quality become visible around weeks 6–8. The full structural remodeling benefit — new collagen replacing damaged tissue — takes a complete 8–12 week cycle to reach peak expression.' },
+      { q: 'Is injectable GHK-Cu better than topical?', a: 'Injectable GHK-Cu provides greater bioavailability and more consistent penetration to the deeper dermal layers where fibroblasts produce collagen. Topical formulations are effective at the epidermal level but have limited depth of penetration. For maximum skin density improvement, subcutaneous injection at 1–2mg 3–5 times weekly delivers the most consistent results.' },
+      { q: 'What is the GHK-Cu dosage protocol?', a: 'Typical research protocols use 1–2mg subcutaneously, 3–5 times per week, for 8–12 weeks. Injection sites are typically the abdomen or thigh. A rest period of 4 weeks between cycles is standard. For looks maxing stacks, GHK-Cu is often combined with SNAP-8 (topical) and BPC-157 for comprehensive skin optimization.' },
+    ],
   },
 
   {
     slug: 'snap-8',
     name: 'SNAP-8',
-    seoTitle: 'SNAP-8 | The Peptide That Works Like Botox — Without the Needles in Your Face | PeptidesMuscle',
+    seoTitle: 'SNAP-8 Peptide: Natural Botox Alternative — Up to 63% Wrinkle Reduction | PeptidesMuscle',
     tagline: 'The Anti-Wrinkle Peptide',
     price: '$45.00',
     category: 'Looks Maxing',
@@ -336,7 +355,7 @@ The economics are simple: two vials at the bundle price represent a meaningful s
   {
     slug: 'cjc-1295-ipamorelin',
     name: 'CJC-1295 / Ipamorelin',
-    seoTitle: 'CJC-1295 / Ipamorelin | The Most Popular Growth Hormone Peptide Stack | PeptidesMuscle',
+    seoTitle: 'CJC-1295 Ipamorelin Stack Guide: Growth Hormone, Fat Loss & Body Composition | PeptidesMuscle',
     tagline: 'The Gold Standard GH Stack',
     price: '$50.00',
     category: 'Body Composition',
@@ -382,6 +401,12 @@ The downstream effects of optimized GH pulsatility are comprehensive: enhanced f
         title: 'Why the Last Injection of the Day Is the Most Important One You\'ll Take',
         body: 'Growth hormone release is highest during the first deep sleep cycle — the body\'s natural nocturnal GH pulse. Injecting CJC-1295/Ipamorelin 30–60 minutes before bed amplifies this natural pulse rather than creating an artificial one at an arbitrary time. The result is a larger, more physiological GH release during the deepest, most restorative phase of sleep — which also happens to be when the majority of tissue repair and growth signaling occurs. Users consistently report improved sleep quality within the first week of use, and this isn\'t a side effect: it\'s the compound doing exactly what it\'s supposed to do.',
       },
+    ],
+    faqs: [
+      { q: 'How does the CJC-1295 Ipamorelin stack work?', a: 'CJC-1295 activates the GHRH receptor to stimulate growth hormone release from the pituitary. Ipamorelin activates the ghrelin receptor through a completely separate pathway. Together, the two peptides produce GH pulses far greater than either compound alone — a synergistic dual-receptor stimulation effect. Ipamorelin\'s high selectivity means no cortisol, prolactin, or appetite side effects.' },
+      { q: 'What results can I expect from CJC-1295 Ipamorelin?', a: 'Weeks 1–2: Improved sleep quality and faster recovery. Weeks 3–4: Increased energy and early body composition changes. Weeks 6–8: Measurable reduction in subcutaneous fat, increased muscle fullness, improved skin quality. Weeks 10–12: Full GH optimization — leaner physique, better body composition, significantly enhanced recovery capacity.' },
+      { q: 'How many times per day should I inject CJC-1295 Ipamorelin?', a: 'Standard protocol is 2–3 injections daily at 100mcg of each component: once before bed (most important — aligns with the natural GH pulse during sleep), and optionally once in the morning and/or 30 minutes before training. Always inject on an empty stomach — eating within 2 hours of injection blunts the GH response via insulin.' },
+      { q: 'How long should a CJC-1295 Ipamorelin cycle last?', a: 'Most researchers run 12–16 week cycles, followed by a 4–8 week break. This mirrors the natural rhythm of GH optimization and prevents receptor desensitization. Measurable body composition changes are typically visible by weeks 8–10, with full protocol benefits expressed at the 12-week mark.' },
     ],
   },
 
@@ -486,6 +511,12 @@ Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5
         title: 'Why Starting at 0.25mg Is the Difference Between Tolerating Semaglutide and Quitting It',
         body: 'Semaglutide\'s GI side effects — nausea, reduced appetite, occasional vomiting in the first weeks — are dose-dependent and adaptation-dependent. Researchers who jump straight to therapeutic doses (1mg+) experience the worst GI profile and often discontinue. The escalation protocol (0.25mg → 0.5mg → 1mg → 2.4mg at 4-week intervals) gives the GI tract time to adapt to slowed gastric emptying at each step. By the time you reach 1mg or above, the GI adaptation is largely complete and the dose is well tolerated. Patience during escalation is not a nice-to-have — it determines whether you complete the protocol.',
       },
+    ],
+    faqs: [
+      { q: 'How does semaglutide cause weight loss?', a: 'Semaglutide activates GLP-1 receptors in the brain\'s hunger centers, producing powerful appetite suppression and prolonged satiety. It also slows gastric emptying, reducing the speed at which food leaves the stomach. These two mechanisms dramatically reduce caloric intake — producing the 14.9% average body weight reduction seen in the STEP-1 clinical trial over 68 weeks.' },
+      { q: 'Semaglutide vs tirzepatide: which is better for weight loss?', a: 'Tirzepatide produces greater average weight loss (22.5%) compared to semaglutide (14.9%) because it activates two receptors — GLP-1 and GIP — versus semaglutide\'s single GLP-1 receptor. For maximum fat loss, tirzepatide is the stronger compound. However, semaglutide has the longer safety record and is the standard starting point for most new GLP-1 protocols.' },
+      { q: 'What is the correct semaglutide dosing protocol?', a: 'Standard escalation: 0.25mg weekly for 4 weeks → 0.5mg for weeks 5–8 → 1mg for weeks 9–12 → 2.4mg maintenance thereafter. Dose escalation minimizes GI side effects by allowing the gut to adapt to slowed gastric emptying at each step. The 2.4mg maintenance dose is what produced the 14.9% weight loss in the STEP-1 trial.' },
+      { q: 'How long does semaglutide take to work?', a: 'Appetite suppression is noticeable within the first 1–2 weeks at even the starting 0.25mg dose. Measurable weight loss typically begins within 4–8 weeks as the dose escalates. The full fat loss benefit of a semaglutide protocol is expressed at maintenance dosing (2.4mg weekly) sustained over 12–24+ weeks.' },
     ],
   },
 
@@ -592,7 +623,7 @@ For cost-conscious researchers running multi-month protocols, the 15mg vial offe
   {
     slug: 'tirzepatide',
     name: 'Tirzepatide',
-    seoTitle: 'Tirzepatide | The Mounjaro Peptide — Works Better Than Ozempic for Weight Loss | PeptidesMuscle',
+    seoTitle: 'Tirzepatide vs Semaglutide: Dual GLP-1/GIP Peptide for Maximum Weight Loss | PeptidesMuscle',
     tagline: 'Dual GLP-1/GIP Agonist',
     price: '$149.99',
     category: 'Weight Management',
@@ -890,7 +921,7 @@ Reconstitution with bacteriostatic water at precise concentrations enables the 6
   {
     slug: 'retatrutide',
     name: 'Retatrutide',
-    seoTitle: 'Retatrutide | The Strongest Weight Loss Peptide Ever Studied — Up to 24% Body Weight Lost | PeptidesMuscle',
+    seoTitle: 'Retatrutide Weight Loss Peptide: Triple GLP-1/GIP/Glucagon vs Tirzepatide vs Semaglutide | PeptidesMuscle',
     tagline: 'Triple Agonist — Maximum Fat Loss',
     price: '$189.99',
     category: 'Weight Management',
@@ -1143,7 +1174,7 @@ Apollo supplies this as a 5mg/5mg blended vial, providing both compounds in a si
   {
     slug: 'epithalon',
     name: 'Epithalon',
-    seoTitle: 'Epithalon | The Anti-Aging Peptide That Actually Lengthens Your Telomeres | PeptidesMuscle',
+    seoTitle: 'Epithalon Peptide: Telomere Lengthening & Anti-Aging Longevity Protocol | PeptidesMuscle',
     tagline: 'The Telomere Lengthening Protocol',
     price: '$139.99',
     category: 'Anti-Aging',

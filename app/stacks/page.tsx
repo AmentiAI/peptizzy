@@ -7,6 +7,19 @@ import { products } from '@/lib/products'
 export const metadata: Metadata = {
   title: 'Stack Protocols | PeptidesMuscle',
   description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance. Full detail pages for each stack.',
+  alternates: { canonical: 'https://peptidesmuscle.com/stacks' },
+  openGraph: {
+    title: 'Stack Protocols | PeptidesMuscle',
+    description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance.',
+    url: 'https://peptidesmuscle.com/stacks',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stack Protocols | PeptidesMuscle',
+    description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance.',
+  },
 }
 
 export default function StacksPage() {

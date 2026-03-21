@@ -1,3 +1,18 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact | Free Peptide Consultation | PeptidesMuscle',
+  description: 'Get a free consultation with our peptide specialists. Personalized protocol guidance for looks maxing, body composition, recovery, and anti-aging.',
+  alternates: { canonical: 'https://peptidesmuscle.com/contact' },
+  openGraph: {
+    title: 'Contact | Free Peptide Consultation | PeptidesMuscle',
+    description: 'Get a free consultation with our peptide specialists. Personalized protocol guidance.',
+    url: 'https://peptidesmuscle.com/contact',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+}
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 sm:pt-24 pb-16">

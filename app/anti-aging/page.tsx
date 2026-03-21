@@ -4,8 +4,22 @@ import type { Metadata } from 'next'
 import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Anti-Aging Peptides | Reverse Biological Age with Proven Protocols | PeptidesMuscle',
-  description: 'The definitive guide to peptide-based anti-aging. Epithalon, NAD+, GHK-Cu — science-backed protocols that target telomere length, cellular energy, and tissue restoration.',
+  title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu Longevity Protocols | PeptidesMuscle',
+  description: 'The definitive anti-aging peptide guide. Epithalon for telomere lengthening, NAD+ for cellular energy, GHK-Cu for skin — science-backed protocols that reverse biological age.',
+  alternates: { canonical: 'https://peptidesmuscle.com/anti-aging' },
+  keywords: 'peptides for anti aging, anti-aging peptides, epithalon longevity, NAD+ anti-aging, best peptides for longevity, telomere peptide',
+  openGraph: {
+    title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu | PeptidesMuscle',
+    description: 'Epithalon for telomere lengthening, NAD+ for cellular energy, GHK-Cu for skin — science-backed anti-aging peptide protocols.',
+    url: 'https://peptidesmuscle.com/anti-aging',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu | PeptidesMuscle',
+    description: 'Epithalon, NAD+, GHK-Cu — science-backed anti-aging peptide protocols that reverse biological age.',
+  },
 }
 
 const accent = '#a78bfa'

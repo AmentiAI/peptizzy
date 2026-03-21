@@ -15,9 +15,23 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const stack = getStackById(params.slug)
   if (!stack) return {}
+  const url = `https://peptidesmuscle.com/stacks/${stack.id}`
   return {
     title: `${stack.name} | PeptidesMuscle Stack Protocols`,
     description: stack.shortDesc,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${stack.name} | PeptidesMuscle Stack Protocols`,
+      description: stack.shortDesc,
+      url,
+      type: 'website',
+      siteName: 'PeptidesMuscle',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${stack.name} | PeptidesMuscle Stack Protocols`,
+      description: stack.shortDesc,
+    },
   }
 }
 
@@ -27,8 +41,34 @@ export default function StackPage({ params }: Props) {
 
   const allStacks = stacks.filter(s => s.id !== stack.id)
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://peptidesmuscle.com' },
+          { '@type': 'ListItem', position: 2, name: 'Stacks', item: 'https://peptidesmuscle.com/stacks' },
+          { '@type': 'ListItem', position: 3, name: stack.name, item: `https://peptidesmuscle.com/stacks/${stack.id}` },
+        ],
+      },
+      ...(stack.faqs?.length ? [{
+        '@type': 'FAQPage',
+        mainEntity: stack.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }] : []),
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-[#07070a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* Breadcrumb */}
       <div className="pt-24 pb-4 max-w-7xl mx-auto px-6 md:px-10">

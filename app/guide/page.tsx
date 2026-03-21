@@ -2,8 +2,22 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Protocol Guide | PeptidesMuscle',
-  description: 'The complete guide to peptide protocols — from beginner fundamentals to advanced stacking strategies.',
+  title: 'Peptide Protocol Guide: Beginner to Advanced Stacking Strategies | PeptidesMuscle',
+  description: 'The complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies, cycle lengths, and dosing for looks maxing, fat loss, and recovery.',
+  alternates: { canonical: 'https://peptidesmuscle.com/guide' },
+  keywords: 'peptide protocol guide, peptide stacking guide, how to use peptides, peptide dosage guide, beginner peptide stack',
+  openGraph: {
+    title: 'Peptide Protocol Guide: Beginner to Advanced Stacking | PeptidesMuscle',
+    description: 'Complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies, and dosing for every goal.',
+    url: 'https://peptidesmuscle.com/guide',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peptide Protocol Guide: Beginner to Advanced Stacking | PeptidesMuscle',
+    description: 'Complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies.',
+  },
 }
 
 export default function GuidePage() {

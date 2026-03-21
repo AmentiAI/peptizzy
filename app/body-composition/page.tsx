@@ -4,8 +4,22 @@ import type { Metadata } from 'next'
 import { products } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Body Composition Peptides | Build Muscle & Lose Fat with Proven Protocols | PeptidesMuscle',
-  description: 'The definitive guide to peptide-based body composition. CJC-1295/Ipamorelin, IGF-1 LR3, BPC-157 — science-backed stacks for lean mass, fat loss, and elite physique development.',
+  title: 'Peptide Stack for Body Composition: Build Muscle & Lose Fat | PeptidesMuscle',
+  description: 'The definitive body composition peptide guide. CJC-1295/Ipamorelin for GH optimization, IGF-1 LR3 for muscle growth, BPC-157 for recovery — science-backed stacks for elite physique development.',
+  alternates: { canonical: 'https://peptidesmuscle.com/body-composition' },
+  keywords: 'peptide stack body composition, best peptides for muscle growth, peptides for fat loss, CJC-1295 ipamorelin body composition, IGF-1 LR3 muscle',
+  openGraph: {
+    title: 'Peptide Stack for Body Composition: Build Muscle & Lose Fat | PeptidesMuscle',
+    description: 'CJC-1295/Ipamorelin, IGF-1 LR3, BPC-157 — science-backed peptide stacks for lean mass, fat loss, and elite physique development.',
+    url: 'https://peptidesmuscle.com/body-composition',
+    type: 'website',
+    siteName: 'PeptidesMuscle',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peptide Stack for Body Composition: Build Muscle & Lose Fat | PeptidesMuscle',
+    description: 'CJC-1295/Ipamorelin, IGF-1 LR3, BPC-157 — science-backed peptide stacks for elite physique development.',
+  },
 }
 
 const accent = '#34d399'
