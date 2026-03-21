@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { stacks, getStackById } from '@/lib/stacks'
 import { products } from '@/lib/products'
+import { stackInternalLinks, type InternalLink } from '@/lib/internal-links'
 
 interface Props { params: { slug: string } }
 
@@ -276,6 +277,27 @@ export default function StackPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Further Reading */}
+      {(stackInternalLinks[stack.id]?.length ?? 0) > 0 && (
+        <section className="max-w-7xl mx-auto px-6 md:px-10 pb-12">
+          <p className="label text-[#d4a043] mb-5 uppercase tracking-widest text-[11px]">Further Reading</p>
+          <div className="flex flex-wrap gap-3">
+            {stackInternalLinks[stack.id].map((link: InternalLink) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="group flex items-center gap-2.5 card rounded-xl px-4 py-3 hover:border-[#d4a043]/30 transition-colors"
+              >
+                <span className="text-[#aaaabc] text-[14px] font-500 group-hover:text-[#d4a043] transition-colors">
+                  {link.anchor}
+                </span>
+                <span className="text-[#50505e] text-[12px]">— {link.title} →</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* OTHER STACKS */}
       <section className="bg-[#0a0a0e] py-20">

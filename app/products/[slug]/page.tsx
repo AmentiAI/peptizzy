@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getProductBySlug, products, type Product } from '@/lib/products'
+import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
 
 interface Props { params: { slug: string } }
@@ -85,6 +86,31 @@ const ANABOLIC_PATHWAY = [
   { node: 'mTOR Complex', desc: 'Master regulator switches cells into anabolic, growth mode' },
   { node: 'Protein Synthesis', desc: 'Ribosomes upregulate — muscle fiber growth and repair begins' },
 ]
+
+// ── Further Reading ──────────────────────────────────────────────────────────
+
+function FurtherReading({ links }: { links: InternalLink[] }) {
+  if (!links?.length) return null
+  return (
+    <section className="max-w-7xl mx-auto px-6 md:px-10 pb-12">
+      <p className="label text-[#d4a043] mb-5 uppercase tracking-widest text-[11px]">Further Reading</p>
+      <div className="flex flex-wrap gap-3">
+        {links.map(link => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="group flex items-center gap-2.5 card rounded-xl px-4 py-3 hover:border-[#d4a043]/30 transition-colors"
+          >
+            <span className="text-[#aaaabc] text-[14px] font-500 group-hover:text-[#d4a043] transition-colors">
+              {link.anchor}
+            </span>
+            <span className="text-[#50505e] text-[12px]">— {link.title} →</span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  )
+}
 
 // ── Shared subcomponents ────────────────────────────────────────────────────
 
@@ -834,6 +860,9 @@ export default function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Further Reading */}
+      <FurtherReading links={productInternalLinks[product.slug] ?? []} />
 
       {/* Related */}
       {related.length > 0 && (
