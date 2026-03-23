@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison | PeptidesMuscle',
   description: 'Complete 2026 comparison of all three GLP-1 class compounds. Tirzepatide vs semaglutide vs retatrutide — weight loss data, mechanisms, side effects, FDA status, cost, and which to choose.',
-  alternates: { canonical: 'https://peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide' },
   keywords: 'tirzepatide vs semaglutide vs retatrutide, semaglutide vs tirzepatide weight loss, glp-1 comparison 2026, retatrutide comparison, which glp-1 is best',
-  openGraph: { title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 Comparison', description: 'All trial data, mechanisms, side effects, and a decision framework for choosing between the three GLP-1 class compounds.', url: 'https://peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 Comparison', description: 'All trial data, mechanisms, side effects, and a decision framework for choosing between the three GLP-1 class compounds.', url: 'https://www.peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', description: 'All trial data and a decision framework for the three GLP-1 class compounds.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

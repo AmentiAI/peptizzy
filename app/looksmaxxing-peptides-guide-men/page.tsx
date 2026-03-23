@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Looksmaxxing Peptides for Men: Complete Stack Guide — Skin, Body, Hair & Recovery | PeptidesMuscle',
   description: 'The definitive looksmaxxing peptides guide for men. GHK-Cu for skin collagen, SNAP-8 for wrinkle reduction, CJC-1295 for body recomp, BPC-157 for recovery — protocol stacks by goal and budget.',
-  alternates: { canonical: 'https://peptidesmuscle.com/looksmaxxing-peptides-guide-men' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/looksmaxxing-peptides-guide-men' },
   keywords: 'looksmaxxing peptides for men, looksmaxxing peptides guide, peptides for appearance enhancement, looksmaxxing stack, ghk-cu looksmaxxing, best peptides looks maxing',
-  openGraph: { title: 'Looksmaxxing Peptides for Men: The Complete Stack Guide', description: 'GHK-Cu, SNAP-8, CJC-1295, BPC-157 — protocol stacks for skin, body, hair and recovery.', url: 'https://peptidesmuscle.com/looksmaxxing-peptides-guide-men', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'Looksmaxxing Peptides for Men: The Complete Stack Guide', description: 'GHK-Cu, SNAP-8, CJC-1295, BPC-157 — protocol stacks for skin, body, hair and recovery.', url: 'https://www.peptidesmuscle.com/looksmaxxing-peptides-guide-men', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'Looksmaxxing Peptides for Men: Complete Stack Guide', description: 'The definitive guide to peptide-based appearance optimization.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Looksmaxxing Peptides for Men: Complete Stack Guide', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'Looksmaxxing Peptides for Men: Complete Stack Guide', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

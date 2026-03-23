@@ -6,12 +6,12 @@ import { products } from '@/lib/products'
 export const metadata: Metadata = {
   title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu Longevity Protocols | PeptidesMuscle',
   description: 'The definitive anti-aging peptide guide. Epithalon for telomere lengthening, NAD+ for cellular energy, GHK-Cu for skin — science-backed protocols that reverse biological age.',
-  alternates: { canonical: 'https://peptidesmuscle.com/anti-aging' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/anti-aging' },
   keywords: 'peptides for anti aging, anti-aging peptides, epithalon longevity, NAD+ anti-aging, best peptides for longevity, telomere peptide',
   openGraph: {
     title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu | PeptidesMuscle',
     description: 'Epithalon for telomere lengthening, NAD+ for cellular energy, GHK-Cu for skin — science-backed anti-aging peptide protocols.',
-    url: 'https://peptidesmuscle.com/anti-aging',
+    url: 'https://www.peptidesmuscle.com/anti-aging',
     type: 'website',
     siteName: 'PeptidesMuscle',
   },

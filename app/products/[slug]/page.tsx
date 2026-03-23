@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProductBySlug(params.slug)
   if (!p) return {}
-  const url = `https://peptidesmuscle.com/products/${p.slug}`
+  const url = `https://www.peptidesmuscle.com/products/${p.slug}`
   return {
     title: p.seoTitle ?? `${p.name} | PeptidesMuscle`,
     description: p.shortDescription,
@@ -815,7 +815,7 @@ export default function ProductPage({ params }: Props) {
       name: product.name,
       description: product.shortDescription,
       image: product.image,
-      url: `https://peptidesmuscle.com/products/${product.slug}`,
+      url: `https://www.peptidesmuscle.com/products/${product.slug}`,
       brand: { '@type': 'Brand', name: 'Apollo Peptide Sciences' },
       offers: {
         '@type': 'Offer',
@@ -829,9 +829,9 @@ export default function ProductPage({ params }: Props) {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://peptidesmuscle.com' },
-        { '@type': 'ListItem', position: 2, name: 'Peptides', item: 'https://peptidesmuscle.com/products' },
-        { '@type': 'ListItem', position: 3, name: product.name, item: `https://peptidesmuscle.com/products/${product.slug}` },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.peptidesmuscle.com' },
+        { '@type': 'ListItem', position: 2, name: 'Peptides', item: 'https://www.peptidesmuscle.com/products' },
+        { '@type': 'ListItem', position: 3, name: product.name, item: `https://www.peptidesmuscle.com/products/${product.slug}` },
       ],
     },
   ]

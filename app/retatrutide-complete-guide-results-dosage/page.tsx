@@ -4,12 +4,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Retatrutide 2026: Complete Guide to Results, Dosage, Side Effects & Comparison | PeptidesMuscle',
   description: 'Comprehensive retatrutide guide with all TRIUMPH Phase 3 trial data. 28.7% weight loss vs tirzepatide vs semaglutide — side effects, dosage, FDA timeline, and how to access it now.',
-  alternates: { canonical: 'https://peptidesmuscle.com/retatrutide-complete-guide-results-dosage' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/retatrutide-complete-guide-results-dosage' },
   keywords: 'retatrutide guide 2026, retatrutide results, retatrutide vs tirzepatide, retatrutide review, retatrutide dosage, retatrutide side effects',
   openGraph: {
     title: 'Retatrutide 2026: Complete Guide — Results, Dosage & Comparison',
     description: 'All TRIUMPH Phase 3 trial data: 28.7% weight loss. Full comparison vs tirzepatide and semaglutide.',
-    url: 'https://peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
+    url: 'https://www.peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
     type: 'article',
     siteName: 'PeptidesMuscle',
   },
@@ -23,10 +23,10 @@ const jsonLd = {
       '@type': 'Article',
       headline: 'Retatrutide 2026: Complete Guide to Results, Dosage, Side Effects & Comparison',
       description: 'Comprehensive retatrutide guide with all TRIUMPH Phase 3 trial data.',
-      url: 'https://peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
+      url: 'https://www.peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
       datePublished: '2026-03-21',
       dateModified: '2026-03-21',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
     },
     {
       '@type': 'FAQPage',

@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline, Before & After & Protocol | PeptidesMuscle',
   description: 'Honest CJC-1295 Ipamorelin results timeline — what to expect week by week, CJC-1295 with DAC vs without DAC, dosing protocol, body composition changes, and how to optimize the stack.',
-  alternates: { canonical: 'https://peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline' },
   keywords: 'CJC-1295 ipamorelin results timeline, cjc-1295 ipamorelin before and after, cjc ipamorelin results, cjc-1295 with dac vs without dac, cjc ipamorelin dosage protocol',
-  openGraph: { title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'What to really expect from CJC-1295/Ipamorelin — honest week-by-week timeline, DAC vs non-DAC, and dosing protocol.', url: 'https://peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'What to really expect from CJC-1295/Ipamorelin — honest week-by-week timeline, DAC vs non-DAC, and dosing protocol.', url: 'https://www.peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'Honest results timeline and protocol guide.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

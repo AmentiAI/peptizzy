@@ -4,12 +4,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Peptide Protocol Guide: Beginner to Advanced Stacking Strategies | PeptidesMuscle',
   description: 'The complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies, cycle lengths, and dosing for looks maxing, fat loss, and recovery.',
-  alternates: { canonical: 'https://peptidesmuscle.com/guide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/guide' },
   keywords: 'peptide protocol guide, peptide stacking guide, how to use peptides, peptide dosage guide, beginner peptide stack',
   openGraph: {
     title: 'Peptide Protocol Guide: Beginner to Advanced Stacking | PeptidesMuscle',
     description: 'Complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies, and dosing for every goal.',
-    url: 'https://peptidesmuscle.com/guide',
+    url: 'https://www.peptidesmuscle.com/guide',
     type: 'website',
     siteName: 'PeptidesMuscle',
   },

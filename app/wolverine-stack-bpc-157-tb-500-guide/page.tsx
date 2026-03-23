@@ -4,12 +4,12 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol — Dosing, Injury Guide & Results | PeptidesMuscle',
   description: 'The definitive Wolverine Stack guide. BPC-157 + TB-500 dosing protocols, injury-specific approaches for tendons, joints and muscle, week-by-week results timeline, and loading vs maintenance phases.',
-  alternates: { canonical: 'https://peptidesmuscle.com/wolverine-stack-bpc-157-tb-500-guide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/wolverine-stack-bpc-157-tb-500-guide' },
   keywords: 'wolverine stack bpc-157 tb-500, wolverine peptide stack protocol, bpc-157 tb-500 dosage, wolverine stack healing results, bpc-157 tb-500 injury recovery',
   openGraph: {
     title: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol | PeptidesMuscle',
     description: 'Injury-specific protocols, loading phases, and week-by-week results timeline for the gold standard recovery stack.',
-    url: 'https://peptidesmuscle.com/wolverine-stack-bpc-157-tb-500-guide',
+    url: 'https://www.peptidesmuscle.com/wolverine-stack-bpc-157-tb-500-guide',
     type: 'article', siteName: 'PeptidesMuscle',
   },
   twitter: { card: 'summary_large_image', title: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol', description: 'The definitive guide to the gold standard injury recovery stack.' },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

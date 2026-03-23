@@ -6,12 +6,12 @@ import { products } from '@/lib/products'
 export const metadata: Metadata = {
   title: 'Looksmaxxing Peptides: The Complete Male Aesthetic Protocol | PeptidesMuscle',
   description: 'The definitive looksmaxxing peptide guide. GHK-Cu for skin collagen, SNAP-8 for wrinkle reduction, BPC-157 for recovery — the complete stack for peak physical appearance optimization.',
-  alternates: { canonical: 'https://peptidesmuscle.com/looks-maxing' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/looks-maxing' },
   keywords: 'looksmaxxing peptides, looksmaxxing guide, best peptides for looks maxing, looks maxing stack, peptides for appearance, GHK-Cu looksmaxxing',
   openGraph: {
     title: 'Looksmaxxing Peptides: The Complete Male Aesthetic Protocol | PeptidesMuscle',
     description: 'The definitive looksmaxxing peptide guide. GHK-Cu, SNAP-8, BPC-157 — the complete stack for peak physical appearance.',
-    url: 'https://peptidesmuscle.com/looks-maxing',
+    url: 'https://www.peptidesmuscle.com/looks-maxing',
     type: 'website',
     siteName: 'PeptidesMuscle',
   },

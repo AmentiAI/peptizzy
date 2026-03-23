@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging | PeptidesMuscle',
   description: 'Complete peptide stacking guide. Fat loss stacks, muscle building stacks, healing stacks, anti-aging stacks — with dosing schedules, timing charts, what not to stack, and cost estimates.',
-  alternates: { canonical: 'https://peptidesmuscle.com/peptide-stacking-guide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/peptide-stacking-guide' },
   keywords: 'peptide stacking guide, best peptide stacks, how to stack peptides, peptide combinations guide, peptide stack fat loss, peptide stack muscle',
-  openGraph: { title: 'Peptide Stacking Guide 2026: Best Combinations for Every Goal', description: 'Fat loss, muscle, healing, and anti-aging stacks with dosing schedules, timing charts, and cost estimates.', url: 'https://peptidesmuscle.com/peptide-stacking-guide', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'Peptide Stacking Guide 2026: Best Combinations for Every Goal', description: 'Fat loss, muscle, healing, and anti-aging stacks with dosing schedules, timing charts, and cost estimates.', url: 'https://www.peptidesmuscle.com/peptide-stacking-guide', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'Peptide Stacking Guide 2026', description: 'Best peptide combinations for fat loss, muscle, healing, and anti-aging.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

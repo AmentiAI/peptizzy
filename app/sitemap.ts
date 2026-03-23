@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { products } from '@/lib/products'
 import { stacks } from '@/lib/stacks'
 
-const BASE = 'https://peptidesmuscle.com'
+const BASE = 'https://www.peptidesmuscle.com'
 
 const LAST_UPDATED = '2026-03-21'
 

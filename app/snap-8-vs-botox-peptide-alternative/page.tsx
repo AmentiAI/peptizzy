@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections? Honest 2026 Review | PeptidesMuscle',
   description: 'SNAP-8 vs Botox honest comparison. Mechanism, clinical data (up to 63% wrinkle reduction), cost difference, how to use topical SNAP-8, and where it outperforms — and where it doesn\'t.',
-  alternates: { canonical: 'https://peptidesmuscle.com/snap-8-vs-botox-peptide-alternative' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/snap-8-vs-botox-peptide-alternative' },
   keywords: 'snap-8 vs botox peptide alternative, argireline vs snap-8, snap-8 wrinkle results, topical peptide botox alternative, snap-8 peptide review 2026, acetyl octapeptide-3',
-  openGraph: { title: 'SNAP-8 vs. Botox: Honest Peptide Alternative Review', description: 'Mechanism, clinical data, cost comparison, and the honest verdict on whether SNAP-8 can replace Botox.', url: 'https://peptidesmuscle.com/snap-8-vs-botox-peptide-alternative', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'SNAP-8 vs. Botox: Honest Peptide Alternative Review', description: 'Mechanism, clinical data, cost comparison, and the honest verdict on whether SNAP-8 can replace Botox.', url: 'https://www.peptidesmuscle.com/snap-8-vs-botox-peptide-alternative', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'SNAP-8 vs. Botox: Can a Peptide Replace Injections?', description: '63% wrinkle reduction clinical data, mechanism, cost breakdown, and honest verdict.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections?', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections?', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

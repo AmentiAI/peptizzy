@@ -3,11 +3,11 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Contact | Free Peptide Consultation | PeptidesMuscle',
   description: 'Get a free consultation with our peptide specialists. Personalized protocol guidance for looks maxing, body composition, recovery, and anti-aging.',
-  alternates: { canonical: 'https://peptidesmuscle.com/contact' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/contact' },
   openGraph: {
     title: 'Contact | Free Peptide Consultation | PeptidesMuscle',
     description: 'Get a free consultation with our peptide specialists. Personalized protocol guidance.',
-    url: 'https://peptidesmuscle.com/contact',
+    url: 'https://www.peptidesmuscle.com/contact',
     type: 'website',
     siteName: 'PeptidesMuscle',
   },

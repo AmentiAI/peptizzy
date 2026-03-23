@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'GHK-Cu Before and After: Injectable vs. Topical Results, Timeline & Anti-Aging Protocol | PeptidesMuscle',
   description: 'GHK-Cu copper peptide before and after results guide. Injectable vs topical comparison, week-by-week results timeline, hair benefits, anti-aging stack, and dosing protocol.',
-  alternates: { canonical: 'https://peptidesmuscle.com/ghk-cu-before-and-after-guide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/ghk-cu-before-and-after-guide' },
   keywords: 'GHK-Cu before and after results, ghk-cu injectable vs topical, copper peptide skin results, ghk-cu dosage protocol, ghk-cu hair loss, copper peptide anti-aging',
-  openGraph: { title: 'GHK-Cu Before and After: Injectable vs. Topical Results & Timeline', description: 'Injectable vs topical comparison, week-by-week results, hair benefits, and the complete anti-aging stack with GHK-Cu.', url: 'https://peptidesmuscle.com/ghk-cu-before-and-after-guide', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'GHK-Cu Before and After: Injectable vs. Topical Results & Timeline', description: 'Injectable vs topical comparison, week-by-week results, hair benefits, and the complete anti-aging stack with GHK-Cu.', url: 'https://www.peptidesmuscle.com/ghk-cu-before-and-after-guide', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'GHK-Cu Before and After: Complete Results Guide', description: 'Injectable vs topical, week-by-week timeline, hair benefits, and anti-aging stack.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'GHK-Cu Before and After: Injectable vs. Topical Results, Timeline & Protocol', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'GHK-Cu Before and After: Injectable vs. Topical Results, Timeline & Protocol', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

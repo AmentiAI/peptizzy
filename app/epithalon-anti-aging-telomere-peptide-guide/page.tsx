@@ -4,16 +4,16 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack | PeptidesMuscle',
   description: 'Complete Epithalon guide 2026. Telomere lengthening mechanism, clinical research, dosing protocol (5–10mg × 10–20 days), anti-aging stack with GHK-Cu and NAD+, and what to realistically expect.',
-  alternates: { canonical: 'https://peptidesmuscle.com/epithalon-anti-aging-telomere-peptide-guide' },
+  alternates: { canonical: 'https://www.peptidesmuscle.com/epithalon-anti-aging-telomere-peptide-guide' },
   keywords: 'epithalon anti-aging guide, epithalon telomere peptide, epitalon dosage protocol, epithalon before and after, epithalon vs rapamycin longevity, epithalon results how long',
-  openGraph: { title: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science & Protocol', description: 'Telomere lengthening mechanism, clinical research, dosing protocol, and realistic expectations from the only known telomerase-activating peptide.', url: 'https://peptidesmuscle.com/epithalon-anti-aging-telomere-peptide-guide', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science & Protocol', description: 'Telomere lengthening mechanism, clinical research, dosing protocol, and realistic expectations from the only known telomerase-activating peptide.', url: 'https://www.peptidesmuscle.com/epithalon-anti-aging-telomere-peptide-guide', type: 'article', siteName: 'PeptidesMuscle' },
   twitter: { card: 'summary_large_image', title: 'Epithalon Complete Guide 2026: Telomere Science & Anti-Aging Protocol', description: 'The only telomerase-activating peptide — mechanism, dosing, and clinical evidence.' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://peptidesmuscle.com' } },
+    { '@type': 'Article', headline: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
     {
       '@type': 'FAQPage',
       mainEntity: [

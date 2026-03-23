@@ -9,7 +9,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-const BASE_URL = 'https://peptidesmuscle.com'
+const BASE_URL = 'https://www.peptidesmuscle.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
