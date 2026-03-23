@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'SNAP-8 vs Botox honest comparison. Mechanism, clinical data (up to 63% wrinkle reduction), cost difference, how to use topical SNAP-8, and where it outperforms — and where it doesn\'t.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/snap-8-vs-botox-peptide-alternative' },
   keywords: 'snap-8 vs botox peptide alternative, argireline vs snap-8, snap-8 wrinkle results, topical peptide botox alternative, snap-8 peptide review 2026, acetyl octapeptide-3',
-  openGraph: { title: 'SNAP-8 vs. Botox: Honest Peptide Alternative Review', description: 'Mechanism, clinical data, cost comparison, and the honest verdict on whether SNAP-8 can replace Botox.', url: 'https://www.peptidesmuscle.com/snap-8-vs-botox-peptide-alternative', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'SNAP-8 vs. Botox: Can a Peptide Replace Injections?', description: '63% wrinkle reduction clinical data, mechanism, cost breakdown, and honest verdict.' },
+  openGraph: { title: 'SNAP-8 vs. Botox: Honest Peptide Alternative Review', description: 'Mechanism, clinical data, cost comparison, and the honest verdict on whether SNAP-8 can replace Botox.', url: 'https://www.peptidesmuscle.com/snap-8-vs-botox-peptide-alternative', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'SNAP-8 vs. Botox: Can a Peptide Replace Injections?', description: '63% wrinkle reduction clinical data, mechanism, cost breakdown, and honest verdict.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

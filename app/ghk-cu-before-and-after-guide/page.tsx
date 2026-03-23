@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'GHK-Cu copper peptide before and after results guide. Injectable vs topical comparison, week-by-week results timeline, hair benefits, anti-aging stack, and dosing protocol.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/ghk-cu-before-and-after-guide' },
   keywords: 'GHK-Cu before and after results, ghk-cu injectable vs topical, copper peptide skin results, ghk-cu dosage protocol, ghk-cu hair loss, copper peptide anti-aging',
-  openGraph: { title: 'GHK-Cu Before and After: Injectable vs. Topical Results & Timeline', description: 'Injectable vs topical comparison, week-by-week results, hair benefits, and the complete anti-aging stack with GHK-Cu.', url: 'https://www.peptidesmuscle.com/ghk-cu-before-and-after-guide', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'GHK-Cu Before and After: Complete Results Guide', description: 'Injectable vs topical, week-by-week timeline, hair benefits, and anti-aging stack.' },
+  openGraph: { title: 'GHK-Cu Before and After: Injectable vs. Topical Results & Timeline', description: 'Injectable vs topical comparison, week-by-week results, hair benefits, and the complete anti-aging stack with GHK-Cu.', url: 'https://www.peptidesmuscle.com/ghk-cu-before-and-after-guide', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'GHK-Cu Before and After: Complete Results Guide', description: 'Injectable vs topical, week-by-week timeline, hair benefits, and anti-aging stack.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

@@ -12,8 +12,9 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
     type: 'article',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Retatrutide 2026: Complete Guide', description: '28.7% weight loss in Phase 3 — full results, dosage, and comparison guide.' },
+  twitter: { card: 'summary_large_image', title: 'Retatrutide 2026: Complete Guide', description: '28.7% weight loss in Phase 3 — full results, dosage, and comparison guide.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/stacks',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Stack Protocols | PeptidesMuscle',
     description: 'Expert-designed peptide stack protocols for looks maxing, body composition, anti-aging, fat loss, and cognitive performance.',
+    images: ['/max-avatar.png'],
   },
 }
 

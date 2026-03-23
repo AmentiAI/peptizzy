@@ -10,11 +10,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/faq',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Peptide FAQ | PeptidesMuscle',
     description: 'Answers to the most common questions about peptides — protocols, dosing, stacking, and results.',
+    images: ['/max-avatar.png'],
   },
 }
 

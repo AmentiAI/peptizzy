@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/guide`,            lastModified: LAST_UPDATED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/learn`,            lastModified: LAST_UPDATED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/faq`,              lastModified: LAST_UPDATED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tools`,            lastModified: LAST_UPDATED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/contact`,          lastModified: LAST_UPDATED, changeFrequency: 'yearly',  priority: 0.4 },
     // SEO content pages
     { url: `${BASE}/retatrutide-complete-guide-results-dosage`,       lastModified: LAST_UPDATED, changeFrequency: 'monthly', priority: 0.8 },

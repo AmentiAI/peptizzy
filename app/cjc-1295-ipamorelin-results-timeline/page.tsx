@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'Honest CJC-1295 Ipamorelin results timeline — what to expect week by week, CJC-1295 with DAC vs without DAC, dosing protocol, body composition changes, and how to optimize the stack.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline' },
   keywords: 'CJC-1295 ipamorelin results timeline, cjc-1295 ipamorelin before and after, cjc ipamorelin results, cjc-1295 with dac vs without dac, cjc ipamorelin dosage protocol',
-  openGraph: { title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'What to really expect from CJC-1295/Ipamorelin — honest week-by-week timeline, DAC vs non-DAC, and dosing protocol.', url: 'https://www.peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'Honest results timeline and protocol guide.' },
+  openGraph: { title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'What to really expect from CJC-1295/Ipamorelin — honest week-by-week timeline, DAC vs non-DAC, and dosing protocol.', url: 'https://www.peptidesmuscle.com/cjc-1295-ipamorelin-results-timeline', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'CJC-1295 + Ipamorelin Results: Week-by-Week Timeline', description: 'Honest results timeline and protocol guide.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

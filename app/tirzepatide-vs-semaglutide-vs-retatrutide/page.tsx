@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'Complete 2026 comparison of all three GLP-1 class compounds. Tirzepatide vs semaglutide vs retatrutide — weight loss data, mechanisms, side effects, FDA status, cost, and which to choose.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide' },
   keywords: 'tirzepatide vs semaglutide vs retatrutide, semaglutide vs tirzepatide weight loss, glp-1 comparison 2026, retatrutide comparison, which glp-1 is best',
-  openGraph: { title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 Comparison', description: 'All trial data, mechanisms, side effects, and a decision framework for choosing between the three GLP-1 class compounds.', url: 'https://www.peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', description: 'All trial data and a decision framework for the three GLP-1 class compounds.' },
+  openGraph: { title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 Comparison', description: 'All trial data, mechanisms, side effects, and a decision framework for choosing between the three GLP-1 class compounds.', url: 'https://www.peptidesmuscle.com/tirzepatide-vs-semaglutide-vs-retatrutide', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', description: 'All trial data and a decision framework for the three GLP-1 class compounds.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

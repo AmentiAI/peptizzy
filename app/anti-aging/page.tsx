@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/anti-aging',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Peptides for Anti-Aging: Epithalon, NAD+ & GHK-Cu | PeptidesMuscle',
     description: 'Epithalon, NAD+, GHK-Cu — science-backed anti-aging peptide protocols that reverse biological age.',
+    images: ['/max-avatar.png'],
   },
 }
 

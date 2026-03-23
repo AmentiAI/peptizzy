@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Step-by-step guide to injecting peptides. How to reconstitute lyophilized peptides, choose injection sites, select needle gauge, store vials, and avoid common mistakes.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/how-to-inject-peptides-beginners-guide' },
   keywords: 'how to inject peptides beginners guide, how to reconstitute peptides, subcutaneous peptide injection, peptide injection sites, bacteriostatic water peptides, peptide needle gauge',
-  openGraph: { title: 'How to Inject Peptides: Complete Beginner\'s Guide', description: 'Step-by-step: reconstitution, injection sites, needle selection, storage, and common mistakes to avoid.', url: 'https://www.peptidesmuscle.com/how-to-inject-peptides-beginners-guide', type: 'article', siteName: 'PeptidesMuscle' },
+  openGraph: { title: 'How to Inject Peptides: Complete Beginner\'s Guide', description: 'Step-by-step: reconstitution, injection sites, needle selection, storage, and common mistakes to avoid.', url: 'https://www.peptidesmuscle.com/how-to-inject-peptides-beginners-guide', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
   twitter: { card: 'summary_large_image', title: 'How to Inject Peptides: Complete Beginner\'s Guide', description: 'Reconstitution, sites, needles, storage — everything a first-timer needs.' },
 }
 

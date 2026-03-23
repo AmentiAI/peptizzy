@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/body-composition',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Peptide Stack for Body Composition: Build Muscle & Lose Fat | PeptidesMuscle',
     description: 'CJC-1295/Ipamorelin, IGF-1 LR3, BPC-157 — science-backed peptide stacks for elite physique development.',
+    images: ['/max-avatar.png'],
   },
 }
 

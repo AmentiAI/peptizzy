@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/wolverine-stack-bpc-157-tb-500-guide',
     type: 'article', siteName: 'PeptidesMuscle',
   },
-  twitter: { card: 'summary_large_image', title: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol', description: 'The definitive guide to the gold standard injury recovery stack.' },
+  twitter: { card: 'summary_large_image', title: 'The Wolverine Stack: BPC-157 + TB-500 Complete Protocol', description: 'The definitive guide to the gold standard injury recovery stack.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

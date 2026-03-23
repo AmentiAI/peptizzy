@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'Complete peptide stacking guide. Fat loss stacks, muscle building stacks, healing stacks, anti-aging stacks — with dosing schedules, timing charts, what not to stack, and cost estimates.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/peptide-stacking-guide' },
   keywords: 'peptide stacking guide, best peptide stacks, how to stack peptides, peptide combinations guide, peptide stack fat loss, peptide stack muscle',
-  openGraph: { title: 'Peptide Stacking Guide 2026: Best Combinations for Every Goal', description: 'Fat loss, muscle, healing, and anti-aging stacks with dosing schedules, timing charts, and cost estimates.', url: 'https://www.peptidesmuscle.com/peptide-stacking-guide', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'Peptide Stacking Guide 2026', description: 'Best peptide combinations for fat loss, muscle, healing, and anti-aging.' },
+  openGraph: { title: 'Peptide Stacking Guide 2026: Best Combinations for Every Goal', description: 'Fat loss, muscle, healing, and anti-aging stacks with dosing schedules, timing charts, and cost estimates.', url: 'https://www.peptidesmuscle.com/peptide-stacking-guide', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'Peptide Stacking Guide 2026', description: 'Best peptide combinations for fat loss, muscle, healing, and anti-aging.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

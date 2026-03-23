@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/looks-maxing',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Looksmaxxing Peptides: The Complete Male Aesthetic Protocol',
     description: 'The definitive looksmaxxing peptide guide. GHK-Cu, SNAP-8, BPC-157 — the complete stack for peak physical appearance.',
+    images: ['/max-avatar.png'],
   },
 }
 

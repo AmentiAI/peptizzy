@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   description: 'The definitive looksmaxxing peptides guide for men. GHK-Cu for skin collagen, SNAP-8 for wrinkle reduction, CJC-1295 for body recomp, BPC-157 for recovery — protocol stacks by goal and budget.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/looksmaxxing-peptides-guide-men' },
   keywords: 'looksmaxxing peptides for men, looksmaxxing peptides guide, peptides for appearance enhancement, looksmaxxing stack, ghk-cu looksmaxxing, best peptides looks maxing',
-  openGraph: { title: 'Looksmaxxing Peptides for Men: The Complete Stack Guide', description: 'GHK-Cu, SNAP-8, CJC-1295, BPC-157 — protocol stacks for skin, body, hair and recovery.', url: 'https://www.peptidesmuscle.com/looksmaxxing-peptides-guide-men', type: 'article', siteName: 'PeptidesMuscle' },
-  twitter: { card: 'summary_large_image', title: 'Looksmaxxing Peptides for Men: Complete Stack Guide', description: 'The definitive guide to peptide-based appearance optimization.' },
+  openGraph: { title: 'Looksmaxxing Peptides for Men: The Complete Stack Guide', description: 'GHK-Cu, SNAP-8, CJC-1295, BPC-157 — protocol stacks for skin, body, hair and recovery.', url: 'https://www.peptidesmuscle.com/looksmaxxing-peptides-guide-men', type: 'article', siteName: 'PeptidesMuscle', images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }] },
+  twitter: { card: 'summary_large_image', title: 'Looksmaxxing Peptides for Men: Complete Stack Guide', description: 'The definitive guide to peptide-based appearance optimization.', images: ['/max-avatar.png'] },
 }
 
 const jsonLd = {

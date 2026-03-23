@@ -12,11 +12,13 @@ export const metadata: Metadata = {
     url: 'https://www.peptidesmuscle.com/guide',
     type: 'website',
     siteName: 'PeptidesMuscle',
+    images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Peptide Protocol Guide: Beginner to Advanced Stacking | PeptidesMuscle',
     description: 'Complete peptide stacking guide — injection fundamentals, beginner protocols, advanced stack strategies.',
+    images: ['/max-avatar.png'],
   },
 }
 
