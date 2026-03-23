@@ -177,7 +177,8 @@ export default function EpithalonGuidePage() {
             <p className="text-white font-700 text-[18px] mb-2">Epithalon (Epitalon)</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Research-grade Epithalon tetrapeptide. 10mg vials for the standard 10-day course protocol. The most extensively researched peptide in longevity science.</p>
             <div className="flex gap-3">
-              <a href={AFF('epithalon')} target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy on Apollo →</a>
+              <a href="/go/epithalon"
+                          target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy on Apollo →</a>
               <Link href="/products/epithalon" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>

@@ -166,8 +166,8 @@ export default function FAQPage() {
             <Link href="/products" className="btn-secondary text-[13px] px-6 py-3">Browse All Peptides</Link>
             <Link href="/stacks" className="btn-secondary text-[13px] px-6 py-3">Stack Protocols</Link>
             <Link href="/guide" className="btn-secondary text-[13px] px-6 py-3">Protocol Guide</Link>
-            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[13px] px-6 py-3">
               Shop Now
             </a>

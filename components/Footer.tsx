@@ -74,8 +74,8 @@ export default function Footer() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">
               Premium grade peptides shipped to your door through our partner Apollo Peptide Sciences.
             </p>
-            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[12px] py-3 px-5">
               Shop Now
             </a>

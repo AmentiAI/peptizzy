@@ -95,7 +95,8 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
             </div>
             <div className="flex items-center gap-4">
               <span className="font-700 text-lg" style={{ color: accent }}>{product.price}</span>
-              <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+              <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                 onClick={e => e.stopPropagation()}
                 className="btn-primary py-2.5 px-5 text-[12px]">
                 Buy Now
@@ -160,7 +161,8 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
             </div>
             <div className="flex items-center justify-between pt-5 border-t border-white/[0.06]">
               <span className="font-700 text-xl" style={{ color: accent }}>{product.price}</span>
-              <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+              <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                 onClick={e => e.stopPropagation()}
                 className="btn-primary py-3 px-6 text-[13px]">
                 Buy Now
@@ -231,7 +233,8 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
             <span className="font-700 text-lg" style={{ color: accent }}>{product.price}</span>
             <div className="flex items-center gap-2">
               <span className="btn-ghost text-[13px]">Details</span>
-              <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+              <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                 onClick={e => e.stopPropagation()}
                 className="btn-primary py-2.5 px-5 text-[12px]">
                 Buy

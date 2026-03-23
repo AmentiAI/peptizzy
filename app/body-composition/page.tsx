@@ -147,8 +147,8 @@ export default function BodyCompositionPage() {
             Build lean muscle. Eliminate stubborn fat. Recover completely between sessions. Peptide protocols create the hormonal and cellular environment where physique transformation becomes inevitable.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[13px] px-7 py-3.5 inline-flex">
               Start Your Protocol
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,8 +302,8 @@ export default function BodyCompositionPage() {
               ))}
             </div>
             <div className="p-6 border-t border-white/[0.05]">
-              <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                target="_blank" rel="noopener noreferrer"
+              <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-4 text-[13px]">
                 Shop This Stack at Apollo Peptide Sciences
               </a>
@@ -345,7 +345,8 @@ export default function BodyCompositionPage() {
                     <p className="text-[#8888a0] text-[13px] mb-4 line-clamp-2">{p.shortDescription}</p>
                     <div className="flex items-center justify-between">
                       <span className="font-700 text-[15px]" style={{ color: accent }}>{p.price}</span>
-                      <a href={p.affiliateUrl} target="_blank" rel="noopener noreferrer"
+                      <a href={`/go/${p.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                         className="btn-primary py-2 px-4 text-[12px]">
                         Buy Now
                       </a>

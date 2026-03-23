@@ -100,8 +100,8 @@ export default function Home() {
                 The most advanced peptide protocols for looks maximization, body composition, and cellular longevity. Premium compounds. Documented results.
               </p>
               <div className="flex flex-wrap gap-3 mb-12 hero-cta">
-                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                  target="_blank" rel="noopener noreferrer"
+                <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary text-[13px] px-7 py-3.5 glow-pulse">
                   Shop All Peptides
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -162,8 +162,8 @@ export default function Home() {
                 )
               })}
               <div className="col-span-2">
-                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                  target="_blank" rel="noopener noreferrer"
+                <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary text-[13px] py-3.5 w-full text-center inline-flex justify-center">
                   Shop All 35 Peptides
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -591,8 +591,8 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[13px] px-8 py-3.5 inline-flex">
               Shop All at Apollo
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -677,8 +677,8 @@ export default function Home() {
                 </div>
               ))}
               <div className="p-5">
-                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                  target="_blank" rel="noopener noreferrer"
+                <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary w-full justify-center py-3.5 text-[13px]">
                   Start Your Protocol
                 </a>
@@ -910,8 +910,8 @@ export default function Home() {
                       </div>
                       <div className="flex gap-3">
                         <Link href={`/products/${item.slug}`} className="btn-secondary text-[12px] py-2.5 px-5">Full Details</Link>
-                        <a href={products.find(p => p.slug === item.slug)?.affiliateUrl ?? 'https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e'}
-                          target="_blank" rel="noopener noreferrer"
+                        <a href={`/go/${item.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                           className="btn-primary text-[12px] py-2.5 px-5">
                           Buy Now
                         </a>
@@ -1063,8 +1063,8 @@ export default function Home() {
             Elite peptide protocols. Premium quality compounds. One protocol separates you from your best physical form.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[14px] px-10 py-4">
               Shop Apollo Peptides
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

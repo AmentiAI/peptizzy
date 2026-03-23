@@ -68,8 +68,8 @@ export default function Navbar() {
             </svg>
             Chat with Max
           </button>
-          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-            target="_blank" rel="noopener noreferrer"
+          <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary text-[12px] py-2.5 px-5">
             Shop Now
           </a>
@@ -104,8 +104,8 @@ export default function Navbar() {
             </svg>
             Chat with Max
           </button>
-          <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-            target="_blank" rel="noopener noreferrer"
+          <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary w-full mt-3 text-center">
             Shop Apollo Peptides
           </a>

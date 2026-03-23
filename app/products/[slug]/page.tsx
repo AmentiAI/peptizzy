@@ -157,11 +157,13 @@ function BuyBox({ product }: { product: Product }) {
           <p className="text-white font-500 text-[15px]">Apollo Peptide Sciences</p>
         </div>
       </div>
-      <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+      <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
         className="btn-primary w-full justify-center py-4 text-[14px] mb-3">
         Buy {product.name} Now
       </a>
-      <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+      <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
         className="btn-secondary w-full justify-center py-3 text-[13px]">
         View on Apollo Peptide Sciences ↗
       </a>
@@ -912,7 +914,8 @@ export default function ProductPage({ params }: Props) {
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">Ready to start?</p>
               <p className="font-['Playfair_Display'] font-900 text-white text-3xl mb-5">{product.price}</p>
-              <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer"
+              <a href={`/go/${product.slug}`}
+                          target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-3.5 text-[13px]">
                 Buy {product.name}
               </a>

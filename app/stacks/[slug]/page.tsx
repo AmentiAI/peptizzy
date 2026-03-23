@@ -106,8 +106,8 @@ export default function StackPage({ params }: Props) {
               <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-8">{stack.shortDesc}</p>
 
               <div className="flex flex-wrap gap-3">
-                <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                  target="_blank" rel="noopener noreferrer"
+                <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary text-[13px] px-7 py-3.5">
                   Shop This Stack
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -274,8 +274,8 @@ export default function StackPage({ params }: Props) {
                   )
                 })}
               </div>
-              <a href="https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e"
-                target="_blank" rel="noopener noreferrer"
+              <a href="/go/shop"
+                          target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-3.5 text-[13px]">
                 Buy at Apollo Peptide Sciences
               </a>
