@@ -343,7 +343,7 @@ const CATEGORY_COLOR: Record<string, string> = {
   'Weight Loss':        '#e05080',
 }
 
-const CATEGORIES = [...new Set(Object.values(PEPTIDE_PROTOCOLS).map(p => p.category))]
+const CATEGORIES = Array.from(new Set(Object.values(PEPTIDE_PROTOCOLS).map(p => p.category)))
 
 function ProtocolReference() {
   const [active, setActive] = useState<string | null>(null)
