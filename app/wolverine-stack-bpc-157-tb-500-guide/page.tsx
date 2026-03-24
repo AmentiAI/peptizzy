@@ -148,7 +148,7 @@ export default function WolverineStackPage() {
                 <p className="text-white font-700 text-[16px] mb-2">{p.name}</p>
                 <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">{p.desc}</p>
                 <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center py-3 text-[13px] mb-2">
-                  Buy on Apollo →
+                  Buy Now →
                 </a>
                 <Link href={p.href} className="btn-ghost w-full justify-center py-2.5 text-[12px]">Learn More</Link>
               </div>

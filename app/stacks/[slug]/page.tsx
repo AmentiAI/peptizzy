@@ -277,7 +277,7 @@ export default function StackPage({ params }: Props) {
               <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-3.5 text-[13px]">
-                Buy at Apollo Peptide Sciences
+                Buy Now
               </a>
             </div>
 

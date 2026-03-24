@@ -56,7 +56,7 @@ function Content() {
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>Peptides</span>
           </h1>
           <p className="text-[#8888a0] text-xl max-w-xl leading-relaxed">
-            Every premium peptide available through our partner Apollo Peptide Sciences — the most comprehensive optimization catalog available.
+            Every premium peptide in the most comprehensive optimization catalog available.
           </p>
         </div>
       </div>
@@ -171,7 +171,7 @@ function Content() {
           <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary text-[12px] py-2.5 px-6">
-            Shop All at Apollo
+            Shop All
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
             </svg>
@@ -203,17 +203,17 @@ function Content() {
         {/* Bottom CTA */}
         <div className="mt-24 relative overflow-hidden card-elevated rounded-3xl p-8 sm:p-14 text-center">
           <div className="spot w-[500px] h-[200px] bg-[#d4a043] opacity-[0.05] top-0 left-1/2 -translate-x-1/2" />
-          <p className="label-gold mb-4">Powered by Apollo Peptide Sciences</p>
+          <p className="label-gold mb-4">Premium Peptide Catalog</p>
           <h3 className="font-['Playfair_Display'] font-900 text-white text-2xl sm:text-4xl mb-4 relative z-10">
             Shop the Complete Catalog
           </h3>
           <p className="text-[#8888a0] text-[16px] mb-8 max-w-lg mx-auto relative z-10">
-            35 premium compounds for looks maxing, body composition, longevity, and peak performance — all sourced from the highest-quality peptide supplier available.
+            35 premium compounds for looks maxing, body composition, longevity, and peak performance — pharmaceutical-grade, certificate of analysis verified on every batch.
           </p>
           <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary text-[14px] px-10 py-4 inline-flex relative z-10">
-            Visit Apollo Peptide Sciences
+            Shop Now
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
             </svg>

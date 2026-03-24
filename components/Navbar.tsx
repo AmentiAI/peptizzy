@@ -107,7 +107,7 @@ export default function Navbar() {
           <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary w-full mt-3 text-center">
-            Shop Apollo Peptides
+            Shop Peptides
           </a>
         </div>
       )}

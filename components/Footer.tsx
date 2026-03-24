@@ -37,7 +37,7 @@ export default function Footer() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5 max-w-[220px]">
               Elite peptide protocols for looks maximization, body composition, and longevity.
             </p>
-            <p className="text-[11px] text-[#50505e] uppercase tracking-widest">Powered by Apollo Peptide Sciences</p>
+            <p className="text-[11px] text-[#50505e] uppercase tracking-widest">Premium Peptide Protocols</p>
           </div>
 
           {/* Peptides */}
@@ -72,7 +72,7 @@ export default function Footer() {
           <div>
             <p className="label mb-5">Start Your Protocol</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">
-              Premium grade peptides shipped to your door through our partner Apollo Peptide Sciences.
+              Pharmaceutical-grade, certificate of analysis verified, shipped to your door.
             </p>
             <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="rule mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle. Affiliate partner of Apollo Peptide Sciences.</p>
+          <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle.</p>
           <div className="flex items-center gap-5">
             <a href="/sitemap.xml" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
               Sitemap

@@ -164,7 +164,7 @@ export default function GhkCuGuidePage() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most clinically studied skin peptide available.</p>
             <div className="flex gap-3">
               <a href="/go/ghk-cu"
-                          target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy on Apollo →</a>
+                          target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/ghk-cu" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>

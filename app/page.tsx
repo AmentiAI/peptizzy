@@ -256,9 +256,9 @@ export default function Home() {
                 },
                 {
                   step: '02',
-                  title: 'Order Through Apollo Peptide Sciences',
-                  body: 'All peptides on this site are sourced through our partner Apollo Peptide Sciences — one of the most trusted suppliers for premium grade compounds with third-party purity verification.',
-                  detail: 'Fast shipping, pharmaceutical-grade quality, and comprehensive product support.',
+                  title: 'Order Your Peptides',
+                  body: 'Pharmaceutical-grade lyophilized compounds with independent certificate of analysis verification on every batch.',
+                  detail: 'Third-party purity tested, fast shipping, and full product documentation.',
                 },
                 {
                   step: '03',
@@ -583,7 +583,7 @@ export default function Home() {
             Every Protocol Available
           </h2>
           <p className="text-[#8888a0] text-[17px] mb-12 max-w-xl leading-relaxed">
-            35 elite peptide compounds covering every dimension of physical and cognitive optimization — all available through Apollo Peptide Sciences.
+            35 elite peptide compounds covering every dimension of physical and cognitive optimization.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             {products.map((p, i) => (
@@ -594,7 +594,7 @@ export default function Home() {
             <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[13px] px-8 py-3.5 inline-flex">
-              Shop All at Apollo
+              Shop All
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
               </svg>
@@ -1022,7 +1022,7 @@ export default function Home() {
             <FAQ q="What exactly are peptides and how do they differ from supplements?"
               a="Peptides are short chains of amino acids — typically 2–50 in length — that function as biological signaling molecules. Unlike conventional supplements that provide nutrients, peptides communicate directly with cellular receptors to trigger specific biological responses: collagen synthesis, growth hormone release, melanin production, tissue regeneration. The key difference is precision. A peptide doesn't improve conditions that may support a response — it directly triggers the response itself." />
             <FAQ q="Are peptides safe to use?"
-              a="The peptides featured here have well-characterized safety profiles with years of clinical and community use. Most, like BPC-157 and GHK-Cu, are naturally occurring in the human body or are close analogues of endogenous compounds. Side effect profiles are typically minimal when used within established dosing ranges. Always source from quality suppliers like Apollo Peptide Sciences to ensure purity, and consult your healthcare provider before beginning any new protocol." />
+              a="The peptides featured here have well-characterized safety profiles with years of clinical and community use. Most, like BPC-157 and GHK-Cu, are naturally occurring in the human body or are close analogues of endogenous compounds. Side effect profiles are typically minimal when used within established dosing ranges. Every peptide on this site is independently certificate-of-analysis verified for purity before being listed. Consult your healthcare provider before beginning any new protocol." />
             <FAQ q="How long until I see results from peptide protocols?"
               a="Timeline varies significantly by peptide and goal. BPC-157 for acute injuries can produce noticeable effects within 1–2 weeks. GHK-Cu shows skin improvements at 4–8 weeks with compounding results over 6 months. Ipamorelin + CJC-1295 produces sleep improvements within the first week and body composition changes visible at 8–12 weeks. Epithalon's anti-aging effects accumulate over months. Most protocols require consistent use of 3–6 months to fully appreciate the depth of transformation." />
             <FAQ q="Can peptides be stacked together?"
@@ -1034,7 +1034,7 @@ export default function Home() {
             <FAQ q="What peptides are best for looks maxing specifically?"
               a="The core looks maxing peptide stack includes: GHK-Cu for collagen synthesis and skin quality, Melanotan 2 for deep eumelanin pigmentation and libido, Ipamorelin + CJC-1295 for GH-optimized body composition, and Epithalon for cellular anti-aging. BPC-157 serves as a foundation compound to optimize the cellular environment. This combination addresses all four pillars of physical optimization: skin structure, pigmentation, hormones, and cellular age." />
             <FAQ q="Where can I buy the peptides featured on this site?"
-              a="All peptides on PeptidesMuscle are available through our partner Apollo Peptide Sciences — a premium supplier with third-party purity verification and fast shipping. Use our affiliate link to shop the complete catalog with full product information and support." />
+              a="All peptides on PeptidesMuscle are sourced through a premium research peptide supplier — pharmaceutical-grade lyophilized powder, independent certificate of analysis testing on every product, and fast shipping. Every product card links directly to the product page." />
           </div>
 
           <div className="text-center mt-10">
@@ -1066,7 +1066,7 @@ export default function Home() {
             <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-[14px] px-10 py-4">
-              Shop Apollo Peptides
+              Shop Peptides
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
               </svg>

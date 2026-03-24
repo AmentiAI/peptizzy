@@ -307,7 +307,7 @@ export default function AntiAgingPage() {
               <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-4 text-[13px]">
-                Shop This Stack at Apollo Peptide Sciences
+                Shop This Stack
               </a>
             </div>
           </div>

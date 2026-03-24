@@ -47,7 +47,7 @@ The compound has demonstrated effects on tendons, ligaments, muscles, bone, the 
 
 For those optimizing their physical appearance and performance, BPC-157 works at the foundational level — addressing the inflammation, tendon fragility, and micro-damage that limit physique development and longevity. It is found in virtually every advanced stack for good reason: it repairs the cellular environment so everything else works better.
 
-Available in 10mg vials from Apollo Peptide Sciences — pharmaceutical-grade lyophilized powder with full certificate of analysis.`,
+Available in 10mg vials — pharmaceutical-grade lyophilized powder with full certificate of analysis.`,
     benefits: [
       'Dramatically accelerates tendon, ligament, and muscle repair',
       'Reduces systemic and localized inflammation throughout the body',
@@ -157,7 +157,7 @@ For physique development, TB-500 addresses the full-body recovery limitation tha
 
 The critical distinction from plain sterile water is the 0.9% benzyl alcohol content. This bacteriostatic preservative prevents microbial growth in the vial between uses, maintaining sterility across multiple draws over 28+ days when stored correctly. Standard water for injection offers no such protection — each use risks contaminating the entire vial. For multi-dose protocols involving weekly or daily administration, bacteriostatic water is not optional.
 
-Pharmaceutical-grade manufacture ensures the absence of pyrogens, endotoxins, and particulate contamination that would compromise research integrity or safety. Apollo Peptide Sciences supplies this in a 10ml sterile vial — sufficient to reconstitute multiple peptide vials with careful technique. Each 10ml vial allows precise dosing calculations by adjusting the volume added to achieve the desired concentration per unit of the reconstituted compound.
+Pharmaceutical-grade manufacture ensures the absence of pyrogens, endotoxins, and particulate contamination that would compromise research integrity or safety. This comes in a 10ml sterile vial — sufficient to reconstitute multiple peptide vials with careful technique. Each 10ml vial allows precise dosing calculations by adjusting the volume added to achieve the desired concentration per unit of the reconstituted compound.
 
 No serious peptide research protocol is complete without it. Whether working with GLP-1 compounds requiring weekly dosing over months-long protocols, or short-cycle performance peptides dosed multiple times per day, bacteriostatic water ensures every injection draws from a sterile, stable, accurately concentrated solution. Add one to every order — it is the one consumable no protocol can function without.`,
     benefits: [
@@ -213,7 +213,7 @@ The mechanism is profound: GHK-Cu activates over 4,000 human genes associated wi
 
 Clinical data has documented a 121% increase in skin density with GHK-Cu application, alongside significant reductions in fine lines, improved skin elasticity, and enhanced wound healing. The compound also demonstrates potent anti-inflammatory and antioxidant properties that protect dermal tissue from the UV, pollution, and oxidative stress that accelerate visible aging.
 
-For looks maximization, GHK-Cu addresses the structural variable that no diet, hydration, or training protocol can change: dermal collagen architecture. Available in 50mg vials from Apollo Peptide Sciences for research purposes.`,
+For looks maximization, GHK-Cu addresses the structural variable that no diet, hydration, or training protocol can change: dermal collagen architecture. Available in 50mg vials for research purposes.`,
     benefits: [
       'Up to 121% increase in skin density with regular use',
       'Activates 4,000+ genes associated with skin repair and regeneration',
@@ -269,7 +269,7 @@ The mechanism is elegant: SNAP-8 competitively inhibits the SNARE protein comple
 
 Research data demonstrates wrinkle depth reductions of up to 63% with consistent SNAP-8 application. The effect is gradual and natural — a softening of expression lines rather than the frozen appearance associated with neurotoxin overuse. For biohackers and looks maximizers, SNAP-8 is the peptide-based entry point for neuromuscular wrinkle intervention.
 
-Available in 10mg vials from Apollo Peptide Sciences for research applications.`,
+Available in 10mg vials for research applications.`,
     benefits: [
       'Reduces expression line depth by up to 63% with consistent use',
       'Blocks the SNARE complex mechanism behind dynamic wrinkle formation',
@@ -365,7 +365,7 @@ The economics are simple: two vials at the bundle price represent a meaningful s
     badge: 'Best Seller',
     featured: true,
     shortDescription: 'Pre-blended GHRH + GHRP combo — the most synergistic growth hormone protocol. Dual-receptor stimulation produces GH pulses far beyond either peptide alone for lean mass and recovery.',
-    fullDescription: `The CJC-1295 / Ipamorelin combination is widely regarded as the most effective and safest growth hormone optimization protocol available in peptide form. Apollo Peptide Sciences supplies this as a pre-blended 5mg/5mg vial, eliminating the need to source and combine two separate compounds.
+    fullDescription: `The CJC-1295 / Ipamorelin combination is widely regarded as the most effective and safest growth hormone optimization protocol available in peptide form. This is available as a pre-blended 5mg/5mg vial, eliminating the need to source and combine two separate compounds.
 
 The synergy is pharmacological: CJC-1295 is a GHRH (Growth Hormone Releasing Hormone) analogue that activates the GHRH receptor on pituitary somatotrophs, while Ipamorelin is a ghrelin-mimetic GHRP that activates the ghrelin receptor through a completely different pathway. When both receptors are stimulated simultaneously, the resulting GH pulse is substantially greater than either compound alone — a "double stimulus" that researchers have described as approaching pharmaceutical GH levels while remaining entirely within the body's own regulatory feedback mechanisms.
 
@@ -475,13 +475,13 @@ Stacked with CJC-1295/Ipamorelin, IGF-1 LR3 creates a comprehensive anabolic env
     badge: 'Clinical Grade',
     featured: true,
     shortDescription: 'The compound behind Ozempic/Wegovy. GLP-1 receptor agonist producing significant appetite suppression, fat loss, and metabolic improvement with once-weekly dosing.',
-    fullDescription: `Semaglutide is the active compound in the pharmaceutical products Ozempic and Wegovy — now widely available as a research peptide through Apollo Peptide Sciences. It is a GLP-1 (Glucagon-Like Peptide-1) receptor agonist with a C18 fatty diacid side chain modification that extends its half-life to approximately 7 days, enabling the once-weekly dosing protocol that defines its clinical use.
+    fullDescription: `Semaglutide is the active compound in the pharmaceutical products Ozempic and Wegovy — now widely available as a research peptide. It is a GLP-1 (Glucagon-Like Peptide-1) receptor agonist with a C18 fatty diacid side chain modification that extends its half-life to approximately 7 days, enabling the once-weekly dosing protocol that defines its clinical use.
 
 The mechanism of action is multi-dimensional. At the hypothalamic level, semaglutide activates GLP-1 receptors in the appetite and satiety centers, producing powerful reductions in hunger signals and food intake — without the stimulant side effects or psychological dependence of traditional appetite suppressants. Simultaneously, it slows gastric emptying (prolonging satiety after meals), reduces glucagon secretion, and improves insulin sensitivity at peripheral tissues.
 
 Clinical data from the STEP trial program demonstrated an average of 14.9% body weight reduction over 68 weeks in research subjects — the most significant weight loss outcomes ever documented for a pharmaceutical compound until the subsequent emergence of dual and triple receptor agonists. For individuals with significant excess body fat, semaglutide produces metabolic improvements (reduced HbA1c, improved lipid profiles, lower blood pressure) that extend well beyond aesthetics.
 
-Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5mg vial is the standard entry point for research protocols — ideal for dose escalation and establishing individual tolerance before moving to higher-volume formats.`,
+Semaglutide is available in 5mg, 10mg, and 15mg formats. The 5mg vial is the standard entry point for research protocols — ideal for dose escalation and establishing individual tolerance before moving to higher-volume formats.`,
     benefits: [
       'Average 14.9% body weight reduction demonstrated in clinical research',
       'Powerful appetite suppression via hypothalamic GLP-1 receptor activation',
@@ -504,7 +504,7 @@ Apollo Peptide Sciences offers semaglutide in 5mg, 10mg, and 15mg formats. The 5
       {
         label: 'The Ozempic Molecule',
         title: 'Same Active Compound as Ozempic and Wegovy — What Changed Is the Format',
-        body: 'Semaglutide is the active molecule in Ozempic (diabetes indication) and Wegovy (weight loss indication) — the identical GLP-1 receptor agonist with the same C18 fatty acid modification that extends half-life to approximately 7 days. What Apollo Peptide Sciences provides is the same compound in lyophilized research format, reconstituted with bacteriostatic water. The compound\'s pharmacology is identical; the difference is the delivery format, the price point, and the absence of the pharmaceutical brand markup that makes prescription Wegovy cost over $1,000/month for many users.',
+        body: 'Semaglutide is the active molecule in Ozempic (diabetes indication) and Wegovy (weight loss indication) — the identical GLP-1 receptor agonist with the same C18 fatty acid modification that extends half-life to approximately 7 days. What is provided is the same compound in lyophilized research format, reconstituted with bacteriostatic water. The compound\'s pharmacology is identical; the difference is the delivery format, the price point, and the absence of the pharmaceutical brand markup that makes prescription Wegovy cost over $1,000/month for many users.',
       },
       {
         label: 'The Escalation Protocol',
@@ -587,7 +587,7 @@ The STEP trial program's pivotal 2.4mg weekly maintenance dose is the reference 
 
 At the 2.4mg weekly maintenance dose, semaglutide's hypothalamic GLP-1 engagement is at maximum intensity: appetite suppression is profound and consistent, gastric emptying is significantly slowed, and the hormonal environment driving fat mobilization is continuously maintained between weekly injections. The 15mg vial's supply duration at this dose — approximately 6 weeks — aligns with the natural assessment intervals for body composition response.
 
-For cost-conscious researchers running multi-month protocols, the 15mg vial offers the most rational economics: a single vial costs less per milligram than any other semaglutide format in the Apollo catalog. Combined with the logistical simplicity of fewer vials to manage, reconstitute, and track, the 15mg format is the standard choice for established, ongoing semaglutide research.`,
+For cost-conscious researchers running multi-month protocols, the 15mg vial offers the most rational economics: a single vial costs less per milligram than any other semaglutide format in the catalog. Combined with the logistical simplicity of fewer vials to manage, reconstitute, and track, the 15mg format is the standard choice for established, ongoing semaglutide research.`,
     benefits: [
       'Lowest cost per milligram across all three semaglutide vial sizes',
       'Matches the 2.4mg weekly STEP trial maintenance dose for 6+ weeks',
@@ -641,7 +641,7 @@ The SURMOUNT-1 trial — the pivotal tirzepatide weight loss study — demonstra
 
 Beyond weight loss, tirzepatide produces dramatic metabolic improvements: HbA1c reductions of 2.1–2.4%, significant reductions in triglycerides and LDL cholesterol, and blood pressure improvements that make it one of the most comprehensively metabolically beneficial compounds in research.
 
-Available from Apollo Peptide Sciences in 15mg vials.`,
+Available in 15mg vials.`,
     benefits: [
       'Up to 22.5% body weight reduction demonstrated in clinical research',
       'Dual GLP-1/GIP receptor activation for superior fat loss vs. semaglutide alone',
@@ -669,7 +669,7 @@ Available from Apollo Peptide Sciences in 15mg vials.`,
       {
         label: 'Mounjaro vs. Research Tirzepatide',
         title: 'Same Molecule, Different Format — What You Need to Know About How Tirzepatide Is Supplied',
-        body: 'Mounjaro and Zepbound contain tirzepatide — the identical compound supplied by Apollo Peptide Sciences in lyophilized research format. The pharmaceutical versions come in pre-filled pens at fixed dose increments, auto-injectors, and with the full pharmaceutical supply chain markup. Apollo\'s tirzepatide gives researchers access to the same active compound in a reconstitutable vial format, at a substantially lower cost per milligram, with full flexibility over concentration, dose, and protocol structure. The pharmacology is the same; the format and price point are different.',
+        body: 'Mounjaro and Zepbound contain tirzepatide — the identical compound available in lyophilized research format. The pharmaceutical versions come in pre-filled pens at fixed dose increments, auto-injectors, and with the full pharmaceutical supply chain markup. Apollo\'s tirzepatide gives researchers access to the same active compound in a reconstitutable vial format, at a substantially lower cost per milligram, with full flexibility over concentration, dose, and protocol structure. The pharmacology is the same; the format and price point are different.',
       },
     ],
   },
@@ -733,14 +733,14 @@ Tirzepatide's dual GLP-1/GIP receptor mechanism — the compound behind Mounjaro
     image: 'https://apollopeptidesciences.com/wp-content/uploads/2024/06/tirzepatide_15mg_multi.webp',
     affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2t-15mg-10-pack/?rfsn=9016964.3f1b1e',
     shortDescription: 'Ten 15mg vials — the maximum bundle for serious long-term tirzepatide research programs. Over 2 months of supply at 15mg weekly. Deepest per-vial discount available.',
-    fullDescription: `The Tirzepatide 15mg 10-Pack is the apex of the Apollo tirzepatide bundle lineup — ten standard 15mg vials at the deepest per-vial discount available for this compound. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to execute multi-month maintenance-phase protocols without supply interruption or reordering overhead.
+    fullDescription: `The Tirzepatide 15mg 10-Pack is the apex of the tirzepatide bundle lineup — ten standard 15mg vials at the deepest per-vial discount available for this compound. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to execute multi-month maintenance-phase protocols without supply interruption or reordering overhead.
 
 At 15mg weekly maintenance dosing — the maximum dose from the SURMOUNT-1 trial that documented 22.5% average body weight reduction — ten vials deliver approximately 10 weeks of uninterrupted research supply from a single order. For researchers running tirzepatide as a primary, sustained metabolic intervention, this represents the most financially efficient and operationally streamlined way to supply a serious long-term program.
 
 The per-vial cost at the 10-pack tier is substantially lower than any smaller bundle or individual purchase, making the economics compelling for researchers who have confirmed tirzepatide tolerability and are committed to the extended protocol duration required to observe the compound's full body composition and metabolic effects. Tirzepatide's dual GLP-1/GIP mechanism produces compounding benefits over months — not weeks — and the 10-pack ensures the supply continuity required to realize those cumulative outcomes.`,
     benefits: [
       '10 vials of 15mg tirzepatide — approximately 10 weeks of supply at 15mg weekly',
-      'Deepest per-vial discount in the Apollo tirzepatide catalog',
+      'Deepest per-vial discount in the tirzepatide catalog',
       'Eliminates all supply management overhead for a full research program cycle',
       'Supports sustained protocols at the SURMOUNT-1 peak efficacy maintenance dose',
       'Maximum cost efficiency for researchers committed to long-term tirzepatide use',
@@ -879,7 +879,7 @@ Paired with bacteriostatic water for reconstitution, the 30mg vial accommodates 
     image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/12/tirzepatide_60mg-1.webp',
     affiliateUrl: 'https://apollopeptidesciences.com/product/glp-2-t-60mg/?rfsn=9016964.3f1b1e',
     shortDescription: 'The maximum bulk format — 4x the standard 15mg vial. Lowest cost per milligram available for tirzepatide, designed for serious long-term research programs at therapeutic maintenance doses.',
-    fullDescription: `The 60mg tirzepatide vial is the apex of the Apollo tirzepatide lineup — four times the volume of the standard 15mg, and representing the single lowest cost-per-milligram available for this compound in any format. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to run weeks-long maintenance-phase protocols without operational interruption.
+    fullDescription: `The 60mg tirzepatide vial is the apex of the tirzepatide lineup — four times the volume of the standard 15mg, and representing the single lowest cost-per-milligram available for this compound in any format. It exists for one purpose: to supply serious, committed long-term research programs with the volume needed to run weeks-long maintenance-phase protocols without operational interruption.
 
 At 15mg weekly maintenance dosing — the maximum dose at which SURMOUNT-1 documented 22.5% average body weight reduction — a single 60mg vial provides four full weeks of research supply. At 10mg weekly, that extends to six weeks. For researchers treating tirzepatide as a sustained metabolic intervention rather than a short-cycle experiment, the 60mg vial eliminates the administrative overhead of multi-vial management entirely.
 
@@ -887,7 +887,7 @@ The financial calculus is straightforward. The 60mg vial's per-milligram cost is
 
 Reconstitution with bacteriostatic water at precise concentrations enables the 60mg vial to serve any maintenance dose within the 10–15mg weekly range with equal precision. Stored refrigerated and drawn from methodically, the vial maintains stability across the multi-week protocols it is designed to support. The 60mg tirzepatide vial is not for the curious beginner — it is the supply format of the serious long-term tirzepatide researcher.`,
     benefits: [
-      'Lowest cost per milligram of any tirzepatide format in the Apollo catalog',
+      'Lowest cost per milligram of any tirzepatide format in the catalog',
       '4x the volume of the standard 15mg vial in a single unit',
       'Provides 4 weeks at 15mg weekly or 6 weeks at 10mg weekly',
       'Eliminates multi-vial management complexity for long-term protocols',
@@ -944,7 +944,7 @@ The compound also demonstrated significant reductions in liver fat (critical for
       'Improves cardiovascular risk markers across all measured parameters',
       'Maintains lean muscle mass during fat loss phase better than diet alone',
       'Weekly injection protocol — same convenience as semaglutide/tirzepatide',
-      'Available in 10mg, 15mg, 30mg, and 60mg vials from Apollo',
+      'Available in 10mg, 15mg, 30mg, and 60mg vials',
     ],
     protocol: 'Dose escalation: 1mg weekly for 4 weeks, increasing gradually to target doses of 4–12mg weekly over 12–24 weeks. The extended escalation is essential with retatrutide due to its potency. Maintenance at 8–12mg weekly. SubQ injection once weekly.',
     synergies: ['bpc-157', 'cjc-1295-ipamorelin', 'nad-plus'],
@@ -1080,7 +1080,7 @@ The glucagon component of retatrutide's mechanism creates an ongoing fat oxidati
     image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/12/retatrutide_60mg.webp',
     affiliateUrl: 'https://apollopeptidesciences.com/product/glp-3-r-60mg/?rfsn=9016964.3f1b1e',
     shortDescription: 'The maximum bulk format for retatrutide — lowest cost per milligram available, designed for serious long-term research at the frontier of fat loss pharmacology.',
-    fullDescription: `Retatrutide 60mg is the pinnacle of the Apollo weight management lineup — the maximum bulk format for the most pharmacologically advanced fat loss compound in research, carrying the lowest cost per milligram across all retatrutide vial sizes. It is the supply format for researchers who have moved beyond exploration and are executing sustained, long-term protocols with the compound that produced the highest documented fat loss outcomes in peer-reviewed clinical history.
+    fullDescription: `Retatrutide 60mg is the pinnacle of the weight management lineup — the maximum bulk format for the most pharmacologically advanced fat loss compound in research, carrying the lowest cost per milligram across all retatrutide vial sizes. It is the supply format for researchers who have moved beyond exploration and are executing sustained, long-term protocols with the compound that produced the highest documented fat loss outcomes in peer-reviewed clinical history.
 
 At 8–12mg weekly maintenance dosing, a single 60mg vial provides five to seven and a half weeks of uninterrupted research supply — a meaningful protocol block that enables proper assessment of retatrutide's cumulative effects on body composition, hepatic fat, visceral adiposity, and metabolic markers. The Phase 2 NEJM data documenting 24.2% average body weight reduction was generated over 48 weeks of sustained dosing; protocols of that ambition demand bulk supply logistics.
 
@@ -1088,7 +1088,7 @@ Retatrutide's glucagon receptor component is what separates it categorically fro
 
 For the serious long-term retatrutide researcher, the per-milligram cost at the 60mg tier versus repeated purchases of smaller vials is the strongest financial argument in the catalog. The compound itself represents the frontier of fat loss pharmacology; the 60mg vial ensures you can pursue that frontier without operational constraints.`,
     benefits: [
-      'Lowest cost per milligram of any retatrutide format in the Apollo catalog',
+      'Lowest cost per milligram of any retatrutide format in the catalog',
       'Provides 5–7.5 weeks of supply at 8–12mg weekly maintenance dosing',
       'Supports the extended protocol duration required for full glucagon-mediated effects',
       'Eliminates supply gaps that interrupt retatrutide\'s cumulative metabolic impact',
@@ -1136,7 +1136,7 @@ Cagrilintide is a long-acting analogue of amylin — a hormone co-secreted with 
 
 The SCALE program demonstrated that CagriSema (2.4mg semaglutide + 2.4mg cagrilintide weekly) achieved up to 15.6% weight loss in 32 weeks — with ongoing Phase 3 trials suggesting outcomes potentially approaching tirzepatide. The dual-mechanism approach also appears to be particularly effective for individuals who have experienced plateau effects with semaglutide alone.
 
-Apollo supplies this as a 5mg/5mg blended vial, providing both compounds in a single convenient formulation.`,
+Available as a 5mg/5mg blended vial, providing both compounds in a single convenient formulation.`,
     benefits: [
       'Dual satiety pathway activation: GLP-1 receptor + amylin receptor simultaneously',
       'Synergistic appetite suppression beyond semaglutide monotherapy',
@@ -1190,7 +1190,7 @@ Telomeres are the protective end-caps on chromosomes that shorten with each cell
 
 Beyond telomere biology, Epithalon demonstrates remarkable breadth of anti-aging effects: it normalizes melatonin production (which declines with age, explaining the sleep architecture improvements users consistently report), exhibits antioxidant activity, modulates immune function, and has demonstrated oncostatic (cancer-limiting) properties in animal models.
 
-Human data from Russian longevity researcher Vladimir Khavinson's 12-year study showed reduced cancer incidence and all-cause mortality in elderly subjects receiving periodic Epithalon treatment — the most significant human longevity data published for any peptide compound. Apollo's 50mg vial provides substantial research quantities at accessible cost.`,
+Human data from Russian longevity researcher Vladimir Khavinson's 12-year study showed reduced cancer incidence and all-cause mortality in elderly subjects receiving periodic Epithalon treatment — the most significant human longevity data published for any peptide compound. The 50mg vial provides substantial research quantities at accessible cost.`,
     benefits: [
       'Only known compound with human data demonstrating measurable telomere lengthening',
       'Activates telomerase — the enzyme responsible for rebuilding chromosomal end-caps',
@@ -1240,7 +1240,7 @@ NAD+ operates at the core of cellular energy metabolism — it is the electron c
 
 Beyond energy metabolism, NAD+ serves as the substrate for sirtuins (SIRT1–7) — the "longevity proteins" that regulate gene expression in response to cellular stress, control DNA repair, modulate inflammation, and mediate many of the life-extending benefits associated with caloric restriction and exercise. NAD+ is also consumed by PARP enzymes during DNA damage repair — creating a competitive demand on NAD+ availability during cellular stress.
 
-Direct NAD+ supplementation bypasses the metabolic steps required to convert oral NMN or NR into NAD+, delivering the coenzyme directly for research applications. Apollo's 500mg vial represents exceptional value for NAD+ research protocols.`,
+Direct NAD+ supplementation bypasses the metabolic steps required to convert oral NMN or NR into NAD+, delivering the coenzyme directly for research applications. The 500mg vial represents exceptional value for NAD+ research protocols.`,
     benefits: [
       'Restores declining NAD+ levels — drops 50%+ between youth and middle age',
       'Activates sirtuin longevity proteins (SIRT1–7) for comprehensive anti-aging effects',

@@ -201,12 +201,12 @@ export default function StacksPage() {
             Ready to start your stack?
           </h2>
           <p className="text-[#8888a0] text-[16px] mb-8">
-            All compounds available through our partner Apollo Peptide Sciences. Every stack, every protocol — sourced from the highest-quality peptide supplier available.
+            Every stack, every protocol — pharmaceutical-grade compounds with certificate of analysis verification on every batch.
           </p>
           <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary text-[13px] px-8 py-4 inline-flex">
-            Shop at Apollo Peptide Sciences
+            Shop Now
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
             </svg>

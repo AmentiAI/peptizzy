@@ -125,7 +125,7 @@ export default function CjcTimelinePage() {
                 </ul>
               </div>
             </div>
-            <p className="text-[#50505e] text-[13px] italic mt-3">The pre-blended CJC-1295/Ipamorelin vial from Apollo Peptide Sciences uses the non-DAC version — the standard for most research protocols.</p>
+            <p className="text-[#50505e] text-[13px] italic mt-3">The pre-blended CJC-1295/Ipamorelin vial uses the non-DAC version — the standard for most research protocols.</p>
           </div>
         </div>
 
@@ -163,7 +163,7 @@ export default function CjcTimelinePage() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pre-blended 5mg/5mg vial — both compounds in one vial eliminates the complexity of separate dosing and reconstitution.</p>
             <div className="flex gap-3">
               <a href="/go/cjc1295-ipamorelin"
-                          target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy on Apollo →</a>
+                          target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/cjc-1295-ipamorelin" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>

@@ -35,7 +35,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'What is retatrutide?', acceptedAnswer: { '@type': 'Answer', text: 'Retatrutide is an investigational triple agonist developed by Eli Lilly that simultaneously activates GLP-1, GIP, and glucagon receptors. Phase 3 trials show up to 28.7% average body weight reduction — the highest ever recorded for a pharmacological intervention.' } },
         { '@type': 'Question', name: 'How does retatrutide compare to tirzepatide?', acceptedAnswer: { '@type': 'Answer', text: 'Retatrutide outperforms tirzepatide on weight loss (28.7% vs 22.5% in separate trials), primarily because its glucagon receptor activation adds metabolic rate enhancement on top of tirzepatide\'s GLP-1/GIP mechanism. Retatrutide also comes with a unique side effect — dysesthesia (tingling/numbness) — not seen with tirzepatide.' } },
         { '@type': 'Question', name: 'When will retatrutide be FDA approved?', acceptedAnswer: { '@type': 'Answer', text: 'Based on current Phase 3 timelines (TRIUMPH program), FDA approval for obesity is estimated earliest Q3 2027. The diabetes Phase 3 trial cleared in March 2026. No approval date has been officially set.' } },
-        { '@type': 'Question', name: 'Can you get retatrutide now?', acceptedAnswer: { '@type': 'Answer', text: 'Retatrutide is available in research peptide format from licensed vendors including Apollo Peptide Sciences. It is not FDA approved for human use. Compounded pharmaceutical versions are not yet widely available pending approval.' } },
+        { '@type': 'Question', name: 'Can you get retatrutide now?', acceptedAnswer: { '@type': 'Answer', text: 'Retatrutide is available in research peptide format from licensed vendors. It is not FDA approved for human use. Compounded pharmaceutical versions are not yet widely available pending approval.' } },
       ],
     },
   ],
@@ -238,7 +238,7 @@ export default function RetatrutidePage() {
           </div>
           <div className="pl-10 space-y-4 text-[#8888a0] text-[16px] leading-relaxed">
             <p>Before FDA approval, retatrutide is available in lyophilized research peptide format from licensed vendors. This is the same format used for all research peptides — reconstituted with bacteriostatic water and administered subcutaneously per the researcher&apos;s protocol.</p>
-            <p>Apollo Peptide Sciences provides pharmaceutical-grade retatrutide with full certificate of analysis verification. The available formats (10mg, 30mg, 60mg) align with the dose ranges studied in TRIUMPH trials.</p>
+            <p>Premium pharmaceutical-grade retatrutide is available with full certificate of analysis verification. The available formats (10mg, 30mg, 60mg) align with the dose ranges studied in TRIUMPH trials.</p>
             <div className="grid sm:grid-cols-3 gap-4 mt-6">
               {[
                 { name: 'Retatrutide 15mg', slug: 'retatrutide', url: `${AFF_BASE}/glp-3r-15mg/${REF}`, price: 'Starting Dose Format' },
@@ -249,7 +249,7 @@ export default function RetatrutidePage() {
                   <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">{p.price}</p>
                   <p className="text-white font-700 text-[16px] mb-4 flex-1">{p.name}</p>
                   <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn-primary justify-center py-3 text-[13px]">
-                    View on Apollo →
+                    View Product →
                   </a>
                 </div>
               ))}

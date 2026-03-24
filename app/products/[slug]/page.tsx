@@ -153,8 +153,8 @@ function BuyBox({ product }: { product: Product }) {
           </p>
         </div>
         <div className="text-right">
-          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Sold By</p>
-          <p className="text-white font-500 text-[15px]">Apollo Peptide Sciences</p>
+          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Purity</p>
+          <p className="text-white font-500 text-[15px]">CoA Verified</p>
         </div>
       </div>
       <a href={`/go/${product.slug}`}
@@ -165,8 +165,15 @@ function BuyBox({ product }: { product: Product }) {
       <a href={`/go/${product.slug}`}
                           target="_blank" rel="noopener nofollow sponsored"
         className="btn-secondary w-full justify-center py-3 text-[13px]">
-        View on Apollo Peptide Sciences ↗
+        View Product ↗
       </a>
+      <div className="flex items-center justify-center gap-4 mt-4">
+        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Third-Party Tested</span>
+        <span className="text-[#50505e]">·</span>
+        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Pharma-Grade</span>
+        <span className="text-[#50505e]">·</span>
+        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+      </div>
     </div>
   )
 }
@@ -818,14 +825,12 @@ export default function ProductPage({ params }: Props) {
       description: product.shortDescription,
       image: product.image,
       url: `https://www.peptidesmuscle.com/products/${product.slug}`,
-      brand: { '@type': 'Brand', name: 'Apollo Peptide Sciences' },
       offers: {
         '@type': 'Offer',
         priceCurrency: 'USD',
         price: product.price.replace(/[^0-9.]/g, ''),
         url: product.affiliateUrl,
         availability: 'https://schema.org/InStock',
-        seller: { '@type': 'Organization', name: 'Apollo Peptide Sciences' },
       },
     },
     {

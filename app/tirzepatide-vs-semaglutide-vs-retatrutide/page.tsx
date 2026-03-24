@@ -154,7 +154,7 @@ export default function GlpComparisonPage() {
                 <p className="text-white font-700 text-[16px] mb-1">{c.name}</p>
                 <p className="text-[#d4a043] font-700 text-[14px] mb-4">{c.loss} loss</p>
                 <a href={c.aff} target="_blank" rel="noopener noreferrer" className="btn-primary justify-center py-3 text-[13px] mb-2">
-                  Buy on Apollo →
+                  Buy Now →
                 </a>
                 <Link href={`/products/${c.slug}`} className="btn-ghost justify-center py-2.5 text-[12px]">Learn More</Link>
               </div>
