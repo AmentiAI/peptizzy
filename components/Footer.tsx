@@ -9,11 +9,13 @@ const col1 = [
   { href: '/products',               label: 'View All →' },
 ]
 const col2 = [
-  { href: '/looks-maxing', label: 'Looks Maxing Guide' },
+  { href: '/blog',         label: 'Guides & Blog' },
+  { href: '/looks-maxing', label: 'Looks Maxing' },
   { href: '/stacks',       label: 'Stack Protocols' },
-  { href: '/guide',        label: 'Protocol Guide' },
-  { href: '/anti-aging',        label: 'Anti-Aging' },
-  { href: '/body-composition',  label: 'Body Composition' },
+  { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Routine' },
+  { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair' },
+  { href: '/melanotan-2-looksmaxxing-tan', label: 'Melanotan 2 Guide' },
+  { href: '/anti-aging',   label: 'Anti-Aging' },
 ]
 
 export default function Footer() {

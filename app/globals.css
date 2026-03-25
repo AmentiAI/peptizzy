@@ -431,6 +431,66 @@ body {
   z-index: 3;
 }
 
+/* ─────────────────────────────────────
+   MOBILE OPTIMIZATIONS
+───────────────────────────────────── */
+
+/* Only apply hover transforms on devices that actually support hover */
+@media (hover: none) {
+  .card:hover {
+    border-color: var(--border);
+    box-shadow: none;
+    transform: none;
+  }
+  .card-product:hover {
+    border-color: var(--border);
+    box-shadow: none;
+    transform: none;
+  }
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-ghost:hover {
+    transform: none;
+  }
+}
+
+/* Touch-friendly tap targets */
+.btn-primary,
+.btn-secondary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
+}
+.btn-ghost {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent text inflation on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Glow spots: scale down on small screens to avoid layout artifacts */
+@media (max-width: 640px) {
+  .spot {
+    width: 280px !important;
+    height: 200px !important;
+  }
+}
+
+/* Horizontal scroll for tab bars / pill rows on mobile */
+.scroll-x-mobile {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 8px;
+  padding-bottom: 4px;
+}
+.scroll-x-mobile::-webkit-scrollbar { display: none; }
+
 /* Input */
 .input {
   background: var(--surface);

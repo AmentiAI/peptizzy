@@ -259,6 +259,31 @@ export default function LooksMaxingPage() {
         </div>
       </section>
 
+      {/* Related Guides */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-5 h-[1px] bg-[#d4a043]" />
+            <p className="label-gold">Deep-Dive Guides</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Complete morning-to-night peptide schedule with exact timings and dosing' },
+              { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair Growth', desc: 'GHK-Cu follicle activation and TB-500 scalp vascularization protocol' },
+              { href: '/melanotan-2-looksmaxxing-tan', label: 'Melanotan 2 Complete Guide', desc: 'Deep melanin tan, libido, and appetite suppression — the MT-2 protocol' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'All four appearance pillars — skin, body, recovery, cellular aging' },
+              { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable vs topical results, 12-week timeline, hair benefits' },
+              { href: '/snap-8-vs-botox-peptide-alternative', label: 'SNAP-8 vs. Botox', desc: 'Topical peptide vs neurotoxin for expression line reduction' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
+                <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }

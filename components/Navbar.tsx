@@ -7,8 +7,8 @@ const links = [
   { href: '/products',     label: 'All Peptides' },
   { href: '/looks-maxing', label: 'Looks Maxing' },
   { href: '/stacks',       label: 'Stacks' },
+  { href: '/blog',         label: 'Blog' },
   { href: '/tools',        label: 'Tools' },
-  { href: '/guide',        label: 'Guide' },
   { href: '/faq',          label: 'FAQ' },
 ]
 

@@ -515,10 +515,10 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-10">
+          <div className="scroll-x-mobile mb-10">
             {TABS.map(t => (
               <button key={t} onClick={() => setTab(t)}
-                className={`text-[13px] px-4 py-2 rounded-full font-500 transition-all duration-150 ${
+                className={`text-[13px] px-4 py-2 rounded-full font-500 transition-all duration-150 whitespace-nowrap flex-shrink-0 ${
                   tab === t
                     ? 'bg-[#d4a043] text-[#07070a] font-700'
                     : 'bg-white/[0.04] border border-white/[0.07] text-[#8888a0] hover:text-white hover:border-white/[0.15]'
@@ -955,6 +955,54 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
+          12b. LATEST GUIDES
+      ══════════════════════════════════════════ */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-12">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-5 h-[1px] bg-[#d4a043]" />
+                <p className="label-gold">Research & Guides</p>
+              </div>
+              <h2 className="display text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
+                Deep-Dive<br /><span className="display-italic gold-text">Peptide Guides</span>
+              </h2>
+            </div>
+            <Link href="/blog" className="btn-ghost text-[14px] flex-shrink-0">
+              All Guides
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+              </svg>
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { href: '/looksmaxxing-routine-daily-protocol', title: 'Looksmaxxing Daily Routine', desc: 'Morning-to-night peptide schedule — timings, dosing, and the reasoning behind every step.', tags: ['Looksmaxxing', 'Protocol'], badge: 'New' },
+              { href: '/peptides-for-hair-growth-loss', title: 'Peptides for Hair Growth', desc: 'GHK-Cu follicle activation + TB-500 scalp vascularization. The complete hair protocol.', tags: ['Looksmaxxing', 'GHK-Cu'], badge: 'New' },
+              { href: '/melanotan-2-looksmaxxing-tan', title: 'Melanotan 2 Guide', desc: 'Deep melanin tan, libido, and appetite suppression — three effects from one peptide.', tags: ['Looksmaxxing', 'MT-2'], badge: 'New' },
+              { href: '/looksmaxxing-peptides-guide-men', title: 'Looksmaxxing Peptides for Men', desc: 'The complete stack guide: skin, body composition, recovery, and cellular aging.', tags: ['Looksmaxxing', 'Stack'] },
+              { href: '/ghk-cu-before-and-after-guide', title: 'GHK-Cu Before & After', desc: '12-week results timeline — injectable vs topical, skin density data, and protocol.', tags: ['GHK-Cu', 'Skin'] },
+              { href: '/epithalon-anti-aging-telomere-peptide-guide', title: 'Epithalon: Telomere & Anti-Aging', desc: 'The only compound with human data showing telomere lengthening. Complete cycle protocol.', tags: ['Anti-Aging', 'Longevity'] },
+            ].map((g, i) => (
+              <AnimateIn key={g.href} type="up" delay={i * 80}>
+                <Link href={g.href} className="card rounded-2xl p-6 group hover:border-[#d4a043]/20 transition-colors flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {g.tags.map(t => <span key={t} className="tag text-[10px]">{t}</span>)}
+                    </div>
+                    {g.badge && <span className="tag-gold text-[10px]">{g.badge}</span>}
+                  </div>
+                  <p className="text-white font-700 text-[15px] leading-snug mb-2 group-hover:text-[#d4a043] transition-colors flex-1">{g.title}</p>
+                  <p className="text-[#8888a0] text-[13px] leading-relaxed">{g.desc}</p>
+                </Link>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
           13. FAQ
       ══════════════════════════════════════════ */}
       <section className="py-24 bg-[#0a0a0e]">
@@ -1023,8 +1071,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
               </svg>
             </a>
-            <Link href="/guide" className="btn-secondary text-[14px] px-10 py-4">
-              Protocol Guide
+            <Link href="/blog" className="btn-secondary text-[14px] px-10 py-4">
+              Read the Guides
             </Link>
           </div>
         </div>
