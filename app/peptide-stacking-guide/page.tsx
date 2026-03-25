@@ -165,6 +165,27 @@ export default function PeptideStackingGuidePage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Full morning-to-night schedule with exact timings for each compound' },
+              { href: '/how-to-inject-peptides-beginners-guide', label: 'How to Inject Peptides', desc: 'Before stacking: master reconstitution and injection technique' },
+              { href: '/wolverine-stack-bpc-157-tb-500-guide', label: 'The Wolverine Stack', desc: 'BPC-157 + TB-500 recovery protocol in detail' },
+              { href: '/cjc-1295-ipamorelin-results-timeline', label: 'CJC-1295 + Ipamorelin Results', desc: 'Week-by-week results from the GH optimization stack' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Stacking strategy applied to full appearance optimization' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
+                <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

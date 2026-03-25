@@ -292,11 +292,14 @@ export default function RetatrutidePage() {
       <section className="bg-[#0a0a0e] py-16">
         <div className="max-w-4xl mx-auto px-6 md:px-10">
           <p className="label text-[#d4a043] mb-6">Related Guides</p>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { href: '/tirzepatide-vs-semaglutide-vs-retatrutide', label: 'Full GLP-1 Comparison', desc: 'Tirzepatide vs. Semaglutide vs. Retatrutide — all data' },
-              { href: '/products/tirzepatide', label: 'Tirzepatide', desc: 'The best available option while retatrutide awaits approval' },
-              { href: '/products/semaglutide', label: 'Semaglutide', desc: 'The proven GLP-1 standard with the longest safety record' },
+              { href: '/tirzepatide-vs-semaglutide-vs-retatrutide', label: 'Full GLP-1 Comparison', desc: 'Tirzepatide vs. Semaglutide vs. Retatrutide — side by side' },
+              { href: '/body-composition', label: 'Body Composition Hub', desc: 'All peptides for fat loss, muscle, and recomposition' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Body composition as a pillar of appearance optimization' },
+              { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'How GLP-1 agonists stack with GH peptides for full body recomp' },
+              { href: '/how-to-inject-peptides-beginners-guide', label: 'How to Inject Peptides', desc: 'Step-by-step subcutaneous injection guide for beginners' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
             ].map(r => (
               <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
                 <p className="text-[#d4a043] text-[12px] font-600 mb-2 group-hover:text-[#d4a043]">{r.label} →</p>

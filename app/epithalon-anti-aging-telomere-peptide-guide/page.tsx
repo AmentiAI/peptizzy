@@ -184,6 +184,27 @@ export default function EpithalonGuidePage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Stack with Epithalon for the complete anti-aging skin protocol' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Cellular anti-aging as the fourth looksmaxxing pillar' },
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'How Epithalon cycles fit into a broader peptide schedule' },
+              { href: '/cjc-1295-ipamorelin-results-timeline', label: 'CJC-1295 + Ipamorelin', desc: 'GH optimization as a complement to cellular anti-aging' },
+              { href: '/anti-aging', label: 'Anti-Aging Hub', desc: 'Complete overview of peptides for longevity and cellular health' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#a060ff]/20 transition-colors">
+                <p className="text-[#a060ff] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

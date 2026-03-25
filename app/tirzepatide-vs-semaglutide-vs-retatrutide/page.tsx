@@ -162,6 +162,27 @@ export default function GlpComparisonPage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/retatrutide-complete-guide-results-dosage', label: 'Retatrutide Complete Guide', desc: 'Deep dive into the triple-receptor agonist with the highest weight loss data' },
+              { href: '/body-composition', label: 'Body Composition Hub', desc: 'All peptides for fat loss, muscle gain, and recomposition' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Body composition as a pillar of appearance optimization' },
+              { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'How GLP-1 agonists stack with GH peptides for full body recomp' },
+              { href: '/how-to-inject-peptides-beginners-guide', label: 'How to Inject Peptides', desc: 'Reconstitution and subcutaneous injection technique' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#e05080]/20 transition-colors">
+                <p className="text-[#e05080] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

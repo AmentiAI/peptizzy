@@ -135,10 +135,12 @@ export default function LooksmaxxingPage() {
           <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 36px)' }}>Related Guides</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { href: '/looks-maxing', label: 'Looks Maxing Deep Dive', desc: 'The science behind each biological pillar of physical appearance' },
-              { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable vs. topical results, timeline, and protocol' },
-              { href: '/snap-8-vs-botox-peptide-alternative', label: 'SNAP-8 vs. Botox', desc: 'Honest comparison: can a topical peptide replace injections?' },
-              { href: '/stacks/looks-max', label: 'The Looks Max Stack', desc: 'Pre-designed 12-week protocol for full aesthetic optimization' },
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Complete morning-to-night schedule: timings, dosing, and weekly plan' },
+              { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair Growth', desc: 'GHK-Cu follicle activation and TB-500 scalp vascularization' },
+              { href: '/melanotan-2-looksmaxxing-tan', label: 'Melanotan 2 Complete Guide', desc: 'Deep melanin tan, libido, and appetite suppression — MT-2 protocol' },
+              { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable vs. topical results, 12-week timeline and protocol' },
+              { href: '/snap-8-vs-botox-peptide-alternative', label: 'SNAP-8 vs. Botox', desc: 'Can a topical peptide replace neurotoxin injections?' },
+              { href: '/looks-maxing', label: 'Looksmaxxing Hub', desc: 'The science behind each biological pillar of physical appearance' },
             ].map(r => (
               <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
                 <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>

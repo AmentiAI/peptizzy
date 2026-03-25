@@ -170,6 +170,27 @@ export default function GhkCuGuidePage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Complete morning-to-night schedule with exact GHK-Cu timing and dosing' },
+              { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair Growth', desc: 'How GHK-Cu activates follicle stem cells and prevents hair loss' },
+              { href: '/snap-8-vs-botox-peptide-alternative', label: 'SNAP-8 vs. Botox', desc: 'The topical peptide that pairs with GHK-Cu for full skin optimization' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Skin, body, recovery, and cellular aging — the full stack' },
+              { href: '/epithalon-anti-aging-telomere-peptide-guide', label: 'Epithalon Anti-Aging Guide', desc: 'Stack with GHK-Cu for the complete anti-aging protocol' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
+                <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

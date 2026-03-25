@@ -204,6 +204,27 @@ export default function Snap8VsBotoxPage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable skin peptide that pairs with SNAP-8 for complete skin optimization' },
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'How SNAP-8 fits into the twice-daily application schedule' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'SNAP-8 as part of the skin quality pillar' },
+              { href: '/looks-maxing', label: 'Looksmaxxing Hub', desc: 'The full skin, body, recovery, and anti-aging overview' },
+              { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'How to combine SNAP-8 with injectable compounds effectively' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
+                <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )

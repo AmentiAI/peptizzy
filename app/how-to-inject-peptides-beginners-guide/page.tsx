@@ -195,10 +195,12 @@ export default function HowToInjectPage() {
           <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3.5vw, 36px)' }}>Related Guides</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Full schedule applying this injection knowledge to a complete protocol' },
               { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'Goal-based stacks for fat loss, muscle, healing, and anti-aging' },
               { href: '/wolverine-stack-bpc-157-tb-500-guide', label: 'The Wolverine Stack', desc: 'BPC-157 + TB-500 injury recovery protocol' },
-              { href: '/cjc-1295-ipamorelin-results-timeline', label: 'CJC-1295 Ipamorelin Protocol', desc: 'Dosing schedule, timing, and week-by-week timeline' },
+              { href: '/cjc-1295-ipamorelin-results-timeline', label: 'CJC-1295 + Ipamorelin Protocol', desc: 'Dosing schedule, timing, and week-by-week timeline' },
               { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Protocol', desc: 'Injectable vs topical, dosing, and results timeline' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
             ].map(r => (
               <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#40c090]/20 transition-colors">
                 <p className="text-[#40c090] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>

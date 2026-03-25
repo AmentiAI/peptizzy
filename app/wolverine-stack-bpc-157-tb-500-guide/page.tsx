@@ -156,6 +156,27 @@ export default function WolverineStackPage() {
           </div>
         </div>
 
+        <div className="rule" />
+
+        <div>
+          <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(22px, 3vw, 34px)' }}>Related Guides</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {[
+              { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair Growth', desc: 'TB-500 scalp vascularization as part of the hair protocol' },
+              { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'Where BPC-157 and TB-500 fit in the full daily peptide schedule' },
+              { href: '/how-to-inject-peptides-beginners-guide', label: 'How to Inject Peptides', desc: 'Reconstitution and injection technique for BPC-157 and TB-500' },
+              { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'How the Wolverine Stack fits within broader multi-compound protocols' },
+              { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'Recovery as the foundation layer of appearance optimization' },
+              { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
+            ].map(r => (
+              <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#40c090]/20 transition-colors">
+                <p className="text-[#40c090] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>
+                <p className="text-[#8888a0] text-[13px]">{r.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )
