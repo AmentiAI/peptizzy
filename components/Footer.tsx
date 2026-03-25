@@ -82,16 +82,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="rule mb-6" />
+        <div className="rule mb-4" />
+        <p className="text-[#3a3a48] text-[11px] leading-relaxed mb-4 max-w-4xl">
+          All peptides on this site are sold for research purposes only and are not intended for human consumption, diagnosis, treatment, or prevention of any disease. These compounds are not FDA-approved for human use. Clinical data referenced is sourced from peer-reviewed research studies. Always consult a qualified healthcare provider before beginning any research protocol. Individual results may vary.
+        </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle.</p>
           <div className="flex items-center gap-5">
             <a href="/sitemap.xml" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
               Sitemap
             </a>
-            <p className="text-[#50505e] text-[13px]">
-              For personal use only. Individual results may vary.
-            </p>
+            <a href="/faq" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
+              FAQ
+            </a>
+            <a href="/guide" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
+              Guide
+            </a>
           </div>
         </div>
       </div>

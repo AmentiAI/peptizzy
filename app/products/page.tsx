@@ -56,7 +56,7 @@ function Content() {
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>Peptides</span>
           </h1>
           <p className="text-[#8888a0] text-xl max-w-xl leading-relaxed">
-            Every premium peptide in the most comprehensive optimization catalog available.
+            35 compounds. Every goal covered. CoA-verified on every batch — from skin collagen to telomere extension to 22.5% fat loss.
           </p>
         </div>
       </div>

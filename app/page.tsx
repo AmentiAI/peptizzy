@@ -97,7 +97,7 @@ export default function Home() {
                 <span className="display hero-line hero-line-3 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Form.</span>
               </h1>
               <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-10 hero-sub">
-                The most advanced peptide protocols for looks maximization, body composition, and cellular longevity. Premium compounds. Documented results.
+                GHK-Cu adds 121% skin density. Tirzepatide removes 22.5% body weight. CJC-1295 optimizes growth hormone naturally. Measurable outcomes — documented protocols, CoA-verified compounds.
               </p>
               <div className="flex flex-wrap gap-3 mb-12 hero-cta">
                 <a href="/go/shop"
@@ -190,8 +190,8 @@ export default function Home() {
                 <p className="label-gold">Staff Picks</p>
               </div>
               <h2 className="font-['Playfair_Display'] font-900 text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', lineHeight: '1.05' }}>
-                The Most Powerful<br />
-                <span className="italic gold-text">Peptides Available</span>
+                Most Researched<br />
+                <span className="italic gold-text">Compounds</span>
               </h2>
             </div>
             <Link href="/products" className="btn-ghost text-[14px] flex-shrink-0">
@@ -384,55 +384,55 @@ export default function Home() {
             {[
               {
                 goal: 'Looks Maxing',
-                desc: 'Comprehensive physical optimization — skin, tan, hormones, and cellular age addressed simultaneously.',
+                desc: 'Skin density up 121% (GHK-Cu). Deep eumelanin tan without UV (MT-2). GH-optimized body composition. Cellular aging reversed. Every physical pillar — one protocol.',
                 peptides: ['GHK-Cu', 'Melanotan 2', 'Ipamorelin', 'Epithalon'],
                 href: '/looks-maxing', icon: '◈', accent: '#d4a043',
               },
               {
                 goal: 'Fat Loss',
-                desc: 'Peptides that target visceral fat, improve metabolic function, and create a lean physique without muscle loss.',
-                peptides: ['Tesamorelin', 'CJC-1295', 'Ipamorelin', 'AOD-9604'],
-                href: '/products?category=Body+Composition', icon: '◆', accent: '#e05080',
+                desc: 'Up to 22.5% body weight reduction via dual GLP-1/GIP agonism. Visceral fat targeted specifically. Muscle preserved. No rebound when used within protocol.',
+                peptides: ['Tirzepatide', 'Semaglutide', 'CJC-1295', 'BPC-157'],
+                href: '/products?category=Weight+Management', icon: '◆', accent: '#e05080',
               },
               {
                 goal: 'Muscle Growth',
-                desc: 'GH secretagogues and IGF-1 modulators that create continuous anabolic signaling for lean mass development.',
+                desc: 'Double-stimulus GH pulse (CJC-1295 + Ipamorelin) — lean mass and fat loss simultaneously. IGF-1 LR3 post-workout drives direct hypertrophy. Visible at 8–12 weeks.',
                 peptides: ['IGF-1 LR3', 'CJC-1295', 'Ipamorelin', 'MK-677'],
                 href: '/products?category=Body+Composition', icon: '◉', accent: '#6090ff',
               },
               {
                 goal: 'Skin & Anti-Aging',
-                desc: 'Collagen-stimulating and gene-resetting peptides that reverse the visible markers of skin aging.',
-                peptides: ['GHK-Cu', 'Epithalon', 'BPC-157', 'MOTS-c'],
+                desc: 'GHK-Cu activates 4,000+ genes to rebuild collagen from the inside. SNAP-8 softens expression lines. Epithalon resets biological age at the chromosomal level.',
+                peptides: ['GHK-Cu', 'Epithalon', 'SNAP-8', 'BPC-157'],
                 href: '/products?category=Anti-Aging', icon: '✦', accent: '#a060ff',
               },
               {
                 goal: 'Recovery & Healing',
-                desc: 'The fastest tissue repair compounds available — muscle, tendon, ligament, and gut healing accelerated.',
+                desc: 'BPC-157 repairs tendons, ligaments, and gut in 2–4 weeks. TB-500 distributes systemically to every injury site at once. Train harder, break less.',
                 peptides: ['BPC-157', 'TB-500', 'GHK-Cu', 'Thymosin Alpha-1'],
                 href: '/products?category=Recovery+%26+Healing', icon: '⬡', accent: '#40c090',
               },
               {
                 goal: 'Cognitive Performance',
-                desc: 'BDNF-boosting nootropic peptides that enhance focus, reduce anxiety, and optimize neural performance.',
+                desc: 'Semax raises BDNF for sharper focus and recall within days. Selank eliminates anxiety without sedation. DSIP deepens sleep architecture for real cognitive recovery.',
                 peptides: ['Semax', 'Selank', 'DSIP', 'Epithalon'],
                 href: '/products?category=Cognitive+Performance', icon: '◎', accent: '#40c0ff',
               },
               {
                 goal: 'Sleep Optimization',
-                desc: 'Delta-wave sleep inducers that transform recovery quality and maximize overnight GH secretion.',
+                desc: 'DSIP directly induces delta-wave sleep — the stage where 80% of GH is secreted and structural repair occurs. MK-677 extends GH pulses through the night.',
                 peptides: ['DSIP', 'Ipamorelin', 'MK-677', 'Selank'],
                 href: '/products', icon: '◐', accent: '#60d090',
               },
               {
                 goal: 'Sexual Health & Libido',
-                desc: 'Melanocortin agonists that work on the central nervous system to enhance desire and performance.',
+                desc: 'PT-141 works centrally on melanocortin receptors — not on blood flow. Desire at the neurological level, not the vascular one. Results within 1–2 hours.',
                 peptides: ['PT-141', 'Melanotan 2', 'Kisspeptin-10', 'BPC-157'],
                 href: '/products', icon: '◑', accent: '#ff8040',
               },
               {
                 goal: 'Immune & Longevity',
-                desc: 'Thymic peptides and mitochondrial compounds for bulletproof immunity and biological age reversal.',
+                desc: 'Thymosin Alpha-1 rebuilds thymic immunity in immunocompromised individuals. Epithalon is the only compound with human data showing telomere lengthening.',
                 peptides: ['Thymosin Alpha-1', 'Epithalon', 'MOTS-c', 'GHK-Cu'],
                 href: '/products?category=Anti-Aging', icon: '◫', accent: '#60d090',
               },
@@ -542,66 +542,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════
-          6. ALL PRODUCTS STRIP
-      ══════════════════════════════════════════ */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-5 h-[1px] bg-[#d4a043]" />
-            <p className="label-gold">Featured</p>
-          </div>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-12">
-            <h2 className="display text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
-              Looks Max Essentials
-            </h2>
-            <Link href="/looks-maxing" className="btn-ghost text-[14px]">
-              Full Protocol Guide
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
-              </svg>
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featured.slice(0, 3).map((p, i) => (
-              <ProductCard key={p.slug} product={p} variant="hero" index={i} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
-          7. ALL 16 PRODUCTS — compact list
-      ══════════════════════════════════════════ */}
-      <section className="py-24 bg-[#0a0a0e]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-5 h-[1px] bg-[#d4a043]" />
-            <p className="label-gold">Complete Catalog</p>
-          </div>
-          <h2 className="display text-white mb-4" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
-            Every Protocol Available
-          </h2>
-          <p className="text-[#8888a0] text-[17px] mb-12 max-w-xl leading-relaxed">
-            35 elite peptide compounds covering every dimension of physical and cognitive optimization.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-            {products.map((p, i) => (
-              <ProductCard key={p.slug} product={p} variant="compact" index={i} />
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <a href="/go/shop"
-                          target="_blank" rel="noopener nofollow sponsored"
-              className="btn-primary text-[13px] px-8 py-3.5 inline-flex">
-              Shop All
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════════════
           8. WHY PEPTIDES (COMPARISON)
@@ -700,10 +640,10 @@ export default function Home() {
               <div className="w-5 h-[1px] bg-[#d4a043]" />
             </div>
             <h2 className="display text-white mb-4" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
-              Who Uses Peptide Protocols
+              Find Your Protocol
             </h2>
             <p className="text-[#8888a0] text-[17px] max-w-xl mx-auto leading-relaxed">
-              From competitive athletes to longevity practitioners — peptide optimization spans every high-performance domain.
+              Different goals. Different mechanisms. One category of compound. Click your profile below.
             </p>
           </div>
 
@@ -711,26 +651,30 @@ export default function Home() {
             {[
               {
                 type: 'Athletes & Competitors',
-                desc: 'BPC-157 and TB-500 for accelerated injury recovery. Ipamorelin for lean body composition. Higher training frequency, faster adaptation.',
+                desc: 'Train harder, recover faster. BPC-157 repairs tendons in 2–4 weeks instead of months. TB-500 clears full-body inflammation between sessions. IGF-1 LR3 drives direct muscle growth post-workout.',
                 protocols: ['BPC-157', 'TB-500', 'Ipamorelin', 'IGF-1 LR3'],
+                href: '/products?category=Recovery+%26+Healing',
                 icon: '◆', accent: '#40c090',
               },
               {
                 type: 'Looks Maxers',
-                desc: 'GHK-Cu for skin quality. MT-2 for optimal pigmentation. Hormonal optimization for body composition. The complete physical transformation stack.',
+                desc: 'Every pillar addressed at once. GHK-Cu rebuilds collagen density. Melanotan 2 deepens skin tone without UV. Ipamorelin optimizes body composition via GH. Epithalon resets cellular aging.',
                 protocols: ['GHK-Cu', 'MT-2', 'Epithalon', 'Ipamorelin'],
+                href: '/looks-maxing',
                 icon: '◈', accent: '#d4a043',
               },
               {
                 type: 'Biohackers',
-                desc: 'Epithalon for telomere extension. MOTS-c for mitochondrial optimization. Comprehensive multi-system optimization with measurable biomarkers.',
+                desc: 'Measuring outcomes, not just feeling them. Epithalon lengthens telomeres — the only compound with human data showing this. MOTS-c activates AMPK for mitochondrial efficiency. Bloodwork confirms the results.',
                 protocols: ['Epithalon', 'MOTS-c', 'GHK-Cu', 'Thymosin A1'],
+                href: '/anti-aging',
                 icon: '◉', accent: '#a060ff',
               },
               {
                 type: 'High Performers',
-                desc: 'Semax and Selank for cognitive edge. DSIP for optimal sleep architecture. The neural and recovery stack for sustained peak output.',
+                desc: 'Cognitive edge without stimulants. Semax raises BDNF within days — sharper focus, better memory consolidation. Selank eliminates anxiety without sedation. DSIP deepens sleep architecture and overnight GH output.',
                 protocols: ['Semax', 'Selank', 'DSIP', 'MK-677'],
+                href: '/products?category=Cognitive+Performance',
                 icon: '◎', accent: '#40c0ff',
               },
             ].map((u, i) => {
@@ -741,7 +685,8 @@ export default function Home() {
               const heroImg = thumbImgs[0]
               return (
               <AnimateIn key={u.type} type="up" delay={i * 100}>
-              <div className="card rounded-2xl overflow-hidden flex flex-col h-full group">
+              <Link href={u.href} className="block h-full">
+              <div className="card rounded-2xl overflow-hidden flex flex-col h-full group cursor-pointer">
                 {/* Product image header */}
                 {heroImg && (
                   <div className="relative overflow-hidden flex-shrink-0" style={{ height: '120px',
@@ -768,13 +713,20 @@ export default function Home() {
                     <h3 className="text-white font-700 text-[16px] leading-tight">{u.type}</h3>
                   </div>
                   <p className="text-[#8888a0] text-[13px] leading-relaxed mb-4 flex-1">{u.desc}</p>
-                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.05]">
-                    {u.protocols.map(p => (
-                      <span key={p} className="tag text-[11px]" style={{ color: u.accent, borderColor: `${u.accent}25`, background: `${u.accent}08` }}>{p}</span>
-                    ))}
+                  <div className="flex items-center justify-between pt-4 border-t border-white/[0.05]">
+                    <div className="flex flex-wrap gap-1.5">
+                      {u.protocols.map(p => (
+                        <span key={p} className="tag text-[11px]" style={{ color: u.accent, borderColor: `${u.accent}25`, background: `${u.accent}08` }}>{p}</span>
+                      ))}
+                    </div>
+                    <svg className="w-4 h-4 flex-shrink-0 ml-2 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+                    </svg>
                   </div>
                 </div>
               </div>
+              </Link>
               </AnimateIn>
               )
             })}
@@ -838,10 +790,10 @@ export default function Home() {
             <p className="label-gold">Deep Dive</p>
           </div>
           <h2 className="display text-white mb-5" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
-            The Most Powerful Peptides Explained
+            Mechanism, Outcome, Timeline
           </h2>
           <p className="text-[#8888a0] text-[17px] max-w-2xl leading-relaxed mb-14">
-            Understanding the mechanism behind each peptide helps you stack intelligently and set accurate expectations for your protocol.
+            Each peptide has a defined receptor target, a documented outcome, and a measurable timeline. Here's exactly what happens — and when.
           </p>
 
           <div className="space-y-5">
