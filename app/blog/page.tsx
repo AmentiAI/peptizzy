@@ -27,12 +27,47 @@ const categories = [
 
 const articles = [
   {
+    href: '/retatrutide-body-recomposition-looksmaxxing',
+    title: 'Retatrutide for Body Recomposition & Looksmaxxing: The 28.7% Fat Loss Stack',
+    desc: 'What 28.7% body weight reduction looks like in practice — and how stacking retatrutide with CJC-1295/Ipamorelin and GHK-Cu preserves muscle and tightens skin during fat loss.',
+    tags: ['Body Comp', 'Looksmaxxing'],
+    category: 'body-comp',
+    badge: 'New',
+    color: '#6090ff',
+  },
+  {
+    href: '/celebrities-famous-people-using-peptides',
+    title: 'Famous People & Celebrities Using Peptides: Athletes, Actors & Biohackers',
+    desc: 'Joe Rogan, Andrew Huberman, Bryan Johnson, Peter Attia — who uses what, the compounds they discuss publicly, and the protocols behind the results.',
+    tags: ['Looksmaxxing', 'Celebrity'],
+    category: 'looksmaxxing',
+    badge: 'New',
+    color: '#d4a043',
+  },
+  {
+    href: '/looksmaxxing-peptides-women',
+    title: 'Looksmaxxing Peptides for Women: Skin, Body & Anti-Aging Guide',
+    desc: 'Female-specific protocols — GHK-Cu for collagen, SNAP-8 for expression lines, CJC-1295 for body composition, Epithalon for hormonal anti-aging. Dosing adapted for women.',
+    tags: ['Looksmaxxing', 'Women'],
+    category: 'looksmaxxing',
+    badge: 'New',
+    color: '#d4a043',
+  },
+  {
+    href: '/facial-looksmaxxing-peptides-guide',
+    title: 'Facial Looksmaxxing Peptides: GHK-Cu, SNAP-8 & Collagen Protocol',
+    desc: 'Peptides specifically for facial optimization — GHK-Cu collagen mechanisms, SNAP-8 expression line reduction, target area application, and 12-week timeline.',
+    tags: ['Looksmaxxing', 'Skin'],
+    category: 'looksmaxxing',
+    badge: 'New',
+    color: '#d4a043',
+  },
+  {
     href: '/looksmaxxing-routine-daily-protocol',
     title: 'Looksmaxxing Daily Routine: The Complete 2026 Peptide Protocol',
     desc: 'Morning-to-night schedule with exact timings, dosing, and the reasoning behind every decision. GHK-Cu, SNAP-8, CJC-1295, BPC-157.',
     tags: ['Looksmaxxing', 'Protocols'],
     category: 'looksmaxxing',
-    badge: 'New',
     color: '#d4a043',
   },
   {
