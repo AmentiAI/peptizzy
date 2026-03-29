@@ -6,7 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        // /go/ affiliate redirects: already noindex via X-Robots-Tag header,
+        // but disallowing here saves crawl budget — no reason for bots to touch them.
+        disallow: ['/api/', '/go/'],
       },
       { userAgent: 'Googlebot',    allow: '/' },
       { userAgent: 'Bingbot',      allow: '/' },

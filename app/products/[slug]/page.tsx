@@ -7,6 +7,11 @@ import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
 import FaqAccordion from '@/components/FaqAccordion'
 
+// Force static generation — all slugs are known at build time via generateStaticParams.
+// This ensures Vercel serves proper cache-control: public headers instead of private/no-store.
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
 interface Props { params: { slug: string } }
 
 export async function generateStaticParams() {
@@ -26,7 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: p.shortDescription,
       url,
       type: 'website',
-      images: [{ url: p.image, alt: p.name }],
+      siteName: 'PeptidesMuscle',
+      images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: p.name }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -829,7 +835,9 @@ export default function ProductPage({ params }: Props) {
         '@type': 'Offer',
         priceCurrency: 'USD',
         price: product.price.replace(/[^0-9.]/g, ''),
-        url: product.affiliateUrl,
+        // url must be the canonical product page, not the affiliate redirect.
+        // Affiliate URL is blocked/noindex — embedding it in schema confuses Googlebot.
+        url: `https://www.peptidesmuscle.com/products/${product.slug}`,
         availability: 'https://schema.org/InStock',
       },
     },
