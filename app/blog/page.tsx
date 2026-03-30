@@ -27,6 +27,42 @@ const categories = [
 
 const articles = [
   {
+    href: '/tb-500-complete-guide',
+    title: 'TB-500 Complete Guide: Systemic Healing, Dosing & The Wolverine Stack',
+    desc: 'Thymosin Beta-4 analogue that travels systemically to repair tissue throughout the body. Actin regulation, loading protocol, and why TB-500 + BPC-157 is the gold-standard recovery stack.',
+    tags: ['Recovery', 'TB-500'],
+    category: 'recovery',
+    badge: 'New',
+    color: '#40c090',
+  },
+  {
+    href: '/nad-plus-anti-aging-guide',
+    title: 'NAD+: The Anti-Aging Coenzyme That Powers Every Cell',
+    desc: 'Why NAD+ drops 50%+ with age, how sirtuin longevity proteins depend on it, and the complete IV vs. SubQ dosing protocol for cellular restoration.',
+    tags: ['Anti-Aging', 'NAD+'],
+    category: 'anti-aging',
+    badge: 'New',
+    color: '#a060ff',
+  },
+  {
+    href: '/tirzepatide-complete-guide',
+    title: 'Tirzepatide Complete Guide: Dual GIP+GLP-1 Protocol & SURMOUNT Results',
+    desc: 'The dual GIP and GLP-1 receptor agonist showing 20.9% average weight loss in clinical trials. Full titration schedule, side effect management, and body composition data.',
+    tags: ['Weight Loss', 'Tirzepatide'],
+    category: 'body-comp',
+    badge: 'New',
+    color: '#e05080',
+  },
+  {
+    href: '/peptides-cognitive-performance-guide',
+    title: 'Peptides for Cognitive Performance: Brain Optimization Stack Guide',
+    desc: 'NAD+, Epithalon, CJC-1295/Ipamorelin, and BPC-157 for focus, memory, neuroprotection, and reversing cognitive decline. The science and the protocol.',
+    tags: ['Cognitive', 'Anti-Aging'],
+    category: 'anti-aging',
+    badge: 'New',
+    color: '#40c0ff',
+  },
+  {
     href: '/retatrutide-body-recomposition-looksmaxxing',
     title: 'Retatrutide for Body Recomposition & Looksmaxxing: The 28.7% Fat Loss Stack',
     desc: 'What 28.7% body weight reduction looks like in practice — and how stacking retatrutide with CJC-1295/Ipamorelin and GHK-Cu preserves muscle and tightens skin during fat loss.',

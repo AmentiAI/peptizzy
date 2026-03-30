@@ -44,6 +44,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/wolverine-stack-bpc-157-tb-500-guide`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/how-to-inject-peptides-beginners-guide`,          lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/peptide-stacking-guide`,                          lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tb-500-complete-guide`,                           lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/nad-plus-anti-aging-guide`,                       lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/tirzepatide-complete-guide`,                      lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-cognitive-performance-guide`,            lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
   ]
 
   const productPages: MetadataRoute.Sitemap = products.map(p => ({
