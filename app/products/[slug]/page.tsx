@@ -276,7 +276,7 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
-        <div className="grid lg:grid-cols-[460px_1fr] gap-8 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
 
           {/* Info — LEFT */}
           <div>
@@ -289,7 +289,11 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
               {product.name}
             </h1>
             <p className="label text-[#d4a043] mb-6 tracking-[0.18em]">{product.tagline}</p>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed mb-8">{product.shortDescription}</p>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
+          </div>
+
+          {/* BuyBox + Protocol — RIGHT */}
+          <div>
             <BuyBox product={product} />
             <div className="card rounded-2xl p-5 mb-4">
               <p className="label text-[#d4a043] mb-2">Suggested Protocol</p>
@@ -298,21 +302,6 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
             <div className="flex flex-wrap gap-2">
               {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
-          </div>
-
-          {/* Image — RIGHT */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl"
-              style={{ aspectRatio: '1/1', background: 'radial-gradient(ellipse at 40% 60%, rgba(180,55,30,0.18), #0a0a0e)' }}>
-              <Image src={product.image} alt={product.name} fill className="object-contain p-8" priority />
-            </div>
-            {product.badge && (
-              <div className="absolute top-5 right-5">
-                <span className="tag-gold">{product.badge}</span>
-              </div>
-            )}
-            <div className="absolute inset-0 -z-10 scale-75 blur-[100px] opacity-20 rounded-full"
-              style={{ background: 'radial-gradient(ellipse, rgba(220,80,40,0.9), transparent)' }} />
           </div>
         </div>
       </div>
@@ -363,7 +352,7 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
           <div className="flex items-start justify-between gap-8 flex-wrap">
             <div className="flex-1 min-w-[280px]">
               <span className="block text-[11px] uppercase tracking-[0.22em] mb-4" style={{ color: accent }}>
-                {product.category} / Skin Optimization Protocol
+                {product.category} / Research Protocol
               </span>
               <h1 className="font-['Playfair_Display'] font-900 italic text-white leading-[1.05]"
                 style={{ fontSize: 'clamp(42px, 6vw, 82px)' }}>
@@ -399,27 +388,21 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
         </div>
       </div>
 
-      {/* Main split — image left, info right */}
+      {/* Main split — info left, buybox right */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
-        <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl"
-              style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(192,132,252,0.14), #0a0a0e)` }}>
-              <Image src={product.image} alt={product.name} fill className="object-contain p-8" priority />
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
+          <div>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed mb-6">{product.shortDescription}</p>
+            <div className="flex flex-wrap gap-2">
+              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
-            <div className="absolute inset-0 -z-10 scale-75 blur-[100px] opacity-15 rounded-full"
-              style={{ background: `radial-gradient(ellipse, ${accent}, transparent)` }} />
           </div>
 
           <div>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed mb-8">{product.shortDescription}</p>
             <BuyBox product={product} />
             <div className="card rounded-2xl p-5 mb-4">
               <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
               <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
           </div>
         </div>
@@ -429,7 +412,12 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
       <div className="max-w-7xl mx-auto px-6 md:px-10 pb-10">
         <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-5">Expected Results Timeline</p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {LOOKS_TIMELINE.map((t, i) => (
+          {[
+            { week: 'Day 1–3',    result: 'Acute anxiolytic and focusing effects — reduced mental noise and stress' },
+            { week: 'Week 1–2',   result: 'Improved working memory, word retrieval, and mental clarity emerge' },
+            { week: 'Week 3–4',   result: 'Deeper focus, sustained attention, and mood stabilization are consistent' },
+            { week: 'Week 6–8',   result: 'Neuroplasticity adaptations — long-term memory and cognitive baseline improved' },
+          ].map((t, i) => (
             <div key={i} className="rounded-xl p-4 relative overflow-hidden"
               style={{ background: '#0d0d12', border: `1px solid ${accent}18` }}>
               <div className="absolute top-0 left-0 w-full h-0.5" style={{ background: `linear-gradient(90deg, ${accent}80, transparent)` }} />
@@ -476,24 +464,7 @@ function BodyCompHero({ product, stats }: { product: Product; stats: StatItem[] 
         </div>
 
         {/* Product split */}
-        <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl"
-              style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(52,211,153,0.12), #0a0a0e)` }}>
-              <Image src={product.image} alt={product.name} fill className="object-contain p-8" priority />
-            </div>
-            {product.badge && (
-              <div className="absolute top-5 left-5">
-                <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest font-600"
-                  style={{ background: `${accent}18`, border: `1px solid ${accent}40`, color: accent }}>
-                  {product.badge}
-                </span>
-              </div>
-            )}
-            <div className="absolute inset-0 -z-10 scale-75 blur-[100px] opacity-15 rounded-full"
-              style={{ background: `radial-gradient(ellipse, ${accent}, transparent)` }} />
-          </div>
-
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
           <div>
             <div className="flex flex-wrap gap-2 mb-5">
               <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest"
@@ -507,14 +478,17 @@ function BodyCompHero({ product, stats }: { product: Product; stats: StatItem[] 
               {product.name}
             </h1>
             <p className="label mb-6 tracking-[0.18em]" style={{ color: accent }}>{product.tagline}</p>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed mb-8">{product.shortDescription}</p>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
+            </div>
+          </div>
+
+          <div>
             <BuyBox product={product} />
             <div className="card rounded-2xl p-5 mb-4">
               <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
               <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
           </div>
         </div>
@@ -552,24 +526,7 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
 
         {/* Hero split */}
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
-          <div className="grid lg:grid-cols-[1fr_460px] gap-8 lg:gap-14 items-start">
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl"
-                style={{ aspectRatio: '1/1', background: `radial-gradient(ellipse at 50% 65%, rgba(96,165,250,0.15), #0a0a0e)` }}>
-                <Image src={product.image} alt={product.name} fill className="object-contain p-8" priority />
-              </div>
-              {product.badge && (
-                <div className="absolute top-5 left-5">
-                  <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest font-600"
-                    style={{ background: `${accent}18`, border: `1px solid ${accent}40`, color: accent }}>
-                    {product.badge}
-                  </span>
-                </div>
-              )}
-              <div className="absolute inset-0 -z-10 scale-75 blur-[100px] opacity-15 rounded-full"
-                style={{ background: `radial-gradient(ellipse, ${accent}, transparent)` }} />
-            </div>
-
+          <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
             <div>
               <div className="flex flex-wrap gap-2 mb-5">
                 <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest"
@@ -583,14 +540,17 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
                 {product.name}
               </h1>
               <p className="label mb-6 tracking-[0.18em]" style={{ color: accent }}>{product.tagline}</p>
-              <p className="text-[#8888a0] text-[17px] leading-relaxed mb-8">{product.shortDescription}</p>
+              <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
+              <div className="flex flex-wrap gap-2 mt-6">
+                {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
+              </div>
+            </div>
+
+            <div>
               <BuyBox product={product} />
               <div className="card rounded-2xl p-5 mb-4">
                 <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
                 <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
             </div>
           </div>
@@ -643,34 +603,6 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
           <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
         </div>
 
-        {/* Centered image with orbital ring */}
-        <div className="relative flex justify-center mb-12 px-12 sm:px-0">
-          <div className="relative w-full max-w-[340px]" style={{ aspectRatio: '1/1' }}>
-            {/* Outer orbital ring */}
-            <div className="absolute rounded-full pointer-events-none animate-spin"
-              style={{ inset: -48, border: `1px solid ${accent}15`, animationDuration: '25s' }} />
-            {/* Inner ring */}
-            <div className="absolute rounded-full pointer-events-none"
-              style={{ inset: -20, border: `1px solid ${accent}22` }} />
-
-            <div className="relative w-full h-full overflow-hidden rounded-2xl"
-              style={{ background: `radial-gradient(ellipse at 50% 60%, rgba(167,139,250,0.2), #0a0a0e)` }}>
-              <Image src={product.image} alt={product.name} fill className="object-contain p-8" priority />
-            </div>
-
-            {product.badge && (
-              <div className="absolute -top-3 -right-3">
-                <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest font-600"
-                  style={{ background: `${accent}18`, border: `1px solid ${accent}40`, color: accent }}>
-                  {product.badge}
-                </span>
-              </div>
-            )}
-          </div>
-          <div className="absolute inset-0 -z-10 blur-[130px] opacity-10 pointer-events-none"
-            style={{ background: `radial-gradient(ellipse, ${accent}, transparent)` }} />
-        </div>
-
         {/* Stats row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mb-12">
           {stats.map((s, i) => (
@@ -682,8 +614,7 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
         </div>
 
         {/* Buy + protocol in two columns below */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <BuyBox product={product} />
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 max-w-5xl mx-auto">
           <div className="card rounded-2xl p-6">
             <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
             <p className="text-[#8888a0] text-[15px] leading-relaxed mb-4">{product.protocol}</p>
@@ -691,6 +622,7 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
               {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
             </div>
           </div>
+          <BuyBox product={product} />
         </div>
       </div>
     </section>
@@ -702,11 +634,12 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
 function ProductHighlights({ product }: { product: Product }) {
   if (!product.highlights?.length) return null
   const accent =
-    product.category === 'Recovery & Healing' ? '#d4a043'
-    : product.category === 'Looks Maxing'     ? '#c084fc'
-    : product.category === 'Body Composition' ? '#34d399'
-    : product.category === 'Weight Management'? '#60a5fa'
-    : '#a78bfa'
+    product.category === 'Recovery & Healing'     ? '#d4a043'
+    : product.category === 'Cognitive & Nootropic'? '#c084fc'
+    : product.category === 'Growth Peptides'      ? '#34d399'
+    : product.category === 'Fat Loss / Metabolic' ? '#60a5fa'
+    : product.category === 'Anti-Aging & Longevity'? '#a78bfa'
+    : '#d4a043'
 
   return (
     <div className="space-y-4 mb-10">
@@ -754,12 +687,12 @@ function RecoveryCallout() {
 function LooksMaxingCallout() {
   return (
     <div className="rounded-2xl p-6 mb-10" style={{ background: 'rgba(192,132,252,0.06)', border: '1px solid rgba(192,132,252,0.14)' }}>
-      <p className="label mb-4" style={{ color: '#c084fc' }}>Skin Architecture — Where It Works</p>
+      <p className="label mb-4" style={{ color: '#c084fc' }}>Cognitive Enhancement Pathways</p>
       <div className="space-y-3">
         {[
-          { layer: 'Epidermis',   role: 'Surface renewal — accelerates cell turnover and barrier repair' },
-          { layer: 'Dermis',      role: 'Fibroblast activation — collagen and elastin synthesis upregulation' },
-          { layer: 'Hypodermis',  role: 'Structural support — improved scaffolding reduces volume loss' },
+          { layer: 'Neuroprotection',    role: 'Shields neurons from oxidative stress, excitotoxicity, and inflammatory damage' },
+          { layer: 'Neuroplasticity',    role: 'Enhances BDNF and NGF expression — strengthens synaptic connections and memory encoding' },
+          { layer: 'Neurotransmission',  role: 'Modulates dopamine, serotonin, and GABA balance for mood, focus, and calm clarity' },
         ].map((l, i) => (
           <div key={i} className="flex items-start gap-3">
             <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: '#c084fc' }} />
@@ -849,6 +782,63 @@ function AntiAgingCallout() {
   )
 }
 
+/** Default hero — for Blends & Stacks and any other categories */
+function DefaultHero({ product, stats }: { product: Product; stats: StatItem[] }) {
+  const accent = '#d4a043'
+  return (
+    <section className="pt-24 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[600px] h-[500px] pointer-events-none"
+        style={{ background: `radial-gradient(ellipse at 80% 20%, ${accent}06, transparent)` }} />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+        <Breadcrumb product={product} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 relative">
+        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
+          <div>
+            <div className="flex flex-wrap gap-2 mb-5">
+              <span className="tag-gold">{product.category}</span>
+              {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
+            </div>
+            <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-3"
+              style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}>
+              {product.name}
+            </h1>
+            <p className="label text-[#d4a043] mb-6 tracking-[0.18em]">{product.tagline}</p>
+            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
+            </div>
+          </div>
+
+          <div>
+            <BuyBox product={product} />
+            <div className="card rounded-2xl p-5">
+              <p className="label text-[#d4a043] mb-2">Suggested Protocol</p>
+              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats strip */}
+      <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
+          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
+            {stats.map((s, i) => (
+              <div key={i} className="px-3 sm:px-6 first:pl-0 last:pr-0 text-center">
+                <p className="font-['Playfair_Display'] font-900 text-[#d4a043] text-xl sm:text-2xl mb-1">{s.value}</p>
+                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ── MAIN PAGE ───────────────────────────────────────────────────────────────
 
 export default function ProductPage({ params }: Props) {
@@ -915,11 +905,14 @@ export default function ProductPage({ params }: Props) {
       />
 
       {/* ── CATEGORY-SPECIFIC HERO ── */}
-      {cat === 'Recovery & Healing'  && <RecoveryHero   product={product} stats={stats} />}
-      {cat === 'Looks Maxing'        && <LooksMaxingHero product={product} stats={stats} />}
-      {cat === 'Body Composition'    && <BodyCompHero    product={product} stats={stats} />}
-      {cat === 'Weight Management'   && <WeightMgmtHero  product={product} stats={stats} trialData={trialData} />}
-      {cat === 'Anti-Aging'          && <AntiAgingHero   product={product} stats={stats} />}
+      {cat === 'Recovery & Healing'     && <RecoveryHero    product={product} stats={stats} />}
+      {cat === 'Cognitive & Nootropic'  && <LooksMaxingHero product={product} stats={stats} />}
+      {cat === 'Growth Peptides'        && <BodyCompHero     product={product} stats={stats} />}
+      {cat === 'Fat Loss / Metabolic'   && <WeightMgmtHero   product={product} stats={stats} trialData={trialData} />}
+      {cat === 'Anti-Aging & Longevity' && <AntiAgingHero    product={product} stats={stats} />}
+      {(cat === 'Blends & Stacks' || !['Recovery & Healing','Cognitive & Nootropic','Growth Peptides','Fat Loss / Metabolic','Anti-Aging & Longevity'].includes(cat)) && (
+        <DefaultHero product={product} stats={stats} />
+      )}
 
       <div className="rule max-w-7xl mx-auto my-14" />
 
@@ -941,6 +934,13 @@ export default function ProductPage({ params }: Props) {
 
             {/* Product-specific highlights */}
             <ProductHighlights product={product} />
+
+            {/* Category-specific deep-dive callout */}
+            {cat === 'Recovery & Healing'     && <RecoveryCallout />}
+            {cat === 'Cognitive & Nootropic'  && <LooksMaxingCallout />}
+            {cat === 'Growth Peptides'        && <BodyCompCallout />}
+            {cat === 'Fat Loss / Metabolic'   && <WeightMgmtCallout trialData={trialData} />}
+            {cat === 'Anti-Aging & Longevity' && <AntiAgingCallout />}
 
             <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
               style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
@@ -967,14 +967,32 @@ export default function ProductPage({ params }: Props) {
 
             <SynergyPanel product={product} />
 
-            <div className="card-elevated rounded-2xl p-6">
-              <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">Ready to start?</p>
-              <p className="font-['Playfair_Display'] font-900 text-white text-3xl mb-5">{product.price}</p>
-              <a href={`/go/${product.slug}`}
-                          target="_blank" rel="noopener nofollow sponsored"
-                className="btn-primary w-full justify-center py-3.5 text-[13px]">
-                Buy {product.name}
-              </a>
+            <div className="card-elevated rounded-2xl overflow-hidden">
+              <div className="p-6 border-b border-white/[0.06]">
+                <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">Ready to start?</p>
+                <p className="font-['Playfair_Display'] font-900 text-white text-3xl mb-1">{product.price}</p>
+                <p className="text-[#40c090] text-[11px] font-600">✓ 10% off via PeptidesMuscle</p>
+              </div>
+              <div className="p-6">
+                <a href={`/go/${product.slug}`}
+                  target="_blank" rel="noopener nofollow sponsored"
+                  className="btn-primary w-full justify-center py-4 text-[14px] mb-3 relative overflow-hidden group/buy2"
+                  style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
+                  <span className="relative z-10 flex items-center gap-2">
+                    Buy {product.name}
+                    <svg className="w-4 h-4 group-hover/buy2:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                  <span className="absolute inset-0 -translate-x-full group-hover/buy2:translate-x-full transition-transform duration-700 ease-in-out"
+                    style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
+                </a>
+                <div className="flex items-center justify-center gap-3">
+                  <span className="text-[10px] text-[#50505e] uppercase tracking-widest">CoA Verified</span>
+                  <span className="text-[#303040]">·</span>
+                  <span className="text-[10px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
