@@ -40,11 +40,16 @@ const STARTERS = [
 function ProductCard({ p }: { p: PeptideCard }) {
   const accent = CATEGORY_ACCENT[p.category] ?? '#d4a043'
   return (
-    <div className="rounded-xl overflow-hidden flex-shrink-0" style={{
-      width: '180px',
-      background: '#0a0a0e',
-      border: `1px solid ${accent}30`,
-    }}>
+    <Link
+      href={`/products/${p.slug}`}
+      className="rounded-xl overflow-hidden flex-shrink-0 block cursor-pointer active:scale-[0.97] transition-transform duration-150"
+      style={{
+        width: '180px',
+        background: '#0a0a0e',
+        border: `1px solid ${accent}30`,
+        WebkitTapHighlightColor: 'transparent',
+      }}
+    >
       {/* Image */}
       <div className="relative" style={{ height: '110px',
         background: `radial-gradient(ellipse at 50% 70%, ${accent}25, #070709)` }}>
@@ -61,23 +66,22 @@ function ProductCard({ p }: { p: PeptideCard }) {
         <p className="text-white font-700 text-[12px] leading-tight mb-0.5">{p.name}</p>
         <p className="text-[10px] leading-snug mb-2.5" style={{ color: accent }}>{p.tagline}</p>
         <p className="text-[#8888a0] text-[10px] leading-relaxed mb-3 line-clamp-2">{p.short_description}</p>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-2">
           <span className="font-700 text-[12px]" style={{ color: accent }}>{p.price}</span>
         </div>
-        <div className="flex gap-1.5 mt-2">
-          <Link href={`/products/${p.slug}`}
-            className="flex-1 text-center text-[10px] py-1.5 rounded-lg font-600 transition-colors"
-            style={{ background: 'rgba(255,255,255,0.06)', color: '#c0c0d0', border: '1px solid rgba(255,255,255,0.08)' }}>
-            Details
-          </Link>
-          <a href={`/go/${p.slug}`} target="_blank" rel="noopener nofollow sponsored"
-            className="flex-1 text-center text-[10px] py-1.5 rounded-lg font-700 transition-all"
-            style={{ background: `linear-gradient(135deg, #c08020, #e8b840)`, color: '#07070a' }}>
-            Buy
-          </a>
-        </div>
+        {/* Buy button — stopPropagation so it opens Phiogen instead of the product page */}
+        <a
+          href={`/go/${p.slug}`}
+          target="_blank"
+          rel="noopener nofollow sponsored"
+          onClick={e => e.stopPropagation()}
+          className="block w-full text-center text-[10px] py-2 rounded-lg font-700 transition-all active:scale-95"
+          style={{ background: `linear-gradient(135deg, #c08020, #e8b840)`, color: '#07070a' }}
+        >
+          Buy Now
+        </a>
       </div>
-    </div>
+    </Link>
   )
 }
 
