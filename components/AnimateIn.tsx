@@ -18,7 +18,16 @@ export default function AnimateIn({
 
   useEffect(() => {
     const el = ref.current
-    if (!el) return
+    if (!el || !('IntersectionObserver' in window)) return
+
+    // If already visible in viewport, skip hiding entirely
+    const rect = el.getBoundingClientRect()
+    if (rect.top < window.innerHeight * 0.95) {
+      return // already visible — no animation needed
+    }
+
+    // Below fold: add hidden state, then reveal when scrolled into view
+    el.classList.add(`ani-${type}`)
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -31,10 +40,10 @@ export default function AnimateIn({
     )
     obs.observe(el)
     return () => obs.disconnect()
-  }, [delay, threshold])
+  }, [delay, type, threshold])
 
   return (
-    <div ref={ref} className={`ani-${type} ${className}`}>
+    <div ref={ref} className={className}>
       {children}
     </div>
   )

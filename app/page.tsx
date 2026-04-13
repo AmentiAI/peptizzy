@@ -1,10 +1,9 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import ProductCard from '@/components/ProductCard'
 import AnimateIn from '@/components/AnimateIn'
+import HomeTabs from '@/components/HomeTabs'
+import HomeFAQ from '@/components/HomeFAQ'
 import { products, getFeaturedProducts } from '@/lib/products'
 
 /* ─── Marquee ─── */
@@ -29,31 +28,6 @@ function Marquee() {
   )
 }
 
-/* ─── FAQ item ─── */
-function FAQ({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="border-b border-white/[0.06]">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-5 text-left gap-4"
-      >
-        <span className="text-white font-600 text-[16px] leading-snug">{q}</span>
-        <svg
-          className={`w-5 h-5 text-[#d4a043] flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-45' : ''}`}
-          fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4"/>
-        </svg>
-      </button>
-      {open && (
-        <p className="text-[#8888a0] text-[15px] leading-relaxed pb-5 pr-8">{a}</p>
-      )}
-    </div>
-  )
-}
-
-const TABS = ['All', 'Fat Loss / Metabolic', 'Growth Peptides', 'Recovery & Healing', 'Anti-Aging & Longevity', 'Cognitive & Nootropic', 'Blends & Stacks']
-
 const CATEGORY_ACCENT: Record<string, string> = {
   'Looks Maxing':           '#d4a043',
   'Body Composition':       '#6090ff',
@@ -67,11 +41,7 @@ const CATEGORY_ACCENT: Record<string, string> = {
 function accentFor(cat: string) { return CATEGORY_ACCENT[cat] ?? '#d4a043' }
 
 export default function Home() {
-  const [tab, setTab] = useState('All')
   const featured = getFeaturedProducts()
-  const grid = tab === 'All'
-    ? products.slice(0, 9)
-    : products.filter(p => p.category === tab).slice(0, 9)
 
   return (
     <div className="bg-[#07070a]">
@@ -79,27 +49,27 @@ export default function Home() {
       {/* ══════════════════════════════════════════
           1. HERO
       ══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="spot spot-pulse w-[560px] h-[400px] bg-[#d4a043] opacity-[0.055] -top-20 left-[15%]" />
         <div className="spot spot-pulse-2 w-[400px] h-[400px] bg-[#6030d0] opacity-[0.04] top-[35%] right-[5%]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-20 sm:pt-32 pb-10 sm:pb-16 w-full">
-          <div className="grid lg:grid-cols-[1fr_560px] gap-12 xl:gap-16 items-center min-h-[70vh]">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-24 sm:pt-28 pb-8 sm:pb-12 w-full">
+          <div className="grid lg:grid-cols-[1fr_560px] gap-10 xl:gap-14 items-start">
 
-            <div>
-              <div className="flex items-center gap-3 mb-8 hero-sub" style={{ animationDelay: '0s', opacity: 0 }}>
+            <div className="lg:pt-4">
+              <div className="flex items-center gap-3 mb-6 hero-sub" style={{ animationDelay: '0s', opacity: 0 }}>
                 <div className="w-6 h-[1px] bg-[#d4a043]" />
                 <p className="mono text-[#d4a043] text-[12px] tracking-[0.2em] uppercase">Elite Peptide Protocols</p>
               </div>
-              <h1 className="mb-8">
+              <h1 className="mb-6">
                 <span className="display hero-line hero-line-1 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Peak</span>
                 <span className="display-italic hero-line hero-line-2 block gold-shimmer" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Physical</span>
                 <span className="display hero-line hero-line-3 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Form.</span>
               </h1>
-              <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-10 hero-sub">
+              <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-8 hero-sub">
                 GHK-Cu adds 121% skin density. Tirzepatide removes 22.5% body weight. CJC-1295 optimizes growth hormone naturally. Measurable outcomes — documented protocols, CoA-verified compounds.
               </p>
-              <div className="flex flex-wrap gap-3 mb-12 hero-cta">
+              <div className="flex flex-wrap gap-3 mb-8 hero-cta">
                 <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary text-[13px] px-7 py-3.5 glow-pulse">
@@ -524,30 +494,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="scroll-x-mobile mb-10">
-            {TABS.map(t => (
-              <button key={t} onClick={() => setTab(t)}
-                className={`text-[13px] px-4 py-2 rounded-full font-500 transition-all duration-150 whitespace-nowrap flex-shrink-0 ${
-                  tab === t
-                    ? 'bg-[#d4a043] text-[#07070a] font-700'
-                    : 'bg-white/[0.04] border border-white/[0.07] text-[#8888a0] hover:text-white hover:border-white/[0.15]'
-                }`}>
-                {t}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {grid.map((p, i) => (
-              <AnimateIn key={p.slug} type="up" delay={i * 60}>
-                <ProductCard product={p} index={i} />
-              </AnimateIn>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/products" className="btn-secondary text-[13px] px-8 py-3.5">View All 139 Peptides</Link>
-          </div>
+          <HomeTabs />
         </div>
       </section>
 
@@ -1028,22 +975,7 @@ export default function Home() {
           </p>
 
           <div className="card-elevated rounded-2xl px-7 py-2">
-            <FAQ q="What exactly are peptides and how do they differ from supplements?"
-              a="Peptides are short chains of amino acids — typically 2–50 in length — that function as biological signaling molecules. Unlike conventional supplements that provide nutrients, peptides communicate directly with cellular receptors to trigger specific biological responses: collagen synthesis, growth hormone release, melanin production, tissue regeneration. The key difference is precision. A peptide doesn't improve conditions that may support a response — it directly triggers the response itself." />
-            <FAQ q="Are peptides safe to use?"
-              a="The peptides featured here have well-characterized safety profiles with years of clinical and community use. Most, like BPC-157 and GHK-Cu, are naturally occurring in the human body or are close analogues of endogenous compounds. Side effect profiles are typically minimal when used within established dosing ranges. Every peptide on this site is independently certificate-of-analysis verified for purity before being listed. Consult your healthcare provider before beginning any new protocol." />
-            <FAQ q="How long until I see results from peptide protocols?"
-              a="Timeline varies significantly by peptide and goal. BPC-157 for acute injuries can produce noticeable effects within 1–2 weeks. GHK-Cu shows skin improvements at 4–8 weeks with compounding results over 6 months. Ipamorelin + CJC-1295 produces sleep improvements within the first week and body composition changes visible at 8–12 weeks. Epithalon's anti-aging effects accumulate over months. Most protocols require consistent use of 3–6 months to fully appreciate the depth of transformation." />
-            <FAQ q="Can peptides be stacked together?"
-              a="Yes — and strategic stacking is often where the most significant results are achieved. Compounds with complementary mechanisms synergize powerfully: CJC-1295 + Ipamorelin produce greater GH pulses than either alone. BPC-157 + TB-500 cover both local and systemic tissue repair. GHK-Cu + Epithalon together create a comprehensive anti-aging and skin optimization protocol. Our Stacks page provides expert-designed combinations for every optimization goal." />
-            <FAQ q="What's the difference between BPC-157 and TB-500?"
-              a="Both are tissue repair peptides, but with different mechanisms and scopes. BPC-157 (Body Protection Compound) works primarily through local mechanisms — promoting blood vessel formation and growth factor receptor activation near the administration site. It's particularly effective for gut health, tendon injuries, and neural recovery. TB-500 (Thymosin Beta-4 analogue) works systemically — traveling through the bloodstream to identify and repair damage throughout the body. It excels at improving flexibility and range of motion. Most advanced recovery protocols use both simultaneously." />
-            <FAQ q="Do I need to inject peptides or are there other options?"
-              a="Most peptides require subcutaneous injection for optimal bioavailability — this is a simple, shallow injection into fatty tissue that most users find straightforward. MK-677 is a notable exception as it's fully orally bioavailable and taken as a capsule. Semax and Selank are effective intranasally. BPC-157 has an oral form that's effective specifically for gut-related benefits. For injection-averse users, MK-677 provides many of the GH optimization benefits through oral dosing." />
-            <FAQ q="What peptides are best for looks maxing specifically?"
-              a="The core looks maxing peptide stack includes: GHK-Cu for collagen synthesis and skin quality, Melanotan 2 for deep eumelanin pigmentation and libido, Ipamorelin + CJC-1295 for GH-optimized body composition, and Epithalon for cellular anti-aging. BPC-157 serves as a foundation compound to optimize the cellular environment. This combination addresses all four pillars of physical optimization: skin structure, pigmentation, hormones, and cellular age." />
-            <FAQ q="Where can I buy the peptides featured on this site?"
-              a="All peptides on PeptidesMuscle are sourced through a premium research peptide supplier — pharmaceutical-grade lyophilized powder, independent certificate of analysis testing on every product, and fast shipping. Every product card links directly to the product page." />
+            <HomeFAQ />
           </div>
 
           <div className="text-center mt-10">

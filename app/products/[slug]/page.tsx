@@ -270,12 +270,12 @@ function SynergyPanel({ product }: { product: Product }) {
 /** Recovery & Healing — reversed split, amber-red glow, tissue strip */
 function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] }) {
   return (
-    <section className="pt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+    <section className="pt-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
         <Breadcrumb product={product} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
         <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
 
           {/* Info — LEFT */}
@@ -341,14 +341,14 @@ function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] 
 function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem[] }) {
   const accent = '#c084fc'
   return (
-    <section className="pt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+    <section className="pt-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
         <Breadcrumb product={product} />
       </div>
 
       {/* Editorial masthead */}
       <div className="border-b border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
           <div className="flex items-start justify-between gap-8 flex-wrap">
             <div className="flex-1 min-w-[280px]">
               <span className="block text-[11px] uppercase tracking-[0.22em] mb-4" style={{ color: accent }}>
@@ -389,7 +389,7 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
       </div>
 
       {/* Main split — info left, buybox right */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
         <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
           <div>
             <p className="text-[#8888a0] text-[17px] leading-relaxed mb-6">{product.shortDescription}</p>
@@ -439,21 +439,21 @@ function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem
 function BodyCompHero({ product, stats }: { product: Product; stats: StatItem[] }) {
   const accent = '#34d399'
   return (
-    <section className="pt-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+    <section className="pt-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
         <Breadcrumb product={product} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
         {/* Performance header */}
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-6">
           <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, transparent, ${accent}40)` }} />
           <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>Performance Profile</span>
           <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
         </div>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
           {stats.map((s, i) => (
             <div key={i} className="card-elevated rounded-2xl p-5 sm:p-6 text-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-[0.04]" style={{ background: `radial-gradient(circle at 50% 110%, ${accent}, transparent)` }} />
@@ -519,13 +519,13 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
         </div>
       )}
 
-      <div className="pt-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+      <div className="pt-4">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
           <Breadcrumb product={product} />
         </div>
 
         {/* Hero split */}
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
           <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
             <div>
               <div className="flex flex-wrap gap-2 mb-5">
@@ -578,18 +578,18 @@ function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats
 function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[] }) {
   const accent = '#a78bfa'
   return (
-    <section className="pt-24 relative overflow-hidden">
+    <section className="pt-16 relative overflow-hidden">
       {/* Background cosmic glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{ background: `radial-gradient(circle, ${accent}08, transparent)` }} />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3 relative">
         <Breadcrumb product={product} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 relative">
         {/* Centered header */}
-        <div className="text-center mb-10 max-w-3xl mx-auto">
+        <div className="text-center mb-8 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="h-px w-16" style={{ background: `${accent}40` }} />
             <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>{product.category}</span>
@@ -604,7 +604,7 @@ function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[]
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mb-8">
           {stats.map((s, i) => (
             <div key={i} className="card rounded-xl p-4 text-center">
               <p className="font-['Playfair_Display'] font-900 text-xl mb-1" style={{ color: accent }}>{s.value}</p>
@@ -786,15 +786,15 @@ function AntiAgingCallout() {
 function DefaultHero({ product, stats }: { product: Product; stats: StatItem[] }) {
   const accent = '#d4a043'
   return (
-    <section className="pt-24 relative overflow-hidden">
+    <section className="pt-16 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[500px] pointer-events-none"
         style={{ background: `radial-gradient(ellipse at 80% 20%, ${accent}06, transparent)` }} />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
         <Breadcrumb product={product} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 relative">
         <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
           <div>
             <div className="flex flex-wrap gap-2 mb-5">
@@ -914,10 +914,10 @@ export default function ProductPage({ params }: Props) {
         <DefaultHero product={product} stats={stats} />
       )}
 
-      <div className="rule max-w-7xl mx-auto my-14" />
+      <div className="rule max-w-7xl mx-auto my-8" />
 
       {/* ── DEEP DIVE ── */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 pb-20">
+      <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
         <div className="grid lg:grid-cols-[1fr_360px] gap-8 lg:gap-14">
 
           {/* Main */}
