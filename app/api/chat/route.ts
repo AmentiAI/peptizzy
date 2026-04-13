@@ -123,6 +123,41 @@ function cleanMarkdown(text: string): string {
     .trim()
 }
 
+/** Convert a DB row or allProducts entry into a chat product card using live Phiogen data. */
+function toProductCard(slug: string): PeptideRow | null {
+  const p = allProducts.find(x =>
+    x.slug === slug ||
+    x.slug.startsWith(slug.replace(/-\d+mg.*$/, '')) ||
+    slug.startsWith(x.slug.replace(/-\d+mg.*$/, ''))
+  )
+  if (!p) return null
+  return {
+    id: 0,
+    slug: p.slug,
+    name: p.name,
+    category: p.category,
+    price: p.price,
+    tagline: p.tagline,
+    short_description: p.shortDescription,
+    image: p.image,
+    affiliate_url: `https://phiogen.is/products/${p.slug}?ref=PEPS`,
+    featured: p.featured ?? false,
+  }
+}
+
+/** Search allProducts directly by keyword (fallback when DB is unavailable). */
+function searchLocal(query: string, limit = 4): PeptideRow[] {
+  const kw = query.toLowerCase()
+  const scored = allProducts.map(p => {
+    const text = `${p.name} ${p.category} ${p.tagline} ${p.shortDescription}`.toLowerCase()
+    const score = (text.includes(kw) ? 2 : 0) +
+      kw.split(/\s+/).filter(w => w.length > 2 && text.includes(w)).length +
+      (p.featured ? 1 : 0)
+    return { p, score }
+  }).filter(x => x.score > 0).sort((a, b) => b.score - a.score)
+  return scored.slice(0, limit).map(x => toProductCard(x.p.slug)!).filter(Boolean)
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json()
@@ -148,10 +183,21 @@ export async function POST(req: NextRequest) {
         const fn = call as { id: string; function: { name: string; arguments: string } }
         if (fn.function.name === 'search_peptides') {
           const { query } = JSON.parse(fn.function.arguments) as { query: string }
-          const results = await searchPeptides(query)
 
-          // If search returned nothing, fall back to featured products
-          const rows = results.length > 0 ? results : await getFeaturedPeptides()
+          // Try DB first, fall back to local allProducts search
+          let dbRows: PeptideRow[] = []
+          try { dbRows = await searchPeptides(query) } catch { /* db unavailable */ }
+          const dbFeatured: PeptideRow[] = []
+          if (dbRows.length === 0) {
+            try { const f = await getFeaturedPeptides(); dbFeatured.push(...f) } catch { /* db unavailable */ }
+          }
+          const baseRows = dbRows.length > 0 ? dbRows : dbFeatured
+
+          // Always remap through allProducts for fresh Phiogen data
+          const rows: PeptideRow[] = baseRows.length > 0
+            ? baseRows.map(r => toProductCard(r.slug) ?? r).filter(Boolean)
+            : searchLocal(query)
+
           for (const r of rows) {
             if (!products.some(p => p.slug === r.slug)) products.push(r)
           }
@@ -176,10 +222,9 @@ export async function POST(req: NextRequest) {
           )
 
           if (product) {
-            // Surface as a product card
-            const dbRows = await searchPeptides(product.name)
-            const match = dbRows.find(r => r.slug === product.slug)
-            if (match && !products.some(p => p.slug === match.slug)) products.push(match)
+            // Always use fresh Phiogen data from allProducts
+            const card = toProductCard(product.slug)
+            if (card && !products.some(p => p.slug === card.slug)) products.push(card)
 
             toolMessages.push({
               role: 'tool',
@@ -224,8 +269,13 @@ Page: /stacks/${s.id}`
 
           toolMessages.push({ role: 'tool', tool_call_id: fn.id, content })
         } else if (fn.function.name === 'get_featured_peptides') {
-          const featured = await getFeaturedPeptides()
-          for (const r of featured) {
+          let featured: PeptideRow[] = []
+          try { featured = await getFeaturedPeptides() } catch { /* db unavailable */ }
+          // Remap through allProducts; fall back to local featured if DB empty
+          const mapped = featured.length > 0
+            ? featured.map(r => toProductCard(r.slug) ?? r)
+            : allProducts.filter(p => p.featured).map(p => toProductCard(p.slug)!).filter(Boolean)
+          for (const r of mapped) {
             if (!products.some(p => p.slug === r.slug)) products.push(r)
           }
 
@@ -264,7 +314,12 @@ Page: /stacks/${s.id}`
     const lastUserMsg = [...messages].reverse().find((m: { role: string }) => m.role === 'user')
     const isGoalRelated = lastUserMsg && /goal|peptide|fat|muscle|skin|recover|age|energy|sleep|look|weight|heal|collagen|start|help|best|what|which|recommend/i.test(lastUserMsg.content)
     if (isGoalRelated) {
-      products = await getFeaturedPeptides()
+      try {
+        const featured = await getFeaturedPeptides()
+        products = featured.map(r => toProductCard(r.slug) ?? r)
+      } catch {
+        products = allProducts.filter(p => p.featured).map(p => toProductCard(p.slug)!).filter(Boolean)
+      }
     }
 
     return NextResponse.json({ reply: cleanMarkdown(msg.content ?? ''), products })

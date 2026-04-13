@@ -22,14 +22,12 @@ interface Message {
 }
 
 const CATEGORY_ACCENT: Record<string, string> = {
-  'Looks Maxing':           '#d4a043',
-  'Body Composition':       '#6090ff',
-  'Weight Management':      '#e05080',
+  'Fat Loss / Metabolic':   '#e05080',
+  'Growth Peptides':        '#6090ff',
   'Recovery & Healing':     '#40c090',
-  'Anti-Aging':             '#a060ff',
-  'Cognitive Performance':  '#40c0ff',
-  'Immune & Vitality':      '#60d090',
-  'Performance & Vitality': '#ff8040',
+  'Anti-Aging & Longevity': '#a060ff',
+  'Cognitive & Nootropic':  '#40c0ff',
+  'Blends & Stacks':        '#d4a043',
 }
 
 const STARTERS = [
@@ -67,12 +65,12 @@ function ProductCard({ p }: { p: PeptideCard }) {
           <span className="font-700 text-[12px]" style={{ color: accent }}>{p.price}</span>
         </div>
         <div className="flex gap-1.5 mt-2">
-          <Link href={`/products/${p.slug}`} target="_blank"
+          <Link href={`/products/${p.slug}`}
             className="flex-1 text-center text-[10px] py-1.5 rounded-lg font-600 transition-colors"
             style={{ background: 'rgba(255,255,255,0.06)', color: '#c0c0d0', border: '1px solid rgba(255,255,255,0.08)' }}>
             Details
           </Link>
-          <a href={p.affiliate_url} target="_blank" rel="noopener noreferrer"
+          <a href={`/go/${p.slug}`} target="_blank" rel="noopener nofollow sponsored"
             className="flex-1 text-center text-[10px] py-1.5 rounded-lg font-700 transition-all"
             style={{ background: `linear-gradient(135deg, #c08020, #e8b840)`, color: '#07070a' }}>
             Buy

@@ -152,22 +152,31 @@ function BuyBox({ product }: { product: Product }) {
   return (
     <div className="card-elevated rounded-2xl overflow-hidden mb-5">
       {/* Product image */}
-      <div className="relative w-full flex items-center justify-center py-8 px-6"
-        style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.10), rgba(13,13,18,0) 70%), #0d0d12' }}>
+      <div className="relative w-full flex items-center justify-center py-10 px-6"
+        style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.13), rgba(13,13,18,0) 70%), #0d0d12' }}>
         {product.badge && (
           <div className="absolute top-4 left-4">
             <span className="tag-gold text-[11px]">{product.badge}</span>
           </div>
         )}
-        <div className="relative w-52 h-52">
+        {/* 10% off badge */}
+        <div className="absolute top-4 right-4">
+          <span className="text-[10px] font-700 px-2 py-1 rounded-full"
+            style={{ background: 'rgba(64,192,144,0.15)', color: '#40c090', border: '1px solid rgba(64,192,144,0.3)' }}>
+            10% OFF
+          </span>
+        </div>
+        <div className="relative w-60 h-60">
           <Image
             src={product.image}
             alt={product.name}
             fill
             priority
-            className="object-contain drop-shadow-[0_8px_32px_rgba(212,160,67,0.18)]"
+            className="object-contain drop-shadow-[0_12px_40px_rgba(212,160,67,0.22)]"
+            style={{ animation: 'float 4s ease-in-out infinite' }}
           />
         </div>
+        <style>{`@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }`}</style>
       </div>
 
       {/* Info + CTA */}
@@ -178,7 +187,7 @@ function BuyBox({ product }: { product: Product }) {
             <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: 'clamp(30px, 8vw, 40px)', lineHeight: '1' }}>
               {product.price}
             </p>
-            <p className="text-[#50505e] text-[11px] mt-1">10% off via PeptidesMuscle</p>
+            <p className="text-[#40c090] text-[11px] font-600 mt-1">✓ 10% off via PeptidesMuscle</p>
           </div>
           <div className="text-right">
             <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Purity</p>
@@ -188,8 +197,17 @@ function BuyBox({ product }: { product: Product }) {
 
         <a href={`/go/${product.slug}`}
           target="_blank" rel="noopener nofollow sponsored"
-          className="btn-primary w-full justify-center py-4 text-[14px] mb-3">
-          Buy {product.name} Now
+          className="btn-primary w-full justify-center py-4 text-[15px] mb-3 relative overflow-hidden group/buy"
+          style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
+          <span className="relative z-10 flex items-center gap-2">
+            Buy {product.name} Now
+            <svg className="w-4 h-4 group-hover/buy:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
+          {/* Shimmer sweep */}
+          <span className="absolute inset-0 -translate-x-full group-hover/buy:translate-x-full transition-transform duration-700 ease-in-out"
+            style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
         </a>
         <a href={`/go/${product.slug}`}
           target="_blank" rel="noopener nofollow sponsored"
