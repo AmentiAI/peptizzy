@@ -106,25 +106,27 @@ export default function StacksPage() {
                         if (!p) return null
                         return (
                           <Link key={item.slug} href={`/products/${item.slug}`}>
-                            <div className="card flex items-center gap-4 p-4 group">
-                              <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0"
-                                style={{ background: `radial-gradient(circle, ${stack.accent}18, #0d0d11)` }}>
-                                <Image src={p.image} alt={p.name} width={48} height={48}
-                                  className="w-full h-full object-contain p-1 group-hover:scale-105 transition-transform duration-400" />
+                            <div className="card flex items-center gap-5 p-4 group">
+                              <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0"
+                                style={{ background: `radial-gradient(circle, ${stack.accent}22, #0d0d11)` }}>
+                                <Image src={p.image} alt={p.name} width={80} height={80}
+                                  className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-400" />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2.5 mb-0.5">
-                                  <p className="text-white font-600 text-[14px]">{p.name}</p>
+                                <div className="flex flex-wrap items-center gap-2.5 mb-1">
+                                  <p className="text-white font-600 text-[15px]">{p.name}</p>
                                   <span className="text-[10px] px-2 py-0.5 rounded-full font-500"
                                     style={{ background: `${stack.accent}18`, color: stack.accent }}>
                                     {item.role}
                                   </span>
                                 </div>
-                                <p className="text-[#8888a0] text-[13px] truncate">{p.shortDescription.slice(0, 75)}…</p>
-                              </div>
-                              <div className="text-right flex-shrink-0">
+                                <p className="text-[#8888a0] text-[13px] mb-1.5">{p.shortDescription.slice(0, 90)}…</p>
                                 <p className="mono text-[11px] text-[#50505e]">{item.timing}</p>
                               </div>
+                              <svg className="w-4 h-4 text-[#50505e] group-hover:text-white group-hover:translate-x-1 transition-all flex-shrink-0"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
+                              </svg>
                             </div>
                           </Link>
                         )

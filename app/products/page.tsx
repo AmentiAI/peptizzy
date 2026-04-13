@@ -8,14 +8,12 @@ import ProductCard from '@/components/ProductCard'
 import { products, categories, getFeaturedProducts } from '@/lib/products'
 
 const CATEGORY_ACCENT: Record<string, string> = {
-  'Looks Maxing':           '#d4a043',
-  'Body Composition':       '#6090ff',
-  'Weight Management':      '#e05080',
+  'Fat Loss / Metabolic':   '#e05080',
+  'Growth Peptides':        '#6090ff',
   'Recovery & Healing':     '#40c090',
-  'Anti-Aging':             '#a060ff',
-  'Cognitive Performance':  '#40c0ff',
-  'Immune & Vitality':      '#60d090',
-  'Performance & Vitality': '#ff8040',
+  'Anti-Aging & Longevity': '#a060ff',
+  'Cognitive & Nootropic':  '#40c0ff',
+  'Blends & Stacks':        '#d4a043',
 }
 
 function Content() {

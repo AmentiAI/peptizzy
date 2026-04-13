@@ -27,6 +27,24 @@ const categories = [
 
 const articles = [
   {
+    href: '/cagrilintide-semaglutide-complete-guide',
+    title: 'CagriSema (Cagrilintide + Semaglutide) Complete Guide: Dual-Pathway Fat Loss',
+    desc: 'Two completely different satiety pathways — GLP-1 and amylin — activated simultaneously for additive fat loss beyond semaglutide alone. Full protocol, titration schedule, and comparison to tirzepatide.',
+    tags: ['Weight Loss', 'GLP-1'],
+    category: 'body-comp',
+    badge: 'New',
+    color: '#e05080',
+  },
+  {
+    href: '/bacteriostatic-water-peptide-reconstitution-guide',
+    title: 'Bacteriostatic Water: How to Reconstitute Peptides Safely — Complete Guide',
+    desc: 'The non-negotiable foundation for every injectable peptide protocol. Reconstitution math, concentration calculations, sterile technique, and storage guidelines for every compound.',
+    tags: ['Protocols', 'Beginner'],
+    category: 'protocols',
+    badge: 'New',
+    color: '#40c090',
+  },
+  {
     href: '/tb-500-complete-guide',
     title: 'TB-500 Complete Guide: Systemic Healing, Dosing & The Wolverine Stack',
     desc: 'Thymosin Beta-4 analogue that travels systemically to repair tissue throughout the body. Actin regulation, loading protocol, and why TB-500 + BPC-157 is the gold-standard recovery stack.',

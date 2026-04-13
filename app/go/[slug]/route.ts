@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { products } from '@/lib/products'
 
-const SHOP_URL = 'https://apollopeptidesciences.com/?rfsn=9016964.3f1b1e'
+const SHOP_URL = 'https://phiogen.is/?ref=PEPS'
 
 // Build slug → affiliateUrl map from products
 const AFFILIATE_MAP: Record<string, string> = {

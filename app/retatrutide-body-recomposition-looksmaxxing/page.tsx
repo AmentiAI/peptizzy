@@ -50,8 +50,8 @@ const jsonLd = {
   ],
 }
 
-const AFF_BASE = 'https://apollopeptidesciences.com/product'
-const REF = '?rfsn=9016964.3f1b1e'
+const AFF_BASE = 'https://phiogen.is/products'
+const REF = '?ref=PEPS'
 
 const weightExamples = [
   { start: '160 lbs', loss: '45.9 lbs', end: '~114 lbs', body: 'Lean to very lean. Dramatic facial definition, visible muscle striations at rest.' },

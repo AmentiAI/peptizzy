@@ -72,7 +72,7 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://apollopeptidesciences.com/product/${s}/?rfsn=9016964.3f1b1e`
+const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#40c090'
 
 const mechanisms = [

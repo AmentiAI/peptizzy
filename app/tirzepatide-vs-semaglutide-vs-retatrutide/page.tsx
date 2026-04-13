@@ -25,7 +25,7 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://apollopeptidesciences.com/product/${s}/?rfsn=9016964.3f1b1e`
+const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 const compounds = [
   { name: 'Semaglutide', receptors: 'GLP-1', loss: '13.7–14.9%', trial: 'STEP-1 (2021)', approved: 'Yes — Wegovy/Ozempic', dosing: 'Once weekly SubQ', sideEffect: 'Nausea, GI', cost: '$$', color: '#6090ff', slug: 'semaglutide', aff: AFF('glp-1s-5mg') },

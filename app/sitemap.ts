@@ -48,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/nad-plus-anti-aging-guide`,                       lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/tirzepatide-complete-guide`,                      lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/peptides-cognitive-performance-guide`,            lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/cagrilintide-semaglutide-complete-guide`,         lastModified: '2026-04-01',  changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/bacteriostatic-water-peptide-reconstitution-guide`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.8 },
   ]
 
   const productPages: MetadataRoute.Sitemap = products.map(p => ({

@@ -33,7 +33,7 @@ const timeline = [
   { week: 'Week 13–16', title: 'Extended Protocol (Optional)', what: 'For those running 16-week cycles: marginal additional body composition gains with diminishing returns. Primary value of extended protocols is maintenance and preventing the 4-week off-cycle regression. At 16 weeks, receptor sensitivity maintenance (4+ weeks off) becomes important.', icon: '📅' },
 ]
 
-const AFF = (s: string) => `https://apollopeptidesciences.com/product/${s}/?rfsn=9016964.3f1b1e`
+const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 export default function CjcTimelinePage() {
   return (

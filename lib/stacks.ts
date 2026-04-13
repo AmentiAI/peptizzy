@@ -50,25 +50,25 @@ export const stacks: Stack[] = [
     outcomes: ['Increased skin density & collagen', 'Reduced expression lines', 'Accelerated tissue recovery', 'Cellular anti-aging', 'Improved skin luminosity'],
     compounds: [
       {
-        slug: 'ghk-cu',
+        slug: 'ghk-cu-50mg',
         role: 'Skin & Collagen Foundation',
         timing: '1–2mg SubQ, 3–5× weekly',
         why: 'GHK-Cu is the structural architect of the stack. It operates directly on dermal fibroblasts — the cells responsible for collagen and elastin synthesis — activating over 4,000 skin-related genes and producing up to a 121% increase in skin density. This is the compound that changes the underlying architecture of your skin rather than just its surface appearance. No other peptide comes close to GHK-Cu\'s breadth of skin optimization data.',
       },
       {
-        slug: 'snap-8',
+        slug: 'snap-8-10mg',
         role: 'Anti-Wrinkle Neuromuscular Inhibitor',
         timing: 'Applied topically twice daily to target areas',
         why: 'SNAP-8 complements GHK-Cu by targeting the second major category of wrinkle formation: dynamic expression lines. While GHK-Cu rebuilds the dermal collagen structure, SNAP-8 blocks the neuromuscular mechanism that etches expression lines into the skin — reducing wrinkle depth by up to 63%. Together, the two compounds address both structural collagen decline and neuromuscular expression damage simultaneously.',
       },
       {
-        slug: 'bpc-157',
+        slug: 'bpc-157-10mg',
         role: 'Cellular Repair & Anti-Inflammatory Foundation',
         timing: '200–300mcg SubQ, daily',
         why: 'BPC-157 is the foundation layer that makes everything else work better. It reduces systemic inflammation — creating the optimal cellular environment in which GHK-Cu stimulates collagen and SNAP-8 softens expression lines. BPC-157 also directly supports skin healing, wound repair, and connective tissue integrity, while optimizing gut function for better absorption of all compounds.',
       },
       {
-        slug: 'epithalon',
+        slug: 'epitalon-50mg',
         role: 'Telomere & Cellular Longevity Layer',
         timing: '5–10mg SubQ, daily × 10–20 days (cycle within cycle)',
         why: 'Epithalon addresses the cellular aging dimension — telomere shortening — that underlies the progressive decline in skin quality, regenerative capacity, and hormonal output that drives visible aging. By activating telomerase and restoring melatonin-driven sleep architecture, Epithalon amplifies the cellular renewal environment that GHK-Cu and BPC-157 create at the tissue level. The combination produces both structural and biological age improvements simultaneously.',
@@ -123,19 +123,19 @@ Epithalon provides the longevity dimension that surface-level skin compounds can
     outcomes: ['Significant lean muscle gains', 'Reduced body fat', 'Sharper muscle definition', 'Enhanced recovery capacity', 'Dramatically improved sleep quality'],
     compounds: [
       {
-        slug: 'cjc-1295-ipamorelin',
+        slug: 'ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg',
         role: 'GH Axis Foundation — Dual Receptor Stimulation',
         timing: '100mcg each component, 2–3× daily (from blended vial)',
         why: 'The CJC-1295/Ipamorelin blend is the cornerstone of this stack — simultaneously activating the GHRH receptor (CJC-1295) and the ghrelin receptor (Ipamorelin) to produce GH pulses greater than either compound alone. Ipamorelin\'s selectivity is critical: zero cortisol, prolactin, or ACTH elevation means the full anabolic and lipolytic benefit of GH optimization is captured without hormonal interference. The pre-blended 5mg/5mg vial eliminates the complexity of managing two separate compounds.',
       },
       {
-        slug: 'igf-1-lr3',
+        slug: 'igf-1-lr3-1mg',
         role: 'Direct Anabolic Signal — Muscle Cell Level',
         timing: '20–50mcg SubQ or IM, post-workout',
         why: 'IGF-1 LR3 is the downstream executor of GH\'s anabolic effects — the compound that directly tells muscle cells to grow at the cellular level. Where CJC-1295/Ipamorelin drives GH production (and therefore endogenous IGF-1 throughout the day), direct IGF-1 LR3 delivers a concentrated anabolic signal post-workout when muscle cells are maximally receptive. This produces muscle hyperplasia — actual new fiber formation — that GH peptides alone cannot achieve. It\'s the advanced compound that separates this stack from a standard GH protocol.',
       },
       {
-        slug: 'bpc-157',
+        slug: 'bpc-157-10mg',
         role: 'Recovery Infrastructure',
         timing: '200–300mcg SubQ, daily',
         why: 'The higher training intensity enabled by GH optimization creates proportionally higher structural stress. BPC-157 addresses this by accelerating the repair of micro-tears, reducing tendon and ligament inflammation, and optimizing gut integrity for maximum nutrient absorption. It is the compound that makes the training intensity and frequency required for elite body composition transformation sustainable over a 12-week cycle — and the one that protects the connective tissue under heavy loads that serious training demands.',
@@ -190,13 +190,13 @@ The combined effect over 12 weeks is a body composition transformation qualitati
     outcomes: ['Dramatically accelerated healing', 'Reduced chronic inflammation', 'Greater training frequency', 'Joint & connective tissue health', 'Injury resolution'],
     compounds: [
       {
-        slug: 'bpc-157',
+        slug: 'bpc-157-10mg',
         role: 'Local & Systemic Tissue Repair',
         timing: '200–500mcg SubQ, daily',
         why: 'BPC-157 is the cornerstone of every serious recovery protocol. Its multi-mechanism approach — angiogenesis promotion, nitric oxide modulation, growth factor receptor upregulation — creates the most comprehensive healing environment available. For specific injuries, injection near the site dramatically concentrates the healing signal. For systemic optimization, abdominal SubQ provides whole-body anti-inflammatory and repair benefits that protect the entire system.',
       },
       {
-        slug: 'tb-500',
+        slug: 'tb-500-thymosin-beta-4-10mg',
         role: 'Systemic Regeneration & Flexibility',
         timing: '2–2.5mg SubQ, 2–3× weekly',
         why: 'TB-500 provides the systemic healing dimension that BPC-157\'s mechanism cannot fully cover. Where BPC-157 excels locally, TB-500 travels through the bloodstream to reach injury sites throughout the body — upregulating actin expression to accelerate cell migration and tissue reconstruction everywhere damage exists. The combination creates complete coverage: BPC-157 handles the local environment with precision while TB-500 addresses full-body healing from a single injection.',
@@ -249,13 +249,13 @@ For physique athletes, the practical benefit is stark: the Wolverine Stack enabl
     outcomes: ['15–22%+ body weight reduction', 'Powerful appetite suppression', 'Improved insulin sensitivity', 'Reduced visceral fat', 'Improved metabolic markers'],
     compounds: [
       {
-        slug: 'tirzepatide',
+        slug: 'tirzepatide-15mg',
         role: 'Primary Fat Loss Agent — Dual GLP-1/GIP Agonist',
         timing: '2.5–15mg SubQ, once weekly',
         why: 'Tirzepatide is the most effective single-compound fat loss peptide — demonstrated 22.5% average weight reduction at the highest dose in clinical trials, exceeding semaglutide\'s outcomes. Dual GLP-1 and GIP receptor activation produces both the powerful appetite suppression of GLP-1 agonism and the metabolic improvements of GIP activation. For those who have never used a GLP-1-class compound, tirzepatide delivers the most impressive fat loss outcomes available.',
       },
       {
-        slug: 'bpc-157',
+        slug: 'bpc-157-10mg',
         role: 'GI Tolerance & Gut Health Support',
         timing: '200–300mcg SubQ, daily during ramp-up',
         why: 'The most common side effects of tirzepatide and other GLP-1-class compounds are gastrointestinal: nausea, discomfort, and altered gut motility during dose escalation. BPC-157 directly addresses these through its profound gut-healing and anti-inflammatory effects. Running BPC-157 concurrently — especially during the first 8–12 weeks of dose escalation — significantly reduces GI side effects, improves tolerability, and allows for faster dose progression to therapeutic fat loss ranges.',
@@ -308,19 +308,19 @@ For individuals who want a more aggressive protocol or have found semaglutide al
     outcomes: ['Telomere lengthening (Epithalon)', 'Restored cellular energy (NAD+)', 'Improved skin structure (GHK-Cu)', 'Enhanced sleep architecture', 'Reduced biological aging markers'],
     compounds: [
       {
-        slug: 'epithalon',
+        slug: 'epitalon-50mg',
         role: 'Telomere Lengthening & Pineal Restoration',
         timing: '5–10mg SubQ daily × 10–20 days (cyclical)',
         why: 'Epithalon is the foundational compound of any serious longevity protocol — the only compound with human data demonstrating measurable telomere lengthening. Telomere shortening is one of the primary molecular mechanisms of aging; Epithalon\'s telomerase activation directly addresses this. Its pineal gland-derived origin also makes it the most effective compound for restoring age-related melatonin decline — dramatically improving sleep architecture, which is itself one of the most powerful levers for biological age reversal.',
       },
       {
-        slug: 'nad-plus',
+        slug: 'nad-500mg',
         role: 'Cellular Energy Restoration & Sirtuin Activation',
         timing: '250–500mg IV or SubQ, 2–5× weekly',
         why: 'NAD+ depletion is the second major mechanism of biological aging — by age 50, NAD+ levels have often declined by 50% or more, impairing mitochondrial energy production, DNA repair, and sirtuin-regulated gene expression. Direct NAD+ supplementation restores the coenzyme that drives every energy-producing reaction in the cell, activates the SIRT1–7 longevity proteins, and provides the substrate for PARP-mediated DNA damage repair. The combination of Epithalon (telomere biology) + NAD+ (mitochondrial and sirtuin biology) covers the two most critical intracellular aging mechanisms simultaneously.',
       },
       {
-        slug: 'ghk-cu',
+        slug: 'ghk-cu-50mg',
         role: 'Dermal & Tissue Anti-Aging',
         timing: '1–2mg SubQ, 3–5× weekly',
         why: 'GHK-Cu addresses the most visible dimension of biological aging: the structural decline of dermal collagen and elastin. Its activation of 4,000+ skin-related genes includes pathways involved in wound healing, antioxidant defense, and cellular renewal that extend beyond skin into multiple tissue types. GHK-Cu\'s documented 121% increase in skin density represents visible biological age reversal — the external manifestation of the cellular renewal that Epithalon and NAD+ drive at the molecular level.',

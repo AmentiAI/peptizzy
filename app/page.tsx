@@ -84,7 +84,7 @@ export default function Home() {
         <div className="spot spot-pulse-2 w-[400px] h-[400px] bg-[#6030d0] opacity-[0.04] top-[35%] right-[5%]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 pt-20 sm:pt-32 pb-10 sm:pb-16 w-full">
-          <div className="grid lg:grid-cols-[1fr_420px] gap-16 xl:gap-24 items-center min-h-[70vh]">
+          <div className="grid lg:grid-cols-[1fr_560px] gap-12 xl:gap-16 items-center min-h-[70vh]">
 
             <div>
               <div className="flex items-center gap-3 mb-8 hero-sub" style={{ animationDelay: '0s', opacity: 0 }}>
@@ -131,7 +131,7 @@ export default function Home() {
                     <div className="rounded-2xl overflow-hidden group cursor-pointer"
                       style={{ background: '#0d0d12', border: '1px solid rgba(255,255,255,0.06)' }}>
                       {/* Image area */}
-                      <div className="relative overflow-hidden" style={{ height: '200px' }}>
+                      <div className="relative overflow-hidden" style={{ height: '240px' }}>
                         <Image src={p.image} alt={p.name} fill priority={i < 2}
                           className="object-contain p-5 group-hover:scale-105 transition-transform duration-700" />
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -305,7 +305,7 @@ export default function Home() {
           <AnimateIn type="scale" delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" style={{ gridAutoRows: 'clamp(140px, 25vw, 200px)' }}>
             <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
-              <Image src="https://apollopeptidesciences.com/wp-content/uploads/2025/01/ghk-cu_50mg.webp"
+              <Image src="https://phiogen.is/images/products/ghk-cu-50mg.png"
                 alt="GHK-Cu collagen peptide" fill
                 className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07070a] via-[#07070a]/30 to-transparent" />
@@ -347,7 +347,7 @@ export default function Home() {
             </Link>
 
             <Link href="/products/tirzepatide" className="col-span-2 card overflow-hidden relative group block">
-              <Image src="https://apollopeptidesciences.com/wp-content/uploads/2024/04/tirzepatide_15mg-1.webp"
+              <Image src="https://phiogen.is/images/products/tirzepatide-15mg.png"
                 alt="Tirzepatide fat loss peptide" fill
                 className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07070a] via-[#07070a]/60 to-transparent" />
@@ -801,7 +801,7 @@ export default function Home() {
               {
                 name: 'BPC-157 — The Foundation Peptide',
                 slug: 'bpc-157',
-                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/09/bpc157_10mg.webp',
+                image: 'https://phiogen.is/images/products/bpc-157-10mg.png',
                 mechanism: 'Promotes angiogenesis, upregulates growth factor receptors, modulates nitric oxide synthesis',
                 keyBenefit: 'Heals tendons, ligaments, gut, and neural tissue simultaneously. The single most versatile recovery peptide.',
                 timeline: '2–4 weeks for injury recovery, 4–8 weeks for gut healing',
@@ -810,7 +810,7 @@ export default function Home() {
               {
                 name: 'GHK-Cu — The Skin and Anti-Aging Peptide',
                 slug: 'ghk-cu',
-                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/01/ghk-cu_50mg.webp',
+                image: 'https://phiogen.is/images/products/ghk-cu-50mg.png',
                 mechanism: 'Activates 4,000+ genes involved in skin repair, stimulates fibroblast collagen production, remodels scar tissue',
                 keyBenefit: 'The only peptide that resets skin gene expression to a younger profile. Up to 121% increase in skin density documented.',
                 timeline: '4–8 weeks for visible skin improvement, compounding over 6+ months',
@@ -819,7 +819,7 @@ export default function Home() {
               {
                 name: 'CJC-1295 / Ipamorelin — The GH Stack',
                 slug: 'cjc-1295-ipamorelin',
-                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/01/cjc1295_5-5mg.webp',
+                image: 'https://phiogen.is/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
                 mechanism: 'CJC-1295 stimulates GHRH receptors; Ipamorelin activates GHSR — double-stimulus GH pulse without cortisol elevation',
                 keyBenefit: 'The cleanest, most effective GH optimization available. Body composition transformation over 3–6 months of consistent use.',
                 timeline: 'Sleep improvements in week 1–2, body composition changes visible at 8–12 weeks',
@@ -828,7 +828,7 @@ export default function Home() {
               {
                 name: 'Epithalon — The Longevity Peptide',
                 slug: 'epithalon',
-                image: 'https://apollopeptidesciences.com/wp-content/uploads/2025/09/epithalon_50mg.webp',
+                image: 'https://phiogen.is/images/products/epitalon-50mg.png',
                 mechanism: 'Activates telomerase enzyme to rebuild telomere caps on chromosomes — the only known compound to achieve this',
                 keyBenefit: 'Measurable telomere lengthening. Profound sleep quality improvements. Biological age reversal at the cellular level.',
                 timeline: '10–20 day cycle twice yearly. Sleep effects within days, biological aging markers over months.',

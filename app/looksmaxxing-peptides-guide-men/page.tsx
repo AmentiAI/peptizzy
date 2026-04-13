@@ -25,7 +25,7 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://apollopeptidesciences.com/product/${s}/?rfsn=9016964.3f1b1e`
+const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 const goals = [
   { num: '01', goal: 'Skin Quality', sub: 'The Most Visible Signal', color: '#d4a043', body: 'Skin is the most immediately readable physical signal — texture, density, luminosity, and the absence of lines communicate youth and vitality more than almost anything else. Peptides address skin at the biological level, not the surface level.', peptides: [{ name: 'GHK-Cu', role: 'Collagen stimulation, skin density', dose: '1–2mg SubQ, 3–5× weekly', href: '/products/ghk-cu' }, { name: 'SNAP-8', role: 'Expression line reduction (topical Botox)', dose: 'Applied topically 2× daily', href: '/products/snap-8' }] },

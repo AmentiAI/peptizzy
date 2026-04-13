@@ -25,7 +25,7 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://apollopeptidesciences.com/product/${s}/?rfsn=9016964.3f1b1e`
+const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 const mechanisms = [
   { label: 'Collagen Type I & III', sub: 'GHK-Cu', body: 'GHK-Cu directly stimulates fibroblast synthesis of collagen type I (structural, 90% of dermal collagen) and type III (elasticity). Clinical measurement shows up to 121% increase in collagen density over 12 weeks.', color: '#d4a043' },
