@@ -150,35 +150,60 @@ function Breadcrumb({ product }: { product: Product }) {
 
 function BuyBox({ product }: { product: Product }) {
   return (
-    <div className="card-elevated rounded-2xl p-6 mb-5">
-      <div className="flex items-center justify-between mb-5">
-        <div>
-          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Starting From</p>
-          <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: 'clamp(28px, 8vw, 38px)', lineHeight: '1' }}>
-            {product.price}
-          </p>
-        </div>
-        <div className="text-right">
-          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Purity</p>
-          <p className="text-white font-500 text-[15px]">CoA Verified</p>
+    <div className="card-elevated rounded-2xl overflow-hidden mb-5">
+      {/* Product image */}
+      <div className="relative w-full flex items-center justify-center py-8 px-6"
+        style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.10), rgba(13,13,18,0) 70%), #0d0d12' }}>
+        {product.badge && (
+          <div className="absolute top-4 left-4">
+            <span className="tag-gold text-[11px]">{product.badge}</span>
+          </div>
+        )}
+        <div className="relative w-52 h-52">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            priority
+            className="object-contain drop-shadow-[0_8px_32px_rgba(212,160,67,0.18)]"
+          />
         </div>
       </div>
-      <a href={`/go/${product.slug}`}
-                          target="_blank" rel="noopener nofollow sponsored"
-        className="btn-primary w-full justify-center py-4 text-[14px] mb-3">
-        Buy {product.name} Now
-      </a>
-      <a href={`/go/${product.slug}`}
-                          target="_blank" rel="noopener nofollow sponsored"
-        className="btn-secondary w-full justify-center py-3 text-[13px]">
-        View Product ↗
-      </a>
-      <div className="flex items-center justify-center gap-4 mt-4">
-        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Third-Party Tested</span>
-        <span className="text-[#50505e]">·</span>
-        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Pharma-Grade</span>
-        <span className="text-[#50505e]">·</span>
-        <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+
+      {/* Info + CTA */}
+      <div className="p-6 border-t border-white/[0.06]">
+        <div className="flex items-end justify-between mb-5">
+          <div>
+            <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Price</p>
+            <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: 'clamp(30px, 8vw, 40px)', lineHeight: '1' }}>
+              {product.price}
+            </p>
+            <p className="text-[#50505e] text-[11px] mt-1">10% off via PeptidesMuscle</p>
+          </div>
+          <div className="text-right">
+            <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Purity</p>
+            <p className="text-white font-600 text-[15px]">CoA Verified</p>
+          </div>
+        </div>
+
+        <a href={`/go/${product.slug}`}
+          target="_blank" rel="noopener nofollow sponsored"
+          className="btn-primary w-full justify-center py-4 text-[14px] mb-3">
+          Buy {product.name} Now
+        </a>
+        <a href={`/go/${product.slug}`}
+          target="_blank" rel="noopener nofollow sponsored"
+          className="btn-secondary w-full justify-center py-3 text-[13px]">
+          View on Phiogen ↗
+        </a>
+
+        <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-white/[0.05]">
+          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">3rd-Party Tested</span>
+          <span className="text-[#303040]">·</span>
+          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Pharma-Grade</span>
+          <span className="text-[#303040]">·</span>
+          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+        </div>
       </div>
     </div>
   )
