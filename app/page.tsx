@@ -52,7 +52,7 @@ function FAQ({ q, a }: { q: string; a: string }) {
   )
 }
 
-const TABS = ['All', 'Looks Maxing', 'Body Composition', 'Recovery & Healing', 'Anti-Aging', 'Cognitive Performance']
+const TABS = ['All', 'Fat Loss / Metabolic', 'Growth Peptides', 'Recovery & Healing', 'Anti-Aging & Longevity', 'Cognitive & Nootropic', 'Blends & Stacks']
 
 const CATEGORY_ACCENT: Record<string, string> = {
   'Looks Maxing':           '#d4a043',
@@ -113,7 +113,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.05] hero-stats">
-                {[{ n: '35+', l: 'Peptides' },{ n: '99%', l: 'Purity' },{ n: '10K+', l: 'Customers' },{ n: '48h', l: 'Dispatch' }].map(s => (
+                {[{ n: '139+', l: 'Peptides' },{ n: '99%', l: 'Purity' },{ n: '10K+', l: 'Customers' },{ n: '48h', l: 'Dispatch' }].map(s => (
                   <div key={s.l}>
                     <p className="font-['Playfair_Display'] font-900 text-white leading-none" style={{ fontSize: 'clamp(22px, 5vw, 32px)' }}>{s.n}</p>
                     <p className="text-[#8888a0] text-[13px] mt-1">{s.l}</p>
@@ -165,7 +165,7 @@ export default function Home() {
                 <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
                   className="btn-primary text-[13px] py-3.5 w-full text-center inline-flex justify-center">
-                  Shop All 35 Peptides
+                  Shop All 139 Peptides
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
                   </svg>
@@ -195,7 +195,7 @@ export default function Home() {
               </h2>
             </div>
             <Link href="/products" className="btn-ghost text-[14px] flex-shrink-0">
-              Full Catalog — 35 Compounds
+              Full Catalog — 139 Compounds
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7"/>
               </svg>
@@ -384,60 +384,69 @@ export default function Home() {
             {[
               {
                 goal: 'Looks Maxing',
-                desc: 'Skin density up 121% (GHK-Cu). Deep eumelanin tan without UV (MT-2). GH-optimized body composition. Cellular aging reversed. Every physical pillar — one protocol.',
-                peptides: ['GHK-Cu', 'Melanotan 2', 'Ipamorelin', 'Epithalon'],
-                href: '/looks-maxing', icon: '◈', accent: '#d4a043',
+                desc: 'Skin density up 121% (GHK-Cu). Deep eumelanin tan without UV (Melanotan II). GH-optimized body composition. Cellular aging reversed at the chromosomal level.',
+                peptides: ['GHK-Cu 50mg', 'Melanotan II 10mg', 'Ipamorelin 10mg', 'Epitalon 50mg'],
+                imageSlug: 'ghk-cu-50mg',
+                href: '/products?category=Anti-Aging+%26+Longevity', icon: '◈', accent: '#d4a043',
               },
               {
                 goal: 'Fat Loss',
-                desc: 'Up to 22.5% body weight reduction via dual GLP-1/GIP agonism. Visceral fat targeted specifically. Muscle preserved. No rebound when used within protocol.',
-                peptides: ['Tirzepatide', 'Semaglutide', 'CJC-1295', 'BPC-157'],
-                href: '/products?category=Weight+Management', icon: '◆', accent: '#e05080',
+                desc: 'Up to 24.2% body weight reduction (Retatrutide). Triple or dual GLP agonism — visceral fat targeted specifically. Muscle preserved. No rebound when used within protocol.',
+                peptides: ['Tirzepatide 15mg', 'Semaglutide 6mg', 'Retatrutide 10mg', 'AOD-9604 5mg'],
+                imageSlug: 'tirzepatide-15mg',
+                href: '/products?category=Fat+Loss+%2F+Metabolic', icon: '◆', accent: '#e05080',
               },
               {
                 goal: 'Muscle Growth',
                 desc: 'Double-stimulus GH pulse (CJC-1295 + Ipamorelin) — lean mass and fat loss simultaneously. IGF-1 LR3 post-workout drives direct hypertrophy. Visible at 8–12 weeks.',
-                peptides: ['IGF-1 LR3', 'CJC-1295', 'Ipamorelin', 'MK-677'],
-                href: '/products?category=Body+Composition', icon: '◉', accent: '#6090ff',
+                peptides: ['IGF-1 LR3 1mg', 'Ipamorelin 10mg', 'CJC-1295 No DAC 10mg', 'Tesamorelin 10mg'],
+                imageSlug: 'igf-1-lr3-1mg',
+                href: '/products?category=Growth+Peptides', icon: '◉', accent: '#6090ff',
               },
               {
                 goal: 'Skin & Anti-Aging',
-                desc: 'GHK-Cu activates 4,000+ genes to rebuild collagen from the inside. SNAP-8 softens expression lines. Epithalon resets biological age at the chromosomal level.',
-                peptides: ['GHK-Cu', 'Epithalon', 'SNAP-8', 'BPC-157'],
-                href: '/products?category=Anti-Aging', icon: '✦', accent: '#a060ff',
+                desc: 'GHK-Cu activates 4,000+ genes to rebuild collagen from the inside. SNAP-8 softens expression lines. Epitalon resets biological age at the chromosomal level.',
+                peptides: ['GHK-Cu 50mg', 'Epitalon 50mg', 'SNAP-8 10mg', 'Glutathione 600mg'],
+                imageSlug: 'ghk-cu-50mg',
+                href: '/products?category=Anti-Aging+%26+Longevity', icon: '✦', accent: '#a060ff',
               },
               {
                 goal: 'Recovery & Healing',
                 desc: 'BPC-157 repairs tendons, ligaments, and gut in 2–4 weeks. TB-500 distributes systemically to every injury site at once. Train harder, break less.',
-                peptides: ['BPC-157', 'TB-500', 'GHK-Cu', 'Thymosin Alpha-1'],
+                peptides: ['BPC-157 10mg', 'TB-500 10mg', 'KPV 10mg', 'Thymosin Alpha-1 10mg'],
+                imageSlug: 'bpc-157-10mg',
                 href: '/products?category=Recovery+%26+Healing', icon: '⬡', accent: '#40c090',
               },
               {
                 goal: 'Cognitive Performance',
-                desc: 'Semax raises BDNF for sharper focus and recall within days. Selank eliminates anxiety without sedation. DSIP deepens sleep architecture for real cognitive recovery.',
-                peptides: ['Semax', 'Selank', 'DSIP', 'Epithalon'],
-                href: '/products?category=Cognitive+Performance', icon: '◎', accent: '#40c0ff',
+                desc: 'NA-Semax Amidate raises BDNF for sharper focus and recall within days. Selank eliminates anxiety without sedation. DSIP deepens sleep architecture for real cognitive recovery.',
+                peptides: ['N-Acetyl Semax Amidate 30mg', 'Selank 10mg', 'DSIP 10mg', 'Pinealon 10mg'],
+                imageSlug: 'n-acetyl-semax-amidate-30mg',
+                href: '/products?category=Cognitive+%26+Nootropic', icon: '◎', accent: '#40c0ff',
               },
               {
                 goal: 'Sleep Optimization',
-                desc: 'DSIP directly induces delta-wave sleep — the stage where 80% of GH is secreted and structural repair occurs. MK-677 extends GH pulses through the night.',
-                peptides: ['DSIP', 'Ipamorelin', 'MK-677', 'Selank'],
-                href: '/products', icon: '◐', accent: '#60d090',
+                desc: 'DSIP directly induces delta-wave sleep — the stage where 80% of GH is secreted and structural repair occurs. Ipamorelin extends GH pulses through the night.',
+                peptides: ['DSIP 10mg', 'Ipamorelin 10mg', 'Selank 10mg', 'Pinealon 20mg'],
+                imageSlug: 'dsip-delta-sleep-inducing-peptide-10mg',
+                href: '/products?category=Cognitive+%26+Nootropic', icon: '◐', accent: '#60d090',
               },
               {
                 goal: 'Sexual Health & Libido',
                 desc: 'PT-141 works centrally on melanocortin receptors — not on blood flow. Desire at the neurological level, not the vascular one. Results within 1–2 hours.',
-                peptides: ['PT-141', 'Melanotan 2', 'Kisspeptin-10', 'BPC-157'],
-                href: '/products', icon: '◑', accent: '#ff8040',
+                peptides: ['PT-141 10mg', 'Melanotan II 10mg', 'Kisspeptin-10 10mg', 'BPC-157 10mg'],
+                imageSlug: 'pt-141-10mg',
+                href: '/products?category=Anti-Aging+%26+Longevity', icon: '◑', accent: '#ff8040',
               },
               {
                 goal: 'Immune & Longevity',
-                desc: 'Thymosin Alpha-1 rebuilds thymic immunity in immunocompromised individuals. Epithalon is the only compound with human data showing telomere lengthening.',
-                peptides: ['Thymosin Alpha-1', 'Epithalon', 'MOTS-c', 'GHK-Cu'],
-                href: '/products?category=Anti-Aging', icon: '◫', accent: '#60d090',
+                desc: 'Thymosin Alpha-1 rebuilds thymic immunity. Epitalon is the only compound with human data showing telomere lengthening. MOTS-c activates mitochondrial energy pathways.',
+                peptides: ['Thymosin Alpha-1 10mg', 'Epitalon 50mg', 'MOTS-c 10mg', 'GHK-Cu 50mg'],
+                imageSlug: 'thymosin-alpha-1-10mg',
+                href: '/products?category=Recovery+%26+Healing', icon: '◫', accent: '#60d090',
               },
             ].map((g, i) => {
-              const repImage = products.find(p => p.name === g.peptides[0])?.image
+              const repImage = products.find(p => p.slug === g.imageSlug)?.image
               return (
                 <AnimateIn key={g.goal} type="up" delay={i * 70}>
                   <Link href={g.href} className="h-full block">
@@ -537,7 +546,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/products" className="btn-secondary text-[13px] px-8 py-3.5">View All 35 Peptides</Link>
+            <Link href="/products" className="btn-secondary text-[13px] px-8 py-3.5">View All 139 Peptides</Link>
           </div>
         </div>
       </section>
