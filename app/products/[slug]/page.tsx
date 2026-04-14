@@ -152,27 +152,27 @@ function BuyBox({ product }: { product: Product }) {
   return (
     <div className="card-elevated rounded-2xl overflow-hidden mb-5">
       {/* Product image */}
-      <div className="relative w-full flex items-center justify-center py-10 px-6"
+      <div className="relative w-full flex items-center justify-center py-6 px-6"
         style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.13), rgba(13,13,18,0) 70%), #0d0d12' }}>
         {product.badge && (
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-3 left-3">
             <span className="tag-gold text-[11px]">{product.badge}</span>
           </div>
         )}
         {/* 10% off badge */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-3 right-3">
           <span className="text-[10px] font-700 px-2 py-1 rounded-full"
             style={{ background: 'rgba(64,192,144,0.15)', color: '#40c090', border: '1px solid rgba(64,192,144,0.3)' }}>
             10% OFF
           </span>
         </div>
-        <div className="relative w-60 h-60">
+        <div className="relative w-40 h-40">
           <Image
             src={product.image}
             alt={product.name}
             fill
             priority
-            className="object-contain drop-shadow-[0_12px_40px_rgba(212,160,67,0.22)]"
+            className="object-contain drop-shadow-[0_8px_30px_rgba(212,160,67,0.22)]"
             style={{ animation: 'float 4s ease-in-out infinite' }}
           />
         </div>

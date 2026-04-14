@@ -50,6 +50,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/peptides-cognitive-performance-guide`,            lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/cagrilintide-semaglutide-complete-guide`,         lastModified: '2026-04-01',  changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/bacteriostatic-water-peptide-reconstitution-guide`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.8 },
+    // New content pages — April 2026
+    { url: `${BASE}/glp-1-peptides-complete-guide`,              lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-for-gut-health-leaky-gut`,          lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/thymosin-alpha-1-immune-peptide-guide`,      lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/dsip-sleep-optimization-peptide-guide`,      lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/kisspeptin-10-testosterone-hormone-guide`,   lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-for-joint-pain-arthritis`,          lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/aod-9604-fat-loss-peptide-guide`,            lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/ghrp-6-complete-guide`,                      lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/hexarelin-growth-hormone-peptide-guide`,     lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/ipamorelin-complete-guide`,                  lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/looksmaxxing-research-peptides-beginners`,   lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/mk-677-ibutamoren-guide`,                    lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-for-collagen-skin-anti-aging`,      lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/pt-141-bremelanotide-guide`,                 lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/selank-semax-nootropic-peptide-guide`,       lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/sermorelin-anti-aging-hgh-guide`,            lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-for-women-complete-guide`,          lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/peptides-athletic-performance-sports`,       lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/fat-loss-peptides-complete-guide`,           lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${BASE}/mots-c-mitochondrial-longevity-guide`,       lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
   ]
 
   const productPages: MetadataRoute.Sitemap = products.map(p => ({
