@@ -148,82 +148,228 @@ function Breadcrumb({ product }: { product: Product }) {
   )
 }
 
-function BuyBox({ product }: { product: Product }) {
+// ── UNIFIED PRODUCT HERO ────────────────────────────────────────────────────
+
+const CATEGORY_ACCENT: Record<string, string> = {
+  'Recovery & Healing':     '#d4a043',
+  'Cognitive & Nootropic':  '#c084fc',
+  'Growth Peptides':        '#34d399',
+  'Fat Loss / Metabolic':   '#60a5fa',
+  'Anti-Aging & Longevity': '#a78bfa',
+  'Blends & Stacks':        '#d4a043',
+}
+
+function ProductHero({
+  product, stats, trialData,
+}: {
+  product: Product
+  stats: StatItem[]
+  trialData?: { trial: string; outcome: string; duration: string }
+}) {
+  const accent = CATEGORY_ACCENT[product.category] ?? '#d4a043'
+  const cat = product.category
+
   return (
-    <div className="card-elevated rounded-2xl overflow-hidden mb-5">
-      {/* Product image */}
-      <div className="relative w-full flex items-center justify-center py-6 px-6"
-        style={{ background: 'radial-gradient(ellipse at 50% 60%, rgba(212,160,67,0.13), rgba(13,13,18,0) 70%), #0d0d12' }}>
-        {product.badge && (
-          <div className="absolute top-3 left-3">
-            <span className="tag-gold text-[11px]">{product.badge}</span>
+    <section className="pt-20">
+
+      {/* Clinical evidence banner (Weight Mgmt only) */}
+      {trialData && cat === 'Fat Loss / Metabolic' && (
+        <div style={{ borderBottom: `1px solid ${accent}25`, background: `${accent}08` }}>
+          <div className="max-w-7xl mx-auto px-6 md:px-10 py-3">
+            <div className="flex flex-wrap items-center gap-2 text-[13px]">
+              <span className="text-[10px] uppercase tracking-[0.22em] font-600" style={{ color: accent }}>Clinical Evidence</span>
+              <span className="text-[#30303e]">|</span>
+              <span className="text-white font-500">{trialData.trial}</span>
+              <span className="text-[#30303e]">·</span>
+              <span className="font-600" style={{ color: accent }}>{trialData.outcome}</span>
+              <span className="text-[#30303e]">·</span>
+              <span className="text-[#8888a0]">{trialData.duration}</span>
+            </div>
           </div>
-        )}
-        {/* 10% off badge */}
-        <div className="absolute top-3 right-3">
-          <span className="text-[10px] font-700 px-2 py-1 rounded-full"
-            style={{ background: 'rgba(64,192,144,0.15)', color: '#40c090', border: '1px solid rgba(64,192,144,0.3)' }}>
-            10% OFF
-          </span>
         </div>
-        <div className="relative w-40 h-40">
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            priority
-            className="object-contain drop-shadow-[0_8px_30px_rgba(212,160,67,0.22)]"
-            style={{ animation: 'float 4s ease-in-out infinite' }}
-          />
-        </div>
-        <style>{`@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }`}</style>
+      )}
+
+      {/* Breadcrumb */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-5 pb-4">
+        <Breadcrumb product={product} />
       </div>
 
-      {/* Info + CTA */}
-      <div className="p-6 border-t border-white/[0.06]">
-        <div className="flex items-end justify-between mb-5">
-          <div>
-            <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Price</p>
-            <p className="font-['Playfair_Display'] font-900 gold-text" style={{ fontSize: 'clamp(30px, 8vw, 40px)', lineHeight: '1' }}>
-              {product.price}
-            </p>
-            <p className="text-[#40c090] text-[11px] font-600 mt-1">✓ 10% off via PeptidesMuscle</p>
-          </div>
-          <div className="text-right">
-            <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Purity</p>
-            <p className="text-white font-600 text-[15px]">CoA Verified</p>
-          </div>
-        </div>
-
-        <a href={`/go/${product.slug}`}
-          target="_blank" rel="noopener nofollow sponsored"
-          className="btn-primary w-full justify-center py-4 text-[15px] mb-3 relative overflow-hidden group/buy"
-          style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
-          <span className="relative z-10 flex items-center gap-2">
-            Buy {product.name} Now
-            <svg className="w-4 h-4 group-hover/buy:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-            </svg>
+      {/* ── FULL-WIDTH TEXT ── */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-8">
+        <div className="flex flex-wrap gap-2 mb-5">
+          <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest font-600"
+            style={{ background: `${accent}15`, border: `1px solid ${accent}35`, color: accent }}>
+            {product.category}
           </span>
-          {/* Shimmer sweep */}
-          <span className="absolute inset-0 -translate-x-full group-hover/buy:translate-x-full transition-transform duration-700 ease-in-out"
-            style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
-        </a>
-        <a href={`/go/${product.slug}`}
-          target="_blank" rel="noopener nofollow sponsored"
-          className="btn-secondary w-full justify-center py-3 text-[13px]">
-          View on Phiogen ↗
-        </a>
+          {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
+          {product.badge && <span className="tag-gold">{product.badge}</span>}
+        </div>
+        <h1 className="font-['Playfair_Display'] font-900 text-white leading-[1.05] mb-4"
+          style={{ fontSize: 'clamp(36px, 5.5vw, 68px)' }}>
+          {product.name}
+        </h1>
+        <p className="text-[12px] uppercase tracking-[0.2em] font-600 mb-5" style={{ color: accent }}>
+          {product.tagline}
+        </p>
+        <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-3xl">
+          {product.shortDescription}
+        </p>
+      </div>
 
-        <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-white/[0.05]">
-          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">3rd-Party Tested</span>
-          <span className="text-[#303040]">·</span>
-          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Pharma-Grade</span>
-          <span className="text-[#303040]">·</span>
-          <span className="text-[11px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+      {/* ── STATS STRIP ── */}
+      <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
+          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
+            {stats.map((s, i) => (
+              <div key={i} className="px-3 sm:px-6 first:pl-0 last:pr-0 text-center">
+                <p className="font-['Playfair_Display'] font-900 text-xl sm:text-2xl mb-1" style={{ color: accent }}>{s.value}</p>
+                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* ── IMAGE + BUY PANEL ── */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
+        <div className="grid md:grid-cols-[200px_1fr] gap-6 lg:gap-8 items-stretch">
+
+          {/* Product image card */}
+          <div className="card-elevated rounded-2xl overflow-hidden flex-shrink-0">
+            <div className="relative flex items-center justify-center p-8 h-full min-h-[200px]"
+              style={{ background: `radial-gradient(ellipse at 50% 60%, ${accent}15, rgba(13,13,18,0) 70%), #0d0d12` }}>
+              <div className="absolute top-3 right-3">
+                <span className="text-[10px] font-700 px-2 py-1 rounded-full"
+                  style={{ background: 'rgba(64,192,144,0.15)', color: '#40c090', border: '1px solid rgba(64,192,144,0.3)' }}>
+                  10% OFF
+                </span>
+              </div>
+              <div className="relative w-36 h-36">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  priority
+                  className="object-contain drop-shadow-[0_8px_30px_rgba(212,160,67,0.22)]"
+                  style={{ animation: 'float 4s ease-in-out infinite' }}
+                />
+              </div>
+              <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+            </div>
+          </div>
+
+          {/* Buy panel */}
+          <div className="card-elevated rounded-2xl p-6 flex flex-col justify-between gap-5">
+            {/* Price + protocol */}
+            <div className="grid sm:grid-cols-2 gap-5">
+              <div>
+                <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1.5">Price</p>
+                <p className="font-['Playfair_Display'] font-900 gold-text leading-none"
+                  style={{ fontSize: 'clamp(32px, 6vw, 44px)' }}>
+                  {product.price}
+                </p>
+                <p className="text-[#40c090] text-[11px] font-600 mt-2">✓ 10% off via PeptidesMuscle</p>
+              </div>
+              <div>
+                <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1.5">Suggested Protocol</p>
+                <p className="text-[#8888a0] text-[14px] leading-relaxed">{product.protocol}</p>
+              </div>
+            </div>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href={`/go/${product.slug}`}
+                target="_blank" rel="noopener nofollow sponsored"
+                className="btn-primary flex-1 justify-center py-4 text-[15px] relative overflow-hidden group/buy"
+                style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
+                <span className="relative z-10 flex items-center gap-2 justify-center">
+                  Buy {product.name} Now
+                  <svg className="w-4 h-4 group-hover/buy:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+                <span className="absolute inset-0 -translate-x-full group-hover/buy:translate-x-full transition-transform duration-700 ease-in-out"
+                  style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
+              </a>
+              <a href={`/go/${product.slug}`}
+                target="_blank" rel="noopener nofollow sponsored"
+                className="btn-secondary justify-center py-4 px-6 text-[14px]">
+                View on Phiogen ↗
+              </a>
+            </div>
+
+            {/* Trust signals + tags */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-white/[0.05]">
+              <div className="flex items-center gap-3 flex-wrap">
+                <span className="text-[10px] text-[#50505e] uppercase tracking-widest">3rd-Party Tested</span>
+                <span className="text-[#303040]">·</span>
+                <span className="text-[10px] text-[#50505e] uppercase tracking-widest">CoA Verified</span>
+                <span className="text-[#303040]">·</span>
+                <span className="text-[10px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {product.tags.slice(0, 3).map(t => <span key={t} className="tag text-[10px]">{t}</span>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── CATEGORY-SPECIFIC EXTRA STRIPS ── */}
+
+      {/* Recovery: tissue targets */}
+      {cat === 'Recovery & Healing' && (
+        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-4">Repair Targets</p>
+          <div className="flex flex-wrap gap-2">
+            {['Tendons', 'Ligaments', 'Gut Lining', 'Joints', 'Cartilage', 'Nerves', 'Muscle Tissue', 'Bone'].map(area => (
+              <span key={area} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px]"
+                style={{ background: 'rgba(212,160,67,0.08)', border: '1px solid rgba(212,160,67,0.2)', color: '#d4a043' }}>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#d4a043] block flex-shrink-0" />
+                {area}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Cognitive: results timeline */}
+      {cat === 'Cognitive & Nootropic' && (
+        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-4">Expected Results Timeline</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {[
+              { week: 'Day 1–3',   result: 'Acute anxiolytic and focusing effects — reduced mental noise and stress' },
+              { week: 'Week 1–2',  result: 'Improved working memory, word retrieval, and mental clarity emerge' },
+              { week: 'Week 3–4',  result: 'Deeper focus, sustained attention, and mood stabilization are consistent' },
+              { week: 'Week 6–8',  result: 'Neuroplasticity adaptations — long-term memory and cognitive baseline improved' },
+            ].map((t, i) => (
+              <div key={i} className="rounded-xl p-4 relative overflow-hidden"
+                style={{ background: '#0d0d12', border: `1px solid ${accent}18` }}>
+                <div className="absolute top-0 left-0 w-full h-0.5" style={{ background: `linear-gradient(90deg, ${accent}80, transparent)` }} />
+                <p className="text-white text-[13px] font-500 mb-1">{t.week}</p>
+                <p className="text-[#50505e] text-[12px] leading-relaxed">{t.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Growth Peptides: performance stat cards */}
+      {cat === 'Growth Peptides' && (
+        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, transparent, ${accent}40)` }} />
+            <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>Performance Profile</span>
+            <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
+          </div>
+        </div>
+      )}
+
+    </section>
   )
 }
 
@@ -262,370 +408,6 @@ function SynergyPanel({ product }: { product: Product }) {
         })}
       </div>
     </div>
-  )
-}
-
-// ── HERO VARIANTS ───────────────────────────────────────────────────────────
-
-/** Recovery & Healing — reversed split, amber-red glow, tissue strip */
-function RecoveryHero({ product, stats }: { product: Product; stats: StatItem[] }) {
-  return (
-    <section className="pt-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
-        <Breadcrumb product={product} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
-
-          {/* Info — LEFT */}
-          <div>
-            <div className="flex flex-wrap gap-2 mb-5">
-              <span className="tag-gold">{product.category}</span>
-              {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-            <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-3"
-              style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}>
-              {product.name}
-            </h1>
-            <p className="label text-[#d4a043] mb-6 tracking-[0.18em]">{product.tagline}</p>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
-          </div>
-
-          {/* BuyBox + Protocol — RIGHT */}
-          <div>
-            <BuyBox product={product} />
-            <div className="card rounded-2xl p-5 mb-4">
-              <p className="label text-[#d4a043] mb-2">Suggested Protocol</p>
-              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Key stats strip */}
-      <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
-            {stats.map((s, i) => (
-              <div key={i} className="px-3 sm:px-6 first:pl-0 last:pr-0 text-center">
-                <p className="font-['Playfair_Display'] font-900 text-[#d4a043] text-xl sm:text-2xl mb-1">{s.value}</p>
-                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Tissue target strip */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
-        <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-4">Repair Targets</p>
-        <div className="flex flex-wrap gap-2">
-          {['Tendons', 'Ligaments', 'Gut Lining', 'Joints', 'Cartilage', 'Nerves', 'Muscle Tissue', 'Bone'].map(area => (
-            <span key={area} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px]"
-              style={{ background: 'rgba(212,160,67,0.08)', border: '1px solid rgba(212,160,67,0.2)', color: '#d4a043' }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d4a043] block flex-shrink-0" />
-              {area}
-            </span>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/** Looks Maxing — editorial masthead, purple accent, results timeline */
-function LooksMaxingHero({ product, stats }: { product: Product; stats: StatItem[] }) {
-  const accent = '#c084fc'
-  return (
-    <section className="pt-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
-        <Breadcrumb product={product} />
-      </div>
-
-      {/* Editorial masthead */}
-      <div className="border-b border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-          <div className="flex items-start justify-between gap-8 flex-wrap">
-            <div className="flex-1 min-w-[280px]">
-              <span className="block text-[11px] uppercase tracking-[0.22em] mb-4" style={{ color: accent }}>
-                {product.category} / Research Protocol
-              </span>
-              <h1 className="font-['Playfair_Display'] font-900 italic text-white leading-[1.05]"
-                style={{ fontSize: 'clamp(42px, 6vw, 82px)' }}>
-                {product.name}
-              </h1>
-              <p className="text-[#8888a0] text-lg mt-5 max-w-2xl italic">&ldquo;{product.tagline}&rdquo;</p>
-            </div>
-            <div className="text-right shrink-0 pt-1">
-              <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1">Starting From</p>
-              <p className="font-['Playfair_Display'] font-900 text-4xl" style={{ color: accent }}>{product.price}</p>
-              {product.badge && (
-                <span className="mt-2 inline-block px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest"
-                  style={{ background: `${accent}18`, border: `1px solid ${accent}40`, color: accent }}>
-                  {product.badge}
-                </span>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats bar */}
-      <div className="border-b border-white/[0.06] bg-[#0a0a0e]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
-            {stats.map((s, i) => (
-              <div key={i} className="px-3 sm:px-6 py-4 sm:py-5 first:pl-0 last:pr-0 text-center sm:text-left">
-                <p className="font-['Playfair_Display'] font-900 text-xl sm:text-2xl mb-0.5" style={{ color: accent }}>{s.value}</p>
-                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Main split — info left, buybox right */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
-          <div>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed mb-6">{product.shortDescription}</p>
-            <div className="flex flex-wrap gap-2">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-          </div>
-
-          <div>
-            <BuyBox product={product} />
-            <div className="card rounded-2xl p-5 mb-4">
-              <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
-              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Results timeline */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-10">
-        <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-5">Expected Results Timeline</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {[
-            { week: 'Day 1–3',    result: 'Acute anxiolytic and focusing effects — reduced mental noise and stress' },
-            { week: 'Week 1–2',   result: 'Improved working memory, word retrieval, and mental clarity emerge' },
-            { week: 'Week 3–4',   result: 'Deeper focus, sustained attention, and mood stabilization are consistent' },
-            { week: 'Week 6–8',   result: 'Neuroplasticity adaptations — long-term memory and cognitive baseline improved' },
-          ].map((t, i) => (
-            <div key={i} className="rounded-xl p-4 relative overflow-hidden"
-              style={{ background: '#0d0d12', border: `1px solid ${accent}18` }}>
-              <div className="absolute top-0 left-0 w-full h-0.5" style={{ background: `linear-gradient(90deg, ${accent}80, transparent)` }} />
-              <div className="w-7 h-7 rounded-full flex items-center justify-center mb-3"
-                style={{ background: `${accent}18`, border: `1px solid ${accent}40` }}>
-                <span className="text-[11px] font-bold" style={{ color: accent }}>{i + 1}</span>
-              </div>
-              <p className="text-white text-[13px] font-500 mb-1">{t.week}</p>
-              <p className="text-[#50505e] text-[12px] leading-relaxed">{t.result}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/** Body Composition — performance stats dashboard header, green accent */
-function BodyCompHero({ product, stats }: { product: Product; stats: StatItem[] }) {
-  const accent = '#34d399'
-  return (
-    <section className="pt-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
-        <Breadcrumb product={product} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
-        {/* Performance header */}
-        <div className="flex items-center gap-4 mb-6">
-          <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, transparent, ${accent}40)` }} />
-          <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>Performance Profile</span>
-          <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
-        </div>
-
-        {/* Stat cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
-          {stats.map((s, i) => (
-            <div key={i} className="card-elevated rounded-2xl p-5 sm:p-6 text-center relative overflow-hidden">
-              <div className="absolute inset-0 opacity-[0.04]" style={{ background: `radial-gradient(circle at 50% 110%, ${accent}, transparent)` }} />
-              <p className="font-['Playfair_Display'] font-900 text-2xl sm:text-3xl mb-1" style={{ color: accent }}>{s.value}</p>
-              <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Product split */}
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
-          <div>
-            <div className="flex flex-wrap gap-2 mb-5">
-              <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest"
-                style={{ background: `${accent}12`, border: `1px solid ${accent}30`, color: accent }}>
-                {product.category}
-              </span>
-              {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-            <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-3"
-              style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}>
-              {product.name}
-            </h1>
-            <p className="label mb-6 tracking-[0.18em]" style={{ color: accent }}>{product.tagline}</p>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-          </div>
-
-          <div>
-            <BuyBox product={product} />
-            <div className="card rounded-2xl p-5 mb-4">
-              <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
-              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/** Weight Management — clinical trial banner at very top, blue accent */
-function WeightMgmtHero({ product, stats, trialData }: { product: Product; stats: StatItem[]; trialData?: { trial: string; outcome: string; duration: string } }) {
-  const accent = '#60a5fa'
-  return (
-    <section>
-      {/* Clinical evidence banner — appears before breadcrumb */}
-      {trialData && (
-        <div style={{ borderBottom: `1px solid ${accent}25`, background: `${accent}08` }}>
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-3">
-            <div className="flex items-center gap-3 flex-wrap text-[13px]">
-              <span className="text-[10px] uppercase tracking-[0.22em] font-600" style={{ color: accent }}>Clinical Evidence</span>
-              <span className="text-[#30303e]">|</span>
-              <span className="text-white font-500">{trialData.trial}</span>
-              <span className="text-[#30303e]">·</span>
-              <span className="font-600" style={{ color: accent }}>{trialData.outcome}</span>
-              <span className="text-[#30303e]">·</span>
-              <span className="text-[#8888a0]">{trialData.duration}</span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="pt-4">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
-          <Breadcrumb product={product} />
-        </div>
-
-        {/* Hero split */}
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5">
-          <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
-            <div>
-              <div className="flex flex-wrap gap-2 mb-5">
-                <span className="px-3 py-1.5 rounded-full text-[11px] uppercase tracking-widest"
-                  style={{ background: `${accent}12`, border: `1px solid ${accent}30`, color: accent }}>
-                  {product.category}
-                </span>
-                {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
-              </div>
-              <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-3"
-                style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}>
-                {product.name}
-              </h1>
-              <p className="label mb-6 tracking-[0.18em]" style={{ color: accent }}>{product.tagline}</p>
-              <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
-              <div className="flex flex-wrap gap-2 mt-6">
-                {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-              </div>
-            </div>
-
-            <div>
-              <BuyBox product={product} />
-              <div className="card rounded-2xl p-5 mb-4">
-                <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
-                <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats strip */}
-        <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-            <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
-              {stats.map((s, i) => (
-                <div key={i} className="px-3 sm:px-6 py-2 sm:py-0 first:pl-0 last:pr-0 text-center">
-                  <p className="font-['Playfair_Display'] font-900 text-xl sm:text-2xl mb-1" style={{ color: accent }}>{s.value}</p>
-                  <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/** Anti-Aging — cosmic centered hero, orbital ring, purple accent */
-function AntiAgingHero({ product, stats }: { product: Product; stats: StatItem[] }) {
-  const accent = '#a78bfa'
-  return (
-    <section className="pt-16 relative overflow-hidden">
-      {/* Background cosmic glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-        style={{ background: `radial-gradient(circle, ${accent}08, transparent)` }} />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3 relative">
-        <Breadcrumb product={product} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 relative">
-        {/* Centered header */}
-        <div className="text-center mb-8 max-w-3xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-16" style={{ background: `${accent}40` }} />
-            <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>{product.category}</span>
-            <div className="h-px w-16" style={{ background: `${accent}40` }} />
-          </div>
-          <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-4"
-            style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
-            {product.name}
-          </h1>
-          <p className="label tracking-[0.18em] mb-5" style={{ color: accent }}>{product.tagline}</p>
-          <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
-        </div>
-
-        {/* Stats row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto mb-8">
-          {stats.map((s, i) => (
-            <div key={i} className="card rounded-xl p-4 text-center">
-              <p className="font-['Playfair_Display'] font-900 text-xl mb-1" style={{ color: accent }}>{s.value}</p>
-              <p className="text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Buy + protocol in two columns below */}
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 max-w-5xl mx-auto">
-          <div className="card rounded-2xl p-6">
-            <p className="label mb-2" style={{ color: accent }}>Suggested Protocol</p>
-            <p className="text-[#8888a0] text-[15px] leading-relaxed mb-4">{product.protocol}</p>
-            <div className="flex flex-wrap gap-2">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-          </div>
-          <BuyBox product={product} />
-        </div>
-      </div>
-    </section>
   )
 }
 
@@ -782,62 +564,6 @@ function AntiAgingCallout() {
   )
 }
 
-/** Default hero — for Blends & Stacks and any other categories */
-function DefaultHero({ product, stats }: { product: Product; stats: StatItem[] }) {
-  const accent = '#d4a043'
-  return (
-    <section className="pt-16 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[600px] h-[500px] pointer-events-none"
-        style={{ background: `radial-gradient(ellipse at 80% 20%, ${accent}06, transparent)` }} />
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-3">
-        <Breadcrumb product={product} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 relative">
-        <div className="grid lg:grid-cols-[1fr_380px] gap-8 lg:gap-14 items-start">
-          <div>
-            <div className="flex flex-wrap gap-2 mb-5">
-              <span className="tag-gold">{product.category}</span>
-              {product.tags.slice(0, 2).map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-            <h1 className="font-['Playfair_Display'] font-900 text-white leading-tight mb-3"
-              style={{ fontSize: 'clamp(38px, 5vw, 62px)' }}>
-              {product.name}
-            </h1>
-            <p className="label text-[#d4a043] mb-6 tracking-[0.18em]">{product.tagline}</p>
-            <p className="text-[#8888a0] text-[17px] leading-relaxed">{product.shortDescription}</p>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-            </div>
-          </div>
-
-          <div>
-            <BuyBox product={product} />
-            <div className="card rounded-2xl p-5">
-              <p className="label text-[#d4a043] mb-2">Suggested Protocol</p>
-              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats strip */}
-      <div className="border-y border-white/[0.06] bg-[#0a0a0e]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-6">
-          <div className="grid grid-cols-3 sm:divide-x divide-white/[0.06]">
-            {stats.map((s, i) => (
-              <div key={i} className="px-3 sm:px-6 first:pl-0 last:pr-0 text-center">
-                <p className="font-['Playfair_Display'] font-900 text-[#d4a043] text-xl sm:text-2xl mb-1">{s.value}</p>
-                <p className="text-[10px] sm:text-[11px] text-[#50505e] uppercase tracking-widest">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // ── MAIN PAGE ───────────────────────────────────────────────────────────────
 
@@ -904,15 +630,8 @@ export default function ProductPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ── CATEGORY-SPECIFIC HERO ── */}
-      {cat === 'Recovery & Healing'     && <RecoveryHero    product={product} stats={stats} />}
-      {cat === 'Cognitive & Nootropic'  && <LooksMaxingHero product={product} stats={stats} />}
-      {cat === 'Growth Peptides'        && <BodyCompHero     product={product} stats={stats} />}
-      {cat === 'Fat Loss / Metabolic'   && <WeightMgmtHero   product={product} stats={stats} trialData={trialData} />}
-      {cat === 'Anti-Aging & Longevity' && <AntiAgingHero    product={product} stats={stats} />}
-      {(cat === 'Blends & Stacks' || !['Recovery & Healing','Cognitive & Nootropic','Growth Peptides','Fat Loss / Metabolic','Anti-Aging & Longevity'].includes(cat)) && (
-        <DefaultHero product={product} stats={stats} />
-      )}
+      {/* ── HERO ── */}
+      <ProductHero product={product} stats={stats} trialData={trialData} />
 
       <div className="rule max-w-7xl mx-auto my-8" />
 

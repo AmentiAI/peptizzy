@@ -393,6 +393,42 @@ const articles = [
     badge: 'New',
     color: '#a060ff',
   },
+  {
+    href: '/peptides-for-women-complete-guide',
+    title: 'Peptides for Women: Complete Guide to Hormones, Fat Loss, Skin & Recovery',
+    desc: 'Female-specific protocols covering hormonal optimization, GHK-Cu for collagen, AOD-9604 for fat loss, Kisspeptin-10 for HPG axis, and CJC-1295/Ipamorelin for body composition — by life stage.',
+    tags: ['Women', 'Looksmaxxing'],
+    category: 'looksmaxxing',
+    badge: 'New',
+    color: '#e879a0',
+  },
+  {
+    href: '/peptides-athletic-performance-sports',
+    title: 'Peptides for Athletic Performance: Complete Sports Guide',
+    desc: 'BPC-157 + TB-500 recovery stack, CJC-1295/Ipamorelin for GH optimization, Hexarelin for strength, and MOTS-c for endurance. The elite recovery protocol explained.',
+    tags: ['Recovery', 'Body Comp'],
+    category: 'recovery',
+    badge: 'New',
+    color: '#22d3ee',
+  },
+  {
+    href: '/fat-loss-peptides-complete-guide',
+    title: 'Fat Loss Peptides: Complete Ranking & Guide for 2026',
+    desc: 'Every fat loss peptide ranked and explained — GLP-1 agonists, AOD-9604, MOTS-c, and CJC-1295/Ipamorelin. Comparison table, goal-based protocols, and realistic results timelines.',
+    tags: ['Weight Loss', 'GLP-1'],
+    category: 'body-comp',
+    badge: 'New',
+    color: '#f97316',
+  },
+  {
+    href: '/mots-c-mitochondrial-longevity-guide',
+    title: 'MOTS-c: Mitochondrial Peptide for Longevity, Fat Loss & Metabolic Health',
+    desc: 'The only mitochondria-encoded peptide. AMPK activation, visceral fat targeting, centenarian genetics data, athletic performance effects, and the complete 5-10mg protocol.',
+    tags: ['Anti-Aging', 'Longevity'],
+    category: 'anti-aging',
+    badge: 'New',
+    color: '#34d399',
+  },
 ]
 
 const featured = articles.slice(0, 3)
