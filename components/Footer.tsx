@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 const col1 = [
-  { href: '/products/bpc-157',      label: 'BPC-157' },
-  { href: '/products/ghk-cu',       label: 'GHK-Cu' },
-  { href: '/products/cjc-1295-ipamorelin', label: 'CJC-1295 / Ipamorelin' },
-  { href: '/products/tirzepatide',   label: 'Tirzepatide' },
-  { href: '/products/epithalon',     label: 'Epithalon' },
+  { href: '/products/bpc-157-10mg',      label: 'BPC-157' },
+  { href: '/products/ghk-cu-50mg',       label: 'GHK-Cu' },
+  { href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg', label: 'CJC-1295 / Ipamorelin' },
+  { href: '/products/tirzepatide-15mg',   label: 'Tirzepatide' },
+  { href: '/products/epitalon-50mg',     label: 'Epithalon' },
   { href: '/products',               label: 'View All →' },
 ]
 const col2 = [

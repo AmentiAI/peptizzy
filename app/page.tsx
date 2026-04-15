@@ -274,7 +274,7 @@ export default function Home() {
 
           <AnimateIn type="scale" delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" style={{ gridAutoRows: 'clamp(140px, 25vw, 200px)' }}>
-            <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
+            <Link href="/products/ghk-cu-50mg" className="col-span-2 row-span-2 card overflow-hidden relative group block">
               <Image src="https://phiogen.is/images/products/ghk-cu-50mg.png"
                 alt="GHK-Cu collagen peptide" fill
                 className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
@@ -300,7 +300,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/products/cjc-1295-ipamorelin" className="card flex flex-col justify-between p-5 group block">
+            <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="card flex flex-col justify-between p-5 group block">
               <p className="label-gold">Body Composition</p>
               <div>
                 <h3 className="text-white font-700 text-lg group-hover:text-[#e8c060] transition-colors mb-1">GH Optimization</h3>
@@ -308,7 +308,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/products/epithalon" className="card flex flex-col justify-between p-5 group block">
+            <Link href="/products/epitalon-50mg" className="card flex flex-col justify-between p-5 group block">
               <p className="label-gold">Longevity</p>
               <div>
                 <h3 className="text-white font-700 text-lg group-hover:text-[#e8c060] transition-colors mb-1">Telomere Extension</h3>
@@ -316,7 +316,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/products/tirzepatide" className="col-span-2 card overflow-hidden relative group block">
+            <Link href="/products/tirzepatide-15mg" className="col-span-2 card overflow-hidden relative group block">
               <Image src="https://phiogen.is/images/products/tirzepatide-15mg.png"
                 alt="Tirzepatide fat loss peptide" fill
                 className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
@@ -756,7 +756,7 @@ export default function Home() {
             {[
               {
                 name: 'BPC-157 — The Foundation Peptide',
-                slug: 'bpc-157',
+                slug: 'bpc-157-10mg',
                 image: 'https://phiogen.is/images/products/bpc-157-10mg.png',
                 mechanism: 'Promotes angiogenesis, upregulates growth factor receptors, modulates nitric oxide synthesis',
                 keyBenefit: 'Heals tendons, ligaments, gut, and neural tissue simultaneously. The single most versatile recovery peptide.',
@@ -765,7 +765,7 @@ export default function Home() {
               },
               {
                 name: 'GHK-Cu — The Skin and Anti-Aging Peptide',
-                slug: 'ghk-cu',
+                slug: 'ghk-cu-50mg',
                 image: 'https://phiogen.is/images/products/ghk-cu-50mg.png',
                 mechanism: 'Activates 4,000+ genes involved in skin repair, stimulates fibroblast collagen production, remodels scar tissue',
                 keyBenefit: 'The only peptide that resets skin gene expression to a younger profile. Up to 121% increase in skin density documented.',
@@ -774,7 +774,7 @@ export default function Home() {
               },
               {
                 name: 'CJC-1295 / Ipamorelin — The GH Stack',
-                slug: 'cjc-1295-ipamorelin',
+                slug: 'ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg',
                 image: 'https://phiogen.is/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
                 mechanism: 'CJC-1295 stimulates GHRH receptors; Ipamorelin activates GHSR — double-stimulus GH pulse without cortisol elevation',
                 keyBenefit: 'The cleanest, most effective GH optimization available. Body composition transformation over 3–6 months of consistent use.',
@@ -783,7 +783,7 @@ export default function Home() {
               },
               {
                 name: 'Epithalon — The Longevity Peptide',
-                slug: 'epithalon',
+                slug: 'epitalon-50mg',
                 image: 'https://phiogen.is/images/products/epitalon-50mg.png',
                 mechanism: 'Activates telomerase enzyme to rebuild telomere caps on chromosomes — the only known compound to achieve this',
                 keyBenefit: 'Measurable telomere lengthening. Profound sleep quality improvements. Biological age reversal at the cellular level.',
