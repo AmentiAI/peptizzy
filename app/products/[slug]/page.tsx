@@ -6,6 +6,8 @@ import { getProductBySlug, products, type Product } from '@/lib/products'
 import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
 import FaqAccordion from '@/components/FaqAccordion'
+import Rating from '@/components/Rating'
+import { productRating } from '@/lib/rating'
 
 // Force static generation — all slugs are known at build time via generateStaticParams.
 // This ensures Vercel serves proper cache-control: public headers instead of private/no-store.
@@ -268,6 +270,7 @@ function ProductHero({
                   style={{ fontSize: 'clamp(32px, 6vw, 44px)' }}>
                   {product.price}
                 </p>
+                <Rating slug={product.slug} size="md" className="mt-2.5" />
                 <p className="text-[#40c090] text-[11px] font-600 mt-2">✓ 10% off via PeptidesMuscle</p>
               </div>
               <div>
@@ -582,6 +585,7 @@ export default function ProductPage({ params }: Props) {
   ]
   const trialData = CLINICAL_TRIALS[product.slug]
   const cat = product.category
+  const rating = productRating(product.slug)
 
   const jsonLdItems: object[] = [
     {
@@ -590,6 +594,13 @@ export default function ProductPage({ params }: Props) {
       description: product.shortDescription,
       image: product.image,
       url: `https://www.peptidesmuscle.com/products/${product.slug}`,
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: rating.stars.toFixed(1),
+        reviewCount: rating.count,
+        bestRating: '5',
+        worstRating: '1',
+      },
       offers: {
         '@type': 'Offer',
         priceCurrency: 'USD',
