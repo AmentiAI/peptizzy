@@ -164,7 +164,7 @@ export default function CjcTimelinePage() {
             <div className="flex gap-3">
               <a href="/go/cjc1295-ipamorelin"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/cjc-1295-ipamorelin" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

@@ -37,8 +37,8 @@ const people = [
     body: 'Joe Rogan has been one of the most influential voices in mainstreaming peptide discussion. On the JRE, he has referenced BPC-157 and TB-500 for injury recovery — specifically joint, knee, and connective tissue damage accumulated over years of martial arts training. He has credited his physician with introducing him to peptide protocols and discussed the dramatic improvement in recovery speed.',
     quote: '"I\'ve been using BPC-157... it actually helped my knee significantly. It\'s a healing peptide." — Joe Rogan, JRE',
     compounds: [
-      { name: 'BPC-157', reason: 'Joint and connective tissue recovery from martial arts injuries', href: '/products/bpc-157' },
-      { name: 'TB-500', reason: 'Systemic healing, flexibility, and tendon repair', href: '/products/tb-500' },
+      { name: 'BPC-157', reason: 'Joint and connective tissue recovery from martial arts injuries', href: '/products/bpc-157-10mg' },
+      { name: 'TB-500', reason: 'Systemic healing, flexibility, and tendon repair', href: '/products/tb-500-thymosin-beta-4-10mg' },
     ],
   },
   {
@@ -50,8 +50,8 @@ const people = [
     body: 'Andrew Huberman has discussed peptide science extensively on the Huberman Lab podcast, covering the mechanisms of BPC-157 in gut permeability repair and tissue regeneration, growth hormone secretagogues for body composition and sleep quality, and various longevity compounds. As a scientist, Huberman is careful to distinguish between animal-model data and human clinical research — making his discussions among the most nuanced publicly available.',
     quote: '"BPC-157 has interesting data on healing gut tissue... the research on connective tissue is compelling." — Andrew Huberman, Huberman Lab',
     compounds: [
-      { name: 'BPC-157', reason: 'Gut lining repair, tissue healing, anti-inflammatory', href: '/products/bpc-157' },
-      { name: 'CJC-1295 / Ipamorelin', reason: 'Growth hormone optimization for body comp and sleep quality', href: '/products/cjc-1295-ipamorelin' },
+      { name: 'BPC-157', reason: 'Gut lining repair, tissue healing, anti-inflammatory', href: '/products/bpc-157-10mg' },
+      { name: 'CJC-1295 / Ipamorelin', reason: 'Growth hormone optimization for body comp and sleep quality', href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg' },
     ],
   },
   {
@@ -63,8 +63,8 @@ const people = [
     body: 'Bryan Johnson\'s Blueprint protocol — the most documented human longevity experiment in history — has incorporated peptide compounds including GHK-Cu for skin rejuvenation and growth hormone optimization. Johnson\'s team publishes blood panel data, biological age measurements, and protocol changes in detail. His approach treats the body as a system to optimize quantitatively, and peptides feature in the skin, hormonal, and cellular age dimensions of his stack.',
     quote: '"The goal is to make my organs as young as possible... we use everything the evidence supports." — Bryan Johnson, Blueprint',
     compounds: [
-      { name: 'GHK-Cu', reason: 'Skin collagen density and anti-aging — topical and injectable', href: '/products/ghk-cu' },
-      { name: 'Epithalon', reason: 'Telomere maintenance and cellular anti-aging cycles', href: '/products/epithalon' },
+      { name: 'GHK-Cu', reason: 'Skin collagen density and anti-aging — topical and injectable', href: '/products/ghk-cu-50mg' },
+      { name: 'Epithalon', reason: 'Telomere maintenance and cellular anti-aging cycles', href: '/products/epitalon-50mg' },
     ],
   },
   {
@@ -76,8 +76,8 @@ const people = [
     body: 'Professional athletes across the NFL, NBA, and UFC have been linked to peptide use — particularly BPC-157 and TB-500 for the accelerated injury recovery that defines elite sport longevity. While WADA has added certain peptides to the prohibited list, BPC-157 and TB-500 remain in a legal gray area in many sports. Multiple athletes and trainers have spoken openly about peptide protocols for connective tissue recovery, inflammation management, and reducing downtime from injury.',
     quote: 'Trainers in NFL locker rooms have described peptide protocols as "the biggest recovery tool no one talks about publicly."',
     compounds: [
-      { name: 'BPC-157', reason: 'Rapid joint and tendon repair between games and training cycles', href: '/products/bpc-157' },
-      { name: 'TB-500', reason: 'Systemic healing, reduced inflammation, improved movement quality', href: '/products/tb-500' },
+      { name: 'BPC-157', reason: 'Rapid joint and tendon repair between games and training cycles', href: '/products/bpc-157-10mg' },
+      { name: 'TB-500', reason: 'Systemic healing, reduced inflammation, improved movement quality', href: '/products/tb-500-thymosin-beta-4-10mg' },
     ],
   },
   {
@@ -89,8 +89,8 @@ const people = [
     body: 'In Hollywood, where appearance is literally currency, peptide use among high-profile actors and executives has been discussed in longevity clinics, biohacking forums, and leaked protocol documents for years. GHK-Cu for skin quality, SNAP-8 as a topical Botox alternative, and growth hormone peptides for body composition and skin tightening are widely used in this ecosystem. The results — visible maintenance of extraordinary appearance into the 50s and 60s — are often attributed to "good genetics" in public while the actual protocols are significantly more involved.',
     quote: 'Multiple longevity clinics in Beverly Hills report that GHK-Cu and SNAP-8 are among their most-requested injectable and topical compounds.',
     compounds: [
-      { name: 'GHK-Cu', reason: 'Skin density, collagen architecture, the anti-aging compound of choice', href: '/products/ghk-cu' },
-      { name: 'SNAP-8', reason: 'Expression line reduction — the topical Botox alternative', href: '/products/snap-8' },
+      { name: 'GHK-Cu', reason: 'Skin density, collagen architecture, the anti-aging compound of choice', href: '/products/ghk-cu-50mg' },
+      { name: 'SNAP-8', reason: 'Expression line reduction — the topical Botox alternative', href: '/products/snap-8-10mg' },
     ],
   },
   {
@@ -102,8 +102,8 @@ const people = [
     body: 'Dr. Peter Attia — longevity physician and author of the bestselling "Outlive" — has discussed growth hormone secretagogues, BPC-157, and various peptide compounds extensively on his podcast "The Drive." Attia is known for applying highly evidence-based standards to his personal protocol and distinguishing rigorously between what the data supports and what remains theoretical. His discussion of GH peptides in the context of metabolic health and body composition has informed thousands of practitioners.',
     quote: '"The data on [GH secretagogues] for body composition in the context of an overall longevity protocol is reasonably compelling." — Peter Attia, The Drive',
     compounds: [
-      { name: 'CJC-1295 / Ipamorelin', reason: 'GH optimization for metabolic health and body composition', href: '/products/cjc-1295-ipamorelin' },
-      { name: 'BPC-157', reason: 'Gut health and systemic anti-inflammatory function', href: '/products/bpc-157' },
+      { name: 'CJC-1295 / Ipamorelin', reason: 'GH optimization for metabolic health and body composition', href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg' },
+      { name: 'BPC-157', reason: 'Gut health and systemic anti-inflammatory function', href: '/products/bpc-157-10mg' },
     ],
   },
 ]

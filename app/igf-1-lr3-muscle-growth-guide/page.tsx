@@ -296,9 +296,9 @@ export default function Igf1Lr3GuidePage() {
           <div className="pl-10 space-y-4">
             <p className="text-[#8888a0] text-[16px] leading-relaxed">IGF-1 LR3 is most powerful as part of a comprehensive body recomposition stack. The Body Sculptor combines it with complementary compounds that address fat loss, GH optimization, and recovery simultaneously.</p>
             {[
-              { name: 'IGF-1 LR3', role: 'Direct anabolic — hyperplasia + hypertrophy', dose: '40–60mcg post-workout, 4–6 week cycles', href: '/products/igf-1-lr3', color: accent },
-              { name: 'CJC-1295 / Ipamorelin', role: 'GH pulsatility restoration — base layer', dose: '100mcg/100mcg, 3–5× weekly pre-sleep', href: '/products/cjc-1295-ipamorelin', color: '#d4a043' },
-              { name: 'Retatrutide', role: 'Triple agonist fat loss — body recomposition', dose: 'Per titration schedule', href: '/products/retatrutide', color: '#a78bfa' },
+              { name: 'IGF-1 LR3', role: 'Direct anabolic — hyperplasia + hypertrophy', dose: '40–60mcg post-workout, 4–6 week cycles', href: '/products/igf-1-lr3-1mg', color: accent },
+              { name: 'CJC-1295 / Ipamorelin', role: 'GH pulsatility restoration — base layer', dose: '100mcg/100mcg, 3–5× weekly pre-sleep', href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg', color: '#d4a043' },
+              { name: 'Retatrutide', role: 'Triple agonist fat loss — body recomposition', dose: 'Per titration schedule', href: '/products/retatrutide-10mg', color: '#a78bfa' },
             ].map((c, i) => (
               <div key={i} className="card-elevated rounded-xl p-5 flex items-center gap-4">
                 <div className="flex-1">
@@ -325,7 +325,7 @@ export default function Igf1Lr3GuidePage() {
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most potent direct anabolic peptide for lean muscle development.</p>
             <div className="flex gap-3">
               <a href="/go/igf-1-lr3" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/igf-1-lr3" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/igf-1-lr3-1mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

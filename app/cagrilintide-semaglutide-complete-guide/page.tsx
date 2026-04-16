@@ -238,7 +238,7 @@ export default function CagriSemaGuidePage() {
           <div className="pl-10 mt-6">
             <div className="card rounded-xl p-5">
               <p className="text-white font-600 text-[14px] mb-2">How to Choose</p>
-              <p className="text-[#8888a0] text-[14px] leading-relaxed">Start with <Link href="/products/semaglutide" className="hover:underline" style={{ color: accent }}>semaglutide</Link> if you&apos;re new to GLP-1 protocols — it has the longest safety record and extensive clinical data. Move to CagriSema if you&apos;ve plateaued on semaglutide or want dual-pathway suppression from the start. Choose <Link href="/products/tirzepatide" className="hover:underline" style={{ color: '#a060ff' }}>tirzepatide</Link> if maximum total fat loss is the primary objective — it currently holds the highest average weight loss data among available compounds.</p>
+              <p className="text-[#8888a0] text-[14px] leading-relaxed">Start with <Link href="/products/semaglutide-6mg" className="hover:underline" style={{ color: accent }}>semaglutide</Link> if you&apos;re new to GLP-1 protocols — it has the longest safety record and extensive clinical data. Move to CagriSema if you&apos;ve plateaued on semaglutide or want dual-pathway suppression from the start. Choose <Link href="/products/tirzepatide-15mg" className="hover:underline" style={{ color: '#a060ff' }}>tirzepatide</Link> if maximum total fat loss is the primary objective — it currently holds the highest average weight loss data among available compounds.</p>
             </div>
           </div>
         </div>
@@ -276,7 +276,7 @@ export default function CagriSemaGuidePage() {
             <div className="card rounded-xl p-5">
               <p className="text-white font-600 text-[14px] mb-2">Reconstitution Note</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">
-                The pre-blended 5mg/5mg vial contains both compounds in equal concentration. Add 1–2ml of <Link href="/products/bacteriostatic-water" className="hover:underline" style={{ color: accent }}>bacteriostatic water</Link> per vial. At 1ml, each unit on an insulin syringe delivers 0.05mg of each component — making precise dose escalation straightforward. Inject subcutaneously (abdomen, thigh, or outer arm) once weekly. Rotate injection sites weekly.
+                The pre-blended 5mg/5mg vial contains both compounds in equal concentration. Add 1–2ml of <Link href="/products/bacteriostatic-water-30ml" className="hover:underline" style={{ color: accent }}>bacteriostatic water</Link> per vial. At 1ml, each unit on an insulin syringe delivers 0.05mg of each component — making precise dose escalation straightforward. Inject subcutaneously (abdomen, thigh, or outer arm) once weekly. Rotate injection sites weekly.
               </p>
             </div>
           </div>
@@ -343,7 +343,7 @@ export default function CagriSemaGuidePage() {
               <div className="card rounded-xl p-5">
                 <p className="font-700 text-[14px] mb-2 text-white">CJC-1295 + Ipamorelin Stack</p>
                 <p className="text-[#8888a0] text-[13px] leading-relaxed mb-3">The most commonly used muscle-preservation addition to GLP-1 protocols. Stimulates pulsatile growth hormone release to maintain nitrogen retention, support protein synthesis, and preferentially drive fat oxidation over muscle catabolism.</p>
-                <Link href="/products/cjc-1295-ipamorelin" className="text-[13px] font-600 hover:underline" style={{ color: accent }}>
+                <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="text-[13px] font-600 hover:underline" style={{ color: accent }}>
                   View CJC-1295 + Ipamorelin →
                 </Link>
               </div>
@@ -369,7 +369,7 @@ export default function CagriSemaGuidePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pre-blended 5mg/5mg vial. Dual amylin + GLP-1 pathway activation in a single weekly injection. Pharmaceutical-grade, COA verified.</p>
               <div className="flex gap-3">
                 <a href="/go/cagrilintide-semaglutide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/cagrilintide-semaglutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/cagri-sema-blend-5mg-cagrilintide-5mg-sema-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">

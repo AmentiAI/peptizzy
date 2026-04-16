@@ -452,7 +452,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The dual GIP+GLP-1 agonist that outperforms all pure GLP-1 therapies in clinical trials.</p>
               <div className="flex gap-3">
                 <a href="/go/tirzepatide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/tirzepatide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/tirzepatide-15mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -460,14 +460,14 @@ export default function TirzepatideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Four vials of 15mg tirzepatide — a full month&apos;s supply at maximum dose for users who have completed titration and need sustained maintenance supply.</p>
               <div className="flex gap-3">
                 <a href="/go/tirzepatide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy 4-Pack →</a>
-                <Link href="/products/tirzepatide-15mg-4-pack" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/tirzepatide-60mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">Start with Semaglutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">New to GLP-1 therapy? Semaglutide is the well-validated entry point with the longest safety track record — the proven first step before upgrading to dual agonism.</p>
               <div className="flex gap-3">
-                <Link href="/products/semaglutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Semaglutide</Link>
+                <Link href="/products/semaglutide-6mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Semaglutide</Link>
                 <Link href="/semaglutide-complete-guide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Sema Guide</Link>
               </div>
             </div>
@@ -475,7 +475,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Maximum Fat Loss: Retatrutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Need more than tirzepatide? Retatrutide&apos;s triple GIP+GLP-1+glucagon agonism produced 24.2% weight loss in trials — the most powerful option available.</p>
               <div className="flex gap-3">
-                <Link href="/products/retatrutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Retatrutide</Link>
+                <Link href="/products/retatrutide-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Retatrutide</Link>
                 <Link href="/retatrutide-complete-guide-results-dosage" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Reta Guide</Link>
               </div>
             </div>

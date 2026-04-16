@@ -199,7 +199,7 @@ export default function Snap8VsBotoxPage() {
             <div className="flex gap-3">
               <a href="/go/snap-8"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/snap-8" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/snap-8-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

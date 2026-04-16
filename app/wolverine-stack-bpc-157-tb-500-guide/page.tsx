@@ -141,8 +141,8 @@ export default function WolverineStackPage() {
           </div>
           <div className="pl-10 grid sm:grid-cols-2 gap-4">
             {[
-              { name: 'BPC-157 10mg', desc: 'Targeted localized healing — the precision component', url: AFF('bpc157-10mg'), href: '/products/bpc-157' },
-              { name: 'TB-500 10mg', desc: 'Systemic full-body coverage — the distribution component', url: AFF('tb500-10mg'), href: '/products/tb-500' },
+              { name: 'BPC-157 10mg', desc: 'Targeted localized healing — the precision component', url: AFF('bpc157-10mg'), href: '/products/bpc-157-10mg' },
+              { name: 'TB-500 10mg', desc: 'Systemic full-body coverage — the distribution component', url: AFF('tb500-10mg'), href: '/products/tb-500-thymosin-beta-4-10mg' },
             ].map(p => (
               <div key={p.name} className="card-elevated rounded-2xl p-6">
                 <p className="text-white font-700 text-[16px] mb-2">{p.name}</p>

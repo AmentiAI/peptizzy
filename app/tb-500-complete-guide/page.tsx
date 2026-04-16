@@ -456,8 +456,8 @@ export default function Tb500CompletePage() {
 
             <div className="grid sm:grid-cols-3 gap-3 mt-2">
               {[
-                { label: 'Add CJC-1295 + Ipamorelin', desc: 'Growth hormone optimization amplifies the cellular repair environment established by the Wolverine Stack. GH peptides increase IGF-1, which accelerates tissue remodeling.', href: '/products/cjc-1295-ipamorelin' },
-                { label: 'Add GHK-Cu', desc: 'Copper peptide GHK-Cu adds collagen synthesis stimulation, anti-fibrotic remodeling, and skin/connective tissue regeneration to complement TB-500\'s systemic healing.', href: '/products/ghk-cu' },
+                { label: 'Add CJC-1295 + Ipamorelin', desc: 'Growth hormone optimization amplifies the cellular repair environment established by the Wolverine Stack. GH peptides increase IGF-1, which accelerates tissue remodeling.', href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg' },
+                { label: 'Add GHK-Cu', desc: 'Copper peptide GHK-Cu adds collagen synthesis stimulation, anti-fibrotic remodeling, and skin/connective tissue regeneration to complement TB-500\'s systemic healing.', href: '/products/ghk-cu-50mg' },
                 { label: 'Advanced Stacking Guide', desc: 'How to sequence and combine healing peptides for comprehensive recovery optimization across multiple injury types and training goals.', href: '/peptide-stacking-guide' },
               ].map((item, i) => (
                 <Link key={i} href={item.href} className="card rounded-xl p-4 group hover:border-[#d4a043]/20 transition-colors">
@@ -484,7 +484,7 @@ export default function Tb500CompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Lyophilized pharmaceutical-grade powder. Certificate of analysis verified. The most powerful systemic healing peptide available for athletes and biohackers.</p>
               <div className="flex gap-3">
                 <a href="/go/tb-500" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/tb-500" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/tb-500-thymosin-beta-4-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -492,7 +492,7 @@ export default function Tb500CompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">TB-500 + BPC-157 together. The complete healing protocol for serious recovery optimization — precision local repair combined with systemic regeneration.</p>
               <div className="flex gap-3">
                 <a href="/go/wolverine" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
-                <Link href="/products/bpc-157" className="btn-ghost flex-1 justify-center py-3 text-[13px]">BPC-157 Info</Link>
+                <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">BPC-157 Info</Link>
               </div>
             </div>
           </div>

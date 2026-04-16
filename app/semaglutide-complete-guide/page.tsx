@@ -295,15 +295,15 @@ export default function SemaglutideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most clinically proven weight loss peptide available.</p>
               <div className="flex gap-3">
                 <a href="/go/semaglutide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/semaglutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/semaglutide-6mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">Ready to Upgrade?</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Tirzepatide and Retatrutide offer significantly greater weight loss for those who need more than semaglutide alone.</p>
               <div className="flex gap-3">
-                <Link href="/products/tirzepatide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Tirzepatide</Link>
-                <Link href="/products/retatrutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Retatrutide</Link>
+                <Link href="/products/tirzepatide-15mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Tirzepatide</Link>
+                <Link href="/products/retatrutide-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Retatrutide</Link>
               </div>
             </div>
           </div>

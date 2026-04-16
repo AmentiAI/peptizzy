@@ -36,8 +36,8 @@ const goals = [
     body: 'Skin collagen density, elasticity, and luminosity decline markedly from the mid-20s — accelerated by UV exposure, hormonal shifts, and oxidative stress. Peptides address collagen architecture at the cellular level: GHK-Cu directly upregulates collagen I, III, and elastin synthesis. SNAP-8 blocks the neuromuscular signal that creates expression lines — without the paralysis or diffusion risk of botulinum toxin.',
     note: 'Women typically respond to GHK-Cu more dramatically than men due to baseline differences in fibroblast density — clinical literature shows consistent collagen density improvements of 70–121%.',
     peptides: [
-      { name: 'GHK-Cu', role: 'Collagen stimulation, skin density, wound healing', dose: '1mg SubQ 3–5× weekly or topical 2× daily', href: '/products/ghk-cu' },
-      { name: 'SNAP-8', role: 'Expression line reduction — topical neuromuscular peptide', dose: 'Applied to target areas 2× daily', href: '/products/snap-8' },
+      { name: 'GHK-Cu', role: 'Collagen stimulation, skin density, wound healing', dose: '1mg SubQ 3–5× weekly or topical 2× daily', href: '/products/ghk-cu-50mg' },
+      { name: 'SNAP-8', role: 'Expression line reduction — topical neuromuscular peptide', dose: 'Applied to target areas 2× daily', href: '/products/snap-8-10mg' },
     ],
   },
   {
@@ -48,7 +48,7 @@ const goals = [
     body: 'Growth hormone peptides are uniquely well-suited to female looksmaxxing goals because the outcomes — reduced subcutaneous fat, improved muscle definition, skin tightening, and better metabolic rate — align precisely with what most women are optimizing for. At female-appropriate doses (typically 50–75mcg Ipamorelin twice daily), the results are body recomposition without androgen-driven side effects.',
     note: 'CJC-1295 + Ipamorelin is the stack of choice because the dual-receptor approach (GHRH + ghrelin pathway) produces a more physiological GH pulse pattern than GHRP compounds alone.',
     peptides: [
-      { name: 'CJC-1295 / Ipamorelin', role: 'GH optimization — fat loss, muscle tone, skin tightening', dose: '50–75mcg each, 2× daily (lower than male protocol)', href: '/products/cjc-1295-ipamorelin' },
+      { name: 'CJC-1295 / Ipamorelin', role: 'GH optimization — fat loss, muscle tone, skin tightening', dose: '50–75mcg each, 2× daily (lower than male protocol)', href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg' },
     ],
   },
   {
@@ -59,7 +59,7 @@ const goals = [
     body: 'Biological aging in women is tightly coupled to hormonal shifts — declining estrogen, progesterone, and growth hormone pulse amplitude from the late 30s onward drive much of the visible aging process. Epithalon addresses cellular age directly by activating telomerase, the enzyme that rebuilds telomere caps. Clinical data shows improved melatonin secretion, circadian rhythm normalization, and antioxidant defense — all of which translate directly to visible rejuvenation.',
     note: 'Epithalon\'s effect on the pineal gland to restore melatonin secretion is particularly relevant for women, where disrupted circadian rhythms are a major driver of hormonal dysregulation.',
     peptides: [
-      { name: 'Epithalon', role: 'Telomere maintenance, melatonin normalization, cellular longevity', dose: '5–10mg daily for 10–20 days (2× per year)', href: '/products/epithalon' },
+      { name: 'Epithalon', role: 'Telomere maintenance, melatonin normalization, cellular longevity', dose: '5–10mg daily for 10–20 days (2× per year)', href: '/products/epitalon-50mg' },
     ],
   },
   {
@@ -70,7 +70,7 @@ const goals = [
     body: 'BPC-157 addresses systemic inflammation, gut permeability, and connective tissue quality — the biological infrastructure that determines how well every other compound works. For women running training programs alongside a peptide stack, BPC-157 reduces recovery time, improves joint health, and supports the gut microbiome balance that underpins skin quality and hormonal metabolism.',
     note: 'BPC-157\'s gut permeability repair is particularly valuable because intestinal health directly affects estrogen metabolism and skin inflammation — two critical axes for female looksmaxxing.',
     peptides: [
-      { name: 'BPC-157', role: 'Gut health, systemic anti-inflammatory, connective tissue repair', dose: '200–250mcg SubQ daily', href: '/products/bpc-157' },
+      { name: 'BPC-157', role: 'Gut health, systemic anti-inflammatory, connective tissue repair', dose: '200–250mcg SubQ daily', href: '/products/bpc-157-10mg' },
     ],
   },
 ]

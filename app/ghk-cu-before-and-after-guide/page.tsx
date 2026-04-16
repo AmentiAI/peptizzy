@@ -136,9 +136,9 @@ export default function GhkCuGuidePage() {
           </div>
           <div className="pl-10 space-y-3">
             {[
-              { name: 'GHK-Cu', role: 'Structural collagen rebuilding — the foundation', dose: '1–2mg SubQ, 3–5× weekly', href: '/products/ghk-cu' },
-              { name: 'SNAP-8', role: 'Neuromuscular wrinkle reduction — expression lines', dose: 'Topical 2× daily', href: '/products/snap-8' },
-              { name: 'Epithalon', role: 'Telomere lengthening — cellular age reversal', dose: '5–10mg daily × 10–20 days/cycle', href: '/products/epithalon' },
+              { name: 'GHK-Cu', role: 'Structural collagen rebuilding — the foundation', dose: '1–2mg SubQ, 3–5× weekly', href: '/products/ghk-cu-50mg' },
+              { name: 'SNAP-8', role: 'Neuromuscular wrinkle reduction — expression lines', dose: 'Topical 2× daily', href: '/products/snap-8-10mg' },
+              { name: 'Epithalon', role: 'Telomere lengthening — cellular age reversal', dose: '5–10mg daily × 10–20 days/cycle', href: '/products/epitalon-50mg' },
             ].map(c => (
               <div key={c.name} className="card-elevated rounded-xl p-5 flex items-center gap-4">
                 <div className="flex-1">
@@ -165,7 +165,7 @@ export default function GhkCuGuidePage() {
             <div className="flex gap-3">
               <a href="/go/ghk-cu"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/ghk-cu" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/ghk-cu-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

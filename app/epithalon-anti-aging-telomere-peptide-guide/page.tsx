@@ -152,8 +152,8 @@ export default function EpithalonGuidePage() {
           </div>
           <div className="pl-10 space-y-3">
             {[
-              { name: 'Epithalon', role: 'Chromosomal level — telomere restoration', dose: '10mg daily × 10 days, 2× yearly', href: '/products/epithalon', color: '#a060ff' },
-              { name: 'GHK-Cu', role: 'Gene expression level — skin anti-aging', dose: '1mg SubQ 3× weekly', href: '/products/ghk-cu', color: '#d4a043' },
+              { name: 'Epithalon', role: 'Chromosomal level — telomere restoration', dose: '10mg daily × 10 days, 2× yearly', href: '/products/epitalon-50mg', color: '#a060ff' },
+              { name: 'GHK-Cu', role: 'Gene expression level — skin anti-aging', dose: '1mg SubQ 3× weekly', href: '/products/ghk-cu-50mg', color: '#d4a043' },
               { name: 'NAD+ (if available)', role: 'Cellular energy level — sirtuin activation', dose: '250–500mg per session', href: '/products', color: '#40c090' },
             ].map(c => (
               <div key={c.name} className="card-elevated rounded-xl p-5 flex items-center gap-4">
@@ -179,7 +179,7 @@ export default function EpithalonGuidePage() {
             <div className="flex gap-3">
               <a href="/go/epithalon"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/epithalon" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>
