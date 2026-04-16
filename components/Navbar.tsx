@@ -56,13 +56,6 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="https://x.com/LooksMax_Agent" target="_blank" rel="noopener noreferrer"
-            className="p-2 text-[#50505e] hover:text-white transition-colors duration-150"
-            aria-label="Follow on X">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.26 5.632 5.905-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-          </a>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent('open-chat'))}
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-[12px] font-600 transition-all duration-200"
@@ -115,13 +108,6 @@ export default function Navbar() {
                           target="_blank" rel="noopener nofollow sponsored"
             className="btn-primary w-full mt-3 text-center">
             Shop Peptides
-          </a>
-          <a href="https://x.com/LooksMax_Agent" target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 mt-3 py-3 text-[#8888a0] hover:text-white transition-colors text-[14px]">
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.26 5.632 5.905-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-            </svg>
-            Follow on X
           </a>
         </div>
       )}
