@@ -50,8 +50,6 @@ const jsonLd = {
   ],
 }
 
-const AFF_BASE = 'https://phiogen.is/products'
-const REF = '?ref=PEPS'
 
 const weightExamples = [
   { start: '160 lbs', loss: '45.9 lbs', end: '~114 lbs', body: 'Lean to very lean. Dramatic facial definition, visible muscle striations at rest.' },
@@ -71,8 +69,8 @@ const stackComponents = [
     mechanism: 'Triple receptor agonism (GLP-1 + GIP + Glucagon) creates a profound caloric deficit through appetite suppression and direct glucagon-mediated energy expenditure increase. The glucagon component is what separates retatrutide from tirzepatide — it directly accelerates hepatic fat burning and raises basal metabolic rate above baseline, so fat loss occurs even without large dietary restriction.',
     looksMaxAngle: 'Creates the caloric environment for fat loss. At 28.7% body weight reduction, retatrutide strips adipose from all depots including facial fat pads, the neck, and subcutaneous layers over muscle — revealing definition that training alone cannot expose in the presence of excess body fat.',
     products: [
-      { name: 'Retatrutide 15mg', url: `${AFF_BASE}/glp-3r-15mg/${REF}` },
-      { name: 'Retatrutide 30mg', url: `${AFF_BASE}/glp-3-r-30mg/${REF}` },
+      { name: 'Retatrutide 15mg', url: '/go/retatrutide-15mg' },
+      { name: 'Retatrutide 30mg', url: '/go/retatrutide-30mg' },
     ],
   },
   {
@@ -84,7 +82,7 @@ const stackComponents = [
     mechanism: 'CJC-1295 stimulates GHRH receptors for sustained GH pulse elevation. Ipamorelin activates the ghrelin receptor for a separate, complementary GH pulse — without the cortisol and prolactin elevation of older GHRP compounds. Together they produce physiologically elevated GH pulses that preserve lean mass during caloric deficit, preferentially mobilize fat, improve sleep quality, and dramatically tighten skin as body fat drops.',
     looksMaxAngle: 'The critical countermeasure to retatrutide\'s lean mass risk. GH is directly anabolic to muscle and connective tissue. During the aggressive fat loss phase, GH optimization means the body selectively burns fat rather than catabolizing muscle — producing a physique that is lean AND muscular rather than simply thin. Skin tightening from GH prevents the loose skin appearance that can accompany rapid fat loss.',
     products: [
-      { name: 'CJC-1295 / Ipamorelin', url: `${AFF_BASE}/cjc-1295-ipamorelin-blend/${REF}` },
+      { name: 'CJC-1295 / Ipamorelin', url: '/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg' },
     ],
   },
   {
@@ -96,7 +94,7 @@ const stackComponents = [
     mechanism: 'BPC-157 repairs gut permeability — which is directly relevant for retatrutide users, as GLP-1 agonists alter GI motility and the gut microbiome environment during the weight loss phase. BPC-157 also accelerates connective tissue remodeling, which matters as fascia and ligaments adapt to rapidly changing body composition. The anti-inflammatory effect supports joint health during intensified training.',
     looksMaxAngle: 'A stable, healthy gut environment means better nutrient absorption from reduced food intake. Connective tissue remodeling during fat loss determines how skin and underlying structures adapt — BPC-157 supports the tissue quality outcome as body fat drops.',
     products: [
-      { name: 'BPC-157', url: `${AFF_BASE}/bpc-157/${REF}` },
+      { name: 'BPC-157', url: '/go/bpc-157-10mg' },
     ],
   },
   {
@@ -108,7 +106,7 @@ const stackComponents = [
     mechanism: 'As body fat decreases, the skin must contract and remodel its collagen architecture to the new body shape. GHK-Cu directly stimulates collagen I, III, and elastin synthesis — accelerating the skin\'s structural adaptation to fat loss. This is most visible in the face: as facial adipose reduces on retatrutide, GHK-Cu ensures the overlying skin tightens and densifies rather than appearing loose or deflated.',
     looksMaxAngle: 'The defining difference between someone who looks "lean and tight" versus someone who looks "thin and gaunt" after significant weight loss. GHK-Cu drives the skin quality response that makes the physique transformation look like optimization rather than weight loss.',
     products: [
-      { name: 'GHK-Cu', url: `${AFF_BASE}/ghk-cu-copper-peptide/${REF}` },
+      { name: 'GHK-Cu', url: '/go/ghk-cu-50mg' },
     ],
   },
 ]
@@ -492,11 +490,11 @@ export default function RetatrutideRecompPage() {
             <p className="text-[#8888a0] text-[15px] leading-relaxed mb-6">Every compound in this protocol, in one place:</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { name: 'Retatrutide 15mg', sub: 'Triple GLP — the fat loss engine', url: `${AFF_BASE}/glp-3r-15mg/${REF}`, color: '#6090ff' },
-                { name: 'Retatrutide 30mg', sub: 'Mid-protocol supply format', url: `${AFF_BASE}/glp-3-r-30mg/${REF}`, color: '#6090ff' },
-                { name: 'CJC-1295 / Ipamorelin', sub: 'GH optimization — lean mass + skin', url: `${AFF_BASE}/cjc-1295-ipamorelin-blend/${REF}`, color: '#d4a043' },
-                { name: 'GHK-Cu', sub: 'Collagen & skin tightening during fat loss', url: `${AFF_BASE}/ghk-cu-copper-peptide/${REF}`, color: '#d4a043' },
-                { name: 'BPC-157', sub: 'Gut health + connective tissue foundation', url: `${AFF_BASE}/bpc-157/${REF}`, color: '#40c090' },
+                { name: 'Retatrutide 15mg', sub: 'Triple GLP — the fat loss engine', url: '/go/retatrutide-15mg', color: '#6090ff' },
+                { name: 'Retatrutide 30mg', sub: 'Mid-protocol supply format', url: '/go/retatrutide-30mg', color: '#6090ff' },
+                { name: 'CJC-1295 / Ipamorelin', sub: 'GH optimization — lean mass + skin', url: '/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg', color: '#d4a043' },
+                { name: 'GHK-Cu', sub: 'Collagen & skin tightening during fat loss', url: '/go/ghk-cu-50mg', color: '#d4a043' },
+                { name: 'BPC-157', sub: 'Gut health + connective tissue foundation', url: '/go/bpc-157-10mg', color: '#40c090' },
               ].map(p => (
                 <a key={p.name} href={p.url} target="_blank" rel="noopener nofollow sponsored" className="card-elevated rounded-2xl p-5 group hover:border-white/10 transition-colors">
                   <p className="text-white font-700 text-[15px] mb-1">{p.name}</p>

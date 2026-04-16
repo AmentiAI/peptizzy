@@ -291,9 +291,9 @@ export default function LooksmaxxingResearchPeptidesBeginners() {
               ))}
             </div>
             <div className="flex flex-wrap gap-3 mt-4">
-              <a href="/go/ghk-cu" target="_blank" rel="noopener nofollow sponsored" className="btn-primary px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
-              <a href="/go/bacteriostatic-water" target="_blank" rel="noopener nofollow sponsored" className="btn-ghost px-5 py-2.5 text-[13px]">Get Bacteriostatic Water →</a>
-              <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-ghost px-5 py-2.5 text-[13px]">Get CJC-1295/Ipamorelin →</a>
+              <a href="/go/ghk-cu-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
+              <a href="/go/bacteriostatic-water-30ml" target="_blank" rel="noopener nofollow sponsored" className="btn-ghost px-5 py-2.5 text-[13px]">Get Bacteriostatic Water →</a>
+              <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-ghost px-5 py-2.5 text-[13px]">Get CJC-1295/Ipamorelin →</a>
             </div>
           </div>
         </div>

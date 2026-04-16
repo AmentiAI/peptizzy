@@ -356,7 +356,7 @@ export default function Mk677IbutamorenGuide() {
             <div className="card rounded-xl p-5 mt-4">
               <p className="text-white font-600 text-[14px] mb-2">Looksmaxxing Stack: MK-677 + GHK-Cu</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">The most synergistic looksmaxxing pairing for skin and hair involves combining MK-677 (systemic GH/IGF-1 elevation) with GHK-Cu (copper peptide — direct fibroblast stimulation and collagen remodeling). MK-677 drives the systemic environment for tissue repair; GHK-Cu provides targeted, localized collagen synthesis and anti-inflammatory signaling in the skin. Many advanced looksmaxxers add injectable or topical GHK-Cu to their MK-677 protocol starting at week 4–6 for amplified results.</p>
-              <a href="/go/ghk-cu" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-4 px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
+              <a href="/go/ghk-cu-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-4 px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
             </div>
           </div>
         </div>
@@ -444,7 +444,7 @@ export default function Mk677IbutamorenGuide() {
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">GHK-Cu (Skin Stack)</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The ideal companion to MK-677 for looksmaxxing. Direct fibroblast activation and collagen remodeling to amplify MK-677&apos;s systemic skin effects.</p>
-              <a href="/go/ghk-cu" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Get GHK-Cu →</a>
+              <a href="/go/ghk-cu-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Get GHK-Cu →</a>
             </div>
           </div>
         </div>

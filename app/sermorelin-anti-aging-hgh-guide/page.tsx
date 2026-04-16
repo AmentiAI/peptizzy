@@ -471,7 +471,7 @@ export default function SermorelinAntiAgingPage() {
               <p className="text-white font-700 text-[18px] mb-1">CJC-1295 + Ipamorelin Stack</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The premium GH optimization combo. Dual-pathway GH stimulation for superior anti-aging and body composition results.</p>
               <div className="flex gap-3">
-                <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
+                <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
                 <Link href="/cjc-1295-ipamorelin-results-timeline" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Stack Guide</Link>
               </div>
             </div>

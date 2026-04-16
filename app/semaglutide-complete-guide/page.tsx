@@ -294,7 +294,7 @@ export default function SemaglutideCompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Semaglutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most clinically proven weight loss peptide available.</p>
               <div className="flex gap-3">
-                <a href="/go/semaglutide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/semaglutide-6mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/semaglutide-6mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

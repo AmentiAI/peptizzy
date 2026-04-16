@@ -83,7 +83,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#34d399'
 
 export default function MotsCLongevityPage() {
@@ -504,7 +503,7 @@ export default function MotsCLongevityPage() {
                   <p className="text-[#8888a0] text-sm mt-1">Mitochondria-encoded AMPK activator — exercise mimetic, visceral fat, longevity</p>
                 </div>
               </div>
-              <a href={AFF('mots-c-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/mots-c-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -518,7 +517,7 @@ export default function MotsCLongevityPage() {
                   <p className="text-[#8888a0] text-sm mt-1">Telomerase activator from pineal peptides — anti-aging via telomere axis</p>
                 </div>
               </div>
-              <a href={AFF('epithalon-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/epitalon-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -532,7 +531,7 @@ export default function MotsCLongevityPage() {
                   <p className="text-[#8888a0] text-sm mt-1">GHRH analogue — amplifies overnight GH pulse for recomp and recovery</p>
                 </div>
               </div>
-              <a href={AFF('cjc-1295-no-dac-2mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/cjc-1295-no-dac-5mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -546,7 +545,7 @@ export default function MotsCLongevityPage() {
                   <p className="text-[#8888a0] text-sm mt-1">Gut barrier repair + systemic anti-inflammatory — metabolic health synergy</p>
                 </div>
               </div>
-              <a href={AFF('bpc-157-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/bpc-157-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>

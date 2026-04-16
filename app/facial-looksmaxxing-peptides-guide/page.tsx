@@ -25,7 +25,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 const mechanisms = [
   { label: 'Collagen Type I & III', sub: 'GHK-Cu', body: 'GHK-Cu directly stimulates fibroblast synthesis of collagen type I (structural, 90% of dermal collagen) and type III (elasticity). Clinical measurement shows up to 121% increase in collagen density over 12 weeks.', color: '#d4a043' },
@@ -104,7 +103,7 @@ export default function FacialLooksmaxxingPage() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['Injectable SubQ', 'Topical', '+121% Collagen'].map(t => <span key={t} className="tag-gold text-[11px]">{t}</span>)}
                 </div>
-                <a href={AFF('ghk-cu-copper-peptide')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center text-[12px] py-2.5">Buy GHK-Cu →</a>
+                <a href={'/go/ghk-cu-50mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center text-[12px] py-2.5">Buy GHK-Cu →</a>
               </div>
               <div className="card-elevated rounded-2xl p-6">
                 <p className="text-white font-700 text-[17px] mb-1">SNAP-8</p>
@@ -113,7 +112,7 @@ export default function FacialLooksmaxxingPage() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['Topical Only', 'No Paralysis Risk', 'Up to 63% Reduction'].map(t => <span key={t} className="tag text-[11px]">{t}</span>)}
                 </div>
-                <a href={AFF('snap-8-peptide')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center text-[12px] py-2.5">Buy SNAP-8 →</a>
+                <a href={'/go/snap-8-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center text-[12px] py-2.5">Buy SNAP-8 →</a>
               </div>
             </div>
           </div>
@@ -233,12 +232,12 @@ export default function FacialLooksmaxxingPage() {
             </h2>
           </div>
           <div className="pl-10 grid sm:grid-cols-2 gap-4">
-            <a href={AFF('ghk-cu-copper-peptide')} target="_blank" rel="noopener nofollow sponsored" className="card-elevated rounded-2xl p-5 group hover:border-[#d4a043]/30 transition-colors">
+            <a href={'/go/ghk-cu-50mg'} target="_blank" rel="noopener nofollow sponsored" className="card-elevated rounded-2xl p-5 group hover:border-[#d4a043]/30 transition-colors">
               <p className="text-white font-700 text-[16px] mb-1">GHK-Cu</p>
               <p className="text-[#d4a043] text-[12px] mb-3">Injectable + topical — collagen & elastin</p>
               <p className="text-[#d4a043] text-[13px] font-600 group-hover:underline">Buy GHK-Cu →</p>
             </a>
-            <a href={AFF('snap-8-peptide')} target="_blank" rel="noopener nofollow sponsored" className="card-elevated rounded-2xl p-5 group hover:border-[#6090ff]/30 transition-colors">
+            <a href={'/go/snap-8-10mg'} target="_blank" rel="noopener nofollow sponsored" className="card-elevated rounded-2xl p-5 group hover:border-[#6090ff]/30 transition-colors">
               <p className="text-white font-700 text-[16px] mb-1">SNAP-8</p>
               <p style={{ color: '#6090ff' }} className="text-[12px] mb-3">Topical — expression line reduction</p>
               <p style={{ color: '#6090ff' }} className="text-[13px] font-600 group-hover:underline">Buy SNAP-8 →</p>

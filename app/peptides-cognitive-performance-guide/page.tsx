@@ -534,7 +534,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-white font-700 text-[18px] mb-1">NAD+</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The foundational neuroenergetic compound. Restores mitochondrial ATP production in neurons, activates SIRT1 neuroprotection, and reverses the NAD+ decline driving cognitive fatigue and brain fog.</p>
               <div className="flex gap-3">
-                <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/nad-500mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -542,7 +542,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-white font-700 text-[18px] mb-1">Epithalon</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Telomerase activator and pineal gland regulator. The deepest-acting longevity peptide for cognitive health — repairs neural telomeres and restores the sleep architecture that makes all other cognitive enhancement possible.</p>
               <div className="flex gap-3">
-                <a href="/go/epithalon" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/epitalon-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -550,7 +550,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-white font-700 text-[18px] mb-1">CJC-1295 / Ipamorelin</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The neurotrophic peptide combination. Elevates growth hormone and IGF-1 to upregulate BDNF, support neurogenesis, and optimize the deep-sleep window for memory consolidation and neural repair.</p>
               <div className="flex gap-3">
-                <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -558,7 +558,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-white font-700 text-[18px] mb-1">BPC-157</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Neuroprotective and anti-neuroinflammatory. Reduces microglial activation, supports dopamine and serotonin pathway recovery, and creates the low-inflammation neural environment required for optimal cognitive performance.</p>
               <div className="flex gap-3">
-                <a href="/go/bpc-157" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/bpc-157-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

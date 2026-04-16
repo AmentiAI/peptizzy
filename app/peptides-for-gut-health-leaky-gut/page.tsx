@@ -80,7 +80,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#40c090'
 
 const leakyGutMechanisms = [
@@ -386,7 +385,7 @@ export default function GutHealthLeakyGutPage() {
                 The gold-standard gut healing peptide. Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. Effective both orally (for gut) and via SubQ injection (for systemic healing).
               </p>
               <div className="flex gap-3">
-                <a href="/go/bpc-157" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/bpc-157-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -397,7 +396,7 @@ export default function GutHealthLeakyGutPage() {
                 The anti-inflammatory tripeptide for IBD and gut inflammation. Targets NF-κB and pro-inflammatory cytokines directly in intestinal tissue. Ideal alongside BPC-157 for inflammatory bowel conditions.
               </p>
               <div className="flex gap-3">
-                <a href="/go/kpv" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/kpv-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/kpv-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

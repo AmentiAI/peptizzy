@@ -72,7 +72,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#40c090'
 
 const mechanisms = [
@@ -348,7 +347,7 @@ export default function Bpc157CompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">BPC-157</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Lyophilized pharmaceutical-grade powder. Certificate of analysis verified. The most-researched healing peptide available.</p>
               <div className="flex gap-3">
-                <a href="/go/bpc-157" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/bpc-157-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -356,7 +355,7 @@ export default function Bpc157CompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Wolverine Stack</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">BPC-157 + TB-500 together. The complete healing protocol for serious recovery optimization.</p>
               <div className="flex gap-3">
-                <a href="/go/wolverine" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
+                <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
                 <Link href="/stacks/wolverine" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Stack Details</Link>
               </div>
             </div>

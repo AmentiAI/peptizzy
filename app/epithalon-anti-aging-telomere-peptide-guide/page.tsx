@@ -26,7 +26,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 export default function EpithalonGuidePage() {
   return (
@@ -177,7 +176,7 @@ export default function EpithalonGuidePage() {
             <p className="text-white font-700 text-[18px] mb-2">Epithalon (Epitalon)</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Research-grade Epithalon tetrapeptide. 10mg vials for the standard 10-day course protocol. The most extensively researched peptide in longevity science.</p>
             <div className="flex gap-3">
-              <a href="/go/epithalon"
+              <a href="/go/epitalon-50mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>

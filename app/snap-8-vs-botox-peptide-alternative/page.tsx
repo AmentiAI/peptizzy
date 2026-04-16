@@ -25,7 +25,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 export default function Snap8VsBotoxPage() {
   return (
@@ -197,7 +196,7 @@ export default function Snap8VsBotoxPage() {
             <p className="text-white font-700 text-[18px] mb-2">SNAP-8 (Acetyl Octapeptide-3)</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Research-grade SNAP-8 for topical application. The most studied peptide alternative to Botox, with double-blind clinical support.</p>
             <div className="flex gap-3">
-              <a href="/go/snap-8"
+              <a href="/go/snap-8-10mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/snap-8-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>

@@ -483,7 +483,7 @@ export default function Tb500CompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">TB-500</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Lyophilized pharmaceutical-grade powder. Certificate of analysis verified. The most powerful systemic healing peptide available for athletes and biohackers.</p>
               <div className="flex gap-3">
-                <a href="/go/tb-500" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/tb-500-thymosin-beta-4-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/tb-500-thymosin-beta-4-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -491,7 +491,7 @@ export default function Tb500CompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Wolverine Stack</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">TB-500 + BPC-157 together. The complete healing protocol for serious recovery optimization — precision local repair combined with systemic regeneration.</p>
               <div className="flex gap-3">
-                <a href="/go/wolverine" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
+                <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
                 <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">BPC-157 Info</Link>
               </div>
             </div>

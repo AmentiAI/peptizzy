@@ -451,7 +451,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Tirzepatide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The dual GIP+GLP-1 agonist that outperforms all pure GLP-1 therapies in clinical trials.</p>
               <div className="flex gap-3">
-                <a href="/go/tirzepatide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/tirzepatide-15mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/tirzepatide-15mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -459,7 +459,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Tirzepatide 15mg — 4-Pack</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Four vials of 15mg tirzepatide — a full month&apos;s supply at maximum dose for users who have completed titration and need sustained maintenance supply.</p>
               <div className="flex gap-3">
-                <a href="/go/tirzepatide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy 4-Pack →</a>
+                <a href="/go/tirzepatide-15mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy 4-Pack →</a>
                 <Link href="/products/tirzepatide-60mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

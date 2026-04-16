@@ -83,7 +83,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#f97316'
 
 export default function FatLossPeptidesPage() {
@@ -479,7 +478,7 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">GLP-1 receptor agonist — appetite suppression + insulin sensitivity</p>
                 </div>
               </div>
-              <a href={AFF('semaglutide-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/semaglutide-12mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -493,7 +492,7 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">GLP-1 + GIP dual agonism — superior fat loss vs. semaglutide alone</p>
                 </div>
               </div>
-              <a href={AFF('tirzepatide-15mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/tirzepatide-15mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -507,7 +506,7 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">GLP-1 + GIP + glucagon triple agonism — fastest fat loss in clinical data</p>
                 </div>
               </div>
-              <a href={AFF('retatrutide-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/retatrutide-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -521,7 +520,7 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">Isolated HGH lipolytic fragment — no IGF-1, no blood sugar effects</p>
                 </div>
               </div>
-              <a href={AFF('aod-9604-5mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/aod9604-5mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -535,7 +534,7 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">AMPK activation — exercise mimetic, visceral fat targeting</p>
                 </div>
               </div>
-              <a href={AFF('mots-c-10mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/mots-c-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">View on Phiogen →</a>
               <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -549,9 +548,9 @@ export default function FatLossPeptidesPage() {
                   <p className="text-[#8888a0] text-sm mt-1">GHRH + GHRP synergy — overnight fat oxidation with muscle preservation</p>
                 </div>
               </div>
-              <a href={AFF('cjc-1295-no-dac-2mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/cjc-1295-no-dac-5mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary text-center block">CJC-1295 on Phiogen →</a>
-              <a href={AFF('ipamorelin-2mg')} target="_blank" rel="noopener nofollow sponsored"
+              <a href={'/go/ipamorelin-10mg'} target="_blank" rel="noopener nofollow sponsored"
                 className="btn-ghost text-center block text-sm">Ipamorelin on Phiogen →</a>
             </div>
 

@@ -80,7 +80,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#f59e0b'
 
 const hpgCascade = [
@@ -442,7 +441,7 @@ export default function Kisspeptin10TestosteronePage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">Kisspeptin-10 — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">The HPG axis master switch. Activates the complete kisspeptin → GnRH → LH → Testosterone cascade for natural hormonal optimization without axis shutdown.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('kisspeptin-10-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/kisspeptin-10-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/kisspeptin-10-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>
@@ -450,7 +449,7 @@ export default function Kisspeptin10TestosteronePage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">Ipamorelin — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Clean GH secretagogue without cortisol or prolactin elevation. Synergizes with normalized testosterone for improved body composition, recovery, and anabolic response.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('ipamorelin-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/ipamorelin-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/ipamorelin-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>

@@ -518,7 +518,7 @@ export default function Aod9604FatLossPage() {
               <p className="text-white font-700 text-[18px] mb-1">CJC-1295 + Ipamorelin</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Stack with AOD-9604 for the definitive body recomposition protocol. Fat loss + GH optimization + muscle preservation.</p>
               <div className="flex gap-3">
-                <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
+                <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
                 <Link href="/cjc-1295-ipamorelin-results-timeline" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Stack Guide</Link>
               </div>
             </div>

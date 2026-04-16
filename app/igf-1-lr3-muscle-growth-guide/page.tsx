@@ -324,7 +324,7 @@ export default function Igf1Lr3GuidePage() {
             <p className="text-white font-700 text-[18px] mb-2">IGF-1 LR3</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most potent direct anabolic peptide for lean muscle development.</p>
             <div className="flex gap-3">
-              <a href="/go/igf-1-lr3" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+              <a href="/go/igf-1-lr3-1mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/igf-1-lr3-1mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>

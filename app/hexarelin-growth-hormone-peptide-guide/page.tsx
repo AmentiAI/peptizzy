@@ -455,7 +455,7 @@ export default function HexarelinGrowthHormonePeptideGuide() {
               <p className="text-white font-600 text-[14px] mb-2">Combined Protocol: Maximum GH Output Cycle</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Morning (fasted): Hexarelin 100mcg + CJC-1295 (No-DAA) 100mcg, SubQ injection simultaneously. Wait 30–45 minutes before eating. Pre-sleep: Hexarelin 100mcg + CJC-1295 (No-DAA) 100mcg. Inject 2+ hours after last meal. The combined morning and pre-sleep protocol delivers two high-amplitude GH pulses timed to natural GH secretion windows, maximizing the anabolic and regenerative impact of the Hexarelin cycle.</p>
             </div>
-            <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex px-5 py-2.5 text-[13px]">Get CJC-1295 / Ipamorelin →</a>
+            <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex px-5 py-2.5 text-[13px]">Get CJC-1295 / Ipamorelin →</a>
           </div>
         </div>
 
@@ -520,7 +520,7 @@ export default function HexarelinGrowthHormonePeptideGuide() {
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">CJC-1295 / Ipamorelin</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The GHRH backbone for Hexarelin stacking, and Ipamorelin for off-cycle rotation management.</p>
-              <a href="/go/cjc-1295-ipamorelin" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Buy CJC-1295 / Ipamorelin →</a>
+              <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Buy CJC-1295 / Ipamorelin →</a>
             </div>
           </div>
         </div>

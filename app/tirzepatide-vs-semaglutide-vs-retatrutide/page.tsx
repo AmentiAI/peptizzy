@@ -25,12 +25,11 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 const compounds = [
-  { name: 'Semaglutide', receptors: 'GLP-1', loss: '13.7–14.9%', trial: 'STEP-1 (2021)', approved: 'Yes — Wegovy/Ozempic', dosing: 'Once weekly SubQ', sideEffect: 'Nausea, GI', cost: '$$', color: '#6090ff', slug: 'semaglutide', aff: AFF('glp-1s-5mg') },
-  { name: 'Tirzepatide', receptors: 'GLP-1 + GIP', loss: '20.2–22.5%', trial: 'SURMOUNT-1 (2022)', approved: 'Yes — Zepbound', dosing: 'Once weekly SubQ', sideEffect: 'Nausea, GI (similar to sema)', cost: '$$$', color: '#d4a043', slug: 'tirzepatide', aff: AFF('glp-2t-15m') },
-  { name: 'Retatrutide', receptors: 'GLP-1 + GIP + Glucagon', loss: '24.2–28.7%', trial: 'TRIUMPH Phase 3', approved: 'No — ~2027', dosing: 'Once weekly SubQ', sideEffect: 'Nausea + Dysesthesia', cost: '$$$$', color: '#a060ff', slug: 'retatrutide', aff: AFF('glp-3r-15mg') },
+  { name: 'Semaglutide', receptors: 'GLP-1', loss: '13.7–14.9%', trial: 'STEP-1 (2021)', approved: 'Yes — Wegovy/Ozempic', dosing: 'Once weekly SubQ', sideEffect: 'Nausea, GI', cost: '$$', color: '#6090ff', slug: 'semaglutide', aff: '/go/semaglutide-6mg' },
+  { name: 'Tirzepatide', receptors: 'GLP-1 + GIP', loss: '20.2–22.5%', trial: 'SURMOUNT-1 (2022)', approved: 'Yes — Zepbound', dosing: 'Once weekly SubQ', sideEffect: 'Nausea, GI (similar to sema)', cost: '$$$', color: '#d4a043', slug: 'tirzepatide', aff: '/go/tirzepatide-15mg' },
+  { name: 'Retatrutide', receptors: 'GLP-1 + GIP + Glucagon', loss: '24.2–28.7%', trial: 'TRIUMPH Phase 3', approved: 'No — ~2027', dosing: 'Once weekly SubQ', sideEffect: 'Nausea + Dysesthesia', cost: '$$$$', color: '#a060ff', slug: 'retatrutide', aff: '/go/retatrutide-15mg' },
 ]
 
 export default function GlpComparisonPage() {

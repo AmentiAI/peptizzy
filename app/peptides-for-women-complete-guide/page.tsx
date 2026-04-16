@@ -83,7 +83,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#e879a0'
 
 const hormonalMechanisms = [
@@ -501,7 +500,7 @@ export default function PeptidesForWomenPage() {
                 <p className="text-[#8888a0] text-sm mt-1">Copper peptide — TGF-β collagen synthesis, MMP balance, anti-inflammatory, stem cell activation</p>
               </div>
             </div>
-            <a href={AFF('ghk-cu-50mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/ghk-cu-50mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -515,7 +514,7 @@ export default function PeptidesForWomenPage() {
                 <p className="text-[#8888a0] text-sm mt-1">HGH C-terminal fragment — β3-AR lipolysis, no IGF-1, no blood sugar effect</p>
               </div>
             </div>
-            <a href={AFF('aod-9604-5mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/aod9604-5mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -529,7 +528,7 @@ export default function PeptidesForWomenPage() {
                 <p className="text-[#8888a0] text-sm mt-1">Melanocortin MC3R/MC4R agonist — CNS desire pathway, hormone-independent mechanism</p>
               </div>
             </div>
-            <a href={AFF('pt-141-10mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/pt-141-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -543,9 +542,9 @@ export default function PeptidesForWomenPage() {
                 <p className="text-[#8888a0] text-sm mt-1">GHRH analogue + GHRP — pulsatile GH restoration, sleep, recovery, body composition</p>
               </div>
             </div>
-            <a href={AFF('cjc-1295-no-dac-2mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/cjc-1295-no-dac-5mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">CJC-1295 on Phiogen →</a>
-            <a href={AFF('ipamorelin-2mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/ipamorelin-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Ipamorelin on Phiogen →</a>
           </div>
 

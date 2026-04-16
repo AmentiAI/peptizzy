@@ -368,7 +368,7 @@ export default function CagriSemaGuidePage() {
               <p className="text-white font-700 text-[18px] mb-1">Cagrilintide + Semaglutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pre-blended 5mg/5mg vial. Dual amylin + GLP-1 pathway activation in a single weekly injection. Pharmaceutical-grade, COA verified.</p>
               <div className="flex gap-3">
-                <a href="/go/cagrilintide-semaglutide" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/cagri-sema-blend-5mg-cagrilintide-5mg-sema-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/cagri-sema-blend-5mg-cagrilintide-5mg-sema-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

@@ -548,7 +548,7 @@ export default function SelankSemaxNootropicPeptideGuide() {
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">NAD+ (Cognitive Stack)</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">NAD+ combined with Semax creates a powerful mitochondrial + neurotrophin cognitive optimization stack for maximum mental performance.</p>
-              <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Get NAD+ →</a>
+              <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-3 text-[13px] flex">Get NAD+ →</a>
             </div>
           </div>
         </div>

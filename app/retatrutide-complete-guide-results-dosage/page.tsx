@@ -41,8 +41,6 @@ const jsonLd = {
   ],
 }
 
-const AFF_BASE = 'https://phiogen.is/products'
-const REF = '?ref=PEPS'
 
 export default function RetatrutidePage() {
   return (
@@ -241,9 +239,9 @@ export default function RetatrutidePage() {
             <p>Premium pharmaceutical-grade retatrutide is available with full certificate of analysis verification. The available formats (10mg, 30mg, 60mg) align with the dose ranges studied in TRIUMPH trials.</p>
             <div className="grid sm:grid-cols-3 gap-4 mt-6">
               {[
-                { name: 'Retatrutide 15mg', slug: 'retatrutide', url: `${AFF_BASE}/glp-3r-15mg/${REF}`, price: 'Starting Dose Format' },
-                { name: 'Retatrutide 30mg', slug: 'retatrutide-30mg', url: `${AFF_BASE}/glp-3-r-30mg/${REF}`, price: 'Mid Protocol' },
-                { name: 'Retatrutide 60mg', slug: 'retatrutide-60mg', url: `${AFF_BASE}/glp-3-r-60mg/${REF}`, price: 'Maximum Supply' },
+                { name: 'Retatrutide 15mg', slug: 'retatrutide', url: '/go/retatrutide-15mg', price: 'Starting Dose Format' },
+                { name: 'Retatrutide 30mg', slug: 'retatrutide-30mg', url: '/go/retatrutide-30mg', price: 'Mid Protocol' },
+                { name: 'Retatrutide 60mg', slug: 'retatrutide-60mg', url: '/go/retatrutide-30mg', price: 'Maximum Supply' },
               ].map(p => (
                 <div key={p.name} className="card-elevated rounded-2xl p-5 flex flex-col">
                   <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">{p.price}</p>

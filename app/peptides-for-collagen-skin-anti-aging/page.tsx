@@ -290,7 +290,7 @@ export default function PeptidesForCollagenSkinAntiAging() {
                 </div>
               ))}
             </div>
-            <a href="/go/ghk-cu" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-2 px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
+            <a href="/go/ghk-cu-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-2 px-5 py-2.5 text-[13px]">Get GHK-Cu →</a>
           </div>
         </div>
 
@@ -320,7 +320,7 @@ export default function PeptidesForCollagenSkinAntiAging() {
                 ))}
               </div>
             </div>
-            <a href="/go/snap-8" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-2 px-5 py-2.5 text-[13px]">Get SNAP-8 →</a>
+            <a href="/go/snap-8-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary inline-flex mt-2 px-5 py-2.5 text-[13px]">Get SNAP-8 →</a>
           </div>
         </div>
 
@@ -491,17 +491,17 @@ export default function PeptidesForCollagenSkinAntiAging() {
             <div className="card-elevated rounded-2xl p-5">
               <p className="text-white font-700 text-[16px] mb-1">GHK-Cu</p>
               <p className="text-[#8888a0] text-[12px] leading-relaxed mb-4">The #1 skin and collagen peptide. Injectable SubQ for maximum bioavailability.</p>
-              <a href="/go/ghk-cu" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy GHK-Cu →</a>
+              <a href="/go/ghk-cu-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy GHK-Cu →</a>
             </div>
             <div className="card-elevated rounded-2xl p-5">
               <p className="text-white font-700 text-[16px] mb-1">SNAP-8</p>
               <p className="text-[#8888a0] text-[12px] leading-relaxed mb-4">Expression line peptide for forehead, crow&apos;s feet, and perioral wrinkles.</p>
-              <a href="/go/snap-8" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy SNAP-8 →</a>
+              <a href="/go/snap-8-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy SNAP-8 →</a>
             </div>
             <div className="card-elevated rounded-2xl p-5">
               <p className="text-white font-700 text-[16px] mb-1">Epithalon</p>
               <p className="text-[#8888a0] text-[12px] leading-relaxed mb-4">Telomere and cellular anti-aging peptide for deep biological age reversal.</p>
-              <a href="/go/epithalon" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy Epithalon →</a>
+              <a href="/go/epitalon-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary w-full justify-center py-2.5 text-[12px] flex">Buy Epithalon →</a>
             </div>
           </div>
         </div>

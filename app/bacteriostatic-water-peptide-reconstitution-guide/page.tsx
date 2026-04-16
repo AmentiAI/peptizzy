@@ -377,7 +377,7 @@ export default function BacteriostaticWaterGuidePage() {
               <p className="text-white font-700 text-[18px] mb-1">Bacteriostatic Water 10ml</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade 0.9% benzyl alcohol solution. Sterile, pyrogen-tested, compatible with every lyophilized peptide in the catalog. Add one to every order.</p>
               <div className="flex gap-3">
-                <a href="/go/bacteriostatic-water" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/bacteriostatic-water-30ml" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/bacteriostatic-water-30ml" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

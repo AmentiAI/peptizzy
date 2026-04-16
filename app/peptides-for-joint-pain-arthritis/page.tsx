@@ -80,7 +80,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#60a5fa'
 
 const whyHardCards = [
@@ -437,7 +436,7 @@ export default function PeptidesJointPainPage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">BPC-157 — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">The primary joint-repair compound. Drives angiogenesis into avascular cartilage, activates SOX-9 for chondrocyte-mediated repair, and breaks the synovial cytokine loop. The most research-backed healing peptide available.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('bpc-157-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/bpc-157-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/bpc-157-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>
@@ -445,7 +444,7 @@ export default function PeptidesJointPainPage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">TB-500 — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">The systemic complement to BPC-157. Regulates actin for cell migration to all joint sites simultaneously, suppresses Cox-2 inflammatory signaling, and drives comprehensive tissue regeneration throughout the body during the recovery cycle.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('tb-500-thymosin-beta-4-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/tb-500-thymosin-beta-4-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/tb-500-thymosin-beta-4-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>

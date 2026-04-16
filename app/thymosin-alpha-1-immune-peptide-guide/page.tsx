@@ -80,7 +80,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#a78bfa'
 
 const thymusMechanisms = [
@@ -387,7 +386,7 @@ export default function ThymosinAlpha1GuidePage() {
                 Research-grade Thymosin Alpha-1. Identical sequence to Zadaxin. Certificate of analysis verified. 10mg vials — sufficient for a full 4–8 week maintenance cycle at 1.6mg 2–3x weekly.
               </p>
               <div className="flex gap-3">
-                <a href="/go/thymosin-alpha-1" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/thymosin-alpha-1-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/thymosin-alpha-1-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -398,7 +397,7 @@ export default function ThymosinAlpha1GuidePage() {
                 The telomerase-activating tetrapeptide. Preserves thymic tissue at the cellular level through telomere maintenance. Pair with Thymosin Alpha-1 for comprehensive thymic and immune anti-aging.
               </p>
               <div className="flex gap-3">
-                <a href="/go/epithalon" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/epitalon-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

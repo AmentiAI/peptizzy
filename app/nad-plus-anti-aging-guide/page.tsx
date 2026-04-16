@@ -392,7 +392,7 @@ export default function NadPlusAntiAgingPage() {
               <p className="text-white font-700 text-[18px] mb-1">NAD+</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized NAD+. Certificate of analysis verified. The direct coenzyme — no conversion steps required. For IV or SubQ administration.</p>
               <div className="flex gap-3">
-                <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/nad-500mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -400,7 +400,7 @@ export default function NadPlusAntiAgingPage() {
               <p className="text-white font-700 text-[18px] mb-1">Longevity Stack</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">NAD+ paired with Epithalon — the most complete anti-aging peptide combination targeting both metabolic aging and telomere length simultaneously.</p>
               <div className="flex gap-3">
-                <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
+                <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Stack →</a>
                 <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Epithalon Info</Link>
               </div>
             </div>
@@ -408,7 +408,7 @@ export default function NadPlusAntiAgingPage() {
               <p className="text-white font-700 text-[18px] mb-1">BPC-157</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Add BPC-157 to your NAD+ protocol for systemic tissue repair and gut integrity. Supports the physical recovery aspect of the longevity stack.</p>
               <div className="flex gap-3">
-                <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/bpc-157-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
@@ -416,7 +416,7 @@ export default function NadPlusAntiAgingPage() {
               <p className="text-white font-700 text-[18px] mb-1">CJC-1295 + Ipamorelin</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Restore growth hormone pulse amplitude. The GH secretagogue combination that completes the comprehensive anti-aging and body recomposition protocol.</p>
               <div className="flex gap-3">
-                <a href="/go/nad-plus" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
+                <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
                 <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>

@@ -83,7 +83,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#22d3ee'
 
 const pillars = [
@@ -507,7 +506,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">Body protection compound — VEGF upregulation, angiogenesis, tendon and GI healing</p>
               </div>
             </div>
-            <a href={AFF('bpc-157-10mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/bpc-157-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -521,7 +520,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">Thymosin beta-4 — actin dynamics, systemic anti-inflammation, whole-body repair</p>
               </div>
             </div>
-            <a href={AFF('tb-500-thymosin-beta-4-10mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/tb-500-thymosin-beta-4-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -535,7 +534,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">GHRH analogue — GH pulse amplitude, nocturnal protocol, pulsatile architecture</p>
               </div>
             </div>
-            <a href={AFF('cjc-1295-no-dac-2mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/cjc-1295-no-dac-5mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -549,7 +548,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">Selective GHRP — GH pulse frequency, no cortisol/prolactin, ideal long-term use</p>
               </div>
             </div>
-            <a href={AFF('ipamorelin-2mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/ipamorelin-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -563,7 +562,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">Most potent GHRP — GHS-R1a peak agonism + CD36 cardioprotection, 4–6 week cycles</p>
               </div>
             </div>
-            <a href={AFF('hexarelin-2mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/hexarelin-5mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>
@@ -577,7 +576,7 @@ export default function PeptidesAthleticPerformancePage() {
                 <p className="text-[#8888a0] text-sm mt-1">Mitochondria-derived peptide — AMPK activation, mitochondrial biogenesis, endurance</p>
               </div>
             </div>
-            <a href={AFF('mots-c-10mg')} target="_blank" rel="noopener nofollow sponsored"
+            <a href={'/go/mots-c-10mg'} target="_blank" rel="noopener nofollow sponsored"
               className="btn-primary text-center block">View on Phiogen →</a>
             <a href="/go/shop" target="_blank" rel="noopener nofollow sponsored"
               className="btn-ghost text-center block text-sm">Browse All Peptides</a>

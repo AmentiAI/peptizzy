@@ -80,7 +80,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 const accent = '#a78bfa'
 
 const brainMechanisms = [
@@ -466,7 +465,7 @@ export default function DsipSleepPeptidePage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">DSIP — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Delta-wave induction, HPA attenuation, GH pulse synchronization. The core of the sleep optimization stack.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('dsip-delta-sleep-inducing-peptide-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/dsip-delta-sleep-inducing-peptide-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/dsip-delta-sleep-inducing-peptide-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>
@@ -474,7 +473,7 @@ export default function DsipSleepPeptidePage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">Selank — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Anxiolytic and GABA modulator that eliminates the anxiety-driven cortisol and arousal signals that prevent deep sleep entry.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('selank-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/selank-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/selank-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>
@@ -482,7 +481,7 @@ export default function DsipSleepPeptidePage() {
               <p className="font-['Playfair_Display'] font-700 text-white text-lg">Ipamorelin — 10mg</p>
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Clean GH secretagogue with no cortisol or prolactin elevation. Timed with NREM3 entry for maximum anabolic GH pulse.</p>
               <div className="flex gap-3 mt-auto">
-                <a href={AFF('ipamorelin-10mg')} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
+                <a href={'/go/ipamorelin-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
                 <Link href="/products/ipamorelin-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>

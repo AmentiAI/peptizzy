@@ -33,7 +33,6 @@ const timeline = [
   { week: 'Week 13–16', title: 'Extended Protocol (Optional)', what: 'For those running 16-week cycles: marginal additional body composition gains with diminishing returns. Primary value of extended protocols is maintenance and preventing the 4-week off-cycle regression. At 16 weeks, receptor sensitivity maintenance (4+ weeks off) becomes important.', icon: '📅' },
 ]
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 export default function CjcTimelinePage() {
   return (
@@ -162,7 +161,7 @@ export default function CjcTimelinePage() {
             <p className="text-white font-700 text-[18px] mb-2">CJC-1295 / Ipamorelin</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pre-blended 5mg/5mg vial — both compounds in one vial eliminates the complexity of separate dosing and reconstitution.</p>
             <div className="flex gap-3">
-              <a href="/go/cjc1295-ipamorelin"
+              <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>

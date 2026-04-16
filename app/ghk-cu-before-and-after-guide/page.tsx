@@ -25,7 +25,6 @@ const jsonLd = {
   ],
 }
 
-const AFF = (s: string) => `https://phiogen.is/products/${s}?ref=PEPS`
 
 export default function GhkCuGuidePage() {
   return (
@@ -163,7 +162,7 @@ export default function GhkCuGuidePage() {
             <p className="text-white font-700 text-[18px] mb-2">GHK-Cu (Injectable)</p>
             <p className="text-[#8888a0] text-[14px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most clinically studied skin peptide available.</p>
             <div className="flex gap-3">
-              <a href="/go/ghk-cu"
+              <a href="/go/ghk-cu-50mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
               <Link href="/products/ghk-cu-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
