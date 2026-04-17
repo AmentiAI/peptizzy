@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Fat Loss Peptides: Complete Ranking & Guide for 2026 | PeptidesMuscle',
@@ -26,14 +27,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Fat Loss Peptides: Complete Ranking & Guide for 2026',
       description: 'The definitive 2026 guide to fat loss peptides — tiered comparison of GLP-1 agonists, GH-axis compounds, and metabolic optimizers with full protocols.',
       url: 'https://www.peptidesmuscle.com/fat-loss-peptides-complete-guide',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      author: { '@type': 'Organization', name: 'PeptidesMuscle' },
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -100,6 +102,7 @@ export default function FatLossPeptidesPage() {
               Fat Loss Peptides:<br />
               <span style={{ color: accent }}>The Definitive</span> Ranking
             </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
             <p className="text-[#8888a0] text-lg leading-relaxed mb-8 max-w-xl">
               Every fat-loss peptide ranked by mechanism, speed, and lean-mass preservation. From GLP-1 agonists to GH-axis compounds — find the protocol that matches your goal.
             </p>

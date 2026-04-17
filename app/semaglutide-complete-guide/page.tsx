@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Semaglutide (Ozempic/Wegovy) Complete Guide: Dosing, Results & Protocol | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Semaglutide (Ozempic/Wegovy) Complete Guide: Dosing, Results & Protocol',
       datePublished: '2026-03-28',
       dateModified: '2026-03-28',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -138,6 +141,7 @@ export default function SemaglutideCompletePage() {
             Semaglutide:<br />
             <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-28" dateModified="2026-03-28" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             How the compound behind Ozempic and Wegovy actually works, the titration schedule, realistic results, side effect management, and when to consider upgrading to tirzepatide or retatrutide.
           </p>

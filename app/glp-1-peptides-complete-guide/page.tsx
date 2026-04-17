@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: "GLP-1 Peptides: Complete Beginner's Guide to Semaglutide, Tirzepatide & Retatrutide | PeptidesMuscle",
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: "GLP-1 Peptides: Complete Beginner's Guide to Semaglutide, Tirzepatide & Retatrutide",
       datePublished: '2026-04-13',
       dateModified: '2026-04-13',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -184,6 +187,7 @@ export default function Glp1PeptidesGuidePage() {
             GLP-1 Peptides:<br />
             <span className="italic" style={{ color: accent }}>Complete Beginner&apos;s Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-04-13" dateModified="2026-04-13" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             What GLP-1 receptor agonists are, how semaglutide, tirzepatide, and retatrutide compare, realistic results timelines, and which compound to start with based on your goals.
           </p>

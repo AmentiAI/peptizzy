@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'BPC-157 Complete Guide: Dosing, Results, Injury Protocols & Science | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'BPC-157 Complete Guide: Dosing, Results, Injury Protocols & Science',
       datePublished: '2026-03-28',
       dateModified: '2026-03-28',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -172,6 +175,7 @@ export default function Bpc157CompletePage() {
             BPC-157:<br />
             <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-28" dateModified="2026-03-28" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Mechanism, injury-specific dosing, results timeline, and why BPC-157 is the first peptide serious athletes and biohackers reach for when injured.
           </p>

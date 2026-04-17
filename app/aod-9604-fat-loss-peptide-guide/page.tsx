@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'AOD-9604 Fat Loss Peptide Guide: HGH Fragment Dosing & Results | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'AOD-9604 Fat Loss Peptide Guide: HGH Fragment Dosing & Results',
       datePublished: '2026-04-03',
       dateModified: '2026-04-03',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -198,6 +201,7 @@ export default function Aod9604FatLossPage() {
             AOD-9604:<br />
             <span className="italic" style={{ color: accent }}>HGH Fragment for Targeted Fat Loss</span>
           </h1>
+      <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The C-terminal fragment of human growth hormone — isolated for its lipolytic activity alone. AOD-9604 delivers HGH&apos;s fat-burning mechanism without affecting blood sugar, IGF-1, or insulin sensitivity. The precision fat loss peptide.
           </p>

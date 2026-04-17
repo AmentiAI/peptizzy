@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Facial Looksmaxxing Peptides: GHK-Cu, SNAP-8 & Collagen Protocol | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Facial Looksmaxxing Peptides: Complete Protocol Guide', datePublished: '2026-03-27', dateModified: '2026-03-27', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'Facial Looksmaxxing Peptides: Complete Protocol Guide',
+      datePublished: '2026-03-27',
+      dateModified: '2026-03-27',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -75,6 +84,7 @@ export default function FacialLooksmaxxingPage() {
             Facial Looksmaxxing<br />
             <span className="italic" style={{ color: '#d4a043' }}>Peptide Protocol</span>
           </h1>
+      <AuthorByline datePublished="2026-03-27" dateModified="2026-03-27" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             GHK-Cu for collagen density and skin architecture. SNAP-8 for expression line reduction. The facial peptide protocol — mechanisms, application methods, target areas, and 12-week timeline.
           </p>

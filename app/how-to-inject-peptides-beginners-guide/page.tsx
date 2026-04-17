@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'How to Inject Peptides: Complete Beginner\'s Guide — Reconstitution, Sites & Storage | PeptidesMuscle',
@@ -13,7 +14,29 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'How to Inject Peptides: Complete Beginner\'s Guide', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'HowTo',
+      name: 'How to Inject Peptides: Complete Beginner\'s Guide',
+      datePublished: '2026-03-21',
+      dateModified: '2026-03-21',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+      totalTime: 'PT5M',
+      supply: [
+        { '@type': 'HowToSupply', name: 'Reconstituted peptide vial' },
+        { '@type': 'HowToSupply', name: 'Insulin syringe (29–31G, 0.5 mL)' },
+        { '@type': 'HowToSupply', name: 'Alcohol swab' },
+        { '@type': 'HowToSupply', name: 'Sharps container' },
+      ],
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Sanitize', text: 'Wash hands thoroughly and swab the vial stopper and injection site with a fresh alcohol pad.' },
+        { '@type': 'HowToStep', position: 2, name: 'Draw dose', text: 'Invert the vial and draw the prescribed dose into an insulin syringe, removing any air bubbles by tapping and pushing the plunger gently.' },
+        { '@type': 'HowToStep', position: 3, name: 'Pinch injection site', text: 'Pinch a fold of abdominal or thigh skin. Subcutaneous injections target the fatty layer beneath the skin.' },
+        { '@type': 'HowToStep', position: 4, name: 'Insert and inject', text: 'Insert the needle at a 45–90° angle depending on needle length, push the plunger slowly, then withdraw and apply gentle pressure.' },
+        { '@type': 'HowToStep', position: 5, name: 'Dispose safely', text: 'Immediately place the used needle in a sharps container. Never recap. Store the peptide vial per the reconstitution guide.' },
+      ],
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -79,6 +102,7 @@ export default function HowToInjectPage() {
             How to Inject Peptides:<br />
             <span className="italic" style={{ color: '#40c090' }}>The Beginner&apos;s Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Reconstitution, injection technique, site rotation, dose calculation, and storage — everything you need to start your first peptide protocol safely.
           </p>

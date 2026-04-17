@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Peptides for Women: Complete Guide to Hormones, Fat Loss, Skin & Recovery | PeptidesMuscle',
@@ -26,14 +27,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Peptides for Women: Complete Guide to Hormones, Fat Loss, Skin & Recovery',
       description: 'How estrogen modulates the GH axis, best peptides for fat loss, skin and collagen, libido, perimenopause support, and protocols by life stage.',
       url: 'https://www.peptidesmuscle.com/peptides-for-women-complete-guide',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      author: { '@type': 'Organization', name: 'PeptidesMuscle' },
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -209,6 +211,7 @@ export default function PeptidesForWomenPage() {
                 Peptides for Women:<br />
                 <span className="italic" style={{ color: accent }}>Hormones, Fat Loss, Skin & Recovery</span>
               </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
               <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
                 A complete guide written around female biology — how estrogen shapes the GH axis, why collagen loss accelerates with age, and which peptides address the concerns most relevant to women aged 25–55.
               </p>

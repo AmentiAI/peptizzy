@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'Epithalon (Epitalon) Complete Guide 2026: Telomere Science, Dosing Protocol & Anti-Aging Stack',
+      datePublished: '2026-03-21',
+      dateModified: '2026-03-21',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -43,6 +52,7 @@ export default function EpithalonGuidePage() {
             Epithalon (Epitalon):<br />
             <span className="italic" style={{ color: '#a060ff' }}>Complete 2026 Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The telomerase-activating tetrapeptide. 35 years of research, clinical data, the standard dosing protocol, and honest expectations for anti-aging and longevity use.
           </p>

@@ -91,6 +91,27 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[#50505e] text-[13px]">© 2025 PeptidesMuscle.</p>
           <div className="flex items-center gap-5">
+            <a
+              href="https://x.com/LooksMax_Agent"
+              target="_blank"
+              rel="me noopener"
+              aria-label="PeptidesMuscle on X"
+              className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors"
+            >
+              X
+            </a>
+            <a
+              href="https://www.reddit.com/user/Loud-Department3185/"
+              target="_blank"
+              rel="me noopener"
+              aria-label="PeptidesMuscle on Reddit"
+              className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors"
+            >
+              Reddit
+            </a>
+            <Link href="/about/editors" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
+              Editors
+            </Link>
             <a href="/sitemap.xml" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">
               Sitemap
             </a>

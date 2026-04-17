@@ -56,9 +56,14 @@ const orgJsonLd = {
       '@type': 'Organization',
       '@id': `${BASE_URL}/#organization`,
       name: 'PeptidesMuscle',
+      alternateName: ['Peptides Muscle', 'LooksMax Agent'],
       url: BASE_URL,
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/max-avatar.png` },
       description: 'The definitive resource for peptide-based physical optimization — looks maxing, body composition, anti-aging, and recovery protocols.',
+      sameAs: [
+        'https://www.reddit.com/user/Loud-Department3185/',
+        'https://x.com/LooksMax_Agent',
+      ],
     },
     {
       '@type': 'WebSite',

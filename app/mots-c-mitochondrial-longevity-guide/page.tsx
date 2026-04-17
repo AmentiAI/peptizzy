@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'MOTS-c: Mitochondrial Peptide for Longevity, Fat Loss & Metabolic Health | PeptidesMuscle',
@@ -26,14 +27,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'MOTS-c: Mitochondrial Peptide for Longevity, Fat Loss & Metabolic Health',
       description: 'The complete 2026 guide to MOTS-c — AMPK activation, visceral fat targeting, longevity applications, athletic performance, and stacking protocols.',
       url: 'https://www.peptidesmuscle.com/mots-c-mitochondrial-longevity-guide',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      author: { '@type': 'Organization', name: 'PeptidesMuscle' },
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -100,6 +102,7 @@ export default function MotsCLongevityPage() {
               MOTS-c:<br />
               <span style={{ color: accent }}>The Mitochondrial</span> Longevity Peptide
             </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
             <p className="text-[#8888a0] text-lg leading-relaxed mb-8 max-w-xl">
               The only peptide encoded in mitochondrial DNA. MOTS-c activates AMPK, mimics the metabolic effects of exercise, targets visceral fat, and correlates with exceptional longevity in centenarian populations.
             </p>

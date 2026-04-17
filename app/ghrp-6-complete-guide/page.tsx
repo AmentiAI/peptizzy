@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'GHRP-6 Complete Guide: Dosage, Results & GH Secretagogue Protocol | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'GHRP-6 Complete Guide: Dosage, Results & GH Secretagogue Protocol',
       datePublished: '2026-04-03',
       dateModified: '2026-04-03',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -173,6 +176,7 @@ export default function Ghrp6CompletePage() {
             GHRP-6:<br />
             <span className="italic" style={{ color: accent }}>GH Pulse, Muscle Growth & Appetite Protocol</span>
           </h1>
+      <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The classic ghrelin mimetic secretagogue. GHRP-6 drives powerful growth hormone pulses through GHS-R1a receptor activation — with the most potent appetite stimulation of any GH peptide. The mass-building secretagogue.
           </p>

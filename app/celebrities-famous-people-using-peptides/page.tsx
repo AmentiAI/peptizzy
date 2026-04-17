@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Famous People & Celebrities Using Peptides: Athletes, Actors & Biohackers | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Famous People & Celebrities Using Peptides', datePublished: '2026-03-27', dateModified: '2026-03-27', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'Famous People & Celebrities Using Peptides',
+      datePublished: '2026-03-27',
+      dateModified: '2026-03-27',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -130,6 +139,7 @@ export default function CelebritiesPeptidesPage() {
             Famous People<br />
             <span className="italic" style={{ color: '#d4a043' }}>Using Peptides</span>
           </h1>
+      <AuthorByline datePublished="2026-03-27" dateModified="2026-03-27" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Joe Rogan, Andrew Huberman, Bryan Johnson, Peter Attia, and elite athletes have all publicly discussed peptide protocols. Here&apos;s who uses what — and the reasoning behind each compound.
           </p>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Peptides for Hair Growth & Hair Loss Prevention: GHK-Cu + TB-500 Protocol | PeptidesMuscle',
@@ -21,11 +22,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Peptides for Hair Growth & Hair Loss Prevention: GHK-Cu + TB-500 Protocol',
       datePublished: '2026-03-25',
       dateModified: '2026-03-25',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -156,6 +159,7 @@ export default function PeptidesHairGrowthPage() {
             Peptides for Hair Growth<br />
             <span className="italic" style={{ color: '#d4a043' }}>& Hair Loss Prevention</span>
           </h1>
+      <AuthorByline datePublished="2026-03-25" dateModified="2026-03-25" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
             GHK-Cu activates follicle stem cells and upregulates KGF/VEGF. TB-500 rebuilds scalp microvascularization. Together they address hair loss from both the cellular and vascular angle — without systemic hormonal side effects.
           </p>

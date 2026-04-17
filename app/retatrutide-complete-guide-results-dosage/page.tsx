@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Retatrutide 2026: Complete Guide to Results, Dosage, Side Effects & Comparison | PeptidesMuscle',
@@ -21,13 +22,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Retatrutide 2026: Complete Guide to Results, Dosage, Side Effects & Comparison',
       description: 'Comprehensive retatrutide guide with all TRIUMPH Phase 3 trial data.',
       url: 'https://www.peptidesmuscle.com/retatrutide-complete-guide-results-dosage',
       datePublished: '2026-03-21',
       dateModified: '2026-03-21',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -59,6 +62,7 @@ export default function RetatrutidePage() {
             Retatrutide 2026:<br />
             <span className="italic" style={{ color: '#d4a043' }}>The Complete Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
             Triple GLP-1/GIP/Glucagon agonist with 28.7% average body weight reduction in TRIUMPH Phase 3 trials — the highest number ever recorded for a pharmacological weight loss intervention. Here is everything you need to know.
           </p>

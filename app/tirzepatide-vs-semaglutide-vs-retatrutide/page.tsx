@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'Tirzepatide vs. Semaglutide vs. Retatrutide: 2026 GLP-1 Comparison',
+      datePublished: '2026-03-21',
+      dateModified: '2026-03-21',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -48,6 +57,7 @@ export default function GlpComparisonPage() {
             Tirzepatide vs. Semaglutide<br />
             <span className="italic" style={{ color: '#a060ff' }}>vs. Retatrutide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             All three GLP-1 class compounds compared — mechanisms, trial data, side effects, approval status, and a clear decision framework for 2026.
           </p>

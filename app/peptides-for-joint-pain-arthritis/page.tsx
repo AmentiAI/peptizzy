@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Peptides for Joint Pain & Arthritis: BPC-157, TB-500 & The Science of Cartilage Regeneration | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Peptides for Joint Pain & Arthritis: BPC-157, TB-500 & The Science of Cartilage Regeneration',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -186,6 +189,7 @@ export default function PeptidesJointPainPage() {
             Peptides for Joint Pain<br />
             <span className="italic" style={{ color: accent }}>&amp; Arthritis</span>
           </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
             Joints are uniquely resistant to healing — poor vascularity, slow chondrocyte renewal, and chronic inflammation conspire to make cartilage damage essentially permanent under conventional treatment. BPC-157 and TB-500 change this equation by addressing each of those barriers directly.
           </p>

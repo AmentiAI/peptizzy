@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'NAD+ Complete Guide: Anti-Aging, Cellular Energy, Sirtuins & Dosing Protocol | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'NAD+ Complete Guide: Anti-Aging, Cellular Energy, Sirtuins & Dosing Protocol',
       datePublished: '2026-03-29',
       dateModified: '2026-03-29',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -183,6 +186,7 @@ export default function NadPlusAntiAgingPage() {
             NAD+:<br />
             <span className="italic" style={{ color: accent }}>The Master Molecule of Aging</span>
           </h1>
+      <AuthorByline datePublished="2026-03-29" dateModified="2026-03-29" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Every cell in your body depends on NAD+ to produce energy, repair DNA, and activate the longevity proteins that determine how fast you age. Here is why levels collapse — and exactly how to restore them.
           </p>

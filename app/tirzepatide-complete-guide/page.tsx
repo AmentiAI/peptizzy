@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Tirzepatide Complete Guide: Dual GIP+GLP-1 Mechanism, Dosing & SURMOUNT Results | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Tirzepatide Complete Guide: Dual GIP+GLP-1 Mechanism, Dosing & SURMOUNT Results',
       datePublished: '2026-03-29',
       dateModified: '2026-03-29',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -152,6 +155,7 @@ export default function TirzepatideCompletePage() {
             Tirzepatide:<br />
             <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-29" dateModified="2026-03-29" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The science behind dual GIP+GLP-1 agonism, the complete 2.5mg–15mg titration protocol, SURMOUNT-1 trial results showing up to 25.2% weight loss, and how to optimize body composition while using it.
           </p>

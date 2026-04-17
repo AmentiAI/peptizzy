@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'CagriSema (Cagrilintide + Semaglutide) Complete Guide: Dual-Pathway Fat Loss | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'CagriSema (Cagrilintide + Semaglutide) Complete Guide: Dual-Pathway Fat Loss',
       datePublished: '2026-04-01',
       dateModified: '2026-04-01',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -167,6 +170,7 @@ export default function CagriSemaGuidePage() {
             CagriSema:<br />
             <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-04-01" dateModified="2026-04-01" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Two completely different satiety pathways. One injection. Why cagrilintide + semaglutide outperforms either compound alone — and how to run the protocol.
           </p>

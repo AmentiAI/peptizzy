@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: "Thymosin Alpha-1: The Immune System's Master Regulator | PeptidesMuscle",
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: "Thymosin Alpha-1: The Immune System's Master Regulator",
       datePublished: '2026-04-13',
       dateModified: '2026-04-13',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -164,6 +167,7 @@ export default function ThymosinAlpha1GuidePage() {
             Thymosin Alpha-1:<br />
             <span className="italic" style={{ color: accent }}>The Immune System&apos;s Master Regulator</span>
           </h1>
+      <AuthorByline datePublished="2026-04-13" dateModified="2026-04-13" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             FDA-approved in 36 countries as Zadaxin. The most clinically validated immune peptide in existence — how it works, who it helps, and the complete protocol for immune restoration and optimization.
           </p>

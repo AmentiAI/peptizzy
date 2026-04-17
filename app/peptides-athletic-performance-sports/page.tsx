@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Peptides for Athletic Performance: Complete Sports Guide | PeptidesMuscle',
@@ -26,14 +27,15 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Peptides for Athletic Performance: Complete Sports Guide',
       description: 'Complete peptide protocols for athletes covering recovery, GH optimization, strength, hypertrophy, and endurance — with full stack protocols and results timelines.',
       url: 'https://www.peptidesmuscle.com/peptides-athletic-performance-sports',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      author: { '@type': 'Organization', name: 'PeptidesMuscle' },
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -193,6 +195,7 @@ export default function PeptidesAthleticPerformancePage() {
                 Peptides for Athletic<br />
                 <span className="italic" style={{ color: accent }}>Performance & Recovery</span>
               </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
               <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
                 The complete guide for athletes, bodybuilders, and CrossFitters — covering recovery peptides, GH optimization, strength, endurance, and the elite full-stack protocol used by serious competitors.
               </p>

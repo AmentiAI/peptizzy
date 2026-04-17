@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'IGF-1 LR3: Muscle Growth, Dosing Protocol & Complete Guide | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'IGF-1 LR3: Muscle Growth, Dosing Protocol & Complete Guide',
       datePublished: '2026-03-28',
       dateModified: '2026-03-28',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -153,6 +156,7 @@ export default function Igf1Lr3GuidePage() {
             IGF-1 LR3:<br />
             <span className="italic" style={{ color: accent }}>Complete Muscle Growth Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-03-28" dateModified="2026-03-28" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             How IGF-1 LR3 creates new muscle fibers — not just hypertrophy — and why it&apos;s the most direct anabolic peptide available for serious body composition goals.
           </p>

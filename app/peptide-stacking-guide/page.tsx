@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'Peptide Stacking Guide 2026: Best Combinations for Fat Loss, Muscle, Healing & Anti-Aging',
+      datePublished: '2026-03-21',
+      dateModified: '2026-03-21',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -79,6 +88,7 @@ export default function PeptideStackingGuidePage() {
             Peptide Stacking Guide<br />
             <span className="italic" style={{ color: '#d4a043' }}>2026 Edition</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Goal-based stack protocols for fat loss, muscle growth, injury recovery, skin optimization, and anti-aging — with dosing schedules, timing, and cost estimates.
           </p>

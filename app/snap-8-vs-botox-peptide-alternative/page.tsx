@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections? Honest 2026 Review | PeptidesMuscle',
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Article', headline: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections?', datePublished: '2026-03-21', dateModified: '2026-03-21', publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' } },
+    {
+      '@type': 'MedicalWebPage',
+      headline: 'SNAP-8 vs. Botox: Can This Peptide Really Replace Injections?',
+      datePublished: '2026-03-21',
+      dateModified: '2026-03-21',
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
+    },
     {
       '@type': 'FAQPage',
       mainEntity: [
@@ -42,6 +51,7 @@ export default function Snap8VsBotoxPage() {
             SNAP-8 vs. Botox:<br />
             <span className="italic" style={{ color: '#d4a043' }}>Honest 2026 Review</span>
           </h1>
+      <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Same mechanism, completely different delivery. Clinical data, real cost comparison, how to apply SNAP-8, and the honest verdict on whether a topical peptide can replace injections.
           </p>

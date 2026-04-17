@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Kisspeptin-10: The Hormone Master Switch for Testosterone & Fertility | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Kisspeptin-10: The Hormone Master Switch for Testosterone & Fertility',
       datePublished: '2026-04-14',
       dateModified: '2026-04-14',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -160,6 +163,7 @@ export default function Kisspeptin10TestosteronePage() {
             Kisspeptin-10:<br />
             <span className="italic" style={{ color: accent }}>The Hormone Master Switch</span>
           </h1>
+      <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-6">
             Kisspeptin-10 is the master regulator of the HPG axis — the hormonal command chain that governs testosterone production in men and LH/FSH balance in women. It sits above GnRH, LH, and FSH in the cascade, making it the highest-leverage intervention point for hormonal optimization available without exogenous testosterone.
           </p>

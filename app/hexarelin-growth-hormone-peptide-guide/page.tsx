@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Hexarelin Guide: The Most Potent GHRP — Dosage, Cardioprotection & Protocols | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Hexarelin Guide: The Most Potent GHRP — Dosage, Cardioprotection & Protocols',
       datePublished: '2026-04-03',
       dateModified: '2026-04-03',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -189,6 +192,7 @@ export default function HexarelinGrowthHormonePeptideGuide() {
             Hexarelin:<br />
             <span className="italic" style={{ color: accent }}>The Most Potent GHRP</span>
           </h1>
+      <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The strongest growth hormone-releasing peptide available — mechanism, cardioprotective effects via CD36, desensitization management, and complete dosing protocols.
           </p>

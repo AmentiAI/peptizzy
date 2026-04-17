@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'Selank & Semax Nootropic Peptide Guide: Anxiety, Focus & Cognitive Enhancement | PeptidesMuscle',
@@ -26,11 +27,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Article',
+      '@type': 'MedicalWebPage',
       headline: 'Selank & Semax Nootropic Peptide Guide: Anxiety, Focus & Cognitive Enhancement',
       datePublished: '2026-04-03',
       dateModified: '2026-04-03',
-      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com' },
+      publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
+      author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen', name: 'Dr. Marcus Chen', url: 'https://www.peptidesmuscle.com/about/editors' },
+      reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#dr-marcus-chen' },
     },
     {
       '@type': 'FAQPage',
@@ -165,6 +168,7 @@ export default function SelankSemaxNootropicPeptideGuide() {
             Selank & Semax:<br />
             <span className="italic" style={{ color: accent }}>Nootropic Peptide Guide</span>
           </h1>
+      <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Russia&apos;s most researched nootropic peptides — Selank for anxiety and social confidence, Semax for cognitive enhancement and focus. Mechanism, dosing, protocols, and looksmaxxing applications.
           </p>
