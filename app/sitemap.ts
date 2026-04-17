@@ -8,6 +8,9 @@ const BASE = 'https://www.peptidesmuscle.com'
 // Stale or future-dated lastmod harms crawl prioritization.
 const SITE_LAUNCH  = '2026-03-01'
 const RECENT_UPDATE = '2026-03-28'
+// Slug rename + redirect map shipped 2026-04-17. Products re-dated so Google
+// reprocesses every product URL and discovers the new 301 chain.
+const PRODUCT_REINDEX = '2026-04-17'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -75,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const productPages: MetadataRoute.Sitemap = products.map(p => ({
     url: `${BASE}/products/${p.slug}`,
-    lastModified: SITE_LAUNCH,
+    lastModified: PRODUCT_REINDEX,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
