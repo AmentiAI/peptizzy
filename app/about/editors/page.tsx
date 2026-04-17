@@ -5,7 +5,7 @@ import { authors, personSchema, BASE_URL } from '@/lib/authors'
 export const metadata: Metadata = {
   title: 'Editors & Contributors | PeptidesMuscle',
   description:
-    'Meet the editorial team behind PeptidesMuscle: Dr. Marcus Chen (PharmD), Sarah Okonkwo (MSc Cosmetic Science), and James Halloran (MSc Sports Science, CSCS). Every guide is reviewed against primary clinical sources.',
+    'Editorial curation behind PeptidesMuscle. Peptide research compiled from PubMed, NEJM, JAMA, and ClinicalTrials.gov — mechanism, dosing, and clinical-trial outcomes in plain language. Research use only, not medical advice.',
   alternates: { canonical: `${BASE_URL}/about/editors` },
   openGraph: {
     title: 'Editors & Contributors | PeptidesMuscle',
