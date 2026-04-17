@@ -2,243 +2,181 @@
 
 **Audit Date:** 2026-04-17
 **URL:** https://www.peptidesmuscle.com
-**Business Type:** E-commerce (peptide catalog + long-form educational content)
-**Pages Analyzed:** 50 sampled from 305-URL sitemap (homepage, category, 10 product, 20 guide, 5 stack, utility)
+**Business Type:** Hybrid — E-commerce (peptide catalog, ~140 SKUs) + Publisher (~45 long-form guides)
+**Pages Analyzed:** 202 (full sitemap) — deep-crawled 11 (home, 2 products, 4 guides, /about/editors, /llms.txt, /robots.txt, /sitemap.xml)
 
 ---
 
 ## Executive Summary
 
-**Overall GEO Score: 61/100 (Fair) — live**
-**Post-deploy Projection: 82/100 (Good)** after the fixes staged in this session ship.
+**Overall GEO Score: 66/100 (Fair — rising)**
 
-The site is technically well-built: Next.js App Router with full SSR, Vercel edge caching, clean canonical and viewport tags, Product/Offer/FAQ schema on product pages, and long-form (4K+ word) guide content with FAQ schema. A single bad commit on **2026-04-13** renamed every product slug without 301 redirects, 404-ing all ~140 previously indexed product URLs — that alone is responsible for the de-indexing the user reported. Content quality is good; brand authority and author credibility (E-E-A-T) are the remaining ceiling on GEO visibility.
+Technical execution is top-decile (94/100) — SSR intact, all 14 named AI crawlers allow-listed, llms.txt live, security headers complete, schema valid. The binding constraint is **off-site entity signals** (Brand Authority 22/100) and **YMYL credibility** (E-E-A-T 58/100, zero inline primary-source citations on guides). Fixing the two content gaps — inline DOIs and a second credentialed contributor — plus seeding Reddit/YouTube presence over 90 days moves this into the 80-85 range; the rest is earned, not coded.
 
 ### Score Breakdown
 
-| Category | Score (Live) | Score (Post-Deploy) | Weight | Weighted (Live) |
-|---|---|---|---|---|
-| AI Citability | 72/100 | 78/100 | 25% | 18.0 |
-| Brand Authority | 40/100 | 42/100 | 20% | 8.0 |
-| Content E-E-A-T | 62/100 | 68/100 | 20% | 12.4 |
-| Technical GEO | 48/100 | **92/100** | 15% | 7.2 |
-| Schema & Structured Data | 78/100 | 85/100 | 10% | 7.8 |
-| Platform Optimization | 76/100 | 88/100 | 10% | 7.6 |
-| **Overall** | | | | **61/100** |
+| Category | Score | Weight | Weighted |
+|---|---|---|---|
+| AI Citability | 84/100 | 25% | 21.0 |
+| Brand Authority | 22/100 | 20% | 4.4 |
+| Content E-E-A-T | 58/100 | 20% | 11.6 |
+| Technical GEO | 94/100 | 15% | 14.1 |
+| Schema & Structured Data | 86/100 | 10% | 8.6 |
+| Platform Optimization | 62/100 | 10% | 6.2 |
+| **Overall** | | | **65.9 → 66/100** |
 
-Technical GEO is pulling the composite down; once the redirects + headers + llms.txt ship, Technical jumps to 92 and overall lands at ~82.
+**Movement vs. prior audit:** +5 points. Previous run: 61/100 (before redirect fixes, robots.txt expansion, llms.txt, /about/editors, MedicalWebPage schema, HSTS preload, footer rel=me).
 
 ---
 
 ## Critical Issues (Fix Immediately)
 
-### C1. ~140 product URLs return HTTP 404 (cause of de-indexing)
+None. No crawl blockers, no de-index flags, no render failures, no 5xx, no AI crawlers blocked.
 
-Commit `add67ef` (2026-04-13) renamed every slug in `lib/products.ts` with no 301 redirects. Every URL Google had indexed under the old scheme (`/products/bpc-157`, `/tb-500`, `/ghk-cu`, etc.) now returns a hard 404 from Vercel. Google is actively de-indexing these URLs on each recrawl.
+## High Priority Issues (Fix Within 1 Week)
 
-**Status:** Fix is staged in the repo (`next.config.js` has redirect map for 20 paths). **Needs to deploy to production.**
+1. **Zero inline primary-source citations on guides.** Site claims "PubMed, NEJM, JAMA, ClinicalTrials.gov sourcing" but 3 sampled YMYL guides (BPC-157, Semaglutide, GLP-1) contain **zero DOIs, zero PMIDs, zero PubMed URLs**. For a medical-adjacent topic, claim-without-proof is the single biggest YMYL trust gap. Target: 8–15 inline citations per guide with `<cite>` + schema-level `citation` array on `MedicalWebPage`.
+2. **IndexNow not submission-wired.** Key file at `/de70e44d61f29841aa01ebde75f50209.txt` is deployed, but standard discovery path `/.well-known/IndexNow` returns 404 and no Vercel build-hook submits updated URLs. Bing Copilot + ChatGPT (Bing-index-dependent) see new content on a multi-day delay instead of minutes.
+3. **No Bing Webmaster verification.** No `msvalidate.01` meta tag — sitemap priority and IndexNow submissions aren't fully weighted without it.
+4. **Brand Authority ceiling (22/100).** Only self-attested entity signals (Organization.sameAs → own X/Reddit). No Wikipedia entity, no YouTube, no third-party mentions, Reddit account has limited karma. This is why LLM citations are rare despite high Citability.
+5. **Single-editor team on YMYL content.** "LooksMax Agent" with "Independent Research Curator" credentials is honest (no fake MD) but caps medical-authority ceiling. Add a second named contributor with verifiable credentials (pharmacist / biochemist / RN / published researcher) + ORCID/LinkedIn in `sameAs`.
 
-### C2. Author attribution is "PeptidesMuscle AI" on flagship guides
+## Medium Priority Issues (Fix Within 1 Month)
 
-Guide pages expose `"author": "PeptidesMuscle AI"` (or similar AI-authored signals) in their content. Google's E-E-A-T guidance and AI Overviews explicitly downweight unattributed AI-generated content. This limits how often guides get cited even with the rest of GEO fixed.
+6. **No BreadcrumbList on guide pages** (only on product pages). Easiest schema win — template already exists.
+7. **Duplicate entry in llms.txt** ("Peptide Stacking Guide" listed twice in Core Guides).
+8. **Product descriptions are boilerplate** across ~140 SKUs ("research-grade purity from Phiogen…"). Product schema missing `brand`/`manufacturer`/`sku`/`mpn`/`gtin` and has no `Review` entity paired with `AggregateRating`.
+9. **Flat H2-only hierarchy on guides.** No H3 sub-sections means AI chunkers can't extract sub-answers (Mechanism / Half-life / Dosing / Contraindications / Stacking). Target 1 H3 per ~250 words on flagship guides.
+10. **`MedicalWebPage` missing `@id`, `mainEntityOfPage`, `image`, `description`, `inLanguage`, `citation`.** Publisher re-declared inline instead of `@id`-referencing `#organization`.
+11. **No `llms-full.txt`** — doubles ingestion surface for GPTBot/ClaudeBot when added.
+12. **HSTS preload not submitted to hstspreload.org.** Header is sent with `preload` directive but domain hasn't been registered.
+13. **Two-hop HTTP → HTTPS → https://www edge redirect** (Vercel platform limitation). Mitigated by HSTS preload once registered.
+14. **No YouTube channel** — Gemini + ChatGPT heavily surface YouTube transcripts in this niche.
 
-**Fix:** create a real author/editor page (`/about` or `/team`), attribute guides to a real human expert (even a pen name with a credible bio), and add `Person` schema linking article → author → organization.
+## Low Priority Issues (Optimize When Possible)
 
----
-
-## High Priority Issues (Fix This Week)
-
-| # | Issue | Why it matters |
-|---|---|---|
-| H1 | `/llms.txt` returns 404 (live) | AI systems (Perplexity, Anthropic) increasingly use llms.txt for site understanding. Fix staged locally. |
-| H2 | Security headers missing (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, CSP) | Trust/safety signals reviewed by Bing + AI crawlers. Fix staged locally. |
-| H3 | No explicit AI-crawler rules in robots.txt | Currently relies on default `User-Agent: *`. Works, but missing trust signal. Fix staged locally. |
-| H4 | Thin brand authority — no visible Wikipedia, limited Reddit/YouTube presence, no authoritative backlinks | Brand entity recognition is the #1 factor for AI citation. Needs an ongoing PR/content play, not a code change. |
-
----
-
-## Medium Priority Issues (Fix This Month)
-
-| # | Issue | Fix |
-|---|---|---|
-| M1 | Hero/above-fold images don't declare `fetchpriority="high"` or preload | 200–400 ms LCP win — add `<Image priority fetchPriority="high">` to product hero |
-| M2 | IndexNow integrated in repo but first full-URL submission hasn't been done | One-time curl POST of every sitemap URL after redirects deploy |
-| M3 | Guide pages lack `Article.author` → `Person` → `jobTitle`/`alumniOf` chain | Tied to C2 — once you have a real author page, enrich the schema |
-| M4 | Sitemap `lastModified` on blog pages uses `SITE_LAUNCH` (2026-03-01) for most entries | Bump to recent dates when content is actually updated |
-| M5 | Product pages use PNG from `phiogen.is` CDN; verify all go through `next/image` (AVIF/WebP) | Grep for raw `<img src="https://phiogen.is">` in repo |
-| M6 | Internal linking density is moderate — products don't link to related guides by topic | Add a "Deep-dive reading" block on each product page mapping slug → guide |
-
----
-
-## Low Priority Issues
-
-- **L1.** HTTP→HTTPS→www redirect chain is 2 hops. Unfixable in Vercel directly; mitigated by HSTS preload (needs submission to hstspreload.org after deploy).
-- **L2.** Blog/guide pages live at root (`/bpc-157-complete-guide`) rather than `/blog/...` — flattens taxonomy. Not worth breaking existing indexed URLs to fix.
-- **L3.** Tap-target spot check recommended on mobile (Tailwind defaults are close to 48px but spot-verify).
-- **L4.** Open Graph image on guides uses tiny `/max-avatar.png` instead of a 1200×630 OG asset — social sharing visual.
+15. No `rel="me"` on editor's external links in `/about/editors` (present in global Footer only).
+16. `reviewedBy` references same Person `@id` as `author` — technically valid, weak E-E-A-T signal; add a distinct reviewer.
+17. No `Content-Security-Policy` header (−1 in Technical audit).
+18. Homepage hero paragraphs and product taglines score 25–55 on citability — promotional, few stats. Inject one differentiator per product (mg/mL, COA ref, primary indication).
+19. No Wikidata entity for PeptidesMuscle.
+20. `AboutPage.isPartOf` re-declared inline instead of `@id` ref.
 
 ---
 
 ## Category Deep Dives
 
-### AI Citability — 72/100
+### AI Citability — 84/100 (Excellent)
 
-**Strengths:**
-- Guides are 4,000–6,000 words with explicit Q/A structure, bullet lists, stat tables, and clinical trial references (STEP-1, SURMOUNT-1, NEJM 2023). This is the extractable pattern AI models prefer.
-- Product pages have clean stat tables (amino acids, half-life, cycle length) that are directly quotable.
-- Headings follow a clear H1 → H2 → H3 hierarchy.
+Guides use self-contained paragraph-level answers with named mechanisms (VEGF upregulation, POMC/AgRP neurons, arcuate nucleus), numeric dosing (2.5mg/mL = 2,500mcg/mL worked example), named trials (STEP-1, SURMOUNT-1, NEJM 2023), and hard statistics (70+ studies, 15–22% weight loss, 30–50% caloric reduction). Each H2 block is an atomic answer — ideal for RAG chunking.
 
-**Weaknesses:**
-- Guides don't open with a tight 2–3 sentence "answer box" summarizing the topic. AI Overviews preferentially pull these.
-- Few inline citations with primary sources (PubMed, NEJM, ClinicalTrials.gov links).
-- Product descriptions lean marketing-language rather than factual Q/A ("The most researched recovery peptide" vs. "BPC-157 is a 15-amino-acid pentadecapeptide derived from...").
+Top-ranked blocks:
+1. **GLP-1 / Arcuate Nucleus Mechanism** — 94/100. Names hypothalamic nucleus + both neuron populations + quantifies outcome.
+2. **Injection Dose Calculation Worked Example** — 92/100. Concrete math, unit-to-volume conversion, insulin-syringe mapping.
+3. **BPC-157 Multi-Mechanism Paragraph** — 88/100. Four mechanisms in one passage with evidence anchor.
 
-**Quick fix:** on every guide, add a `<section class="answer-box">` right after the H1 with a 40–60 word summary and mark it as `speakable` in the Article schema.
+Weaker blocks: intro/hero paragraphs (45–55), product descriptions (~25, boilerplate).
 
-### Brand Authority — 40/100
+### Brand Authority — 22/100 (Critical Gap)
 
-This is the hard ceiling on AI visibility. Without third-party entity reinforcement, AI models have limited signal that "PeptidesMuscle" is a legitimate, citable source vs. one of thousands of affiliate sites.
+Entity graph is effectively empty. Wikipedia API confirms zero results for "peptidesmuscle" and "LooksMax Agent." No G2/Trustpilot/Capterra. No YouTube channel. No news coverage. Only external signals are the self-declared `sameAs` pair (X + Reddit) reinforced by Organization JSON-LD and rel="me" footer links — technically clean self-attestation, but LLMs weight it low without third-party corroboration.
 
-**What's missing:**
-- No Wikipedia article or mention
-- No visible Reddit community presence (no AMAs, no reviewed posts)
-- No YouTube channel or embedded expert video content
-- LinkedIn company page status: unverified
-- Limited authoritative backlinks (would need a full backlink audit via a tool like Ahrefs/SEMrush — out of scope for this audit)
+### Content E-E-A-T — 58/100 (Fair)
 
-**What to do:**
-1. Claim and fill Google Business Profile (even as a web-only entity)
-2. Stand up a simple LinkedIn company page with correct NAP + `sameAs` linking
-3. Start a lightweight Reddit presence: contribute factual answers in r/Peptides / r/PeptidesHealth, link back only when genuinely useful
-4. Write one guest post or expert quote contribution per month on related publications
-
-This is the slowest lever but has the largest long-term payoff for GEO.
-
-### Content E-E-A-T — 62/100
-
-**Experience (40):** Guides read as research-compilation rather than lived-experience. Adding 1–2 short "what I/we observed in practice" anecdotes per guide would materially help.
-
-**Expertise (60):** Content is medically and pharmacologically accurate (spot-checked against NEJM 2023 for retatrutide), but it's not attributed to a credentialed person.
-
-**Authoritativeness (60):** Domain has 35+ long-form guides — good depth for the niche. No recognizable author bylines. No press coverage. No citations from other authoritative sites.
-
-**Trustworthiness (75):** Correct disclaimers (research-use, not medical advice). Clear affiliate disclosure path. HTTPS, clean privacy practices.
-
-**Biggest single lever:** fix C2 (real named author + bio + credentials). Alone, this raises E-E-A-T to ~78.
-
-### Technical GEO — 48/100 (live), 92/100 (post-deploy)
-
-See `GEO-TECHNICAL-AUDIT.md` for the full 8-category breakdown. Live score is dragged down by:
-- 140 404s on old product URLs
-- No llms.txt
-- Missing security headers
-- No explicit AI crawler allowances
-
-All four are fixed in the local repo and will deploy together. Post-deploy technical score jumps to **92/100** with only the HSTS-preload submission and IndexNow URL push remaining.
-
-### Schema & Structured Data — 78/100
-
-**Present on product pages:** Product, Offer, AggregateRating, FAQPage, BreadcrumbList, Organization, WebSite, SearchAction, ImageObject. Verified via raw-HTML `curl` (SSR-delivered).
-
-**Present on guide pages:** Article, FAQPage (Question/Answer × 4+), Organization, ImageObject.
-
-**Present on homepage:** Organization, WebSite, SearchAction, ImageObject.
-
-**Missing:**
-- `Person` schema for authors (blocked on E-E-A-T fix)
-- `MedicalWebPage` type on guides that discuss dosing/protocols — Google has a dedicated schema for medical content that signals AI Overviews eligibility
-- `Review` / user-review schema — guides and products have no review blocks at all
-- `HowTo` schema on the injection guide, reconstitution guide, protocol guides — these are perfect HowTo candidates
-
-**Quick wins:**
-1. Upgrade guide `Article` → `MedicalWebPage` (drop-in type change)
-2. Wrap step-by-step injection instructions in `HowTo` schema
-3. Once authors exist, add `Person` → `author` linkage
-
-### Platform Optimization — 76/100
-
-| Platform | Readiness | Notes |
+| Pillar | Score | Note |
 |---|---|---|
-| Google AI Overviews | 85% | SSR ✓, FAQ schema ✓, fast ✓, E-E-A-T needs work |
-| ChatGPT / ChatGPT Search | 70% | GPTBot + OAI-SearchBot allowed (post-deploy), strong content, weak brand signals |
-| Perplexity | 75% | PerplexityBot allowed (post-deploy), llms.txt (post-deploy), citation-friendly content |
-| Google Gemini | 72% | Google-Extended now explicit (post-deploy), good schema, same E-E-A-T gap |
-| Bing Copilot | 78% | Bingbot allowed ✓, IndexNow integrated (needs first submit) |
+| Experience | 10/25 | Pure curation — no first-hand protocols, user logs, lab walkthroughs |
+| Expertise | 13/25 | Honest non-medical framing avoids fake-credential penalty but caps ceiling |
+| Authoritativeness | 14/25 | Named editor + sameAs + editorial standards page; single editor, no Wikipedia |
+| Trustworthiness | 21/25 | Clear disclaimers, dated guides, named accountability; trust loss from missing inline citations |
 
-**Biggest platform gap:** ChatGPT. It weights training-data brand recognition heavily and the site has minimal presence on Reddit/YouTube/Wikipedia where ChatGPT's training data skews.
+Sample depth: guides are 1,400–1,950 words, 7–8 H2s, zero H3s, 5 external links, zero DOI/PMID. Standard-form, not long-form, for YMYL.
+
+### Technical GEO — 94/100 (Excellent)
+
+| Sub-category | Score |
+|---|---|
+| Crawlability | 14/15 |
+| Indexability | 12/12 |
+| Security | 9/10 (no CSP) |
+| URL Structure | 7/8 |
+| Mobile | 10/10 |
+| Core Web Vitals (est.) | 13/15 |
+| SSR | 15/15 |
+| Page Speed | 14/15 |
+
+TTFB 110–180ms from Vercel Edge, `x-vercel-cache: HIT` across sampled paths. All 14 AI crawlers allow-listed. Sitemap 202 URLs with fresh lastmods. HSTS preload header sent (submission pending). 3 non-blocking warnings (2-hop redirect, IndexNow not wired, hstspreload.org registration). See `GEO-TECHNICAL-AUDIT.md` for full detail.
+
+### Schema & Structured Data — 86/100 (Excellent)
+
+All JSON-LD server-rendered. No parse errors, no duplicate `@id`s, dates valid ISO-8601, `Person @id` linkage from `MedicalWebPage.author` resolves. Types: Organization, WebSite, Product + Offer + AggregateRating + BreadcrumbList + FAQPage, MedicalWebPage, AboutPage, Person, HowTo (injection guide). Gaps: guide BreadcrumbList missing, Product.brand/sku missing, MedicalWebPage `@id`/`image`/`citation` missing, publisher re-declared instead of @id-referenced.
+
+### Platform Optimization — 62/100 (Fair)
+
+| Platform | Score |
+|---|---|
+| Google AI Overviews | 54/100 — YMYL-capped |
+| ChatGPT (SearchGPT) | 68/100 |
+| Perplexity | 66/100 |
+| Gemini | 58/100 |
+| Bing Copilot | 64/100 |
+
+AIO and Gemini are ceiling-limited by YMYL credentialing. ChatGPT and Perplexity are best-positioned but waiting on off-site entity signals and IndexNow wiring.
 
 ---
 
 ## Quick Wins (Implement This Week)
 
-1. **Deploy the staged fixes** — `next.config.js` redirects + headers + `app/llms.txt/route.ts` + `app/robots.ts` AI crawlers. Single deploy resolves C1, H1, H2, H3, unlocks 31 points of technical score.
-2. **Add a named author + bio page** (e.g., `/about/editors`). Even a single editor with a real bio and credentials resolves C2 and lifts E-E-A-T by ~16 points.
-3. **Add a 40–60 word "answer box"** at the top of each of the 10 top-traffic guides with `speakable` schema — AI Overviews / ChatGPT love this format.
-4. **Upgrade guide `Article` → `MedicalWebPage`** in `generateMetadata` — one-line change per guide template.
-5. **Submit `/sitemap.xml`** to Google Search Console and run one IndexNow POST with the full sitemap URL list.
+1. **Wire IndexNow submission into Vercel build hook** — POST every changed URL on deploy. Also deploy key at `/.well-known/IndexNow/{key}.txt` in addition to root. (<2 hours, Medium impact)
+2. **Add `msvalidate.01` meta tag** to `app/layout.tsx` after verifying domain in Bing Webmaster Tools. (<30 min, Medium impact)
+3. **Submit domain to hstspreload.org** — HSTS header already carries `preload` directive. (<10 min, Low impact)
+4. **Fix llms.txt duplicate** — "Peptide Stacking Guide" appears twice in Core Guides. (<5 min, Low impact)
+5. **Add BreadcrumbList JSON-LD to every guide page** — template exists on products; copy to guide layout. (<1 hour, Medium impact)
 
 ## 30-Day Action Plan
 
-### Week 1 — Unblock indexing
-- [ ] Deploy staged redirect map + headers + llms.txt + robots (resolves C1, H1, H2, H3)
-- [ ] Verify 301s via `curl -I /products/bpc-157` returns 308 → 200
-- [ ] Resubmit sitemap in Google Search Console
-- [ ] Run IndexNow POST with full sitemap URL list
-- [ ] Submit domain to https://hstspreload.org
+### Week 1: Citation + Sourcing Layer (YMYL Credibility)
+- [ ] Audit every H2 claim across top 10 guides; assign one PubMed ID or DOI per mechanism/dosage/half-life/efficacy claim.
+- [ ] Render citations inline as `<a href="https://pubmed.ncbi.nlm.nih.gov/...">` with `rel="nofollow noopener"`.
+- [ ] Add schema-level `citation` array on `MedicalWebPage` for each guide.
+- [ ] Target: 8–15 inline citations per flagship guide (BPC-157, GLP-1, Semaglutide, Tirzepatide, Retatrutide).
 
-### Week 2 — E-E-A-T foundation
-- [ ] Create `/about/editors` (or `/about/authors`) page with 1–2 named editors, credentials, links to external profiles (LinkedIn, ORCID if clinical)
-- [ ] Update guide template to include `author` `Person` schema pointing at editor page
-- [ ] Add bylines + last-updated dates to all 35 guides
+### Week 2: Editorial Team Expansion
+- [ ] Recruit or contract a named contributor with verifiable credentials (pharmacist/biochemist/RN/PhD researcher).
+- [ ] Create a second `Person` in `lib/authors.ts` with real ORCID / LinkedIn / PubMed author profile in `sameAs`.
+- [ ] Assign this person as `reviewedBy` on top 10 YMYL guides (distinct from `author`).
+- [ ] Publish a "How we evaluate sources" methodology page.
 
-### Week 3 — Citability polish
-- [ ] Add 40–60 word answer-box summaries (with `speakable` schema) to top 10 guides
-- [ ] Upgrade guide schema to `MedicalWebPage`
-- [ ] Wrap injection guide + reconstitution guide in `HowTo` schema
-- [ ] Add inline PubMed / NEJM / ClinicalTrials.gov links to top 10 guides
+### Week 3: Off-Site Entity Signals
+- [ ] Launch YouTube channel (`@LooksMax_Agent`); publish 4 short explainer videos (BPC-157, GLP-1, CJC-1295/Ipamorelin, How to Inject).
+- [ ] Add YouTube URL to `Organization.sameAs` and the editor's `Person.sameAs`.
+- [ ] Reddit: 15–20 substantive, cited, non-promotional answers in r/Peptides, r/PeptideTherapy, r/Biohackers under the Loud-Department3185 account.
+- [ ] Outreach for 1 guest post / podcast appearance on Longevity Advice, Ben Greenfield, Modern Healthspan.
 
-### Week 4 — Brand authority + hygiene
-- [ ] Claim LinkedIn company page, add `sameAs` to Organization schema
-- [ ] Start Reddit contribution cadence in 1–2 relevant subs
-- [ ] Add a pre-deploy check: fail build if any product slug changes without a matching redirect
-- [ ] Re-run `/geo-audit` — target 85+ composite
+### Week 4: Schema Enrichment + llms-full.txt
+- [ ] Ship `/llms-full.txt` with concatenated guide bodies (Markdown).
+- [ ] Expand `HowTo` schema to reconstitution + stacking + dosing-calculator guides.
+- [ ] Add H3 sub-sections (Mechanism / Half-life / Typical Research Doses / Contraindications / Stacking) to flagship guides.
+- [ ] Unify `@graph` across JSON-LD blocks; collapse inline publisher declarations to `@id` refs.
+- [ ] Add `Product.brand` (Phiogen), rewrite ~15 top-SKU descriptions with unique 1–2 sentence specs.
 
 ---
 
-## Appendix: Sampled Pages
+## Appendix: Pages Analyzed (Deep Crawl)
 
-| URL | Type | Schema | Notes |
+| URL | Status | Key Schema | Notes |
 |---|---|---|---|
-| / | Homepage | Organization, WebSite, SearchAction, ImageObject | Strong hero, missing obvious H1 text (detected empty H1 shell) |
-| /products | Category | BreadcrumbList, ItemList | OK |
-| /products/bpc-157-10mg | Product | Product, Offer, AggregateRating, FAQPage, Breadcrumb | Full stack, well-formed |
-| /products/bpc-157 | 404 | — | **Indexed pre-rename, now 404** |
-| /products/tb-500 | 404 | — | Same |
-| /bpc-157-complete-guide | Guide | Article, FAQPage, Organization | 4,231 words, AI-authored byline |
-| /tb-500-complete-guide | Guide | Article, FAQPage | Similar |
-| /peptide-stacking-guide | Guide | Article | Strong structure |
-| /how-to-inject-peptides-beginners-guide | Guide | Article | **Should be HowTo** |
-| /bacteriostatic-water-peptide-reconstitution-guide | Guide | Article | **Should be HowTo** |
-| /tools | Utility | — | OK |
-| /faq | Utility | FAQPage | OK |
-| /contact | Utility | ContactPage | OK |
-| /robots.txt | Config | — | Explicit UA list (post-deploy adds AI bots) |
-| /sitemap.xml | Config | — | 305 URLs, product entries re-dated 2026-04-17 |
-| /llms.txt | Config | — | **404 live; route shipped in repo this session** |
+| / | 200 | Organization, WebSite | SSR clean, HSTS preload |
+| /robots.txt | 200 | — | 14 AI crawlers allow-listed |
+| /sitemap.xml | 200 | — | 202 URLs, fresh lastmods |
+| /llms.txt | 200 (24h cache) | — | Duplicate "Peptide Stacking" entry |
+| /products/bpc-157-10mg | 200 | Product, Offer, AggregateRating, BreadcrumbList, FAQPage | Missing brand/sku |
+| /products/bpc-157 | 308 → /products/bpc-157-10mg | — | Redirect working |
+| /bpc-157-complete-guide | 200 | MedicalWebPage, FAQPage, Person | Zero inline citations, no BreadcrumbList, no H3s |
+| /semaglutide-complete-guide | 200 | MedicalWebPage, FAQPage, Person | Same gaps |
+| /glp-1-peptides-complete-guide | 200 | MedicalWebPage, FAQPage, Person | Same gaps |
+| /how-to-inject-peptides-beginners-guide | 200 | HowTo, FAQPage, Person | HowTo schema richer than other guides |
+| /about/editors | 200 | AboutPage, Person | Clean; single editor caps ceiling |
 
----
-
-## Files Changed This Session (ready to deploy)
-
-| File | Purpose |
-|---|---|
-| `next.config.js` | +20 redirects, +6 security headers, consolidated config |
-| `next.config.ts` | **deleted** (was ignored, contained orphan redirects) |
-| `app/robots.ts` | +14 explicit AI crawler allow rules |
-| `app/sitemap.ts` | Product `lastModified` bumped to force reprocessing |
-| `app/llms.txt/route.ts` | New — serves `/llms.txt` dynamically from catalog |
-| `lib/indexnow.ts` | New — IndexNow submission helper |
-| `public/de70e44d61f29841aa01ebde75f50209.txt` | IndexNow verification key |
-| `public/New folder (29)/` | **deleted** (debris) |
-
-Deploy this bundle and the live GEO score moves from 61 → 82.
+Referenced audit artifacts:
+- `/mnt/c/Users/Wilso/peptizzy/GEO-TECHNICAL-AUDIT.md` — full technical category breakdown (94/100)
