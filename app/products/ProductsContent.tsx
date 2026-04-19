@@ -1,9 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState, useMemo, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState, useMemo } from 'react'
 import ProductCard from '@/components/ProductCard'
 import { products, categories, getFeaturedProducts } from '@/lib/products'
 
@@ -16,9 +13,8 @@ const CATEGORY_ACCENT: Record<string, string> = {
   'Blends & Stacks':        '#d4a043',
 }
 
-function Content() {
-  const searchParams = useSearchParams()
-  const [cat, setCat] = useState(searchParams.get('category') || 'all')
+function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
+  const [cat, setCat] = useState(initialCategory)
   const [q, setQ] = useState('')
 
   const filtered = useMemo(() => {
@@ -222,17 +218,6 @@ function Content() {
   )
 }
 
-export default function ProductsContent() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-[#07070a] flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-8 h-8 rounded-full border-2 border-[#d4a043] border-t-transparent animate-spin mx-auto mb-4" />
-          <p className="text-[#8888a0] text-[14px]">Loading catalog...</p>
-        </div>
-      </div>
-    }>
-      <Content />
-    </Suspense>
-  )
+export default function ProductsContent({ initialCategory }: { initialCategory?: string }) {
+  return <Content initialCategory={initialCategory} />
 }

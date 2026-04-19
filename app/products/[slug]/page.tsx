@@ -7,8 +7,6 @@ import { getProductBySlug, products, type Product } from '@/lib/products'
 import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
 import FaqAccordion from '@/components/FaqAccordion'
-import Rating from '@/components/Rating'
-import { productRating } from '@/lib/rating'
 
 // Force static generation — all slugs are known at build time via generateStaticParams.
 // This ensures Vercel serves proper cache-control: public headers instead of private/no-store.
@@ -35,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       type: 'website',
       siteName: 'PeptidesMuscle',
-      images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: p.name }],
+      images: [{ url: p.image, width: 1200, height: 1200, alt: p.name }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -91,26 +89,6 @@ const CLINICAL_TRIALS: Record<string, { trial: string; outcome: string; duration
   'retatrutide-60mg':         { trial: 'Phase 2 — NEJM (2023)',       outcome: '24.2% avg. body weight reduction', duration: '48 weeks' },
   'cagrilintide-semaglutide': { trial: 'SCALE Program (2024)',        outcome: '15.6% avg. body weight reduction', duration: '32 weeks' },
 }
-
-const LOOKS_TIMELINE = [
-  { week: 'Week 1–2',   result: 'Improved hydration and baseline skin firmness begins' },
-  { week: 'Week 3–4',   result: 'Visible reduction in fine lines, elasticity boost' },
-  { week: 'Week 6–8',   result: 'Measurable increase in skin density and collagen matrix' },
-  { week: 'Week 10–12', result: 'Full structural remodeling — new collagen replaces damaged tissue' },
-]
-
-const HEALING_STAGES = [
-  { step: '01', title: 'Angiogenesis', desc: 'New blood vessels form, flooding damaged tissue with oxygen and nutrients' },
-  { step: '02', title: 'Cell Recruitment', desc: 'Growth factor receptors upregulate, drawing repair cells to the injury site' },
-  { step: '03', title: 'Tissue Regeneration', desc: 'Collagen synthesis and structural proteins rebuild at accelerated rates' },
-]
-
-const ANABOLIC_PATHWAY = [
-  { node: 'IGF-1R / GHRH-R', desc: 'Receptor binding triggers intracellular cascade' },
-  { node: 'PI3K → Akt', desc: 'Phosphorylation activates the pro-growth signaling chain' },
-  { node: 'mTOR Complex', desc: 'Master regulator switches cells into anabolic, growth mode' },
-  { node: 'Protein Synthesis', desc: 'Ribosomes upregulate — muscle fiber growth and repair begins' },
-]
 
 // ── Further Reading ──────────────────────────────────────────────────────────
 
@@ -184,14 +162,6 @@ const BENEFITS_HEADINGS = [
   'Measured Responses',
 ] as const
 
-const FAQ_HEADINGS = [
-  'Frequently Asked Questions',
-  'Common Research Questions',
-  'Questions Researchers Ask',
-  'Protocol Q&A',
-  'Answers for Researchers',
-] as const
-
 const MORE_HEADING_TEMPLATES = [
   (cat: string) => <>More in <span className="italic gold-text">{cat}</span></>,
   (cat: string) => <>Other <span className="italic gold-text">{cat}</span> Peptides</>,
@@ -215,15 +185,13 @@ const SYNERGY_LABELS = [
   'Recommended Stack Partners',
 ] as const
 
-// Main-column block ordering. `paragraphs` stays first (narrative anchor);
-// the other three rotate so highlights / callout / benefits land in varied positions.
+// Main-column block ordering. `summary` anchors the page (1-paragraph lede);
+// specs / highlights / benefits rotate to vary structure per SKU.
 const MAIN_ORDERS = [
-  ['paragraphs', 'highlights', 'callout', 'benefits'],
-  ['paragraphs', 'callout', 'highlights', 'benefits'],
-  ['paragraphs', 'benefits', 'highlights', 'callout'],
-  ['paragraphs', 'benefits', 'callout', 'highlights'],
-  ['paragraphs', 'highlights', 'benefits', 'callout'],
-  ['paragraphs', 'callout', 'benefits', 'highlights'],
+  ['summary', 'specs', 'highlights', 'benefits'],
+  ['summary', 'specs', 'benefits', 'highlights'],
+  ['summary', 'highlights', 'specs', 'benefits'],
+  ['summary', 'benefits', 'specs', 'highlights'],
 ] as const
 
 // Sidebar stack ordering. Existing three blocks shuffled.
@@ -344,8 +312,7 @@ function ProductHero({
                   style={{ fontSize: 'clamp(32px, 6vw, 44px)' }}>
                   {product.price}
                 </p>
-                <Rating slug={product.slug} size="md" className="mt-2.5" />
-                <p className="text-[#40c090] text-[11px] font-600 mt-2">✓ 10% off via PeptidesMuscle</p>
+                <p className="text-[#40c090] text-[11px] font-600 mt-3">✓ 10% off via PeptidesMuscle</p>
               </div>
               <div>
                 <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1.5">Suggested Protocol</p>
@@ -392,60 +359,6 @@ function ProductHero({
         </div>
       </div>
 
-      {/* ── CATEGORY-SPECIFIC EXTRA STRIPS ── */}
-
-      {/* Recovery: tissue targets */}
-      {cat === 'Recovery & Healing' && (
-        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
-          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-4">Repair Targets</p>
-          <div className="flex flex-wrap gap-2">
-            {['Tendons', 'Ligaments', 'Gut Lining', 'Joints', 'Cartilage', 'Nerves', 'Muscle Tissue', 'Bone'].map(area => (
-              <span key={area} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px]"
-                style={{ background: 'rgba(212,160,67,0.08)', border: '1px solid rgba(212,160,67,0.2)', color: '#d4a043' }}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#d4a043] block flex-shrink-0" />
-                {area}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Cognitive: results timeline */}
-      {cat === 'Cognitive & Nootropic' && (
-        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
-          <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-4">Expected Results Timeline</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {[
-              { week: 'Day 1–3',   result: 'Acute anxiolytic and focusing effects — reduced mental noise and stress' },
-              { week: 'Week 1–2',  result: 'Improved working memory, word retrieval, and mental clarity emerge' },
-              { week: 'Week 3–4',  result: 'Deeper focus, sustained attention, and mood stabilization are consistent' },
-              { week: 'Week 6–8',  result: 'Neuroplasticity adaptations — long-term memory and cognitive baseline improved' },
-            ].map((t, i) => (
-              <div key={i} className="rounded-xl p-4 relative overflow-hidden"
-                style={{ background: '#0d0d12', border: `1px solid ${accent}18` }}>
-                <div className="absolute top-0 left-0 w-full h-0.5" style={{ background: `linear-gradient(90deg, ${accent}80, transparent)` }} />
-                <p className="text-white text-[13px] font-500 mb-1">{t.week}</p>
-                <p className="text-[#50505e] text-[12px] leading-relaxed">{t.result}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Growth Peptides: performance stat cards */}
-      {cat === 'Growth Peptides' && (
-        <div className="max-w-7xl mx-auto px-6 md:px-10 pb-6">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, transparent, ${accent}40)` }} />
-            <span className="text-[11px] uppercase tracking-[0.25em]" style={{ color: accent }}>Performance Profile</span>
-            <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${accent}40, transparent)` }} />
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {product.tags.map(t => <span key={t} className="tag">{t}</span>)}
-          </div>
-        </div>
-      )}
-
     </section>
   )
 }
@@ -488,6 +401,132 @@ function SynergyPanel({ product, label = 'Best Stacked With' }: { product: Produ
   )
 }
 
+// ── TRANSACTIONAL FAQ GENERATION ────────────────────────────────────────────
+
+function generateTransactionalFaqs(product: Product): Array<{ q: string; a: string }> {
+  const vial = extractVialSize(product.name)
+  const pack = extractPackCount(product.name)
+  const isCapsule = /capsule/i.test(product.name)
+  const isTablet = /tablet/i.test(product.name)
+  const isBacWater = product.slug === 'bacteriostatic-water'
+  const isOral = isCapsule || isTablet
+  const name = product.name
+
+  const faqs: Array<{ q: string; a: string }> = []
+
+  faqs.push({
+    q: `How is ${name} shipped and packaged?`,
+    a: isBacWater
+      ? `${name} ships in sealed, stoppered vials inside a protected container. Orders ship from our US fulfillment partner within 1–2 business days and typically arrive within 3–5 business days domestically.`
+      : isOral
+      ? `${name} ships in a sealed bottle with tamper-evident seal. Domestic orders arrive within 3–5 business days after a 1–2 day handling window. No refrigerated transit required for this format.`
+      : `${name} ships as a sealed, lyophilized vial in temperature-protective packaging. Orders dispatch within 1–2 business days and typically arrive in 3–5 business days domestically. The compound is stable at room temperature during transit in its lyophilized state.`,
+  })
+
+  faqs.push({
+    q: `Do you provide a Certificate of Analysis (CoA) for ${name}?`,
+    a: `Yes. A batch-specific Certificate of Analysis — covering HPLC purity, mass spectrometry identity confirmation, and relevant physical tests — is available on request for every lot of ${name}. Contact customer service with your order number to receive the CoA PDF.`,
+  })
+
+  if (!isOral && !isBacWater && vial) {
+    faqs.push({
+      q: `What reconstitution volume should I use for this ${vial} vial?`,
+      a: `Reconstitution volume depends on your target working concentration. As a general reference for a ${vial} vial, 1 mL of bacteriostatic water gives a concentration of ${vial.replace(/\s/g, '')}/mL, 2 mL gives half that concentration, and so on. Choose the volume that produces a dose convenient for your protocol. See our reconstitution guide for a full calculator and step-by-step instructions.`,
+    })
+  }
+
+  if (pack) {
+    faqs.push({
+      q: `How many vials are in this ${name} pack?`,
+      a: `This pack contains ${pack.toLowerCase()} of ${name.replace(/\s*[-–]?\s*\d+[-\s]?pack.*$/i, '')}. Each vial is individually sealed and labeled with the same batch CoA.`,
+    })
+  }
+
+  faqs.push({
+    q: `How should I store ${name}?`,
+    a: isOral
+      ? `Store ${name} at room temperature in a dry place, protected from direct light. Keep the bottle sealed when not in use. Do not refrigerate.`
+      : isBacWater
+      ? `Keep ${name} sealed at room temperature until first use. After the first draw, mark the date on the vial and refrigerate at 2–8°C; use within 28 days.`
+      : `Store unopened ${name} at 2–8°C in its original packaging, protected from light. After reconstitution, refrigerate at 2–8°C and use within approximately 28 days. Do not freeze reconstituted solution.`,
+  })
+
+  return faqs
+}
+
+// ── PER-SKU SPECIFICATION TABLE ─────────────────────────────────────────────
+
+function extractVialSize(name: string): string | null {
+  const m = name.match(/(\d+(?:\.\d+)?)\s*(mg|mcg|ml|iu)\b/i)
+  if (!m) return null
+  return `${m[1]} ${m[2].toLowerCase()}`
+}
+
+function extractPackCount(name: string): string | null {
+  const m = name.match(/(\d+)[\s-]?pack/i) || name.match(/x\s*(\d+)/i)
+  return m ? `${m[1]} vials` : null
+}
+
+function ProductSpecs({ product }: { product: Product }) {
+  const vial = extractVialSize(product.name)
+  const pack = extractPackCount(product.name)
+  const isCapsule = /capsule/i.test(product.name)
+  const isTablet = /tablet/i.test(product.name)
+  const isBacWater = product.slug === 'bacteriostatic-water'
+
+  const format = isBacWater
+    ? 'Sterile solution (0.9% benzyl alcohol)'
+    : isCapsule ? 'Oral capsule'
+    : isTablet ? 'Oral tablet'
+    : 'Lyophilized powder'
+
+  const reconst = isBacWater
+    ? 'N/A — supplied as solution'
+    : isCapsule || isTablet
+    ? 'N/A — oral dosage form'
+    : 'Bacteriostatic water (0.9% benzyl alcohol)'
+
+  const storage = isCapsule || isTablet
+    ? 'Room temperature, dry, protected from light'
+    : 'Store at 2–8°C before reconstitution. Once reconstituted, refrigerate and use within 28 days.'
+
+  const rows: Array<[string, string]> = [
+    ['Product', product.name],
+    ['Category', product.category],
+    vial ? ['Unit size', vial] : null,
+    pack ? ['Pack count', pack] : null,
+    ['Format', format],
+    ['Purity', '≥99% (HPLC verified)'],
+    ['Appearance', isBacWater ? 'Clear, colorless solution' : (isCapsule || isTablet) ? 'White, uniform' : 'White to off-white lyophilized cake'],
+    ['Reconstitution solvent', reconst],
+    ['Storage', storage],
+    ['Shelf life (unopened)', '24 months from manufacture date'],
+    ['Third-party tested', 'HPLC and mass spectrometry — COA available on request'],
+    ['Research use', 'For laboratory research only. Not for human or veterinary use.'],
+  ].filter(Boolean) as Array<[string, string]>
+
+  return (
+    <div className="mb-10">
+      <h2 className="font-['Playfair_Display'] font-900 text-white mb-6"
+        style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+        Specifications
+      </h2>
+      <div className="card rounded-2xl overflow-hidden">
+        <table className="w-full text-[14px]">
+          <tbody>
+            {rows.map(([label, value], i) => (
+              <tr key={label} className={i < rows.length - 1 ? 'border-b border-white/[0.05]' : ''}>
+                <th scope="row" className="text-left text-[#8888a0] font-500 px-5 py-3 w-[42%] sm:w-[32%] align-top">{label}</th>
+                <td className="text-white px-5 py-3 leading-relaxed">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
+
 // ── PRODUCT-SPECIFIC HIGHLIGHTS ─────────────────────────────────────────────
 
 function ProductHighlights({ product }: { product: Product }) {
@@ -516,132 +555,6 @@ function ProductHighlights({ product }: { product: Product }) {
   )
 }
 
-// ── CATEGORY-SPECIFIC DEEP-DIVE CALLOUT SECTIONS ───────────────────────────
-
-function RecoveryCallout() {
-  return (
-    <div className="card rounded-2xl p-6 mb-10">
-      <p className="label text-[#d4a043] mb-6">The Biological Repair Cascade</p>
-      <div className="space-y-0">
-        {HEALING_STAGES.map((stage, i) => (
-          <div key={i} className="flex gap-5 pb-6 last:pb-0 relative">
-            {i < HEALING_STAGES.length - 1 && (
-              <div className="absolute left-[19px] top-10 bottom-0 w-px bg-[#d4a043]/15" />
-            )}
-            <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-[11px] font-700 text-[#d4a043] z-10"
-              style={{ background: 'rgba(212,160,67,0.1)', border: '1px solid rgba(212,160,67,0.25)' }}>
-              {stage.step}
-            </div>
-            <div className="pt-2">
-              <p className="text-white text-[14px] font-500 mb-1">{stage.title}</p>
-              <p className="text-[#50505e] text-[13px] leading-relaxed">{stage.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function LooksMaxingCallout() {
-  return (
-    <div className="rounded-2xl p-6 mb-10" style={{ background: 'rgba(192,132,252,0.06)', border: '1px solid rgba(192,132,252,0.14)' }}>
-      <p className="label mb-4" style={{ color: '#c084fc' }}>Cognitive Enhancement Pathways</p>
-      <div className="space-y-3">
-        {[
-          { layer: 'Neuroprotection',    role: 'Shields neurons from oxidative stress, excitotoxicity, and inflammatory damage' },
-          { layer: 'Neuroplasticity',    role: 'Enhances BDNF and NGF expression — strengthens synaptic connections and memory encoding' },
-          { layer: 'Neurotransmission',  role: 'Modulates dopamine, serotonin, and GABA balance for mood, focus, and calm clarity' },
-        ].map((l, i) => (
-          <div key={i} className="flex items-start gap-3">
-            <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: '#c084fc' }} />
-            <div>
-              <span className="text-white text-[13px] font-500">{l.layer}: </span>
-              <span className="text-[#50505e] text-[13px]">{l.role}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function BodyCompCallout() {
-  return (
-    <div className="rounded-2xl p-6 mb-10" style={{ background: 'rgba(52,211,153,0.05)', border: '1px solid rgba(52,211,153,0.14)' }}>
-      <p className="label mb-6" style={{ color: '#34d399' }}>Anabolic Signal Pathway</p>
-      <div className="relative">
-        {ANABOLIC_PATHWAY.map((node, i) => (
-          <div key={i} className="flex items-start gap-4 mb-4 last:mb-0">
-            <div className="flex flex-col items-center">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-[10px] font-700"
-                style={{ background: 'rgba(52,211,153,0.12)', border: '1px solid rgba(52,211,153,0.3)', color: '#34d399' }}>
-                {i + 1}
-              </div>
-              {i < ANABOLIC_PATHWAY.length - 1 && (
-                <div className="w-px h-4 mt-1" style={{ background: 'rgba(52,211,153,0.2)' }} />
-              )}
-            </div>
-            <div className="pt-1">
-              <p className="text-white text-[13px] font-500 mb-0.5">{node.node}</p>
-              <p className="text-[#50505e] text-[12px]">{node.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function WeightMgmtCallout({ trialData }: { trialData?: { trial: string; outcome: string; duration: string } }) {
-  if (!trialData) return null
-  return (
-    <div className="rounded-2xl p-6 mb-10 relative overflow-hidden" style={{ background: 'rgba(96,165,250,0.06)', border: '1px solid rgba(96,165,250,0.15)' }}>
-      <div className="absolute top-0 left-0 right-0 h-0.5" style={{ background: 'linear-gradient(90deg, #60a5fa, transparent)' }} />
-      <p className="label mb-4" style={{ color: '#60a5fa' }}>Clinical Trial Reference</p>
-      <div className="grid sm:grid-cols-3 gap-4">
-        <div>
-          <p className="text-[10px] text-[#50505e] uppercase tracking-widest mb-1">Study</p>
-          <p className="text-white text-[14px] font-500">{trialData.trial}</p>
-        </div>
-        <div>
-          <p className="text-[10px] text-[#50505e] uppercase tracking-widest mb-1">Primary Outcome</p>
-          <p className="text-[14px] font-600" style={{ color: '#60a5fa' }}>{trialData.outcome}</p>
-        </div>
-        <div>
-          <p className="text-[10px] text-[#50505e] uppercase tracking-widest mb-1">Duration</p>
-          <p className="text-white text-[14px] font-500">{trialData.duration}</p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function AntiAgingCallout() {
-  return (
-    <div className="rounded-2xl p-6 mb-10" style={{ background: 'rgba(167,139,250,0.06)', border: '1px solid rgba(167,139,250,0.14)' }}>
-      <p className="label mb-4" style={{ color: '#a78bfa' }}>Cellular Age Reversal Mechanism</p>
-      <div className="grid sm:grid-cols-2 gap-4">
-        {[
-          { term: 'Telomerase Activation',  desc: 'Rebuilds chromosomal end-caps that shorten with each cell division' },
-          { term: 'Melatonin Restoration',  desc: 'Normalizes age-related melatonin decline — improves deep sleep architecture' },
-          { term: 'Antioxidant Activity',   desc: 'Scavenges free radicals that accelerate cellular aging and DNA damage' },
-          { term: 'Immune Modulation',      desc: 'Recalibrates age-related immune dysregulation toward youthful baseline' },
-        ].map((item, i) => (
-          <div key={i} className="flex items-start gap-3">
-            <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ background: '#a78bfa' }} />
-            <div>
-              <p className="text-white text-[13px] font-500 mb-0.5">{item.term}</p>
-              <p className="text-[#50505e] text-[12px] leading-relaxed">{item.desc}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-
 // ── MAIN PAGE ───────────────────────────────────────────────────────────────
 
 export default function ProductPage({ params }: Props) {
@@ -658,8 +571,8 @@ export default function ProductPage({ params }: Props) {
     { label: 'Grade',    value: 'Research'       },
   ]
   const trialData = CLINICAL_TRIALS[product.slug]
-  const cat = product.category
-  const rating = productRating(product.slug)
+  const transactionalFaqs = generateTransactionalFaqs(product)
+  const allFaqs = [...transactionalFaqs, ...(product.faqs ?? [])]
 
   const jsonLdItems: object[] = [
     {
@@ -668,13 +581,8 @@ export default function ProductPage({ params }: Props) {
       description: product.shortDescription,
       image: product.image,
       url: `https://www.peptidesmuscle.com/products/${product.slug}`,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: rating.stars.toFixed(1),
-        reviewCount: rating.count,
-        bestRating: '5',
-        worstRating: '1',
-      },
+      brand: { '@type': 'Brand', name: 'Phiogen' },
+      category: product.category,
       offers: {
         '@type': 'Offer',
         priceCurrency: 'USD',
@@ -695,10 +603,10 @@ export default function ProductPage({ params }: Props) {
     },
   ]
 
-  if (product.faqs?.length) {
+  if (allFaqs.length) {
     jsonLdItems.push({
       '@type': 'FAQPage',
-      mainEntity: product.faqs.map(f => ({
+      mainEntity: allFaqs.map(f => ({
         '@type': 'Question',
         name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -732,29 +640,17 @@ export default function ProductPage({ params }: Props) {
         // further varies sidebar length between products.
         const showSidebarCta = (slugHash(product.slug) % 5) >= 2
 
-        const paragraphs = (
-          <>
-            <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
-              style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
-              {product.deepDiveTitle}
-            </h2>
-            <div className="space-y-5 mb-10">
-              {product.fullDescription.split('\n\n').map((para, i) => (
-                <p key={i} className={`leading-relaxed ${i === 0 ? 'text-[#aaaabc] text-[17px]' : 'text-[#8888a0] text-[16px]'}`}>{para}</p>
-              ))}
-            </div>
-          </>
+        const summary = (
+          <div className="mb-10">
+            <p className="text-[#aaaabc] text-[17px] leading-relaxed">
+              {product.fullDescription.split('\n\n')[0]}
+            </p>
+          </div>
         )
 
-        const highlights = <ProductHighlights product={product} />
+        const specs = <ProductSpecs product={product} />
 
-        const callout =
-          cat === 'Recovery & Healing'     ? <RecoveryCallout /> :
-          cat === 'Cognitive & Nootropic'  ? <LooksMaxingCallout /> :
-          cat === 'Growth Peptides'        ? <BodyCompCallout /> :
-          cat === 'Fat Loss / Metabolic'   ? <WeightMgmtCallout trialData={trialData} /> :
-          cat === 'Anti-Aging & Longevity' ? <AntiAgingCallout /> :
-          null
+        const highlights = <ProductHighlights product={product} />
 
         const benefits = (
           <div className="mb-10">
@@ -775,7 +671,7 @@ export default function ProductPage({ params }: Props) {
           </div>
         )
 
-        const mainBlocks: Record<string, React.ReactNode> = { paragraphs, highlights, callout, benefits }
+        const mainBlocks: Record<string, React.ReactNode> = { summary, specs, highlights, benefits }
 
         const protocolCard = (
           <div className="card rounded-2xl p-6">
@@ -832,14 +728,14 @@ export default function ProductPage({ params }: Props) {
         )
       })()}
 
-      {/* FAQ Section */}
-      {product.faqs?.length && (
+      {/* FAQ Section — transactional (per-SKU) first, then editorial */}
+      {allFaqs.length > 0 && (
         <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
           <div className="rule mb-12" />
           <h2 className="font-['Playfair_Display'] font-900 text-white mb-8" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
-            {pick(FAQ_HEADINGS, product.slug, 19)}
+            {product.name} — FAQs
           </h2>
-          <FaqAccordion faqs={product.faqs} />
+          <FaqAccordion faqs={allFaqs} />
         </section>
       )}
 

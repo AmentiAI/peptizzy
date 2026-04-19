@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Product } from '@/lib/products'
-import Rating from './Rating'
 
 interface Props {
   product: Product
@@ -42,7 +41,6 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-white font-700 text-[14px] leading-tight truncate">{product.name}</p>
-            <Rating slug={product.slug} size="sm" showCount={false} className="mt-0.5" />
             <p className="text-[#8888a0] text-[12px] mt-0.5 truncate">{product.tagline}</p>
           </div>
           <div className="flex-shrink-0 text-right">
@@ -84,10 +82,9 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
             <p className="text-[11px] font-600 tracking-widest uppercase mb-2" style={{ color: accent }}>
               {product.category}
             </p>
-            <h3 className="font-['Playfair_Display'] font-900 text-white text-2xl leading-tight mb-2 group-hover:text-[#e8c060] transition-colors">
+            <h3 className="font-['Playfair_Display'] font-900 text-white text-2xl leading-tight mb-3 group-hover:text-[#e8c060] transition-colors">
               {product.name}
             </h3>
-            <Rating slug={product.slug} size="sm" className="mb-3" />
             <p className="text-[#8888a0] text-[14px] leading-relaxed line-clamp-2 mb-4">
               {product.shortDescription}
             </p>
@@ -151,10 +148,9 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
 
           {/* Body */}
           <div className="p-7 flex flex-col flex-1">
-            <h3 className="font-['Playfair_Display'] font-900 text-white text-[26px] leading-tight mb-2 group-hover:text-[#e8c060] transition-colors duration-300">
+            <h3 className="font-['Playfair_Display'] font-900 text-white text-[26px] leading-tight mb-3 group-hover:text-[#e8c060] transition-colors duration-300">
               {product.name}
             </h3>
-            <Rating slug={product.slug} size="sm" className="mb-3" />
             <p className="text-[#8888a0] text-[14px] leading-relaxed line-clamp-3 mb-5 flex-1">
               {product.shortDescription}
             </p>
@@ -218,10 +214,9 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
 
         {/* Body */}
         <div className="p-6 flex flex-col flex-1">
-          <h3 className="font-['Playfair_Display'] font-900 text-white text-[22px] leading-snug mb-2 group-hover:text-[#e8c060] transition-colors duration-300">
+          <h3 className="font-['Playfair_Display'] font-900 text-white text-[22px] leading-snug mb-3 group-hover:text-[#e8c060] transition-colors duration-300">
             {product.name}
           </h3>
-          <Rating slug={product.slug} size="sm" className="mb-3" />
           <p className="text-[#8888a0] text-[14px] leading-relaxed line-clamp-3 flex-1 mb-4">
             {product.shortDescription}
           </p>
