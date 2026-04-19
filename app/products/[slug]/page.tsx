@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -160,6 +161,79 @@ const CATEGORY_ACCENT: Record<string, string> = {
   'Anti-Aging & Longevity': '#a78bfa',
   'Blends & Stacks':        '#d4a043',
 }
+
+// Deterministic slug → integer. Stable across builds, identical per product.
+// Used to rotate section order / heading wording per page so Google doesn't
+// cluster 139 near-identical templated pages as duplicate content.
+function slugHash(slug: string): number {
+  let h = 0
+  for (let i = 0; i < slug.length; i++) {
+    h = (h << 5) - h + slug.charCodeAt(i)
+    h |= 0
+  }
+  return Math.abs(h)
+}
+const pick = <T,>(arr: readonly T[], slug: string, salt = 0): T =>
+  arr[(slugHash(slug) + salt) % arr.length]
+
+const BENEFITS_HEADINGS = [
+  'Key Benefits',
+  'Reported Outcomes',
+  'What Researchers Observe',
+  'Documented Effects',
+  'Measured Responses',
+] as const
+
+const FAQ_HEADINGS = [
+  'Frequently Asked Questions',
+  'Common Research Questions',
+  'Questions Researchers Ask',
+  'Protocol Q&A',
+  'Answers for Researchers',
+] as const
+
+const MORE_HEADING_TEMPLATES = [
+  (cat: string) => <>More in <span className="italic gold-text">{cat}</span></>,
+  (cat: string) => <>Other <span className="italic gold-text">{cat}</span> Peptides</>,
+  (cat: string) => <>Similar <span className="italic gold-text">{cat}</span> Compounds</>,
+  (cat: string) => <>Related <span className="italic gold-text">{cat}</span> Research</>,
+  (cat: string) => <>Also Explore: <span className="italic gold-text">{cat}</span></>,
+] as const
+
+const PROTOCOL_LABELS = [
+  'Full Protocol',
+  'Research Protocol',
+  'Dosing Guide',
+  'Administration Outline',
+  'Standard Protocol',
+] as const
+
+const SYNERGY_LABELS = [
+  'Best Stacked With',
+  'Complementary Compounds',
+  'Pairs Well With',
+  'Recommended Stack Partners',
+] as const
+
+// Main-column block ordering. `paragraphs` stays first (narrative anchor);
+// the other three rotate so highlights / callout / benefits land in varied positions.
+const MAIN_ORDERS = [
+  ['paragraphs', 'highlights', 'callout', 'benefits'],
+  ['paragraphs', 'callout', 'highlights', 'benefits'],
+  ['paragraphs', 'benefits', 'highlights', 'callout'],
+  ['paragraphs', 'benefits', 'callout', 'highlights'],
+  ['paragraphs', 'highlights', 'benefits', 'callout'],
+  ['paragraphs', 'callout', 'benefits', 'highlights'],
+] as const
+
+// Sidebar stack ordering. Existing three blocks shuffled.
+const SIDEBAR_ORDERS = [
+  ['protocol', 'synergy', 'cta'],
+  ['cta', 'protocol', 'synergy'],
+  ['synergy', 'protocol', 'cta'],
+  ['protocol', 'cta', 'synergy'],
+  ['synergy', 'cta', 'protocol'],
+] as const
 
 function ProductHero({
   product, stats, trialData,
@@ -376,11 +450,11 @@ function ProductHero({
   )
 }
 
-function SynergyPanel({ product }: { product: Product }) {
+function SynergyPanel({ product, label = 'Best Stacked With' }: { product: Product; label?: string }) {
   if (!product.synergies.length) return null
   return (
     <div className="card rounded-2xl p-6">
-      <p className="label text-[#d4a043] mb-4">Best Stacked With</p>
+      <p className="label text-[#d4a043] mb-4">{label}</p>
       <div className="space-y-1">
         {product.synergies.map(syn => {
           const sp = products.find(p => p.name.toLowerCase().includes(syn.toLowerCase()) || p.slug === syn)
@@ -647,11 +721,19 @@ export default function ProductPage({ params }: Props) {
       <div className="rule max-w-7xl mx-auto my-8" />
 
       {/* ── DEEP DIVE ── */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
-        <div className="grid lg:grid-cols-[1fr_360px] gap-8 lg:gap-14">
+      {(() => {
+        const mainOrder      = pick(MAIN_ORDERS, product.slug)
+        const sidebarOrder   = pick(SIDEBAR_ORDERS, product.slug, 7)
+        const benefitsH      = pick(BENEFITS_HEADINGS, product.slug, 3)
+        const protocolLabel  = pick(PROTOCOL_LABELS, product.slug, 11)
+        const synergyLabel   = pick(SYNERGY_LABELS, product.slug, 13)
+        // Some pages skip the redundant bottom CTA sidebar card — the hero
+        // already has a prominent buy panel, so dropping it on ~40% of slugs
+        // further varies sidebar length between products.
+        const showSidebarCta = (slugHash(product.slug) % 5) >= 2
 
-          {/* Main */}
-          <div>
+        const paragraphs = (
+          <>
             <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
               style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
               {product.deepDiveTitle}
@@ -661,20 +743,24 @@ export default function ProductPage({ params }: Props) {
                 <p key={i} className={`leading-relaxed ${i === 0 ? 'text-[#aaaabc] text-[17px]' : 'text-[#8888a0] text-[16px]'}`}>{para}</p>
               ))}
             </div>
+          </>
+        )
 
-            {/* Product-specific highlights */}
-            <ProductHighlights product={product} />
+        const highlights = <ProductHighlights product={product} />
 
-            {/* Category-specific deep-dive callout */}
-            {cat === 'Recovery & Healing'     && <RecoveryCallout />}
-            {cat === 'Cognitive & Nootropic'  && <LooksMaxingCallout />}
-            {cat === 'Growth Peptides'        && <BodyCompCallout />}
-            {cat === 'Fat Loss / Metabolic'   && <WeightMgmtCallout trialData={trialData} />}
-            {cat === 'Anti-Aging & Longevity' && <AntiAgingCallout />}
+        const callout =
+          cat === 'Recovery & Healing'     ? <RecoveryCallout /> :
+          cat === 'Cognitive & Nootropic'  ? <LooksMaxingCallout /> :
+          cat === 'Growth Peptides'        ? <BodyCompCallout /> :
+          cat === 'Fat Loss / Metabolic'   ? <WeightMgmtCallout trialData={trialData} /> :
+          cat === 'Anti-Aging & Longevity' ? <AntiAgingCallout /> :
+          null
 
+        const benefits = (
+          <div className="mb-10">
             <h2 className="font-['Playfair_Display'] font-900 text-white mb-8"
               style={{ fontSize: 'clamp(28px, 3.5vw, 46px)' }}>
-              Key Benefits
+              {benefitsH}
             </h2>
             <div className="grid sm:grid-cols-2 gap-3">
               {product.benefits.map((b, i) => (
@@ -687,53 +773,71 @@ export default function ProductPage({ params }: Props) {
               ))}
             </div>
           </div>
+        )
 
-          {/* Sidebar */}
-          <div className="space-y-5">
-            <div className="card rounded-2xl p-6">
-              <p className="label text-[#d4a043] mb-3">Full Protocol</p>
-              <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
+        const mainBlocks: Record<string, React.ReactNode> = { paragraphs, highlights, callout, benefits }
+
+        const protocolCard = (
+          <div className="card rounded-2xl p-6">
+            <p className="label text-[#d4a043] mb-3">{protocolLabel}</p>
+            <p className="text-[#8888a0] text-[15px] leading-relaxed">{product.protocol}</p>
+          </div>
+        )
+
+        const synergyCard = <SynergyPanel product={product} label={synergyLabel} />
+
+        const ctaCard = showSidebarCta ? (
+          <div className="card-elevated rounded-2xl overflow-hidden">
+            <div className="p-6 border-b border-white/[0.06]">
+              <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">Ready to start?</p>
+              <p className="font-['Playfair_Display'] font-900 text-white text-3xl mb-1">{product.price}</p>
+              <p className="text-[#40c090] text-[11px] font-600">✓ 10% off via PeptidesMuscle</p>
             </div>
-
-            <SynergyPanel product={product} />
-
-            <div className="card-elevated rounded-2xl overflow-hidden">
-              <div className="p-6 border-b border-white/[0.06]">
-                <p className="text-[#50505e] text-[11px] uppercase tracking-widest mb-2">Ready to start?</p>
-                <p className="font-['Playfair_Display'] font-900 text-white text-3xl mb-1">{product.price}</p>
-                <p className="text-[#40c090] text-[11px] font-600">✓ 10% off via PeptidesMuscle</p>
-              </div>
-              <div className="p-6">
-                <a href={`/go/${product.slug}`}
-                  target="_blank" rel="noopener nofollow sponsored"
-                  className="btn-primary w-full justify-center py-4 text-[14px] mb-3 relative overflow-hidden group/buy2"
-                  style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
-                  <span className="relative z-10 flex items-center gap-2">
-                    Buy {product.name}
-                    <svg className="w-4 h-4 group-hover/buy2:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                    </svg>
-                  </span>
-                  <span className="absolute inset-0 -translate-x-full group-hover/buy2:translate-x-full transition-transform duration-700 ease-in-out"
-                    style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
-                </a>
-                <div className="flex items-center justify-center gap-3">
-                  <span className="text-[10px] text-[#50505e] uppercase tracking-widest">CoA Verified</span>
-                  <span className="text-[#303040]">·</span>
-                  <span className="text-[10px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
-                </div>
+            <div className="p-6">
+              <a href={`/go/${product.slug}`}
+                target="_blank" rel="noopener nofollow sponsored"
+                className="btn-primary w-full justify-center py-4 text-[14px] mb-3 relative overflow-hidden group/buy2"
+                style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
+                <span className="relative z-10 flex items-center gap-2">
+                  Buy {product.name}
+                  <svg className="w-4 h-4 group-hover/buy2:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+                <span className="absolute inset-0 -translate-x-full group-hover/buy2:translate-x-full transition-transform duration-700 ease-in-out"
+                  style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
+              </a>
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-[10px] text-[#50505e] uppercase tracking-widest">CoA Verified</span>
+                <span className="text-[#303040]">·</span>
+                <span className="text-[10px] text-[#50505e] uppercase tracking-widest">Fast Ship</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        ) : null
+
+        const sidebarBlocks: Record<string, React.ReactNode> = { protocol: protocolCard, synergy: synergyCard, cta: ctaCard }
+
+        return (
+          <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
+            <div className="grid lg:grid-cols-[1fr_360px] gap-8 lg:gap-14">
+              <div>
+                {mainOrder.map(k => <React.Fragment key={k}>{mainBlocks[k]}</React.Fragment>)}
+              </div>
+              <div className="space-y-5">
+                {sidebarOrder.map(k => <React.Fragment key={k}>{sidebarBlocks[k]}</React.Fragment>)}
+              </div>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* FAQ Section */}
       {product.faqs?.length && (
         <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
           <div className="rule mb-12" />
           <h2 className="font-['Playfair_Display'] font-900 text-white mb-8" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
-            Frequently Asked Questions
+            {pick(FAQ_HEADINGS, product.slug, 19)}
           </h2>
           <FaqAccordion faqs={product.faqs} />
         </section>
@@ -748,8 +852,7 @@ export default function ProductPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-6 md:px-10">
             <div className="flex items-center justify-between mb-10">
               <h2 className="font-['Playfair_Display'] font-900 text-white text-3xl">
-                More in{' '}
-                <span className="italic gold-text">{product.category}</span>
+                {pick(MORE_HEADING_TEMPLATES, product.slug, 23)(product.category)}
               </h2>
               <Link href="/products" className="btn-ghost text-[14px]">
                 View All
