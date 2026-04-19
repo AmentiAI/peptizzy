@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/anti-aging`,       lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/body-composition`, lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/guide`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/what-are-peptides`, lastModified: '2026-04-19',  changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/learn`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/faq`,              lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
