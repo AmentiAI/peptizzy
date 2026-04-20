@@ -80,7 +80,6 @@ ${stacks.map(s => `- [${s.name}](${BASE}/stacks/${s.id}): ${s.shortDesc}`).join(
 - [Blog](${BASE}/blog)
 - [Anti-Aging](${BASE}/anti-aging)
 - [Body Composition](${BASE}/body-composition)
-- [Looks-Maxing](${BASE}/looks-maxing)
 - [Guides](${BASE}/guide)
 - [FAQ](${BASE}/faq)
 - [Tools](${BASE}/tools)

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Peptide FAQ | Everything You Need to Know | PeptidesMuscle',
+  title: 'Peptides Muscle FAQ',
   description: 'Answers to the most common questions about peptides — how they work, how to inject, what to stack, dosing protocols, side effects, sourcing, and results timelines.',
   alternates: { canonical: 'https://www.peptidesmuscle.com/faq' },
   openGraph: {
-    title: 'Peptide FAQ | PeptidesMuscle',
+    title: 'Peptides Muscle FAQ',
     description: 'Answers to the most common questions about peptides — protocols, dosing, stacking, and results.',
     url: 'https://www.peptidesmuscle.com/faq',
     type: 'website',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Peptide FAQ | PeptidesMuscle',
+    title: 'Peptides Muscle FAQ',
     description: 'Answers to the most common questions about peptides — protocols, dosing, stacking, and results.',
     images: ['/max-avatar.png'],
   },

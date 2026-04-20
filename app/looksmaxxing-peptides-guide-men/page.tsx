@@ -149,7 +149,6 @@ export default function LooksmaxxingPage() {
               { href: '/melanotan-2-looksmaxxing-tan', label: 'Melanotan 2 Complete Guide', desc: 'Deep melanin tan, libido, and appetite suppression — MT-2 protocol' },
               { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable vs. topical results, 12-week timeline and protocol' },
               { href: '/snap-8-vs-botox-peptide-alternative', label: 'SNAP-8 vs. Botox', desc: 'Can a topical peptide replace neurotoxin injections?' },
-              { href: '/looks-maxing', label: 'Looksmaxxing Hub', desc: 'The science behind each biological pillar of physical appearance' },
             ].map(r => (
               <Link key={r.href} href={r.href} className="card rounded-xl p-5 group hover:border-[#d4a043]/20 transition-colors">
                 <p className="text-[#d4a043] text-[13px] font-600 mb-1 group-hover:underline">{r.label} →</p>

@@ -206,8 +206,7 @@ export default function GuidePage() {
           <p className="text-[#8888a0] text-[16px] mb-6">Ready to go deeper?</p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link href="/products" className="btn-secondary text-[13px] px-6 py-3">Browse All Peptides</Link>
-            <Link href="/stacks" className="btn-secondary text-[13px] px-6 py-3">Stack Protocols</Link>
-            <Link href="/looks-maxing" className="btn-primary text-[13px] px-6 py-3">Looks Max Guide</Link>
+            <Link href="/stacks" className="btn-primary text-[13px] px-6 py-3">Stack Protocols</Link>
           </div>
         </div>
 

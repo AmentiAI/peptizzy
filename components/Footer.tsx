@@ -10,7 +10,6 @@ const col1 = [
 ]
 const col2 = [
   { href: '/blog',         label: 'Guides & Blog' },
-  { href: '/looks-maxing', label: 'Looks Maxing' },
   { href: '/stacks',       label: 'Stack Protocols' },
   { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Routine' },
   { href: '/peptides-for-hair-growth-loss', label: 'Peptides for Hair' },

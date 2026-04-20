@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 const links = [
   { href: '/products',     label: 'All Peptides' },
-  { href: '/looks-maxing', label: 'Looks Maxing' },
   { href: '/stacks',       label: 'Stacks' },
   { href: '/blog',         label: 'Blog' },
   { href: '/tools',        label: 'Tools' },

@@ -78,8 +78,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                   </svg>
                 </a>
-                <Link href="/looks-maxing" className="btn-secondary text-[13px] px-7 py-3.5">
-                  Looks Maxing Guide
+                <Link href="/looksmaxxing-peptides-guide-men" className="btn-secondary text-[13px] px-7 py-3.5">
+                  Looksmaxxing Guide
                 </Link>
               </div>
               <div className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.05] hero-stats">
@@ -616,7 +616,7 @@ export default function Home() {
                 type: 'Looks Maxers',
                 desc: 'Every pillar addressed at once. GHK-Cu rebuilds collagen density. Melanotan 2 deepens skin tone without UV. Ipamorelin optimizes body composition via GH. Epithalon resets cellular aging.',
                 protocols: ['GHK-Cu', 'MT-2', 'Epithalon', 'Ipamorelin'],
-                href: '/looks-maxing',
+                href: '/looksmaxxing-peptides-guide-men',
                 icon: '◈', accent: '#d4a043',
               },
               {

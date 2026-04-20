@@ -105,7 +105,7 @@ export default function FAQPage() {
             <p className="label-gold">Knowledge Base</p>
           </div>
           <h1 className="display text-white mb-5" style={{ fontSize: 'clamp(48px, 7vw, 96px)' }}>
-            FAQ
+            Peptides Muscle FAQ
           </h1>
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-xl">
             Everything you need to know about peptide protocols, looks maxing stacks, cycling, administration, and getting started.

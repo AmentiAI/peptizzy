@@ -87,6 +87,8 @@ const nextConfig = {
       { source: '/products/semax',            destination: '/selank-semax-nootropic-peptide-guide',            permanent: true },
 
       { source: '/stacks/anti-aging',         destination: '/stacks/longevity',                                permanent: true },
+
+      { source: '/looks-maxing',              destination: '/looksmaxxing-peptides-guide-men',                 permanent: true },
     ]
   },
   images: {

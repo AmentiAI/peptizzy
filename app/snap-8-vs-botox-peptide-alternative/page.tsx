@@ -222,7 +222,6 @@ export default function Snap8VsBotoxPage() {
               { href: '/ghk-cu-before-and-after-guide', label: 'GHK-Cu Before & After', desc: 'Injectable skin peptide that pairs with SNAP-8 for complete skin optimization' },
               { href: '/looksmaxxing-routine-daily-protocol', label: 'Looksmaxxing Daily Routine', desc: 'How SNAP-8 fits into the twice-daily application schedule' },
               { href: '/looksmaxxing-peptides-guide-men', label: 'Looksmaxxing Peptides: Men\'s Guide', desc: 'SNAP-8 as part of the skin quality pillar' },
-              { href: '/looks-maxing', label: 'Looksmaxxing Hub', desc: 'The full skin, body, recovery, and anti-aging overview' },
               { href: '/peptide-stacking-guide', label: 'Peptide Stacking Guide', desc: 'How to combine SNAP-8 with injectable compounds effectively' },
               { href: '/blog', label: 'All Peptide Guides', desc: 'Browse every in-depth protocol and research article' },
             ].map(r => (

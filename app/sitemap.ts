@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/products`,         lastModified: RECENT_UPDATE, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE}/blog`,             lastModified: RECENT_UPDATE, changeFrequency: 'weekly',  priority: 0.9 },
     { url: `${BASE}/stacks`,           lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE}/looks-maxing`,     lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/anti-aging`,       lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/body-composition`, lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/guide`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
