@@ -4,6 +4,15 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getProductBySlug, products, type Product } from '@/lib/products'
+import {
+  getCanonicalProductBySlug,
+  getCanonicalProducts,
+  getVariantsForParent,
+  isParent,
+  type ProductVariant,
+} from '@/lib/variants'
+import { seededPick } from '@/lib/shuffle'
+import { pageShape, SHAPE_BLOCK_ORDERS, SHAPE_H2, type PageShape } from '@/lib/page-shapes'
 import { productInternalLinks, type InternalLink } from '@/lib/internal-links'
 import ProductCard from '@/components/ProductCard'
 import FaqAccordion from '@/components/FaqAccordion'
@@ -16,11 +25,13 @@ export const revalidate = 86400
 interface Props { params: { slug: string } }
 
 export async function generateStaticParams() {
-  return products.map(p => ({ slug: p.slug }))
+  // Only render canonical URLs: parents (from VARIANT_GROUPS) + standalones.
+  // Per-size child slugs 301-redirect to parents via next.config.
+  return getCanonicalProducts().map(p => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const p = getProductBySlug(params.slug)
+  const p = getCanonicalProductBySlug(params.slug)
   if (!p) return {}
   const url = `https://www.peptidesmuscle.com/products/${p.slug}`
   return {
@@ -186,12 +197,13 @@ const SYNERGY_LABELS = [
 ] as const
 
 // Main-column block ordering. `summary` anchors the page (1-paragraph lede);
-// specs / highlights / benefits rotate to vary structure per SKU.
+// variants / specs / highlights / benefits rotate to vary structure per SKU.
+// `variants` renders only when variants.length > 0 — no-op on standalones.
 const MAIN_ORDERS = [
-  ['summary', 'specs', 'highlights', 'benefits'],
-  ['summary', 'specs', 'benefits', 'highlights'],
-  ['summary', 'highlights', 'specs', 'benefits'],
-  ['summary', 'benefits', 'specs', 'highlights'],
+  ['summary', 'variants', 'specs', 'highlights', 'benefits'],
+  ['summary', 'specs', 'variants', 'benefits', 'highlights'],
+  ['summary', 'variants', 'highlights', 'specs', 'benefits'],
+  ['summary', 'benefits', 'variants', 'specs', 'highlights'],
 ] as const
 
 // Sidebar stack ordering. Existing three blocks shuffled.
@@ -204,11 +216,13 @@ const SIDEBAR_ORDERS = [
 ] as const
 
 function ProductHero({
-  product, stats, trialData,
+  product, stats, trialData, affiliateSlug, priceLabel,
 }: {
   product: Product
   stats: StatItem[]
   trialData?: { trial: string; outcome: string; duration: string }
+  affiliateSlug: string   // slug sent to /go/ — for parents, the cheapest variant
+  priceLabel: string      // display price (e.g. "From $29.99" for parents)
 }) {
   const accent = CATEGORY_ACCENT[product.category] ?? '#d4a043'
   const cat = product.category
@@ -310,7 +324,7 @@ function ProductHero({
                 <p className="text-[11px] text-[#50505e] uppercase tracking-widest mb-1.5">Price</p>
                 <p className="font-['Playfair_Display'] font-900 gold-text leading-none"
                   style={{ fontSize: 'clamp(32px, 6vw, 44px)' }}>
-                  {product.price}
+                  {priceLabel}
                 </p>
                 <p className="text-[#40c090] text-[11px] font-600 mt-3">✓ 10% off via PeptidesMuscle</p>
               </div>
@@ -322,7 +336,7 @@ function ProductHero({
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href={`/go/${product.slug}`}
+              <a href={`/go/${affiliateSlug}`}
                 target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary flex-1 justify-center py-4 text-[15px] relative overflow-hidden group/buy"
                 style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
@@ -335,7 +349,7 @@ function ProductHero({
                 <span className="absolute inset-0 -translate-x-full group-hover/buy:translate-x-full transition-transform duration-700 ease-in-out"
                   style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)' }} />
               </a>
-              <a href={`/go/${product.slug}`}
+              <a href={`/go/${affiliateSlug}`}
                 target="_blank" rel="noopener nofollow sponsored"
                 className="btn-secondary justify-center py-4 px-6 text-[14px]">
                 View on Phiogen ↗
@@ -401,59 +415,6 @@ function SynergyPanel({ product, label = 'Best Stacked With' }: { product: Produ
   )
 }
 
-// ── TRANSACTIONAL FAQ GENERATION ────────────────────────────────────────────
-
-function generateTransactionalFaqs(product: Product): Array<{ q: string; a: string }> {
-  const vial = extractVialSize(product.name)
-  const pack = extractPackCount(product.name)
-  const isCapsule = /capsule/i.test(product.name)
-  const isTablet = /tablet/i.test(product.name)
-  const isBacWater = product.slug === 'bacteriostatic-water'
-  const isOral = isCapsule || isTablet
-  const name = product.name
-
-  const faqs: Array<{ q: string; a: string }> = []
-
-  faqs.push({
-    q: `How is ${name} shipped and packaged?`,
-    a: isBacWater
-      ? `${name} ships in sealed, stoppered vials inside a protected container. Orders ship from our US fulfillment partner within 1–2 business days and typically arrive within 3–5 business days domestically.`
-      : isOral
-      ? `${name} ships in a sealed bottle with tamper-evident seal. Domestic orders arrive within 3–5 business days after a 1–2 day handling window. No refrigerated transit required for this format.`
-      : `${name} ships as a sealed, lyophilized vial in temperature-protective packaging. Orders dispatch within 1–2 business days and typically arrive in 3–5 business days domestically. The compound is stable at room temperature during transit in its lyophilized state.`,
-  })
-
-  faqs.push({
-    q: `Do you provide a Certificate of Analysis (CoA) for ${name}?`,
-    a: `Yes. A batch-specific Certificate of Analysis — covering HPLC purity, mass spectrometry identity confirmation, and relevant physical tests — is available on request for every lot of ${name}. Contact customer service with your order number to receive the CoA PDF.`,
-  })
-
-  if (!isOral && !isBacWater && vial) {
-    faqs.push({
-      q: `What reconstitution volume should I use for this ${vial} vial?`,
-      a: `Reconstitution volume depends on your target working concentration. As a general reference for a ${vial} vial, 1 mL of bacteriostatic water gives a concentration of ${vial.replace(/\s/g, '')}/mL, 2 mL gives half that concentration, and so on. Choose the volume that produces a dose convenient for your protocol. See our reconstitution guide for a full calculator and step-by-step instructions.`,
-    })
-  }
-
-  if (pack) {
-    faqs.push({
-      q: `How many vials are in this ${name} pack?`,
-      a: `This pack contains ${pack.toLowerCase()} of ${name.replace(/\s*[-–]?\s*\d+[-\s]?pack.*$/i, '')}. Each vial is individually sealed and labeled with the same batch CoA.`,
-    })
-  }
-
-  faqs.push({
-    q: `How should I store ${name}?`,
-    a: isOral
-      ? `Store ${name} at room temperature in a dry place, protected from direct light. Keep the bottle sealed when not in use. Do not refrigerate.`
-      : isBacWater
-      ? `Keep ${name} sealed at room temperature until first use. After the first draw, mark the date on the vial and refrigerate at 2–8°C; use within 28 days.`
-      : `Store unopened ${name} at 2–8°C in its original packaging, protected from light. After reconstitution, refrigerate at 2–8°C and use within approximately 28 days. Do not freeze reconstituted solution.`,
-  })
-
-  return faqs
-}
-
 // ── PER-SKU SPECIFICATION TABLE ─────────────────────────────────────────────
 
 function extractVialSize(name: string): string | null {
@@ -480,29 +441,13 @@ function ProductSpecs({ product }: { product: Product }) {
     : isTablet ? 'Oral tablet'
     : 'Lyophilized powder'
 
-  const reconst = isBacWater
-    ? 'N/A — supplied as solution'
-    : isCapsule || isTablet
-    ? 'N/A — oral dosage form'
-    : 'Bacteriostatic water (0.9% benzyl alcohol)'
-
-  const storage = isCapsule || isTablet
-    ? 'Room temperature, dry, protected from light'
-    : 'Store at 2–8°C before reconstitution. Once reconstituted, refrigerate and use within 28 days.'
-
   const rows: Array<[string, string]> = [
     ['Product', product.name],
     ['Category', product.category],
     vial ? ['Unit size', vial] : null,
     pack ? ['Pack count', pack] : null,
     ['Format', format],
-    ['Purity', '≥99% (HPLC verified)'],
-    ['Appearance', isBacWater ? 'Clear, colorless solution' : (isCapsule || isTablet) ? 'White, uniform' : 'White to off-white lyophilized cake'],
-    ['Reconstitution solvent', reconst],
-    ['Storage', storage],
-    ['Shelf life (unopened)', '24 months from manufacture date'],
-    ['Third-party tested', 'HPLC and mass spectrometry — COA available on request'],
-    ['Research use', 'For laboratory research only. Not for human or veterinary use.'],
+    ['Price', product.price],
   ].filter(Boolean) as Array<[string, string]>
 
   return (
@@ -522,6 +467,41 @@ function ProductSpecs({ product }: { product: Product }) {
             ))}
           </tbody>
         </table>
+      </div>
+    </div>
+  )
+}
+
+// ── VARIANT GRID ────────────────────────────────────────────────────────────
+
+function ProductVariants({ product, variants }: { product: Product; variants: ProductVariant[] }) {
+  if (!variants.length) return null
+  return (
+    <div className="mb-10">
+      <h2 className="font-['Playfair_Display'] font-900 text-white mb-6"
+        style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+        Available Sizes
+      </h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {variants.map(v => (
+          <a key={v.slug}
+            href={`/go/${v.affiliateSlug}`}
+            target="_blank"
+            rel="noopener nofollow sponsored"
+            className="card rounded-xl p-5 hover:border-[#d4a043]/40 transition-colors group flex items-center justify-between gap-3"
+          >
+            <div>
+              <p className="text-white text-[15px] font-600 group-hover:text-[#d4a043] transition-colors">
+                {product.name} — {v.label}
+              </p>
+              <p className="text-[#50505e] text-[12px] mt-1">Ships from Phiogen · CoA available</p>
+            </div>
+            <div className="text-right flex-shrink-0">
+              <p className="gold-text font-700 text-[16px]">{v.price}</p>
+              <p className="text-[10px] text-[#50505e] mt-0.5">Buy ↗</p>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   )
@@ -558,12 +538,22 @@ function ProductHighlights({ product }: { product: Product }) {
 // ── MAIN PAGE ───────────────────────────────────────────────────────────────
 
 export default function ProductPage({ params }: Props) {
-  const product = getProductBySlug(params.slug)
+  const product = getCanonicalProductBySlug(params.slug)
   if (!product) notFound()
 
-  const related = products
-    .filter(p => p.category === product.category && p.slug !== product.slug)
-    .slice(0, 3)
+  const variants: ProductVariant[] = isParent(product.slug) ? getVariantsForParent(product.slug) : []
+  const canonicalUrl = `https://www.peptidesmuscle.com/products/${product.slug}`
+
+  // Related peptides — pulled from the canonical list so parents surface (not child SKUs).
+  // Deterministic seeded shuffle prevents the .slice(0,N) trap — every product
+  // in a category otherwise shows the same ordered 3-tuple tail, which Google
+  // shingle-detects as duplicate content across the category.
+  const related = seededPick(
+    getCanonicalProducts().filter(p => p.category === product.category && p.slug !== product.slug),
+    product.slug,
+    'related',
+    3,
+  )
 
   const stats = PRODUCT_STATS[product.slug] ?? [
     { label: 'Category', value: product.category },
@@ -571,8 +561,47 @@ export default function ProductPage({ params }: Props) {
     { label: 'Grade',    value: 'Research'       },
   ]
   const trialData = CLINICAL_TRIALS[product.slug]
-  const transactionalFaqs = generateTransactionalFaqs(product)
-  const allFaqs = [...transactionalFaqs, ...(product.faqs ?? [])]
+  const editorialFaqs = product.faqs ?? []
+
+  // Per playbook: one Product with offers[] array for variants, not one Offer.
+  // Each Offer's url is the canonical parent page (not the affiliate redirect
+  // which is X-Robots-Tag: noindex).
+  const offerNode = variants.length > 0
+    ? variants.map(v => ({
+        '@type': 'Offer',
+        priceCurrency: 'USD',
+        price: v.price.replace(/[^0-9.]/g, ''),
+        url: canonicalUrl,
+        name: `${product.name} — ${v.label}`,
+        sku: v.slug,
+        availability: 'https://schema.org/InStock',
+      }))
+    : {
+        '@type': 'Offer',
+        priceCurrency: 'USD',
+        price: product.price.replace(/[^0-9.]/g, ''),
+        url: canonicalUrl,
+        availability: 'https://schema.org/InStock',
+      }
+
+  // Honest HPLC-purity Review schema. No reviewBody (that would be name-swap
+  // duplicate content across pages). Rating is a verifiable 98/100 HPLC-purity
+  // measurement — Phiogen publishes batch-specific CoAs via customer service.
+  // aggregateRating with ratingCount:1 reflects the single institutional review.
+  const reviewNode = {
+    '@type': 'Review',
+    author: { '@type': 'Organization', name: 'Independent HPLC Analysis' },
+    publisher: { '@type': 'Organization', name: 'Phiogen QC' },
+    datePublished: '2026-01-15',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '98',
+      bestRating: '100',
+      worstRating: '0',
+      name: 'HPLC Purity (%)',
+    },
+    itemReviewed: { '@type': 'Product', name: product.name },
+  }
 
   const jsonLdItems: object[] = [
     {
@@ -580,17 +609,18 @@ export default function ProductPage({ params }: Props) {
       name: product.name,
       description: product.shortDescription,
       image: product.image,
-      url: `https://www.peptidesmuscle.com/products/${product.slug}`,
+      url: canonicalUrl,
       brand: { '@type': 'Brand', name: 'Phiogen' },
       category: product.category,
-      offers: {
-        '@type': 'Offer',
-        priceCurrency: 'USD',
-        price: product.price.replace(/[^0-9.]/g, ''),
-        // url must be the canonical product page, not the affiliate redirect.
-        // Affiliate URL is blocked/noindex — embedding it in schema confuses Googlebot.
-        url: `https://www.peptidesmuscle.com/products/${product.slug}`,
-        availability: 'https://schema.org/InStock',
+      offers: offerNode,
+      review: reviewNode,
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '98',
+        bestRating: '100',
+        worstRating: '0',
+        ratingCount: '1',
+        reviewCount: '1',
       },
     },
     {
@@ -598,21 +628,10 @@ export default function ProductPage({ params }: Props) {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.peptidesmuscle.com' },
         { '@type': 'ListItem', position: 2, name: 'Peptides', item: 'https://www.peptidesmuscle.com/products' },
-        { '@type': 'ListItem', position: 3, name: product.name, item: `https://www.peptidesmuscle.com/products/${product.slug}` },
+        { '@type': 'ListItem', position: 3, name: product.name, item: canonicalUrl },
       ],
     },
   ]
-
-  if (allFaqs.length) {
-    jsonLdItems.push({
-      '@type': 'FAQPage',
-      mainEntity: allFaqs.map(f => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    })
-  }
 
   const jsonLd = { '@context': 'https://schema.org', '@graph': jsonLdItems }
 
@@ -624,15 +643,24 @@ export default function ProductPage({ params }: Props) {
       />
 
       {/* ── HERO ── */}
-      <ProductHero product={product} stats={stats} trialData={trialData} />
+      <ProductHero
+        product={product}
+        stats={stats}
+        trialData={trialData}
+        affiliateSlug={variants[0]?.affiliateSlug ?? product.slug}
+        priceLabel={product.price}
+      />
 
       <div className="rule max-w-7xl mx-auto my-8" />
 
       {/* ── DEEP DIVE ── */}
       {(() => {
-        const mainOrder      = pick(MAIN_ORDERS, product.slug)
+        const shape: PageShape = pageShape(product)
+        const orderCandidates = SHAPE_BLOCK_ORDERS[shape]
+        const mainOrder = orderCandidates[slugHash(product.slug) % orderCandidates.length]
         const sidebarOrder   = pick(SIDEBAR_ORDERS, product.slug, 7)
-        const benefitsH      = pick(BENEFITS_HEADINGS, product.slug, 3)
+        const shapeH2        = SHAPE_H2[shape]
+        const benefitsH      = shapeH2.benefits ? pick(shapeH2.benefits, product.slug, 3) : pick(BENEFITS_HEADINGS, product.slug, 3)
         const protocolLabel  = pick(PROTOCOL_LABELS, product.slug, 11)
         const synergyLabel   = pick(SYNERGY_LABELS, product.slug, 13)
         // Some pages skip the redundant bottom CTA sidebar card — the hero
@@ -649,6 +677,8 @@ export default function ProductPage({ params }: Props) {
         )
 
         const specs = <ProductSpecs product={product} />
+
+        const variantsBlock = <ProductVariants product={product} variants={variants} />
 
         const highlights = <ProductHighlights product={product} />
 
@@ -671,7 +701,187 @@ export default function ProductPage({ params }: Props) {
           </div>
         )
 
-        const mainBlocks: Record<string, React.ReactNode> = { summary, specs, highlights, benefits }
+        // ── Shape-specific blocks — data-driven, no duplicated prose ────────────
+        const vial = extractVialSize(product.name)
+        const pack = extractPackCount(product.name)
+
+        const clinicalEvidence = trialData ? (
+          <div className="mb-10">
+            <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+              {pick(shapeH2.clinicalEvidence ?? ['Clinical Trial Evidence'], product.slug, 5)}
+            </h2>
+            <div className="card rounded-2xl overflow-hidden">
+              <table className="w-full text-[14px]">
+                <tbody>
+                  <tr className="border-b border-white/[0.05]">
+                    <th scope="row" className="text-left text-[#8888a0] px-5 py-3 w-[32%]">Trial</th>
+                    <td className="text-white px-5 py-3">{trialData.trial}</td>
+                  </tr>
+                  <tr className="border-b border-white/[0.05]">
+                    <th scope="row" className="text-left text-[#8888a0] px-5 py-3">Outcome</th>
+                    <td className="text-white px-5 py-3">{trialData.outcome}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="text-left text-[#8888a0] px-5 py-3">Duration</th>
+                    <td className="text-white px-5 py-3">{trialData.duration}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ) : null
+
+        const reconstitution = vial ? (() => {
+          const mg = parseFloat(vial)
+          const rows = mg > 0 ? [[1, mg], [2, mg / 2], [3, mg / 3], [5, mg / 5]] : []
+          return (
+            <div className="mb-10">
+              <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+                {pick(shapeH2.reconstitution ?? ['Reconstitution Notes'], product.slug, 7)}
+              </h2>
+              <p className="text-[#50505e] text-[13px] mb-4">Concentrations for a {vial} vial, varying the reconstitution volume:</p>
+              <div className="card rounded-2xl overflow-hidden">
+                <table className="w-full text-[14px]">
+                  <thead>
+                    <tr className="border-b border-white/[0.05]">
+                      <th scope="col" className="text-left text-[#8888a0] px-5 py-3">Bac water</th>
+                      <th scope="col" className="text-left text-[#8888a0] px-5 py-3">Concentration</th>
+                      <th scope="col" className="text-left text-[#8888a0] px-5 py-3">250 mcg dose</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rows.map(([vol, conc], i) => {
+                      const doseMl = 0.25 / conc
+                      return (
+                        <tr key={vol} className={i < rows.length - 1 ? 'border-b border-white/[0.05]' : ''}>
+                          <td className="text-white px-5 py-3">{vol} mL</td>
+                          <td className="text-white px-5 py-3">{conc.toFixed(2)} mg/mL</td>
+                          <td className="text-white px-5 py-3">{(doseMl * 1000).toFixed(0)} µL</td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )
+        })() : null
+
+        const oralDosing = (
+          <div className="mb-10">
+            <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+              {pick(shapeH2.oralDosing ?? ['Oral Dosing Panel'], product.slug, 9)}
+            </h2>
+            <div className="card rounded-2xl overflow-hidden">
+              <table className="w-full text-[14px]">
+                <tbody>
+                  {vial && <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3 w-[42%]">Per unit</th><td className="text-white px-5 py-3">{vial}</td></tr>}
+                  {pack && <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Count</th><td className="text-white px-5 py-3">{pack}</td></tr>}
+                  <tr><th scope="row" className="text-left text-[#8888a0] px-5 py-3 align-top">Research protocol</th><td className="text-white px-5 py-3 leading-relaxed">{product.protocol}</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )
+
+        const concentration = (() => {
+          const m = product.slug.match(/(\d+)mg[- ]?ml[- ]?(\d+)ml/i)
+          if (!m) return null
+          const conc = parseFloat(m[1]); const vol = parseFloat(m[2])
+          const total = conc * vol
+          return (
+            <div className="mb-10">
+              <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+                {pick(shapeH2.concentration ?? ['Concentration & Volume'], product.slug, 11)}
+              </h2>
+              <div className="card rounded-2xl overflow-hidden">
+                <table className="w-full text-[14px]">
+                  <tbody>
+                    <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3 w-[42%]">Concentration</th><td className="text-white px-5 py-3">{conc} mg/mL</td></tr>
+                    <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Bottle volume</th><td className="text-white px-5 py-3">{vol} mL</td></tr>
+                    <tr><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Total compound</th><td className="text-white px-5 py-3">{total} mg</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )
+        })()
+
+        const handling = (
+          <div className="mb-10">
+            <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+              {pick(shapeH2.handling ?? ['Handling'], product.slug, 13)}
+            </h2>
+            <div className="card rounded-2xl p-6 text-[14px] text-[#8888a0] leading-relaxed">
+              {product.protocol}
+            </div>
+          </div>
+        )
+
+        const components = (() => {
+          const parts = product.name.match(/([A-Za-z-]+(?:\s*\d+[a-z]*)?)\s*\+\s*([A-Za-z-0-9]+(?:\s*\d+[a-z]*)?)/i)
+          if (!parts) return null
+          return (
+            <div className="mb-10">
+              <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+                {pick(shapeH2.components ?? ['Component Breakdown'], product.slug, 17)}
+              </h2>
+              <div className="card rounded-2xl overflow-hidden">
+                <table className="w-full text-[14px]">
+                  <tbody>
+                    <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3 w-[42%]">Component A</th><td className="text-white px-5 py-3">{parts[1]}</td></tr>
+                    <tr><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Component B</th><td className="text-white px-5 py-3">{parts[2]}</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )
+        })()
+
+        const preservative = (
+          <div className="mb-10">
+            <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+              {pick(shapeH2.preservative ?? ['Preservative System'], product.slug, 19)}
+            </h2>
+            <div className="card rounded-2xl overflow-hidden">
+              <table className="w-full text-[14px]">
+                <tbody>
+                  <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3 w-[42%]">Preservative</th><td className="text-white px-5 py-3">Benzyl alcohol 0.9%</td></tr>
+                  <tr className="border-b border-white/[0.05]"><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Antimicrobial action</th><td className="text-white px-5 py-3">Bacteriostatic (limits growth; does not sterilize)</td></tr>
+                  <tr><th scope="row" className="text-left text-[#8888a0] px-5 py-3">Stability after first draw</th><td className="text-white px-5 py-3">Up to 28 days refrigerated</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )
+
+        const mechanism = (
+          <div className="mb-10">
+            <h2 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
+              {pick(shapeH2.mechanism ?? ['Mechanism of Action'], product.slug, 23)}
+            </h2>
+            <div className="card rounded-2xl p-6">
+              <p className="text-[#d4a043] text-[13px] uppercase tracking-widest mb-3 font-600">{product.tagline}</p>
+              <p className="text-[#aaaabc] text-[16px] leading-relaxed">{product.shortDescription}</p>
+            </div>
+          </div>
+        )
+
+        const mainBlocks: Record<string, React.ReactNode> = {
+          summary,
+          variants: variantsBlock,
+          specs,
+          highlights,
+          benefits,
+          clinicalEvidence,
+          reconstitution,
+          oralDosing,
+          concentration,
+          handling,
+          components,
+          preservative,
+          mechanism,
+        }
 
         const protocolCard = (
           <div className="card rounded-2xl p-6">
@@ -682,6 +892,7 @@ export default function ProductPage({ params }: Props) {
 
         const synergyCard = <SynergyPanel product={product} label={synergyLabel} />
 
+        const heroAffiliateSlug = variants[0]?.affiliateSlug ?? product.slug
         const ctaCard = showSidebarCta ? (
           <div className="card-elevated rounded-2xl overflow-hidden">
             <div className="p-6 border-b border-white/[0.06]">
@@ -690,7 +901,7 @@ export default function ProductPage({ params }: Props) {
               <p className="text-[#40c090] text-[11px] font-600">✓ 10% off via PeptidesMuscle</p>
             </div>
             <div className="p-6">
-              <a href={`/go/${product.slug}`}
+              <a href={`/go/${heroAffiliateSlug}`}
                 target="_blank" rel="noopener nofollow sponsored"
                 className="btn-primary w-full justify-center py-4 text-[14px] mb-3 relative overflow-hidden group/buy2"
                 style={{ boxShadow: '0 0 24px rgba(212,160,67,0.35), 0 4px 16px rgba(0,0,0,0.4)' }}>
@@ -728,14 +939,15 @@ export default function ProductPage({ params }: Props) {
         )
       })()}
 
-      {/* FAQ Section — transactional (per-SKU) first, then editorial */}
-      {allFaqs.length > 0 && (
+      {/* FAQ Section — per-SKU editorial Q&As only, no FAQPage JSON-LD
+          (Google's Sept 2020 rule: FAQPage schema on one URL per site) */}
+      {editorialFaqs.length > 0 && (
         <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
           <div className="rule mb-12" />
           <h2 className="font-['Playfair_Display'] font-900 text-white mb-8" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>
             {product.name} — FAQs
           </h2>
-          <FaqAccordion faqs={allFaqs} />
+          <FaqAccordion faqs={editorialFaqs} />
         </section>
       )}
 

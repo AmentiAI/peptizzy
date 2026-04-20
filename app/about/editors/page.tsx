@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     siteName: 'PeptidesMuscle',
     images: [{ url: '/max-avatar.png', width: 1200, height: 630, alt: 'PeptidesMuscle Editors' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Editors & Contributors | PeptidesMuscle',
+    description: 'Credentialed editorial team reviewing every peptide guide on PeptidesMuscle against primary research.',
+    images: ['/max-avatar.png'],
+  },
 }
 
 const jsonLd = {

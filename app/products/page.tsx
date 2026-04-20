@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import ProductsContent from './ProductsContent'
-import { products } from '@/lib/products'
+import { getCanonicalProducts } from '@/lib/variants'
 
 interface Props {
   searchParams?: { category?: string }
@@ -8,12 +8,13 @@ interface Props {
 
 export default function ProductsPage({ searchParams }: Props) {
   const initialCategory = searchParams?.category ?? 'all'
+  const canonical = getCanonicalProducts()
   return (
     <>
       <ProductsContent initialCategory={initialCategory} />
       <nav className="sr-only" aria-label="All products">
         <ul>
-          {products.map(p => (
+          {canonical.map(p => (
             <li key={p.slug}>
               <Link href={`/products/${p.slug}`}>{p.name} — {p.category}</Link>
             </li>

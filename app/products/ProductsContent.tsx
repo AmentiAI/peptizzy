@@ -2,7 +2,10 @@
 
 import { useState, useMemo } from 'react'
 import ProductCard from '@/components/ProductCard'
-import { products, categories, getFeaturedProducts } from '@/lib/products'
+import { categories } from '@/lib/products'
+import { getCanonicalProducts } from '@/lib/variants'
+
+const canonical = getCanonicalProducts()
 
 const CATEGORY_ACCENT: Record<string, string> = {
   'Fat Loss / Metabolic':   '#e05080',
@@ -18,7 +21,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
   const [q, setQ] = useState('')
 
   const filtered = useMemo(() => {
-    let r = products
+    let r = canonical
     if (cat !== 'all') r = r.filter(p => p.category === cat)
     if (q.trim()) {
       const lq = q.toLowerCase()
@@ -31,7 +34,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
     return r
   }, [cat, q])
 
-  const featured = getFeaturedProducts().slice(0, 3)
+  const featured = canonical.filter(p => p.featured).slice(0, 3)
 
   return (
     <div className="min-h-screen bg-[#07070a]">
@@ -43,14 +46,14 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-5 h-[1px] bg-[#d4a043]" />
-            <p className="label-gold">Complete Catalog — 35 Compounds</p>
+            <p className="label-gold">Complete Catalog — {canonical.length} Compounds</p>
           </div>
           <h1 className="mb-5" style={{ lineHeight: '0.92' }}>
             <span className="display text-white block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>All</span>
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>Peptides</span>
           </h1>
           <p className="text-[#8888a0] text-xl max-w-xl leading-relaxed">
-            35 compounds. Every goal covered. CoA-verified on every batch — from skin collagen to telomere extension to 22.5% fat loss.
+            {canonical.length} compounds across every goal — CoA-verified on every batch, from skin collagen to telomere extension to GLP-1 fat-loss protocols.
           </p>
         </div>
       </div>
@@ -83,7 +86,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {categories.map(c => {
                 const accent = CATEGORY_ACCENT[c.name] ?? '#d4a043'
-                const count = products.filter(p => p.category === c.name).length
+                const count = canonical.filter(p => p.category === c.name).length
                 return (
                   <button key={c.name} onClick={() => setCat(c.name)}
                     className="card p-5 text-left group transition-all duration-200">
@@ -128,7 +131,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
                   ? 'bg-[#d4a043] text-[#07070a] border-[#d4a043]'
                   : 'bg-white/[0.04] border-white/[0.07] text-[#8888a0] hover:text-white hover:border-white/[0.15]'
               }`}>
-              All ({products.length})
+              All ({canonical.length})
             </button>
             {categories.map(c => {
               const accent = CATEGORY_ACCENT[c.name] ?? '#d4a043'
@@ -202,7 +205,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
             Shop the Complete Catalog
           </h3>
           <p className="text-[#8888a0] text-[16px] mb-8 max-w-lg mx-auto relative z-10">
-            35 premium compounds for looks maxing, body composition, longevity, and peak performance — pharmaceutical-grade, certificate of analysis verified on every batch.
+            {canonical.length} premium compounds for looks maxing, body composition, longevity, and peak performance — pharmaceutical-grade, certificate of analysis verified on every batch.
           </p>
           <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"

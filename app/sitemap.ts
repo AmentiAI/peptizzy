@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { products } from '@/lib/products'
+import { getCanonicalProducts } from '@/lib/variants'
 import { stacks } from '@/lib/stacks'
 
 const BASE = 'https://www.peptidesmuscle.com'
@@ -77,7 +77,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/mots-c-mitochondrial-longevity-guide`,       lastModified: '2026-04-14', changeFrequency: 'monthly', priority: 0.9 },
   ]
 
-  const productPages: MetadataRoute.Sitemap = products.map(p => ({
+  // Only canonical URLs — parents + standalones. Per-size children 301 to parents.
+  const productPages: MetadataRoute.Sitemap = getCanonicalProducts().map(p => ({
     url: `${BASE}/products/${p.slug}`,
     lastModified: PRODUCT_REINDEX,
     changeFrequency: 'monthly' as const,
