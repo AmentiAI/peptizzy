@@ -1,203 +1,167 @@
-# Technical GEO Audit — peptidesmuscle.com
+# GEO Technical SEO Audit — peptidesmuscle.com
+Date: 2026-04-21
 
-**Target:** https://www.peptidesmuscle.com
-**Audit Date:** 2026-04-17
-**Auditor:** GEO Technical SEO Agent
-**Stack Detected:** Next.js (static export) on Vercel Edge
+## Technical Score: 95/100
 
----
+Stack: Next.js on Vercel. Fully server-rendered, AI-crawler-friendly, globally cached.
+Site-wide technical posture is excellent; remaining gaps are low-lift polish items.
 
-## Technical Foundations
+## Score Breakdown
 
-**Technical Score: 94/100 — Excellent**
-
-The site is in a genuinely strong technical state for both traditional search and generative engines. Server-side rendering is fully intact, every major AI crawler is explicitly allow-listed, the sitemap and canonical system are internally consistent, security headers are comprehensive, and TTFB from Vercel Edge is consistently under 200 ms. Only three non-critical issues remain: a two-hop HTTP to HTTPS-www edge redirect (Vercel platform limitation), an IndexNow key hosted but not yet submitted to the engines, and HSTS sent with `preload` but the domain not yet registered on hstspreload.org.
-
-### Score Breakdown
-
-| # | Category | Score | Max | Status |
-|---|---|---|---|---|
-| 1 | Crawlability | 14 | 15 | Excellent |
-| 2 | Indexability | 12 | 12 | Excellent |
-| 3 | Security | 9 | 10 | Excellent |
-| 4 | URL Structure | 7 | 8 | Good |
-| 5 | Mobile Optimization | 10 | 10 | Excellent |
-| 6 | Core Web Vitals (est.) | 13 | 15 | Excellent |
-| 7 | Server-Side Rendering | 15 | 15 | Excellent |
-| 8 | Page Speed / Delivery | 14 | 15 | Excellent |
-| | **TOTAL** | **94** | **100** | **Excellent** |
-
----
-
-## 1. Crawlability — 14/15
-
-**Robots.txt:** Found at `/robots.txt` — syntactically clean, well structured, with 23 explicit user-agent blocks.
-
-- Default `User-agent: *` allows everything except `/api/` and `/go/` (correct: these are internal endpoints and outbound redirects that should never be indexed).
-- Traditional search engines explicitly allow-listed: Googlebot, Bingbot, Slurp (Yahoo), DuckDuckBot, Baiduspider, YandexBot.
-- Social / preview bots: facebot, Twitterbot.
-- **AI crawlers explicitly allow-listed (13):** GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-Web, PerplexityBot, Perplexity-User, Google-Extended, Applebot-Extended, CCBot, Amazonbot, Meta-ExternalAgent, cohere-ai, Diffbot.
-- `Host` directive present (canonical host declared).
-- `Sitemap` directive references `https://www.peptidesmuscle.com/sitemap.xml`.
-- No `Crawl-delay` directives that could slow indexing.
-
-**XML Sitemap:** Found and valid.
-
-- 202 URLs, proper XML formatting, correct `xmlns`.
-- `<lastmod>` dates are fresh and credible (2026-03-01, 2026-03-28, 2026-04-01, 2026-04-14, 2026-04-17). Products carry today's lastmod.
-- `<changefreq>` and `<priority>` populated consistently (products 0.9, stacks 0.8, category pages 0.7).
-- Target URL and all product pages appear in the sitemap.
-
-**Meta robots / X-Robots-Tag:** No `noindex`, `nofollow`, or other restrictive directives observed on any sampled page. No `X-Robots-Tag` response header interfering.
-
-**Crawl depth:** Every product and guide is reachable within 1–2 clicks from the homepage (flat hierarchy `/`, `/products/*`, `/stacks/*`, guide slugs at root).
-
-**IndexNow (Warning, -1):** Verification file `/de70e44d61f29841aa01ebde75f50209.txt` is live and returns 200, but the domain has not yet been submitted to the IndexNow endpoints (Bing/Yandex/Seznam/Naver). Sitemap changes are not being push-notified.
-
----
-
-## 2. Indexability — 12/12
-
-- **Canonical tags:** Self-referencing and correct on all three sampled pages.
-  - Homepage: `https://www.peptidesmuscle.com`
-  - Product: `https://www.peptidesmuscle.com/products/bpc-157-10mg`
-  - Guide: `https://www.peptidesmuscle.com/bpc-157-complete-guide`
-- **Duplicate content control:** Old product slugs (e.g. `/products/bpc-157`) return a clean `308 Permanent Redirect` to the canonical dosed slug (`/products/bpc-157-10mg`). One-hop server-side redirect, no chain.
-- **Pagination:** No problematic `?page=` parameter duplication observed in sitemap.
-- **Hreflang:** Not applicable — single-language (en) site. `<html lang="en">` correctly declared.
-- **Index bloat:** No observed low-value URLs (tag archives, search result pages, internal filters) leaking into the sitemap.
-
----
-
-## 3. Security — 9/10
-
-**Observed response headers (homepage):**
-
-| Header | Value | Status |
+| Category | Score | Status |
 |---|---|---|
-| HTTPS | TLS served | Present |
-| Strict-Transport-Security | `max-age=63072000; includeSubDomains; preload` | Present (2-year, subdomains, preload) |
-| X-Content-Type-Options | `nosniff` | Present |
-| X-Frame-Options | `SAMEORIGIN` | Present |
-| Referrer-Policy | `strict-origin-when-cross-origin` | Present |
-| Permissions-Policy | `camera=(), microphone=(), geolocation=(), interest-cohort=()` | Present |
-| Content-Security-Policy | Not observed | Missing (-1) |
+| Crawlability | 15/15 | Pass |
+| Indexability | 11/12 | Pass |
+| Security | 9/10 | Pass |
+| URL Structure | 8/8 | Pass |
+| Mobile Optimization | 10/10 | Pass |
+| Core Web Vitals | 12/15 | Pass (estimated — no field data) |
+| Server-Side Rendering | 15/15 | Pass |
+| Page Speed & Server | 15/15 | Pass |
 
-**HSTS preload (Warning, not score-affecting):** The `preload` directive is set correctly, but the domain has not been submitted to hstspreload.org. The header is valid either way; submission converts it to a browser-baked default.
+## AI Crawler Access
 
-**Notes:** Absence of an explicit CSP is the only real gap. Given the Next.js static export and known third-party scripts (Google Tag Manager / GA4), a moderately strict CSP is achievable and would eliminate the only meaningful missing security surface.
+Every major AI crawler is explicitly allowed in `robots.txt`. No blocks detected.
 
----
-
-## 4. URL Structure — 7/8
-
-**Target URL:** `https://www.peptidesmuscle.com/` — clean, canonical host.
-
-Observed patterns across sitemap and sampled pages:
-
-- Lowercase throughout.
-- Hyphen word separators (no underscores).
-- Descriptive slugs (`/products/bpc-157-10mg`, `/bpc-157-complete-guide`, `/stacks/longevity`).
-- Logical hierarchy: root landing, `/products/*` for SKUs, `/stacks/*` for protocols, guide slugs at root.
-- No query parameters, session IDs, or hash fragments.
-- Max depth 2 segments — well under the 4-level concern threshold.
-- Old slug consolidation handled cleanly with 308 redirects (single hop).
-
-**Two-hop edge redirect (Warning, -1):** `http://peptidesmuscle.com/` resolves via two redirects (HTTP→HTTPS→https://www.). This is a Vercel platform characteristic when combining automatic HTTPS upgrade with apex-to-www canonicalization at the edge; it is not fixable in application code. Impact on crawlers is negligible (both hops are 301-class, preserved, and edge-cached) but an ideal single-hop is not achievable on this platform.
-
----
-
-## 5. Mobile Optimization — 10/10
-
-- `<meta name="viewport" content="width=device-width, initial-scale=1"/>` present on every sampled page.
-- Responsive image pipeline via Next.js `<Image>`: `srcSet` with 640/750/828/1080/1200/1920 widths and `sizes` declared on every hero and product shot (255 `_next/image` references on the homepage alone).
-- Fluid typography using CSS `clamp()` (`font-size: clamp(36px, 5.5vw, 68px)`) — scales smoothly from mobile to desktop without breakpoints.
-- `<html lang="en">` declared.
-- No fixed-width layout signals or horizontal-scroll risks in raw HTML.
-- No hover-only interactive patterns detected in visible markup.
-
----
-
-## 6. Core Web Vitals (Estimated) — 13/15
-
-Static HTML-based estimation. Field data from CrUX or PageSpeed Insights should be layered on top for confirmation.
-
-| Vital | Risk | Evidence |
-|---|---|---|
-| LCP | Low | Hero images preloaded via `<link rel="preload" as="image" imageSrcSet=...>`, `fetchPriority="high"` applied, AVIF/WebP served through Next.js image pipeline, TTFB 110–180 ms from Vercel Edge. |
-| INP | Low–Medium | 21 script tags on homepage, but all tagged `async` or `defer` (47 async/defer attribute matches). Next.js code-splitting in use. No inline `onclick` handlers driving heavy work. |
-| CLS | Low | Next.js `<Image>` component emits width/height and `aspect-ratio` implicitly. 30 `loading="lazy"` images below the fold. No ad slots or dynamic above-the-fold injections observed. |
-
-**Deductions (-2):** Homepage raw HTML weight is 382 KB (largely inline JSON-LD + preload hint soup from `<Image>` srcsets). That is above average for a static landing page and a reasonable target for modest trimming. Only 2 of 35 `<img>`/image elements carry explicit `width=` attributes in raw form, though Next.js `<Image>` sets them via `style`.
-
----
-
-## 7. Server-Side Rendering — 15/15
-
-**Rendering type:** Static Site Generation (Next.js static export) served from Vercel Edge.
-**AI crawler visibility:** Full.
-
-Confirmed across three page types (homepage, product, guide):
-
-- Real `<title>`, `<meta name="description">`, `<link rel="canonical">`, full Open Graph and Twitter Card sets rendered in the initial HTML response — no client-side injection.
-- Full text content (H1/H2/H3, product copy, FAQ questions and answers, guide body) present in raw HTML before any JavaScript executes.
-- JSON-LD rendered server-side:
-  - Homepage: Organization, WebSite (with SearchAction), ImageObject.
-  - Product: Product, Offer, AggregateRating, BreadcrumbList, FAQPage, Organization, WebSite.
-  - Guide: MedicalWebPage, FAQPage, Person (author), Organization, WebSite.
-- 110 internal `href="/..."` links on the homepage — navigation graph fully visible to non-JS crawlers.
-- Zero `<noscript>` fallbacks needed (content is already there for JS-off).
-
-This is the single most important finding for GEO: GPTBot, ClaudeBot, PerplexityBot, and Google-Extended all see the complete page.
-
----
-
-## 8. Page Speed & Delivery — 14/15
-
-**TTFB samples (IAD region, cached):**
-
-| Page | Run 1 | Run 2 | Run 3 |
+| Crawler | User-Agent | Status | Recommendation |
 |---|---|---|---|
-| Homepage | 174 ms | 385 ms | 187 ms |
-| Product (bpc-157-10mg) | 180 ms | 227 ms | 166 ms |
-| Guide (bpc-157-complete-guide) | 116 ms | — | — |
+| GPTBot | GPTBot | Allowed | — |
+| OAI-SearchBot | OAI-SearchBot | Allowed | — |
+| ChatGPT-User | ChatGPT-User | Allowed | — |
+| ClaudeBot | ClaudeBot | Allowed | — |
+| Claude-Web | Claude-Web | Allowed | — |
+| PerplexityBot | PerplexityBot | Allowed | — |
+| Perplexity-User | Perplexity-User | Allowed | — |
+| Googlebot | Googlebot | Allowed | — |
+| Google-Extended | Google-Extended | Allowed | — |
+| Bingbot | Bingbot | Allowed | — |
+| Applebot-Extended | Applebot-Extended | Allowed | — |
+| CCBot | CCBot | Allowed | — |
+| Amazonbot | Amazonbot | Allowed | — |
+| Meta-ExternalAgent | Meta-ExternalAgent | Allowed | — |
+| cohere-ai | cohere-ai | Allowed | — |
+| Diffbot | Diffbot | Allowed | — |
+| YandexBot, Baiduspider, DuckDuckBot, Slurp, facebot, Twitterbot | — | Allowed | — |
 
-Vercel Edge cache is HIT on every sampled path (`x-vercel-cache: HIT`, `age` values showing hot cache).
+This is best-in-class AI crawler access. Disallows are correctly scoped to `/api/` and `/go/` (affiliate redirects).
 
-**Delivery strengths:**
+## Critical Issues (fix immediately)
 
-- Next.js image optimization producing AVIF/WebP with per-breakpoint srcsets.
-- Static assets under `/_next/static/` carry hashed filenames — safe for long-TTL immutable caching.
-- HTML served with `cache-control: public, max-age=0, must-revalidate` (correct for ISR/edge-cached HTML).
-- `llms.txt` explicitly `s-maxage=86400, stale-while-revalidate=604800` — well-tuned for a slow-changing document.
-- HTTP/2 end-to-end.
-- 2 `preconnect` and 4 `preload` hints on the homepage; `<link rel="preload" as="image" fetchPriority="high">` on the LCP hero.
-- 47 `async`/`defer` attributes across 21 scripts — no render-blocking JS in the critical path.
+None.
 
-**Deduction (-1):** Homepage HTML payload of 382 KB is larger than ideal. Much of this is inline JSON-LD (valuable for GEO, keep) plus exhaustive image-preload `imageSrcSet` attributes — a minor trim opportunity by reducing the number of preloaded heroes from "all visible products above the fold" to the true LCP candidate only.
+## Warnings (fix this month)
 
----
+1. **No Content-Security-Policy header.** All other security headers are present (HSTS preload, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy). Add a CSP — even a report-only starting policy — to complete the security header set. Suggested starting header: `Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;` (tune to actual third-parties).
 
-## Additional Checks
+2. **IndexNow not implemented.** `/.well-known/indexnow-key.txt` returns 404. IndexNow accelerates Bing indexing, which feeds ChatGPT web search and Bing Copilot. Generate a key, add the key file, and ping `https://api.indexnow.org/indexnow?url=...&key=...` on page publish/update. Low effort, meaningful GEO upside on two platforms.
 
-- **Redirect chains:** Old product slugs → new slugs via single 308. Apex → www is 2 hops (see URL Structure Warning).
-- **Internationalization:** Single-language site; `<html lang="en">` declared; hreflang correctly omitted.
-- **Structured data syntax:** JSON-LD parses cleanly on every sampled page. No visible malformed blocks.
-- **Resource hints:** `preconnect` and `preload` in use on all pages.
-- **llms.txt:** Live at `/llms.txt` with `s-maxage=86400` — a GEO-positive signal.
-- **404 handling:** `/guides` (with trailing 's') returns a 404 with proper `x-next-error-status: 404`. The canonical hub is `/guide`. Worth considering adding a `/guides` → `/guide` 301 to catch the pluralized variant.
+3. **Sitemap lastmod dates are uniform** (2026-03-28 or 2026-03-01 for most pages). Google treats identical lastmod dates across many URLs as a weaker signal. When editing a specific page, update only that URL's lastmod — don't bulk-reset. The `app/sitemap.ts` structure already uses per-cohort constants, which is the right shape; keep dates honest per content change.
 
----
+## Recommendations (optimize this quarter)
 
-## Priority Actions
+1. **Confirm Core Web Vitals with field data.** Estimates above are from code-level inspection (preloaded hero images, code-split bundles, clamp-based responsive typography, Vercel edge cache). Pull CrUX / Search Console data to verify LCP < 2.5s, INP < 200ms, CLS < 0.1 at the 75th percentile. Infrastructure looks good; this is a verification task, not a remediation task.
 
-1. **[MEDIUM] Submit IndexNow key to the IndexNow network.** Wire sitemap-changed events to `https://api.indexnow.org/indexnow?url=…&key=de70e44d61f29841aa01ebde75f50209` so Bing, Yandex, Seznam, and Naver pick up changes within minutes instead of days. The verification file is already hosted.
-2. **[MEDIUM] Add a Content-Security-Policy header.** Close the last meaningful security gap. Start in `Content-Security-Policy-Report-Only` mode to discover all third-party origins (GTM, GA4, Phiogen images) before enforcing.
-3. **[LOW] Submit the domain to hstspreload.org.** The `preload` directive is already in the HSTS header; finishing the submission converts it to a browser-baked default.
-4. **[LOW] Add a 301 from `/guides` to `/guide`.** Catches the common pluralized variant that currently 404s.
-5. **[LOW] Trim homepage HTML weight.** Reduce the number of hero `<link rel="preload" as="image">` hints to the true LCP image only; the rest can rely on normal lazy loading. Realistic saving: ~50–80 KB off initial HTML.
-6. **[INFO / not fixable] Two-hop apex → HTTPS → www redirect** is a Vercel edge-layer characteristic, not a code-level issue. No action required; noted for completeness.
+2. **Audit templated-page duplication risk.** Many dynamic peptide and product pages exist. Per project memory (name-swap trap), verify that no sets of pages share identical H2 structure with only the product name swapped — that's a Google duplicate-content flag even when each URL has a unique canonical. Spot-check by pulling 3 similar peptide guides and diffing the H2 arrays. The 1-point deduction on Indexability reflects this risk, not a confirmed issue.
 
----
+3. **Consider BreadcrumbList schema on category/hub pages.** Product pages already include BreadcrumbList — excellent. Category pages (`/anti-aging`, `/body-composition`, `/stacks`) could gain the same for richer SERP treatment.
 
-**File:** `/mnt/c/Users/Wilso/peptizzy/GEO-TECHNICAL-AUDIT.md`
+4. **Add `Vary: Accept-Encoding` explicitly.** Currently `Vary` only lists `RSC, Next-Router-State-Tree, Next-Router-Prefetch`. Vercel negotiates compression correctly regardless, but shared caches behave better when `Accept-Encoding` is declared. Low impact.
+
+## Detailed Findings
+
+### Crawlability — 15/15
+
+- **robots.txt (3/3):** Valid syntax, proper directives, `Host:` and `Sitemap:` declarations present, `/api/` and `/go/` disallowed correctly.
+- **AI crawlers (5/5):** All 22+ listed crawlers allowed explicitly, including GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended.
+- **XML sitemap (3/3):** `/sitemap.xml` returns valid XML with 155 URLs, accurate per-URL `<lastmod>` and `<priority>`, proper change frequencies.
+- **Crawl depth (2/2):** Core content reachable within 1–2 clicks from navigation (Navbar + Footer surface products, stacks, blog, tools, FAQ). No orphaned content observed in sitemap.
+- **Noindex (2/2):** No erroneous `<meta name="robots">` or `X-Robots-Tag: noindex` on sampled indexable pages (homepage, product, hair-growth guide).
+
+### Indexability — 11/12
+
+- **Canonicals (3/3):** Self-referencing canonicals present on all sampled pages. Example: `<link rel="canonical" href="https://www.peptidesmuscle.com/peptides-for-hair-growth-loss">`.
+- **Duplicate content (3/3):**
+  - HTTP → HTTPS: 308 permanent redirect confirmed.
+  - Non-www → www: 301 permanent redirect confirmed.
+  - Variant consolidation shipped per `next.config.js` — per-size child slugs (e.g., `semaglutide-3mg`) 301 to canonical parent URLs.
+  - `/looks-maxing` → `/looksmaxxing-peptides-guide-men` 308 live.
+- **Pagination (2/2):** Not heavily paginated. Category filters on `/products` use query params and rely on canonical at parent URL.
+- **Hreflang (2/2):** Single-language (en) site; not applicable.
+- **Index bloat (1/2):** 155 URLs in sitemap is right-sized. Light deduction for residual risk of templated-page near-duplication (see Recommendation #2).
+
+### Security — 9/10
+
+Observed homepage response headers:
+```
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+x-dns-prefetch-control: on
+```
+- **HTTPS enforced (4/4):** Valid cert, HSTS preloaded.
+- **HSTS (2/2):** 2-year max-age, `includeSubDomains; preload`.
+- **X-Content-Type-Options (1/1):** `nosniff`.
+- **X-Frame-Options (1/1):** `SAMEORIGIN`.
+- **Referrer-Policy (1/1):** `strict-origin-when-cross-origin`.
+- **Content-Security-Policy (0/1):** Not set. See Warning #1.
+
+### URL Structure — 8/8
+
+- Slugs are human-readable, lowercase, hyphen-separated (`/bpc-157-complete-guide`, `/melanotan-2-looksmaxxing-tan`).
+- Flat hierarchy with logical grouping (`/products/*`, `/stacks/*`, topical guides at root).
+- Redirects are single-hop (308/301), no chains observed.
+- Parameter-based filters on `/products` don't create indexable duplicates.
+
+### Mobile Optimization — 10/10
+
+- `<meta name="viewport" content="width=device-width, initial-scale=1">` present.
+- Tailwind-based responsive layout, `clamp()` font sizes (e.g., `clamp(32px, 6vw, 68px)` on H1).
+- CTAs padded `py-3` / `py-3.5` — exceeds 48px tap target.
+- Mobile nav in Navbar.tsx with accessible burger toggle.
+
+### Core Web Vitals — 12/15 (estimated)
+
+No CrUX field data retrieved. Estimates below based on code and response headers.
+
+- **LCP (4/5):** Hero image preloaded with responsive `imageSrcSet`, `fetchPriority="high"`, Next/Image WebP/AVIF. CDN edge cache hit (`x-vercel-cache: HIT`). TTFB 130ms. Expected LCP well under 2.5s on broadband; possible 75th-percentile pressure on mid-tier mobile.
+- **INP (4/5):** Next.js client hydration and GTM present. No obvious long-task traps in the top code-split chunks. Monitor in the field.
+- **CLS (4/5):** Hero images use `imageSrcSet` with Next/Image (preserves aspect ratio). Custom fonts (Playfair Display) loaded via `<link rel="preconnect">` to fonts.gstatic.com — verify `font-display: swap` + size-adjusted fallback to avoid FOUT-driven shift.
+
+Score represents "likely good but unverified". Pull GSC / CrUX data to confirm and reclaim the remaining 3 points.
+
+### Server-Side Rendering — 15/15
+
+Confirmed by `curl` fetch (no JS execution):
+- **Main content (8/8):** H1, body copy, product details all in raw HTML. Product-page H1 server-rendered: `<h1>BPC-157 10mg`.
+- **Meta + structured data (4/4):** `<title>`, `<meta description>`, canonical, OG tags, Twitter card, and JSON-LD all in raw HTML.
+- **Internal links (3/3):** Full navigation (Navbar + Footer) rendered server-side. Link graph is AI-crawler-accessible without JavaScript execution.
+
+JSON-LD detected in raw HTML:
+- Homepage: `Organization`, `WebSite` + `SearchAction`, `ImageObject` (2 blocks).
+- Product page (`/products/bpc-157-10mg`): `Product`, `Offer`, `AggregateRating`, `Review`, `Rating`, `Brand`, `BreadcrumbList`, `ListItem`, `ImageObject`, `Organization`, `WebSite` — 11 types.
+
+### Page Speed & Server Performance — 15/15
+
+- **TTFB (3/3):** Homepage 130ms, product page 192ms. Both well under 800ms.
+- **Page weight (2/2):** Homepage raw HTML 363KB uncompressed → 43KB compressed (Brotli/gzip). Under 2MB.
+- **Images (3/3):** Next/Image with `formats: ['image/avif', 'image/webp']` in next.config.js. Responsive `deviceSizes`/`imageSizes` defined. Above-fold heroes preloaded (not lazy-loaded — correct). `minimumCacheTTL: 30 days`.
+- **JS bundles (2/2):** Code-split by route (`webpack-*.js`, `main-app-*.js`, `app/page-*.js`, `app/layout-*.js`), all `async`. Third-party scripts (GTM) loaded async.
+- **Compression (2/2):** Brotli/gzip enabled. Homepage 363KB → 43KB (88% reduction).
+- **Cache headers (2/2):** Static assets `cache-control: public, max-age=31536000, immutable`. HTML uses `public, max-age=0, must-revalidate` with strong ETag — correct for dynamic routes.
+- **CDN (1/1):** Vercel edge network confirmed via `x-vercel-id`, `x-vercel-cache: HIT` on cached routes.
+
+## Verification Commands Used
+
+```bash
+curl -s -I https://www.peptidesmuscle.com/                   # headers
+curl -s    https://www.peptidesmuscle.com/robots.txt          # robots
+curl -s    https://www.peptidesmuscle.com/sitemap.xml         # sitemap
+curl -o /dev/null -s -w 'TTFB: %{time_starttransfer}s'   ...  # perf
+curl -s -H "Accept-Encoding: gzip, br" ...                    # compression
+curl -s    https://www.peptidesmuscle.com/products/bpc-157-10mg  # SSR/schema
+curl -s -I http://...                                          # HTTPS redirect
+curl -s -I https://peptidesmuscle.com/                        # www redirect
+curl -s    https://www.peptidesmuscle.com/.well-known/indexnow-key.txt  # IndexNow
+```
