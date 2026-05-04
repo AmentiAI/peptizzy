@@ -164,8 +164,8 @@ export default function Tb500CompletePage() {
             <p className="label-gold">Recovery & Systemic Regeneration Peptide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            TB-500:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            TB-500:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-03-29" dateModified="2026-03-29" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

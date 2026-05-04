@@ -90,11 +90,30 @@ const faqs = [
   },
 ]
 
+// FAQPage JSON-LD — every Q&A on this page in one schema block.
+// These Q&As are evergreen / general-policy and do not duplicate the
+// per-product or per-guide FAQ schemas (per the one-FAQPage-per-Q&A-set rule).
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.flatMap(section =>
+    section.questions.map(q => ({
+      '@type': 'Question',
+      name: q.q,
+      acceptedAnswer: { '@type': 'Answer', text: q.a },
+    })),
+  ),
+}
+
 export default function FAQPage() {
   const [open, setOpen] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-[#07070a]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* HERO */}
       <section className="relative pt-20 sm:pt-32 pb-10 sm:pb-20">

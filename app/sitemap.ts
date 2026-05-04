@@ -26,6 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/faq`,              lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools`,            lastModified: SITE_LAUNCH,   changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/contact`,          lastModified: SITE_LAUNCH,   changeFrequency: 'yearly',  priority: 0.4 },
+    { url: `${BASE}/terms`,            lastModified: '2026-04-29',  changeFrequency: 'yearly',  priority: 0.3 },
+    { url: `${BASE}/privacy`,          lastModified: '2026-04-29',  changeFrequency: 'yearly',  priority: 0.3 },
+    { url: `${BASE}/shipping`,         lastModified: '2026-04-29',  changeFrequency: 'yearly',  priority: 0.4 },
+    { url: `${BASE}/refund`,           lastModified: '2026-04-29',  changeFrequency: 'yearly',  priority: 0.4 },
     // Blog / SEO content pages — ordered chronologically
     { url: `${BASE}/bpc-157-complete-guide`,                          lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE}/igf-1-lr3-muscle-growth-guide`,                   lastModified: RECENT_UPDATE, changeFrequency: 'monthly', priority: 0.9 },

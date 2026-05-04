@@ -164,8 +164,8 @@ export default function ThymosinAlpha1GuidePage() {
             <p className="label-gold">Immune Peptide Guide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Thymosin Alpha-1:<br />
-            <span className="italic" style={{ color: accent }}>The Immune System&apos;s Master Regulator</span>
+            Thymosin Alpha-1:{' '}
+            <span className="italic block" style={{ color: accent }}>The Immune System&apos;s Master Regulator</span>
           </h1>
       <AuthorByline datePublished="2026-04-13" dateModified="2026-04-13" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -391,7 +391,7 @@ export default function ThymosinAlpha1GuidePage() {
               </p>
               <div className="flex gap-3">
                 <a href="/go/thymosin-alpha-1-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/thymosin-alpha-1-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/thymosin-alpha-1" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -402,7 +402,7 @@ export default function ThymosinAlpha1GuidePage() {
               </p>
               <div className="flex gap-3">
                 <a href="/go/epitalon-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/epitalon" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
           </div>

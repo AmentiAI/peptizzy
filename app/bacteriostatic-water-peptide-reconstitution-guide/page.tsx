@@ -167,13 +167,20 @@ export default function BacteriostaticWaterGuidePage() {
             <p className="label-gold">Peptide Protocol Fundamentals</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Bacteriostatic Water:<br />
-            <span className="italic" style={{ color: accent }}>Complete Reconstitution Guide</span>
+            Bacteriostatic Water:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Reconstitution Guide</span>
           </h1>
       <AuthorByline datePublished="2026-04-01" dateModified="2026-04-01" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The non-negotiable foundation for every injectable peptide protocol. How to reconstitute safely, calculate concentrations, maintain sterility, and store correctly — for every compound in your stack.
           </p>
+
+          {/* Answer-first definition — short and quotable for AI extractors */}
+          <div className="mt-8 max-w-2xl border-l-2 pl-5 md:pl-6 py-2" style={{ borderColor: accent }}>
+            <p className="text-[#c0c0d0] text-[15.5px] leading-[1.75]">
+              <strong className="text-white font-700">Bacteriostatic water is sterile water containing 0.9% benzyl alcohol</strong>, a preservative that suppresses microbial growth between needle draws. It is the standard solvent for reconstituting lyophilized peptides — <Link href="/bpc-157-complete-guide" className="underline hover:text-white" style={{ color: accent }}>BPC-157</Link>, <Link href="/semaglutide-complete-guide" className="underline hover:text-white" style={{ color: accent }}>semaglutide</Link>, <Link href="/tirzepatide-complete-guide" className="underline hover:text-white" style={{ color: accent }}>tirzepatide</Link>, <Link href="/cjc-1295-ipamorelin-results-timeline" className="underline hover:text-white" style={{ color: accent }}>CJC-1295/Ipamorelin</Link>, GHK-Cu — because reconstituted vials are typically used across 14–28 days. Plain sterile water is single-use; it loses sterility the moment the septum is punctured. Standard reconstitution dilutes a 5mg vial with 1–2ml of bacteriostatic water, producing a 5mg/ml or 2.5mg/ml solution that delivers the target dose in 0.05–0.20ml on an insulin syringe. Reconstituted peptides are refrigerated at 2–8&deg;C and remain stable for the labeled shelf life — typically 28 days for most compounds, longer for GLP-1s. This is research-use guidance; consult a clinician before any injection protocol.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -188,7 +195,7 @@ export default function BacteriostaticWaterGuidePage() {
             <h2 className="font-['Playfair_Display'] font-900 text-white" style={{ fontSize: 'clamp(26px, 4vw, 40px)' }}>Why Bacteriostatic Water — Not Plain Sterile Water</h2>
           </div>
           <div className="pl-10 space-y-4 text-[#8888a0] text-[16px] leading-relaxed">
-            <p>Every lyophilized (freeze-dried) peptide in a research catalog — <Link href="/products/bpc-157-10mg" className="hover:underline" style={{ color: accent }}>BPC-157</Link>, <Link href="/products/semaglutide-6mg" className="hover:underline" style={{ color: accent }}>semaglutide</Link>, <Link href="/products/tirzepatide-15mg" className="hover:underline" style={{ color: accent }}>tirzepatide</Link>, <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="hover:underline" style={{ color: accent }}>CJC-1295/Ipamorelin</Link>, <Link href="/products/ghk-cu-50mg" className="hover:underline" style={{ color: accent }}>GHK-Cu</Link> — arrives as a dry powder that must be dissolved before injection. The solvent you choose determines whether the reconstituted solution remains sterile across weeks of multi-dose use.</p>
+            <p>Every lyophilized (freeze-dried) peptide in a research catalog — <Link href="/products/bpc-157-10mg" className="hover:underline" style={{ color: accent }}>BPC-157</Link>, <Link href="/products/semaglutide" className="hover:underline" style={{ color: accent }}>semaglutide</Link>, <Link href="/products/tirzepatide" className="hover:underline" style={{ color: accent }}>tirzepatide</Link>, <Link href="/products/ipamorelin-cjc-1295-blend" className="hover:underline" style={{ color: accent }}>CJC-1295/Ipamorelin</Link>, <Link href="/products/ghk-cu" className="hover:underline" style={{ color: accent }}>GHK-Cu</Link> — arrives as a dry powder that must be dissolved before injection. The solvent you choose determines whether the reconstituted solution remains sterile across weeks of multi-dose use.</p>
             <p>Plain sterile water for injection is sterile at the moment of opening. Once the septum is punctured, there is nothing preventing microbial contamination from the needle, air exposure, or handling — each draw from the vial introduces a new contamination risk. For a peptide protocol requiring 14 injections over two weeks from the same vial, this is not acceptable.</p>
             <p>Bacteriostatic water contains 0.9% benzyl alcohol — a bacteriostatic preservative that creates a chemical environment hostile to bacterial growth throughout the vial&apos;s use. This single ingredient is the difference between a vial that stays sterile across 28+ days of multi-dose use and one that poses an infection risk after the second draw.</p>
 

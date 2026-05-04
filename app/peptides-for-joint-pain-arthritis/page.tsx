@@ -186,8 +186,8 @@ export default function PeptidesJointPainPage() {
             className="font-['Playfair_Display'] font-900 text-white mb-6"
             style={{ fontSize: 'clamp(30px, 5vw, 60px)', lineHeight: 1.1 }}
           >
-            Peptides for Joint Pain<br />
-            <span className="italic" style={{ color: accent }}>&amp; Arthritis</span>
+            Peptides for Joint Pain{' '}
+            <span className="italic block" style={{ color: accent }}>&amp; Arthritis</span>
           </h1>
       <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">

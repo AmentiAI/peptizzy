@@ -96,12 +96,9 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    // Product images are self-hosted under /public/images/products/. The remaining
+    // remote pattern is kept for any legacy/external image references.
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'phiogen.is',
-        pathname: '/images/products/**',
-      },
       {
         protocol: 'https',
         hostname: 'apollopeptidesciences.com',

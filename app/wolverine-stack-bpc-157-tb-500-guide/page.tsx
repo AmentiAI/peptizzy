@@ -54,8 +54,8 @@ export default function WolverineStackPage() {
             <p className="label-gold">Recovery & Healing Protocol</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1 }}>
-            The Wolverine Stack<br />
-            <span className="italic" style={{ color: '#40c090' }}>BPC-157 + TB-500</span>
+            The Wolverine Stack{' '}
+            <span className="italic block" style={{ color: '#40c090' }}>BPC-157 + TB-500</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

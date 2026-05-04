@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import AuthorByline from '@/components/AuthorByline'
@@ -184,8 +185,8 @@ export default function Glp1PeptidesGuidePage() {
             <p className="label-gold">Metabolic Peptide Guide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            GLP-1 Peptides:<br />
-            <span className="italic" style={{ color: accent }}>Complete Beginner&apos;s Guide</span>
+            GLP-1 Peptides:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Beginner&apos;s Guide</span>
           </h1>
       <AuthorByline datePublished="2026-04-13" dateModified="2026-04-13" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -387,7 +388,7 @@ export default function Glp1PeptidesGuidePage() {
                   >
                     Buy Now →
                   </a>
-                  <Link href={`/products/${c.slug}`} className="btn-ghost justify-center py-2.5 text-[13px]">
+                  <Link href={canonicalProductHref(c.slug)} className="btn-ghost justify-center py-2.5 text-[13px]">
                     Product Info
                   </Link>
                 </div>

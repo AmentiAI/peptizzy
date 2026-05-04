@@ -447,12 +447,19 @@ export default function BlogPage() {
             <p className="label-gold">Evidence-Based Guides</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-4" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.08 }}>
-            Peptide Research<br />
-            <span className="italic" style={{ color: '#d4a043' }}>& Guides</span>
+            Peptide Research{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>& Guides</span>
           </h1>
-          <p className="text-[#8888a0] text-lg leading-relaxed max-w-2xl">
+          <p className="text-[#8888a0] text-lg leading-relaxed max-w-2xl mb-8">
             Deep-dive protocols, mechanism breakdowns, and clinical-grade guides for looksmaxxing, anti-aging, body composition, and recovery.
           </p>
+
+          {/* Answer-first definition for the blog index — what readers find here */}
+          <div className="max-w-3xl">
+            <p className="text-[#c0c0d0] text-[16.5px] leading-[1.75]">
+              <strong className="text-white font-700">This is the PeptidesMuscle research library</strong> — the long-form companion to the product catalog. Each guide opens with the mechanism (the receptor or pathway the peptide acts on), continues with a dosing protocol drawn from published clinical trials and established research-community practice, lays out a realistic timeline of when measurable changes occur, and ends with FAQs that address the questions readers actually ask. The library covers four practical categories: <Link href="/looksmaxxing-peptides-guide-men" className="underline hover:text-white" style={{ color: '#d4a043' }}>looksmaxxing</Link> (skin, body composition, pigmentation), <Link href="/fat-loss-peptides-complete-guide" className="underline hover:text-white" style={{ color: '#d4a043' }}>fat loss</Link> (GLP-1 agonists, AOD-9604), <Link href="/wolverine-stack-bpc-157-tb-500-guide" className="underline hover:text-white" style={{ color: '#d4a043' }}>recovery</Link> (BPC-157, TB-500), and <Link href="/epithalon-anti-aging-telomere-peptide-guide" className="underline hover:text-white" style={{ color: '#d4a043' }}>longevity</Link> (epitalon, MOTS-c). Sourcing is restricted to PubMed-indexed literature, the New England Journal of Medicine, JAMA, and ClinicalTrials.gov registry data. None of the content here is medical advice.
+            </p>
+          </div>
         </div>
       </section>
 

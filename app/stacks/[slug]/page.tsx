@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -197,7 +198,7 @@ export default function StackPage({ params }: Props) {
                         <p className="mono text-[11px] text-[#50505e] mt-0.5">{item.timing}</p>
                       </div>
                       {product && (
-                        <Link href={`/products/${item.slug}`}
+                        <Link href={canonicalProductHref(item.slug)}
                           className="btn-ghost text-[12px] flex-shrink-0">
                           Details
                           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

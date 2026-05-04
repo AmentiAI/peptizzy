@@ -31,6 +31,32 @@ const jsonLd = {
       publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
       author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent', name: 'LooksMax Agent', url: 'https://www.peptidesmuscle.com/about/editors' },
       reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent' },
+      citation: [
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Triple-Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial',
+          author: 'Jastreboff AM, Kaplan LM, Frías JP, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'New England Journal of Medicine' },
+          datePublished: '2023-08-10',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1056/NEJMoa2301972' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '37356251' },
+          ],
+          url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2301972',
+        },
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Retatrutide, a GIP, GLP-1 and glucagon receptor agonist, for people with type 2 diabetes — Phase 2 trial',
+          author: 'Rosenstock J, Frias JP, Jastreboff AM, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'The Lancet' },
+          datePublished: '2023-08-10',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1016/S0140-6736(23)01053-X' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '37356446' },
+          ],
+          url: 'https://doi.org/10.1016/S0140-6736(23)01053-X',
+        },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -59,8 +85,8 @@ export default function RetatrutidePage() {
             <p className="label-gold">Phase 3 Data — March 2026</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1 }}>
-            Retatrutide 2026:<br />
-            <span className="italic" style={{ color: '#d4a043' }}>The Complete Guide</span>
+            Retatrutide 2026:{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>The Complete Guide</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">

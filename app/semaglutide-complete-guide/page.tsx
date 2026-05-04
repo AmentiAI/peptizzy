@@ -34,6 +34,32 @@ const jsonLd = {
       publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
       author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent', name: 'LooksMax Agent', url: 'https://www.peptidesmuscle.com/about/editors' },
       reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent' },
+      citation: [
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP-1)',
+          author: 'Wilding JPH, Batterham RL, Calanna S, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'New England Journal of Medicine' },
+          datePublished: '2021-03-18',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1056/NEJMoa2032183' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '33567185' },
+          ],
+          url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2032183',
+        },
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes (SELECT)',
+          author: 'Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'New England Journal of Medicine' },
+          datePublished: '2023-12-14',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1056/NEJMoa2307563' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '37952131' },
+          ],
+          url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2307563',
+        },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -138,8 +164,8 @@ export default function SemaglutideCompletePage() {
             <p className="label-gold">GLP-1 Weight Loss Peptide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Semaglutide:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            Semaglutide:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-03-28" dateModified="2026-03-28" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -299,15 +325,15 @@ export default function SemaglutideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The most clinically proven weight loss peptide available.</p>
               <div className="flex gap-3">
                 <a href="/go/semaglutide-6mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/semaglutide-6mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/semaglutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">Ready to Upgrade?</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Tirzepatide and Retatrutide offer significantly greater weight loss for those who need more than semaglutide alone.</p>
               <div className="flex gap-3">
-                <Link href="/products/tirzepatide-15mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Tirzepatide</Link>
-                <Link href="/products/retatrutide-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Retatrutide</Link>
+                <Link href="/products/tirzepatide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Tirzepatide</Link>
+                <Link href="/products/retatrutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Retatrutide</Link>
               </div>
             </div>
           </div>

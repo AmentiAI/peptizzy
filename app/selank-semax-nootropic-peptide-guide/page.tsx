@@ -165,8 +165,8 @@ export default function SelankSemaxNootropicPeptideGuide() {
             <p className="label-gold">Nootropic Peptides</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Selank & Semax:<br />
-            <span className="italic" style={{ color: accent }}>Nootropic Peptide Guide</span>
+            Selank & Semax:{' '}
+            <span className="italic block" style={{ color: accent }}>Nootropic Peptide Guide</span>
           </h1>
       <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

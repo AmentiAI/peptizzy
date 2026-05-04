@@ -56,8 +56,8 @@ export default function CjcTimelinePage() {
             <p className="label-gold">Growth Hormone Protocol</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            CJC-1295 + Ipamorelin<br />
-            <span className="italic" style={{ color: '#6090ff' }}>Results Timeline</span>
+            CJC-1295 + Ipamorelin{' '}
+            <span className="italic block" style={{ color: '#6090ff' }}>Results Timeline</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -173,7 +173,7 @@ export default function CjcTimelinePage() {
             <div className="flex gap-3">
               <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/ipamorelin-cjc-1295-blend" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

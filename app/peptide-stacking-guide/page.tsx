@@ -85,8 +85,8 @@ export default function PeptideStackingGuidePage() {
             <p className="label-gold">Complete Stacking Reference</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1 }}>
-            Peptide Stacking Guide<br />
-            <span className="italic" style={{ color: '#d4a043' }}>2026 Edition</span>
+            Peptide Stacking Guide{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>2026 Edition</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

@@ -81,8 +81,8 @@ export default function FacialLooksmaxxingPage() {
             <p className="label-gold">Facial Appearance Optimization</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1 }}>
-            Facial Looksmaxxing<br />
-            <span className="italic" style={{ color: '#d4a043' }}>Peptide Protocol</span>
+            Facial Looksmaxxing{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>Peptide Protocol</span>
           </h1>
       <AuthorByline datePublished="2026-03-27" dateModified="2026-03-27" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -142,14 +143,21 @@ export default function AntiAgingPage() {
           <h1 className="mb-6" style={{ lineHeight: '0.93' }}>
             <span className="display text-white block" style={{ fontSize: 'clamp(48px, 7vw, 96px)' }}>
               Reverse Your
-            </span>
+            </span>{' '}
             <span className="display-italic block" style={{ fontSize: 'clamp(48px, 7vw, 96px)', color: accent }}>
               Biological Age
             </span>
           </h1>
-          <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-10">
+          <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">
             Aging is not a single process — it is a cascade of molecular failures. Peptide protocols address each layer: telomere shortening, NAD+ depletion, GH decline, and tissue degradation.
           </p>
+
+          {/* Answer-first definition — quotable summary for AI extractors */}
+          <div className="max-w-2xl rounded-lg bg-white/[0.02] border border-white/[0.05] p-5 md:p-6 mb-10">
+            <p className="text-[#c0c0d0] text-[15.5px] leading-[1.75]">
+              <strong className="text-white font-700">Anti-aging peptides are short signaling proteins</strong> that intervene in specific molecular hallmarks of aging — telomere attrition, mitochondrial dysfunction, growth-hormone decline, and loss of skin and tissue integrity. The peptides with the strongest research record in this category are <em className="not-italic" style={{ color: accent }}>epitalon</em> (a tetrapeptide that activates telomerase, with human pilot data showing telomere lengthening across 10–20 day cycles), <em className="not-italic" style={{ color: accent }}>GHK-Cu</em> (a copper-binding tripeptide that upregulates more than 4,000 genes involved in skin remodeling and collagen synthesis), <em className="not-italic" style={{ color: accent }}>MOTS-c</em> (a 16-amino-acid peptide encoded in mitochondrial DNA that activates AMPK and mimics the metabolic signature of exercise), and the <em className="not-italic" style={{ color: accent }}>CJC-1295/ipamorelin</em> stack (which restores physiological GH pulsatility without cortisol elevation). None of this is medical advice. These compounds are discussed as research tools.
+            </p>
+          </div>
           <div className="flex flex-wrap gap-4">
             <a href="/go/shop"
                           target="_blank" rel="noopener nofollow sponsored"
@@ -213,7 +221,7 @@ export default function AntiAgingPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href={`/products/${pillar.slug}`} className="btn-primary text-[12px] py-3 px-6 inline-flex"
+                  <Link href={canonicalProductHref(pillar.slug)} className="btn-primary text-[12px] py-3 px-6 inline-flex"
                     style={{ background: `linear-gradient(135deg, ${accent}cc, ${accent})` }}>
                     View Full Protocol
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -341,7 +349,7 @@ export default function AntiAgingPage() {
                     <Image src={p.image} alt={p.name} fill className="object-contain p-6" />
                   </div>
                   <div className="p-5">
-                    <Link href={`/products/${p.slug}`}>
+                    <Link href={canonicalProductHref(p.slug)}>
                       <p className="text-white font-700 text-[16px] mb-1 hover:text-[#c4b5fd] transition-colors">{p.name}</p>
                     </Link>
                     <p className="text-[#8888a0] text-[13px] mb-4 line-clamp-2">{p.shortDescription}</p>

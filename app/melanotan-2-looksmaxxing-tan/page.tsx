@@ -137,8 +137,8 @@ export default function Melanotan2LooksmaxxingPage() {
             <p className="label-gold">Melanocortin · Tanning · Libido</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 6vw, 68px)', lineHeight: 1.08 }}>
-            Melanotan 2<br />
-            <span className="italic" style={{ color: '#d4a043' }}>The Looksmaxxing Tan Protocol</span>
+            Melanotan 2{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>The Looksmaxxing Tan Protocol</span>
           </h1>
       <AuthorByline datePublished="2026-03-25" dateModified="2026-03-25" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">

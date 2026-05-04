@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Link from 'next/link'
 import ProductsContent from './ProductsContent'
 import { getCanonicalProducts } from '@/lib/variants'
@@ -16,7 +17,7 @@ export default function ProductsPage({ searchParams }: Props) {
         <ul>
           {canonical.map(p => (
             <li key={p.slug}>
-              <Link href={`/products/${p.slug}`}>{p.name} — {p.category}</Link>
+              <Link href={canonicalProductHref(p.slug)}>{p.name} — {p.category}</Link>
             </li>
           ))}
         </ul>

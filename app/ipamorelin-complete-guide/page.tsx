@@ -181,8 +181,8 @@ export default function IpamorelinCompletePage() {
             <p className="label-gold">GH Secretagogue</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Ipamorelin:<br />
-            <span className="italic" style={{ color: accent }}>The Cleanest GH Secretagogue</span>
+            Ipamorelin:{' '}
+            <span className="italic block" style={{ color: accent }}>The Cleanest GH Secretagogue</span>
           </h1>
       <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

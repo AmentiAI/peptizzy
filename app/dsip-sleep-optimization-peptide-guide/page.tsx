@@ -195,8 +195,8 @@ export default function DsipSleepPeptidePage() {
             className="font-['Playfair_Display'] font-900 text-white mb-6"
             style={{ fontSize: 'clamp(30px, 5vw, 60px)', lineHeight: 1.1 }}
           >
-            DSIP:<br />
-            <span className="italic" style={{ color: accent }}>The Neuropeptide That Rewires<br className="hidden sm:block" /> Your Sleep Architecture</span>
+            DSIP:{' '}
+            <span className="italic block" style={{ color: accent }}>The Neuropeptide That Rewires<br className="hidden sm:block" /> Your Sleep Architecture</span>
           </h1>
       <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-6">
@@ -470,7 +470,7 @@ export default function DsipSleepPeptidePage() {
               <p className="text-[#8888a0] text-[14px] leading-relaxed">Delta-wave induction, HPA attenuation, GH pulse synchronization. The core of the sleep optimization stack.</p>
               <div className="flex gap-3 mt-auto">
                 <a href={'/go/dsip-delta-sleep-inducing-peptide-10mg'} target="_blank" rel="noopener nofollow sponsored" className="btn-primary text-[13px] py-2.5 px-5 flex-1 justify-center">Buy Now</a>
-                <Link href="/products/dsip-delta-sleep-inducing-peptide-10mg" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
+                <Link href="/products/dsip" className="btn-secondary text-[13px] py-2.5 px-5">Details</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6 flex flex-col gap-4">

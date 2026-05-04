@@ -208,8 +208,8 @@ export default function PeptidesForWomenPage() {
                 <p className="label-gold">Women's Peptide Guide</p>
               </div>
               <h1 className="font-['Playfair_Display'] text-[clamp(2rem,5vw,3.5rem)] font-900 leading-[1.08] tracking-tight text-white mb-6">
-                Peptides for Women:<br />
-                <span className="italic" style={{ color: accent }}>Hormones, Fat Loss, Skin & Recovery</span>
+                Peptides for Women:{' '}
+                <span className="italic block" style={{ color: accent }}>Hormones, Fat Loss, Skin & Recovery</span>
               </h1>
       <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
               <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">

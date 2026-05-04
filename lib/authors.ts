@@ -20,10 +20,10 @@ export const authors: Record<string, Author> = {
   'looksmax-agent': {
     slug: 'looksmax-agent',
     name: 'LooksMax Agent',
-    title: 'Editor · PeptidesMuscle',
-    credentials: ['Independent Peptide Research Curator'],
+    title: 'Pseudonymous Editor · PeptidesMuscle (Independent Research Curator)',
+    credentials: ['Independent Peptide Research Curator', 'Pseudonymous editorial persona — no medical credentials claimed'],
     bio:
-      'LooksMax Agent is the editor of PeptidesMuscle. The editorial brief is to compile peptide research in plain language — mechanism, dosing, and clinical-trial outcomes — sourced from PubMed, NEJM, JAMA, and ClinicalTrials.gov. Community Q&A and protocol discussion run on the @LooksMax_Agent X profile and on Reddit. Nothing on this site is medical advice; peptides are discussed as research compounds.',
+      'LooksMax Agent is the pseudonymous editorial persona behind PeptidesMuscle. The site is an independent research-curation publication run by a single researcher writing under this name; no medical, pharmaceutical, or clinical credentials are claimed. The editorial brief is to compile peptide research in plain language — mechanism, dosing, and clinical-trial outcomes — sourced from PubMed, NEJM, JAMA, and ClinicalTrials.gov. Community Q&A and protocol discussion run on the @LooksMax_Agent X profile and on the linked Reddit account, which serve as verifiable touchpoints for reader correspondence. Nothing on this site is medical advice and the author does not have a doctor-patient relationship with readers; peptides are discussed strictly as research compounds.',
     focus: [
       'GLP-1 receptor agonists (semaglutide, tirzepatide, retatrutide)',
       'Regenerative peptides (BPC-157, TB-500)',
@@ -59,8 +59,14 @@ export function personSchema(author: Author) {
     '@type': 'Person',
     '@id': personUrl(author.slug),
     name: author.name,
+    alternateName: 'Pseudonymous editorial persona',
     jobTitle: author.title,
     description: author.bio,
+    // Explicit transparency for AI / SQEG raters: the site is not a credentialed
+    // medical authority — it is a research-curation publication. This avoids the
+    // YMYL trap where an unverified "Person" appears to claim clinical authority.
+    disambiguatingDescription:
+      'Pseudonymous editor and research curator. PeptidesMuscle is an independent research-curation publication; the editor writes under a persona handle and does not claim medical, clinical, or pharmaceutical credentials. Content cites primary sources (PubMed, NEJM, JAMA, ClinicalTrials.gov) and is published for educational use only — it is not medical advice and does not establish a clinician–patient relationship.',
     image: `${BASE_URL}${author.image}`,
     url: `${BASE_URL}/about/editors`,
     knowsAbout: author.focus,

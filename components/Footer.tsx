@@ -2,10 +2,10 @@ import Link from 'next/link'
 
 const col1 = [
   { href: '/products/bpc-157-10mg',      label: 'BPC-157' },
-  { href: '/products/ghk-cu-50mg',       label: 'GHK-Cu' },
-  { href: '/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg', label: 'CJC-1295 / Ipamorelin' },
-  { href: '/products/tirzepatide-15mg',   label: 'Tirzepatide' },
-  { href: '/products/epitalon-50mg',     label: 'Epithalon' },
+  { href: '/products/ghk-cu',       label: 'GHK-Cu' },
+  { href: '/products/ipamorelin-cjc-1295-blend', label: 'CJC-1295 / Ipamorelin' },
+  { href: '/products/tirzepatide',   label: 'Tirzepatide' },
+  { href: '/products/epitalon',     label: 'Epithalon' },
   { href: '/products',               label: 'View All →' },
 ]
 const col2 = [
@@ -121,6 +121,13 @@ export default function Footer() {
               Guide
             </a>
           </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-3">
+          <Link href="/terms" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">Terms</Link>
+          <Link href="/privacy" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">Privacy</Link>
+          <Link href="/shipping" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">Shipping</Link>
+          <Link href="/refund" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">Refund Policy</Link>
+          <Link href="/contact" className="text-[#50505e] text-[13px] hover:text-[#8888a0] transition-colors">Contact</Link>
         </div>
       </div>
     </footer>

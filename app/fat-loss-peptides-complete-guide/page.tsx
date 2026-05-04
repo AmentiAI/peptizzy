@@ -99,8 +99,8 @@ export default function FatLossPeptidesPage() {
           <div>
             <div className="label-gold mb-4">COMPLETE GUIDE · 2026</div>
             <h1 className="font-['Playfair_Display'] text-[clamp(2rem,5vw,3.5rem)] font-900 leading-[1.08] tracking-tight text-white mb-6">
-              Fat Loss Peptides:<br />
-              <span style={{ color: accent }}>The Definitive</span> Ranking
+              Fat Loss Peptides:{' '}
+              <span className="block" style={{ color: accent }}>The Definitive</span> Ranking
             </h1>
       <AuthorByline datePublished="2026-04-14" dateModified="2026-04-14" />
             <p className="text-[#8888a0] text-lg leading-relaxed mb-8 max-w-xl">

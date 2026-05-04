@@ -487,7 +487,7 @@ export default function ToolsPage() {
           <h1 className="mb-5" style={{ lineHeight: '0.93' }}>
             <span className="display text-white block" style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
               Peptide
-            </span>
+            </span>{' '}
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
               Tools
             </span>

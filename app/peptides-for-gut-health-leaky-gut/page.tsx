@@ -193,8 +193,8 @@ export default function GutHealthLeakyGutPage() {
             <p className="label-gold">Gut Healing Peptide Guide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            BPC-157 for Gut Health<br />
-            <span className="italic" style={{ color: accent }}>&amp; Leaky Gut</span>
+            BPC-157 for Gut Health{' '}
+            <span className="italic block" style={{ color: accent }}>&amp; Leaky Gut</span>
           </h1>
       <AuthorByline datePublished="2026-04-13" dateModified="2026-04-13" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -401,7 +401,7 @@ export default function GutHealthLeakyGutPage() {
               </p>
               <div className="flex gap-3">
                 <a href="/go/kpv-10mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/kpv-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/kpv" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
           </div>

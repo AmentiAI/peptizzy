@@ -162,8 +162,8 @@ export default function Mk677IbutamorenGuide() {
             <p className="label-gold">Oral GH Secretagogue</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            MK-677 Ibutamoren:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            MK-677 Ibutamoren:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

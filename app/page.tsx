@@ -5,6 +5,7 @@ import AnimateIn from '@/components/AnimateIn'
 import HomeTabs from '@/components/HomeTabs'
 import HomeFAQ from '@/components/HomeFAQ'
 import { products, getFeaturedProducts } from '@/lib/products'
+import { canonicalProductHref } from '@/lib/variants'
 
 /* ─── Marquee ─── */
 const NAMES = [
@@ -62,8 +63,8 @@ export default function Home() {
                 <p className="mono text-[#d4a043] text-[12px] tracking-[0.2em] uppercase">Elite Peptide Protocols</p>
               </div>
               <h1 className="mb-6">
-                <span className="display hero-line hero-line-1 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Peak</span>
-                <span className="display-italic hero-line hero-line-2 block gold-shimmer" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Physical</span>
+                <span className="display hero-line hero-line-1 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Peak</span>{' '}
+                <span className="display-italic hero-line hero-line-2 block gold-shimmer" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Physical</span>{' '}
                 <span className="display hero-line hero-line-3 block text-white" style={{ fontSize: 'clamp(60px, 8.5vw, 118px)' }}>Form.</span>
               </h1>
               <p className="text-[#8888a0] text-lg leading-relaxed max-w-md mb-8 hero-sub">
@@ -97,7 +98,7 @@ export default function Home() {
               {featured.slice(0, 4).map((p, i) => {
                 const accent = accentFor(p.category)
                 return (
-                  <Link key={p.slug} href={`/products/${p.slug}`}>
+                  <Link key={p.slug} href={canonicalProductHref(p.slug)}>
                     <div className="rounded-2xl overflow-hidden group cursor-pointer"
                       style={{ background: '#0d0d12', border: '1px solid rgba(255,255,255,0.06)' }}>
                       {/* Image area */}
@@ -149,6 +150,20 @@ export default function Home() {
       <Marquee />
 
       {/* ══════════════════════════════════════════
+          1a. ANSWER-FIRST DEFINITION
+          AI-citation block: what this site is, who it's for, what
+          peptide categories it covers. Plain narrative prose; no
+          bullets, cards, or stat tiles.
+      ══════════════════════════════════════════ */}
+      <section className="py-16 md:py-20 border-b border-white/[0.04]">
+        <div className="max-w-3xl mx-auto px-6 md:px-10">
+          <p className="text-[#c0c0d0] text-[17px] md:text-[18px] leading-[1.7]">
+            <strong className="text-white font-700">PeptidesMuscle is an independent reference for peptide research and protocol design</strong> — built for athletes, biohackers, researchers, and looksmaxxers who want to understand what a compound actually does before they use it. The site catalogs the peptide categories that appear most often in self-directed optimization: GLP-1 receptor agonists for fat loss (semaglutide, tirzepatide, retatrutide), regenerative compounds for injury recovery (BPC-157, TB-500), growth-hormone secretagogues for body composition (CJC-1295, ipamorelin, tesamorelin), and longevity peptides for cellular aging (epitalon, MOTS-c, GHK-Cu). Every protocol page leads with mechanism, dosing, and the clinical timeline you can expect — sourced from PubMed, NEJM, JAMA, and ClinicalTrials.gov rather than supplement-industry marketing. Nothing on this site is medical advice. Peptides are discussed strictly as research compounds. Consult a physician before using any compound described on this site.
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
           1b. VISUAL PRODUCT SHOWCASE
       ══════════════════════════════════════════ */}
       <section className="py-20 md:py-28">
@@ -160,8 +175,8 @@ export default function Home() {
                 <p className="label-gold">Staff Picks</p>
               </div>
               <h2 className="font-['Playfair_Display'] font-900 text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', lineHeight: '1.05' }}>
-                Most Researched<br />
-                <span className="italic gold-text">Compounds</span>
+                Most Researched{' '}
+                <span className="italic gold-text block">Compounds</span>
               </h2>
             </div>
             <Link href="/products" className="btn-ghost text-[14px] flex-shrink-0">
@@ -264,7 +279,7 @@ export default function Home() {
               <p className="label-gold">The Science</p>
             </div>
             <h2 className="mb-5" style={{ fontSize: 'clamp(36px, 5vw, 64px)', lineHeight: '1.05' }}>
-              <span className="display text-white">Looks Maxing at the</span>
+              <span className="display text-white">Looks Maxing at the</span>{' '}
               <span className="display-italic gold-text block">Molecular Level</span>
             </h2>
             <p className="text-[#8888a0] text-[17px] leading-relaxed max-w-2xl mb-14">
@@ -274,8 +289,8 @@ export default function Home() {
 
           <AnimateIn type="scale" delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" style={{ gridAutoRows: 'clamp(140px, 25vw, 200px)' }}>
-            <Link href="/products/ghk-cu-50mg" className="col-span-2 row-span-2 card overflow-hidden relative group block">
-              <Image src="https://phiogen.is/images/products/ghk-cu-50mg.png"
+            <Link href="/products/ghk-cu" className="col-span-2 row-span-2 card overflow-hidden relative group block">
+              <Image src="/images/products/ghk-cu-50mg.png"
                 alt="GHK-Cu collagen peptide" fill
                 className="object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07070a] via-[#07070a]/30 to-transparent" />
@@ -300,7 +315,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="card flex flex-col justify-between p-5 group block">
+            <Link href="/products/ipamorelin-cjc-1295-blend" className="card flex flex-col justify-between p-5 group block">
               <p className="label-gold">Body Composition</p>
               <div>
                 <h3 className="text-white font-700 text-lg group-hover:text-[#e8c060] transition-colors mb-1">GH Optimization</h3>
@@ -308,7 +323,7 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/products/epitalon-50mg" className="card flex flex-col justify-between p-5 group block">
+            <Link href="/products/epitalon" className="card flex flex-col justify-between p-5 group block">
               <p className="label-gold">Longevity</p>
               <div>
                 <h3 className="text-white font-700 text-lg group-hover:text-[#e8c060] transition-colors mb-1">Telomere Extension</h3>
@@ -316,8 +331,8 @@ export default function Home() {
               </div>
             </Link>
 
-            <Link href="/products/tirzepatide-15mg" className="col-span-2 card overflow-hidden relative group block">
-              <Image src="https://phiogen.is/images/products/tirzepatide-15mg.png"
+            <Link href="/products/tirzepatide" className="col-span-2 card overflow-hidden relative group block">
+              <Image src="/images/products/tirzepatide-15mg.png"
                 alt="Tirzepatide fat loss peptide" fill
                 className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07070a] via-[#07070a]/60 to-transparent" />
@@ -511,7 +526,7 @@ export default function Home() {
                 <p className="label-gold">Why Peptides</p>
               </div>
               <h2 className="mb-6" style={{ fontSize: 'clamp(34px, 5vw, 58px)', lineHeight: '1.05' }}>
-                <span className="display text-white">Precision Over</span>
+                <span className="display text-white">Precision Over</span>{' '}
                 <span className="display-italic gold-text block">Broad Intervention</span>
               </h2>
               <p className="text-[#8888a0] text-[16px] leading-relaxed mb-6">
@@ -701,7 +716,7 @@ export default function Home() {
               <div>
                 <p className="label-gold mb-4">Synergistic Protocols</p>
                 <h2 className="mb-5" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: '1.05' }}>
-                  <span className="display text-white">Elite Peptide</span>
+                  <span className="display text-white">Elite Peptide</span>{' '}
                   <span className="display-italic gold-text block">Stack Protocols</span>
                 </h2>
                 <p className="text-[#8888a0] text-[16px] leading-relaxed max-w-md">
@@ -757,7 +772,7 @@ export default function Home() {
               {
                 name: 'BPC-157 — The Foundation Peptide',
                 slug: 'bpc-157-10mg',
-                image: 'https://phiogen.is/images/products/bpc-157-10mg.png',
+                image: '/images/products/bpc-157-10mg.png',
                 mechanism: 'Promotes angiogenesis, upregulates growth factor receptors, modulates nitric oxide synthesis',
                 keyBenefit: 'Heals tendons, ligaments, gut, and neural tissue simultaneously. The single most versatile recovery peptide.',
                 timeline: '2–4 weeks for injury recovery, 4–8 weeks for gut healing',
@@ -766,7 +781,7 @@ export default function Home() {
               {
                 name: 'GHK-Cu — The Skin and Anti-Aging Peptide',
                 slug: 'ghk-cu-50mg',
-                image: 'https://phiogen.is/images/products/ghk-cu-50mg.png',
+                image: '/images/products/ghk-cu-50mg.png',
                 mechanism: 'Activates 4,000+ genes involved in skin repair, stimulates fibroblast collagen production, remodels scar tissue',
                 keyBenefit: 'The only peptide that resets skin gene expression to a younger profile. Up to 121% increase in skin density documented.',
                 timeline: '4–8 weeks for visible skin improvement, compounding over 6+ months',
@@ -775,7 +790,7 @@ export default function Home() {
               {
                 name: 'CJC-1295 / Ipamorelin — The GH Stack',
                 slug: 'ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg',
-                image: 'https://phiogen.is/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
+                image: '/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
                 mechanism: 'CJC-1295 stimulates GHRH receptors; Ipamorelin activates GHSR — double-stimulus GH pulse without cortisol elevation',
                 keyBenefit: 'The cleanest, most effective GH optimization available. Body composition transformation over 3–6 months of consistent use.',
                 timeline: 'Sleep improvements in week 1–2, body composition changes visible at 8–12 weeks',
@@ -784,7 +799,7 @@ export default function Home() {
               {
                 name: 'Epithalon — The Longevity Peptide',
                 slug: 'epitalon-50mg',
-                image: 'https://phiogen.is/images/products/epitalon-50mg.png',
+                image: '/images/products/epitalon-50mg.png',
                 mechanism: 'Activates telomerase enzyme to rebuild telomere caps on chromosomes — the only known compound to achieve this',
                 keyBenefit: 'Measurable telomere lengthening. Profound sleep quality improvements. Biological age reversal at the cellular level.',
                 timeline: '10–20 day cycle twice yearly. Sleep effects within days, biological aging markers over months.',
@@ -817,7 +832,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="flex gap-3">
-                        <Link href={`/products/${item.slug}`} className="btn-secondary text-[12px] py-2.5 px-5">Full Details</Link>
+                        <Link href={canonicalProductHref(item.slug)} className="btn-secondary text-[12px] py-2.5 px-5">Full Details</Link>
                         <a href={`/go/${item.slug}`}
                           target="_blank" rel="noopener nofollow sponsored"
                           className="btn-primary text-[12px] py-2.5 px-5">
@@ -922,7 +937,8 @@ export default function Home() {
                 <p className="label-gold">Research & Guides</p>
               </div>
               <h2 className="display text-white" style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}>
-                Deep-Dive<br /><span className="display-italic gold-text">Peptide Guides</span>
+                Deep-Dive{' '}
+                <span className="display-italic gold-text block">Peptide Guides</span>
               </h2>
             </div>
             <Link href="/blog" className="btn-ghost text-[14px] flex-shrink-0">
@@ -997,7 +1013,7 @@ export default function Home() {
           <p className="label-gold mb-6">Begin Today</p>
           <h2 className="mb-7" style={{ fontSize: 'clamp(44px, 7vw, 96px)', lineHeight: '0.95' }}>
             <span className="display text-white">Your Peak </span>
-            <span className="display-italic gold-shimmer">Physical</span>
+            <span className="display-italic gold-shimmer">Physical</span>{' '}
             <span className="display text-white block">Form Awaits.</span>
           </h2>
           <p className="text-[#8888a0] text-[18px] leading-relaxed max-w-xl mx-auto mb-10">

@@ -50,22 +50,22 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
   ],
   "bacteriostatic-water": [
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 60mg",
       "anchor": "Reconstitution"
     },
     {
-      "href": "/products/tirzepatide-30mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 30mg",
       "anchor": "Reconstitution"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (4-Pack)",
       "anchor": "Reconstitution"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 20mg (5-Pack)",
       "anchor": "Reconstitution"
     }
@@ -99,7 +99,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Skin"
     },
     {
-      "href": "/products/ghk-cu-50mg",
+      "href": "/products/ghk-cu",
       "title": "GHK-Cu",
       "anchor": "Skin"
     },
@@ -121,7 +121,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Skin"
     },
     {
-      "href": "/products/ghk-cu-50mg",
+      "href": "/products/ghk-cu",
       "title": "GHK-Cu",
       "anchor": "Skin"
     },
@@ -143,7 +143,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Muscle Growth"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Fat Loss"
     },
@@ -160,7 +160,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
   ],
   "igf-1-lr3": [
     {
-      "href": "/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg",
+      "href": "/products/ipamorelin-cjc-1295-blend",
       "title": "CJC-1295 / Ipamorelin",
       "anchor": "Muscle Growth"
     },
@@ -187,232 +187,232 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 10mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 15mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     }
   ],
   "semaglutide-10mg": [
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 30mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-6mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 15mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     }
   ],
   "semaglutide-15mg": [
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 10mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (10-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 60mg",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide": [
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-6mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 15mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 20mg (5-Pack)",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide-15mg-4-pack": [
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (10-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 20mg (5-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-30mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 30mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide-15mg-10-pack": [
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (4-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 20mg (5-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide-20mg-5-pack": [
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (10-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (4-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide-30mg": [
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (4-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     }
   ],
   "tirzepatide-60mg": [
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (10-Pack)",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-60mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide 15mg (4-Pack)",
       "anchor": "Weight Loss"
     }
   ],
   "retatrutide": [
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 10mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 30mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     }
   ],
   "retatrutide-10mg": [
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 30mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 60mg",
       "anchor": "Weight Loss"
     },
@@ -424,66 +424,66 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
   ],
   "retatrutide-30mg": [
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 60mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 10mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     }
   ],
   "retatrutide-60mg": [
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 10mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/retatrutide-30mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 30mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 10mg",
       "anchor": "Weight Loss"
     }
   ],
   "cagrilintide-semaglutide": [
     {
-      "href": "/products/semaglutide-6mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 15mg",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/tirzepatide-15mg",
+      "href": "/products/tirzepatide",
       "title": "Tirzepatide",
       "anchor": "Weight Loss"
     },
     {
-      "href": "/products/semaglutide-12mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide 10mg",
       "anchor": "Weight Loss"
     }
@@ -500,7 +500,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Anti-Aging"
     },
     {
-      "href": "/products/nad-500mg",
+      "href": "/products/nad",
       "title": "NAD+",
       "anchor": "Anti-Aging"
     },
@@ -517,7 +517,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Anti-Aging"
     },
     {
-      "href": "/products/epitalon-50mg",
+      "href": "/products/epitalon",
       "title": "Epithalon",
       "anchor": "Anti-Aging"
     },
@@ -527,7 +527,7 @@ export const productInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Anti-Aging"
     },
     {
-      "href": "/products/ghk-cu-50mg",
+      "href": "/products/ghk-cu",
       "title": "GHK-Cu",
       "anchor": "Anti-Aging"
     }
@@ -542,17 +542,17 @@ export const stackInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Recovery"
     },
     {
-      "href": "/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg",
+      "href": "/products/ipamorelin-cjc-1295-blend",
       "title": "CJC-1295 / Ipamorelin",
       "anchor": "Sleep"
     },
     {
-      "href": "/products/epitalon-50mg",
+      "href": "/products/epitalon",
       "title": "Epithalon",
       "anchor": "Anti-Aging"
     },
     {
-      "href": "/products/ghk-cu-50mg",
+      "href": "/products/ghk-cu",
       "title": "GHK-Cu",
       "anchor": "Skin"
     }
@@ -564,7 +564,7 @@ export const stackInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Dual-Mechanism Satiety Stack"
     },
     {
-      "href": "/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg",
+      "href": "/products/ipamorelin-cjc-1295-blend",
       "title": "CJC-1295 / Ipamorelin",
       "anchor": "Sleep"
     },
@@ -574,7 +574,7 @@ export const stackInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "Anabolic"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "Triple Agonist — Maximum Fat Loss"
     }
@@ -608,34 +608,34 @@ export const stackInternalLinks: Record<string, InternalLink[]> = {
       "anchor": "GLP-1"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide",
       "anchor": "GLP-1"
     },
     {
-      "href": "/products/retatrutide-10mg",
+      "href": "/products/retatrutide",
       "title": "Retatrutide 10mg",
       "anchor": "GLP-1"
     },
     {
-      "href": "/products/semaglutide-6mg",
+      "href": "/products/semaglutide",
       "title": "Semaglutide",
       "anchor": "GLP-1"
     }
   ],
   "longevity": [
     {
-      "href": "/products/epitalon-50mg",
+      "href": "/products/epitalon",
       "title": "Epithalon",
       "anchor": "Anti-Aging"
     },
     {
-      "href": "/products/ghk-cu-50mg",
+      "href": "/products/ghk-cu",
       "title": "GHK-Cu",
       "anchor": "Skin"
     },
     {
-      "href": "/products/nad-500mg",
+      "href": "/products/nad",
       "title": "NAD+",
       "anchor": "Anti-Aging"
     },

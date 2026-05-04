@@ -5,6 +5,7 @@
  */
 
 import { products } from '../lib/products'
+import { canonicalProductHref } from '../lib/variants'
 import { stacks } from '../lib/stacks'
 import * as fs from 'fs'
 import * as path from 'path'
@@ -42,7 +43,9 @@ function buildKeywords(fields: string[]): Set<string> {
 
 const pages: PageDesc[] = [
   ...products.map(p => ({
-    href: `/products/${p.slug}`,
+    // Canonical href — child variants resolve to their parent so generated
+    // internal links never point at a 308-redirected URL.
+    href: canonicalProductHref(p.slug),
     title: p.name,
     tagline: p.tagline,
     rawTags: p.tags,

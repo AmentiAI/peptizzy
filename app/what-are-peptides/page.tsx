@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AuthorByline from '@/components/AuthorByline'
 
 export const metadata: Metadata = {
   title: 'What Are Peptides? Mechanisms, Receptor Targets & Research Context | PeptidesMuscle',
@@ -37,6 +38,7 @@ export default function WhatArePeptidesPage() {
           <h1 className="display text-white mb-5" style={{ fontSize: 'clamp(44px, 6.5vw, 88px)' }}>
             What Are Peptides?
           </h1>
+          <AuthorByline datePublished="2026-04-19" dateModified="2026-04-19" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             Peptides are short chains of amino acids that act as biological signals. This is a plain-language explainer on what separates the peptide class from small molecules and full proteins — and why that distinction matters in research.
           </p>

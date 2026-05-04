@@ -80,7 +80,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'GLP-1 Receptor Agonist — Weekly Dosing',
     shortDescription: 'Long-half-life GLP-1 receptor agonist studied in the STEP weight-management trials. Available in five vial sizes from 3 mg through 30 mg to match research-protocol duration; all sizes draw from the same batch and CoA.',
-    image: 'https://phiogen.is/images/products/semaglutide-3mg.png',
+    image: '/images/products/semaglutide-3mg.png',
     tags: ['GLP-1', 'Weight Management', 'STEP Trials', 'Once-Weekly'],
     seoTitle: 'Semaglutide — Research Vials (3mg / 6mg / 12mg / 20mg / 30mg) | PeptidesMuscle',
     featured: true,
@@ -91,7 +91,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Dual GLP-1 / GIP Receptor Agonist',
     shortDescription: 'Dual incretin agonist engaging both GLP-1 and GIP receptors. Studied in SURMOUNT-1 (22.5% weight reduction at 72 weeks). Available in 15 mg, 30 mg, and 60 mg vials.',
-    image: 'https://phiogen.is/images/products/tirzepatide-15mg.png',
+    image: '/images/products/tirzepatide-15mg.png',
     tags: ['GLP-1', 'GIP', 'SURMOUNT', 'Dual Agonist'],
     seoTitle: 'Tirzepatide — Research Vials (15mg / 30mg / 60mg) | PeptidesMuscle',
     featured: true,
@@ -102,7 +102,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Triple GLP-1 / GIP / Glucagon Receptor Agonist',
     shortDescription: 'Triple incretin agonist reported to produce 24.2% body-weight reduction at 48 weeks in NEJM Phase 2 data (2023). Available across four vial sizes from 10 mg through 30 mg.',
-    image: 'https://phiogen.is/images/products/retatrutide-10mg.png',
+    image: '/images/products/retatrutide-10mg.png',
     tags: ['GLP-1', 'GIP', 'Glucagon', 'Triple Agonist'],
     seoTitle: 'Retatrutide — Research Vials (10mg / 15mg / 20mg / 30mg) | PeptidesMuscle',
     featured: true,
@@ -113,7 +113,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Cagrilintide + Retatrutide Combination Vial',
     shortDescription: 'Amylin-analogue cagrilintide combined with triple-agonist retatrutide for researchers exploring additive satiety and energy-balance pathways. Available in 5 mg and 10 mg sizes.',
-    image: 'https://phiogen.is/images/products/cagri-reta-5mg.png',
+    image: '/images/products/cagri-reta-5mg.png',
     tags: ['Amylin', 'Triple Agonist', 'Combination'],
   },
   'cagrilintide': {
@@ -121,7 +121,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Long-Acting Amylin Analogue',
     shortDescription: 'Acylated amylin analogue designed for once-weekly subcutaneous dosing. Studied alongside semaglutide and retatrutide for combined incretin/amylin research. Available in 5 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/cagrilintide-5mg.png',
+    image: '/images/products/cagrilintide-5mg.png',
     tags: ['Amylin', 'Once-Weekly', 'Satiety'],
   },
   'sermorelin': {
@@ -129,7 +129,7 @@ export const PARENT_META: Record<string, {
     category: 'Growth Peptides',
     tagline: 'GHRH(1-29) Growth Hormone Releasing Hormone',
     shortDescription: 'Truncated GHRH analogue covering the first 29 residues — the portion sufficient for pituitary GH-release activity. Available as 2 mg, 5 mg, or 10 mg vials.',
-    image: 'https://phiogen.is/images/products/sermorelin-2mg.png',
+    image: '/images/products/sermorelin-2mg.png',
     tags: ['GHRH', 'Pituitary', 'GH-Axis'],
   },
   'tesamorelin': {
@@ -137,7 +137,7 @@ export const PARENT_META: Record<string, {
     category: 'Growth Peptides',
     tagline: 'Stabilized GHRH Analogue — FDA-Studied',
     shortDescription: 'N-terminally trans-3-hexenoyl-modified GHRH(1-44) with enhanced plasma stability. Research focus on visceral-adipose reduction. Available in 10 mg and 20 mg sizes.',
-    image: 'https://phiogen.is/images/products/tesamorelin-10mg.png',
+    image: '/images/products/tesamorelin-10mg.png',
     tags: ['GHRH', 'Visceral Fat', 'HIV-Associated Lipodystrophy'],
   },
   'thymosin-alpha-1': {
@@ -145,7 +145,7 @@ export const PARENT_META: Record<string, {
     category: 'Recovery & Healing',
     tagline: 'Immune-Modulating 28-Residue Peptide',
     shortDescription: 'Acetylated N-terminal fragment of prothymosin-α, studied for T-cell maturation and innate-immune modulation. Available in 5 mg and 10 mg research vials.',
-    image: 'https://phiogen.is/images/products/thymosin-alpha-1-5mg.png',
+    image: '/images/products/thymosin-alpha-1-5mg.png',
     tags: ['Immune', 'T-Cell', 'Thymus'],
   },
   'cjc-1295-no-dac': {
@@ -153,7 +153,7 @@ export const PARENT_META: Record<string, {
     category: 'Growth Peptides',
     tagline: 'Short-Half-Life GHRH Analogue',
     shortDescription: 'CJC-1295 without the Drug Affinity Complex — ~30 minute half-life, preserves pulsatile GH release. Research vials in 5 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/cjc-1295-no-dac-5mg.png',
+    image: '/images/products/cjc-1295-no-dac-5mg.png',
     tags: ['GHRH', 'Short-Half-Life', 'Pulsatile'],
   },
   'aod9604': {
@@ -161,7 +161,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'hGH Lipolytic C-Terminal Fragment',
     shortDescription: 'Modified 16-residue C-terminal fragment of human growth hormone (177-191), engineered to retain lipolytic activity without the metabolic effects of full-length hGH. Available in 2 mg, 5 mg, and 10 mg.',
-    image: 'https://phiogen.is/images/products/aod9604-2mg.png',
+    image: '/images/products/aod9604-2mg.png',
     tags: ['Lipolysis', 'hGH Fragment', 'Fat Metabolism'],
   },
   'adipotide-fttp': {
@@ -169,7 +169,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Proapoptotic Peptide Targeting Adipose Vasculature',
     shortDescription: 'Fat-targeting proapoptotic peptide studied in primate adiposity models by Arap & Pasqualini. Available in 5 mg and 10 mg research vials.',
-    image: 'https://phiogen.is/images/products/adipotide-fttp-5mg.png',
+    image: '/images/products/adipotide-fttp-5mg.png',
     tags: ['Apoptosis', 'Adipose', 'Proapoptotic'],
   },
   'bam-15': {
@@ -177,7 +177,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Mitochondrial Uncoupling Agent',
     shortDescription: 'Small-molecule mitochondrial protonophore studied as a tissue-safe alternative to DNP for thermogenesis research. Available as 30 mg/mL or 50 mg/mL in 30 mL.',
-    image: 'https://phiogen.is/images/products/bam-15-30mg-ml-30ml.png',
+    image: '/images/products/bam-15-30mg-ml-30ml.png',
     tags: ['Uncoupler', 'Mitochondria', 'Thermogenesis'],
   },
   'l-carnitine': {
@@ -185,7 +185,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'Mitochondrial Fatty-Acid Transport Cofactor',
     shortDescription: 'Quaternary ammonium compound required for long-chain fatty-acid transport into mitochondria. Available in two concentrations and a 5-pack.',
-    image: 'https://phiogen.is/images/products/l-carnitine-400mg-ml.png',
+    image: '/images/products/l-carnitine-400mg-ml.png',
     tags: ['Mitochondria', 'Fatty-Acid Oxidation'],
   },
   'slu-pp-332-liquid': {
@@ -193,7 +193,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'ERR Agonist — Oral Solution',
     shortDescription: 'Estrogen-related-receptor agonist studied for endurance and mitochondrial biogenesis. Liquid formulation in two concentrations.',
-    image: 'https://phiogen.is/images/products/slu-pp-332-1mg-ml-30ml.png',
+    image: '/images/products/slu-pp-332-1mg-ml-30ml.png',
     tags: ['ERR', 'Mitochondrial Biogenesis', 'Endurance'],
   },
   'slu-pp-332-capsules': {
@@ -201,7 +201,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'ERR Agonist — Oral Capsules',
     shortDescription: 'Estrogen-related-receptor agonist studied for endurance and mitochondrial biogenesis. Capsule format across three strength/count combinations.',
-    image: 'https://phiogen.is/images/products/slu-pp-332-1mg-x-30-capsules.png',
+    image: '/images/products/slu-pp-332-1mg-x-30-capsules.png',
     tags: ['ERR', 'Mitochondrial Biogenesis', 'Endurance', 'Capsule'],
   },
   'ru-58841': {
@@ -209,7 +209,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Topical Androgen Receptor Antagonist',
     shortDescription: 'Non-steroidal anti-androgen researched for scalp-localized androgen-receptor blockade in hair-follicle models. Available in 30 mL and 60 mL bottles.',
-    image: 'https://phiogen.is/images/products/ru-58841-50mg-x-30ml.png',
+    image: '/images/products/ru-58841-50mg-x-30ml.png',
     tags: ['Anti-Androgen', 'Topical', 'Hair Research'],
   },
   'epitalon': {
@@ -217,7 +217,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Khavinson Tetrapeptide — Ala-Glu-Asp-Gly',
     shortDescription: 'Four-residue synthetic peptide derived from Epithalamin, the pineal extract characterized by Khavinson. Available in 10 mg and 50 mg vials.',
-    image: 'https://phiogen.is/images/products/epitalon-10mg.png',
+    image: '/images/products/epitalon-10mg.png',
     tags: ['Khavinson', 'Tetrapeptide', 'Pineal', 'Telomere'],
   },
   'ghk-cu': {
@@ -225,7 +225,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Copper Tripeptide — Pickart 1973',
     shortDescription: 'Glycyl-L-histidyl-L-lysine coordinated with Cu(II) — the Pickart copper-tripeptide metallopeptide studied for collagen remodelling and matrix signalling. 50 mg and 100 mg vials.',
-    image: 'https://phiogen.is/images/products/ghk-cu-50mg.png',
+    image: '/images/products/ghk-cu-50mg.png',
     tags: ['Copper Tripeptide', 'Pickart', 'Matrix'],
   },
   'nad': {
@@ -233,7 +233,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Nicotinamide Adenine Dinucleotide',
     shortDescription: 'Cofactor for sirtuin and PARP enzymes implicated in DNA-repair and metabolic longevity programs. Available in 500 mg and 1000 mg sizes.',
-    image: 'https://phiogen.is/images/products/nad-500mg.png',
+    image: '/images/products/nad-500mg.png',
     tags: ['NAD+', 'Sirtuin', 'Cofactor'],
   },
   'glutathione': {
@@ -241,7 +241,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Endogenous Tripeptide Antioxidant',
     shortDescription: 'Gamma-glutamyl-cysteinyl-glycine — the primary intracellular antioxidant. Research vials in 200 mg, 600 mg, and 1500 mg.',
-    image: 'https://phiogen.is/images/products/glutathione-200mg.png',
+    image: '/images/products/glutathione-200mg.png',
     tags: ['Antioxidant', 'Liver', 'Detoxification'],
   },
   'mots-c': {
@@ -249,7 +249,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Mitochondrial-Derived Peptide (MDP)',
     shortDescription: '16-residue peptide encoded by the 12S rRNA region of mitochondrial DNA. Studied for metabolic homeostasis and exercise-response modulation. Available in 10, 20, and 40 mg sizes.',
-    image: 'https://phiogen.is/images/products/mots-c-10mg.png',
+    image: '/images/products/mots-c-10mg.png',
     tags: ['Mitochondrial', 'MDP', 'Exercise'],
   },
   'ss-31': {
@@ -257,7 +257,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Mitochondria-Targeted Tetrapeptide',
     shortDescription: 'D-Arg-dimethyl-Tyr-Lys-Phe-NH₂ — a cationic peptide that concentrates in the inner mitochondrial membrane and binds cardiolipin. Available in 10, 25, and 50 mg.',
-    image: 'https://phiogen.is/images/products/ss-31-10mg.png',
+    image: '/images/products/ss-31-10mg.png',
     tags: ['Mitochondrial', 'Cardiolipin', 'Elamipretide'],
   },
   'pinealon': {
@@ -265,7 +265,7 @@ export const PARENT_META: Record<string, {
     category: 'Anti-Aging & Longevity',
     tagline: 'Khavinson Tripeptide (Glu-Asp-Arg)',
     shortDescription: 'Short synthetic tripeptide studied by the Khavinson group for neuroprotection and cognitive-aging endpoints. Available in 10 mg and 20 mg.',
-    image: 'https://phiogen.is/images/products/pinealon-10mg.png',
+    image: '/images/products/pinealon-10mg.png',
     tags: ['Khavinson', 'Tripeptide', 'Neuro'],
   },
   'dsip': {
@@ -273,7 +273,7 @@ export const PARENT_META: Record<string, {
     category: 'Cognitive & Nootropic',
     tagline: 'Nine-Residue Sleep-Modulating Peptide',
     shortDescription: 'Nonapeptide characterized by Monnier in the 1970s for its effects on delta-wave EEG activity. Available as 5, 10, and 15 mg research vials.',
-    image: 'https://phiogen.is/images/products/dsip-delta-sleep-inducing-peptide-5mg.png',
+    image: '/images/products/dsip-delta-sleep-inducing-peptide-5mg.png',
     tags: ['Sleep', 'Delta Wave', 'EEG', 'Nonapeptide'],
   },
   'na-selank-amidate': {
@@ -281,7 +281,7 @@ export const PARENT_META: Record<string, {
     category: 'Cognitive & Nootropic',
     tagline: 'Modified Selank — Enhanced Intranasal Stability',
     shortDescription: 'N-acetylated, C-amidated variant of the Semax-family nootropic Selank, designed for intranasal stability. Available in 10 mg and 30 mg.',
-    image: 'https://phiogen.is/images/products/na-selank-amidate-10mg.png',
+    image: '/images/products/na-selank-amidate-10mg.png',
     tags: ['Nootropic', 'Selank', 'Intranasal'],
   },
   'kisspeptin-10': {
@@ -289,7 +289,7 @@ export const PARENT_META: Record<string, {
     category: 'Growth Peptides',
     tagline: 'GnRH-Upstream Decapeptide',
     shortDescription: 'C-terminal decapeptide of kisspeptin — the primary endogenous driver of GnRH release. Available in 5 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/kisspeptin-10-5mg.png',
+    image: '/images/products/kisspeptin-10-5mg.png',
     tags: ['GnRH', 'Reproductive Axis', 'Decapeptide'],
   },
   'oxytocin': {
@@ -297,7 +297,7 @@ export const PARENT_META: Record<string, {
     category: 'Cognitive & Nootropic',
     tagline: 'Nine-Residue Neurohypophyseal Hormone',
     shortDescription: 'Endogenous nonapeptide hormone studied for social-bonding, pair-bonding, and stress-response research. Available in 8 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/oxytocin-8mg.png',
+    image: '/images/products/oxytocin-8mg.png',
     tags: ['Hormone', 'Social', 'Nonapeptide'],
   },
   'vip': {
@@ -305,7 +305,7 @@ export const PARENT_META: Record<string, {
     category: 'Recovery & Healing',
     tagline: '28-Residue Neuropeptide',
     shortDescription: 'Vasoactive intestinal peptide — 28-residue neuropeptide studied for smooth-muscle relaxation and mast-cell stabilization research. Available in 5 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/vip-5mg.png',
+    image: '/images/products/vip-5mg.png',
     tags: ['Neuropeptide', 'Vasoactive'],
   },
   'kpv': {
@@ -313,7 +313,7 @@ export const PARENT_META: Record<string, {
     category: 'Recovery & Healing',
     tagline: 'α-MSH C-Terminal Tripeptide',
     shortDescription: 'Lysine-proline-valine — the C-terminal tripeptide of α-MSH studied for anti-inflammatory and gut-barrier endpoints. Available in 5 mg and 10 mg.',
-    image: 'https://phiogen.is/images/products/kpv-5mg.png',
+    image: '/images/products/kpv-5mg.png',
     tags: ['Anti-Inflammatory', 'Tripeptide', 'α-MSH'],
   },
   '5-amino-1mq': {
@@ -321,7 +321,7 @@ export const PARENT_META: Record<string, {
     category: 'Fat Loss / Metabolic',
     tagline: 'NNMT Inhibitor — Research Vial',
     shortDescription: 'Nicotinamide N-methyltransferase inhibitor studied for white-adipose NAD+ preservation and metabolic endpoints. Lyophilized research vials; 5 mg and 50 mg.',
-    image: 'https://phiogen.is/images/products/5-amino-1mq-5mg.png',
+    image: '/images/products/5-amino-1mq-5mg.png',
     tags: ['NNMT', 'NAD+', 'Adipose'],
   },
   'bpc-157-tb-500-blend': {
@@ -329,7 +329,7 @@ export const PARENT_META: Record<string, {
     category: 'Blends & Stacks',
     tagline: 'Orthogonal Tissue-Repair Blend',
     shortDescription: 'Co-lyophilized blend of BPC-157 (angiogenic signalling) and TB-500 (actin-motility). Available in matched 5+5 mg and 10+10 mg ratios.',
-    image: 'https://phiogen.is/images/products/bpc-157-tb-500-blend-bpc-157-5mg-tb-500-5mg.png',
+    image: '/images/products/bpc-157-tb-500-blend-bpc-157-5mg-tb-500-5mg.png',
     tags: ['BPC-157', 'TB-500', 'Repair Blend'],
   },
   'ipamorelin-tesamorelin-blend': {
@@ -337,7 +337,7 @@ export const PARENT_META: Record<string, {
     category: 'Blends & Stacks',
     tagline: 'GHRP + GHRH Dual-Axis Blend',
     shortDescription: 'Co-formulated ipamorelin (GHRP, ghrelin-receptor agonist) with tesamorelin (stabilized GHRH). Two ipamorelin-dose variants over constant 10 mg tesamorelin.',
-    image: 'https://phiogen.is/images/products/ipamorelin-tesamorelin-blend-ipa-3mg-tesa-10mg.png',
+    image: '/images/products/ipamorelin-tesamorelin-blend-ipa-3mg-tesa-10mg.png',
     tags: ['Ipamorelin', 'Tesamorelin', 'GHRP+GHRH'],
   },
   'ipamorelin-cjc-1295-blend': {
@@ -345,7 +345,7 @@ export const PARENT_META: Record<string, {
     category: 'Blends & Stacks',
     tagline: 'GHRP + Short-Half-Life GHRH Blend',
     shortDescription: 'Co-formulated ipamorelin with CJC-1295 (no-DAC). Dual ghrelin/GHRH stimulation studied for pulsatile GH release. Available as matched 5+5 mg.',
-    image: 'https://phiogen.is/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
+    image: '/images/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg.png',
     tags: ['Ipamorelin', 'CJC-1295', 'GHRP+GHRH'],
   },
 }
@@ -448,4 +448,12 @@ export function getCanonicalProductBySlug(slug: string): Product | undefined {
   if (PARENT_SLUGS.has(slug)) return getParentProduct(slug)
   if (CHILD_TO_PARENT[slug]) return undefined // will be redirected
   return products.find(p => p.slug === slug)
+}
+
+// Map any product slug (parent or child) to its canonical /products/ URL.
+// Use this for EVERY internal product link so Googlebot never sees a 308 redirect.
+// Children (in VARIANT_GROUPS) → /products/<parent>. Parents and standalones → self.
+export function canonicalProductHref(slug: string): string {
+  const parent = CHILD_TO_PARENT[slug]
+  return `/products/${parent ?? slug}`
 }

@@ -59,7 +59,19 @@ const orgJsonLd = {
       alternateName: ['Peptides Muscle', 'LooksMax Agent'],
       url: BASE_URL,
       logo: { '@type': 'ImageObject', url: `${BASE_URL}/max-avatar.png` },
-      description: 'The definitive resource for peptide-based physical optimization — looks maxing, body composition, anti-aging, and recovery protocols.',
+      description: 'PeptidesMuscle is an independent peptide-research curation publication — long-form mechanism, dosing, and clinical-timeline guides for looksmaxxing, body composition, anti-aging, and recovery protocols, sourced from PubMed, NEJM, JAMA, and ClinicalTrials.gov.',
+      // Transparency for SQEG / AI raters: brand persona positioning, not a
+      // credentialed medical authority. Content is educational; not medical advice.
+      disambiguatingDescription:
+        'Independent research-curation publication run by a single editor under the pseudonymous handle "LooksMax Agent". No medical, clinical, or pharmaceutical credentials are claimed. All content is for educational use; nothing on the site is medical advice and the publication does not establish a clinician–patient relationship.',
+      knowsAbout: [
+        'Peptide pharmacology',
+        'GLP-1 receptor agonists (semaglutide, tirzepatide, retatrutide)',
+        'Regenerative peptides (BPC-157, TB-500)',
+        'Growth-hormone secretagogues (CJC-1295, ipamorelin, tesamorelin)',
+        'Longevity peptides (epitalon, MOTS-c, GHK-Cu)',
+        'Reconstitution and subcutaneous injection protocols',
+      ],
       sameAs: [
         'https://www.reddit.com/user/Loud-Department3185/',
         'https://x.com/LooksMax_Agent',

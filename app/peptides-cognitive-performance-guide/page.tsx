@@ -240,8 +240,8 @@ export default function PeptidesCognitivePage() {
             <p className="label-gold">Cognitive Performance & Brain Optimization</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Peptides for<br />
-            <span className="italic" style={{ color: accent }}>Cognitive Performance</span>
+            Peptides for{' '}
+            <span className="italic block" style={{ color: accent }}>Cognitive Performance</span>
           </h1>
       <AuthorByline datePublished="2026-03-29" dateModified="2026-03-29" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -385,7 +385,7 @@ export default function PeptidesCognitivePage() {
             {/* GHK-Cu mention */}
             <div className="card rounded-xl p-5">
               <p className="text-white font-600 text-[14px] mb-2">GHK-Cu: Supporting Mention</p>
-              <p className="text-[#8888a0] text-[13px] leading-relaxed">GHK-Cu (copper peptide GHK-Cu) deserves mention as a supporting cognitive compound. While not in the primary four, GHK-Cu demonstrates potent antioxidant activity in neural tissue — reducing reactive oxygen species that accelerate both mitochondrial dysfunction and telomere shortening. It also shows anti-inflammatory activity in brain tissue and upregulates antioxidant gene expression (SOD2, catalase) via Nrf2 pathway activation. For users building a comprehensive cognitive protection protocol, GHK-Cu can be incorporated as a systemic antioxidant support layer. <Link href="/products/ghk-cu-50mg" className="hover:underline" style={{ color: accent }}>View GHK-Cu →</Link></p>
+              <p className="text-[#8888a0] text-[13px] leading-relaxed">GHK-Cu (copper peptide GHK-Cu) deserves mention as a supporting cognitive compound. While not in the primary four, GHK-Cu demonstrates potent antioxidant activity in neural tissue — reducing reactive oxygen species that accelerate both mitochondrial dysfunction and telomere shortening. It also shows anti-inflammatory activity in brain tissue and upregulates antioxidant gene expression (SOD2, catalase) via Nrf2 pathway activation. For users building a comprehensive cognitive protection protocol, GHK-Cu can be incorporated as a systemic antioxidant support layer. <Link href="/products/ghk-cu" className="hover:underline" style={{ color: accent }}>View GHK-Cu →</Link></p>
             </div>
 
           </div>
@@ -539,7 +539,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The foundational neuroenergetic compound. Restores mitochondrial ATP production in neurons, activates SIRT1 neuroprotection, and reverses the NAD+ decline driving cognitive fatigue and brain fog.</p>
               <div className="flex gap-3">
                 <a href="/go/nad-500mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/nad-500mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/nad" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -547,7 +547,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Telomerase activator and pineal gland regulator. The deepest-acting longevity peptide for cognitive health — repairs neural telomeres and restores the sleep architecture that makes all other cognitive enhancement possible.</p>
               <div className="flex gap-3">
                 <a href="/go/epitalon-50mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/epitalon-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/epitalon" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -555,7 +555,7 @@ export default function PeptidesCognitivePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">The neurotrophic peptide combination. Elevates growth hormone and IGF-1 to upregulate BDNF, support neurogenesis, and optimize the deep-sleep window for memory consolidation and neural repair.</p>
               <div className="flex gap-3">
                 <a href="/go/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/ipamorelin-cjc-1295-blend" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">

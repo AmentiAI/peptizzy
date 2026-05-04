@@ -49,7 +49,7 @@ function Content({ initialCategory = 'all' }: { initialCategory?: string }) {
             <p className="label-gold">Complete Catalog — {canonical.length} Compounds</p>
           </div>
           <h1 className="mb-5" style={{ lineHeight: '0.92' }}>
-            <span className="display text-white block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>All</span>
+            <span className="display text-white block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>All</span>{' '}
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(52px, 7vw, 100px)' }}>Peptides</span>
           </h1>
           <p className="text-[#8888a0] text-xl max-w-xl leading-relaxed">

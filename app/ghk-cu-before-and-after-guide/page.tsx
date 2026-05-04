@@ -48,8 +48,8 @@ export default function GhkCuGuidePage() {
             <p className="label-gold">Copper Peptide Results Guide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            GHK-Cu Before & After:<br />
-            <span className="italic" style={{ color: '#d4a043' }}>Injectable vs. Topical</span>
+            GHK-Cu Before & After:{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>Injectable vs. Topical</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -174,7 +174,7 @@ export default function GhkCuGuidePage() {
             <div className="flex gap-3">
               <a href="/go/ghk-cu-50mg"
                           target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-              <Link href="/products/ghk-cu-50mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
+              <Link href="/products/ghk-cu" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Full Product Info</Link>
             </div>
           </div>
         </div>

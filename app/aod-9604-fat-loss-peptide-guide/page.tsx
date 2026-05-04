@@ -198,13 +198,21 @@ export default function Aod9604FatLossPage() {
             <p className="label-gold">HGH Fragment</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            AOD-9604:<br />
-            <span className="italic" style={{ color: accent }}>HGH Fragment for Targeted Fat Loss</span>
+            AOD-9604:{' '}
+            <span className="italic block" style={{ color: accent }}>HGH Fragment for Targeted Fat Loss</span>
           </h1>
       <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
             The C-terminal fragment of human growth hormone — isolated for its lipolytic activity alone. AOD-9604 delivers HGH&apos;s fat-burning mechanism without affecting blood sugar, IGF-1, or insulin sensitivity. The precision fat loss peptide.
           </p>
+
+          {/* Answer-first definition block — AI-citable summary */}
+          <div className="mt-8 max-w-2xl rounded-2xl border border-white/[0.06] bg-white/[0.015] p-6 md:p-7">
+            <p className="text-[11px] tracking-[0.18em] uppercase text-[#d4a043] mb-3">In plain terms</p>
+            <p className="text-[#c0c0d0] text-[15.5px] leading-[1.75]">
+              <strong className="text-white font-700">AOD-9604 is a 15-amino-acid synthetic peptide</strong> corresponding to residues 177–191 of human growth hormone — the C-terminal fragment that contains HGH&apos;s lipolytic (fat-burning) activity. Developed by Metabolic Pharmaceuticals in Australia and progressed through Phase IIb trials at a 1mg subcutaneous daily dose, AOD-9604 selectively stimulates lipolysis and inhibits lipogenesis without binding the GH receptor. That selectivity is the entire point: clinical trials measured no change in IGF-1, fasting glucose, or insulin sensitivity, which separates AOD-9604 from full HGH and from GLP-1 agonists like <Link href="/semaglutide-complete-guide" className="underline hover:text-white" style={{ color: accent }}>semaglutide</Link>. Standard research protocols run 250–500mcg subcutaneous daily for 12 weeks, with measurable changes in body fat reported within 4–8 weeks. AOD-9604 is a research compound; nothing here is medical advice.
+            </p>
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Product } from '@/lib/products'
+import { canonicalProductHref } from '@/lib/variants'
 
 interface Props {
   product: Product
@@ -31,7 +32,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
   /* ─── COMPACT horizontal card ─── */
   if (variant === 'compact') {
     return (
-      <Link href={`/products/${product.slug}`}>
+      <Link href={canonicalProductHref(product.slug)}>
         <div className="card flex items-center gap-4 p-4 group hover:scale-[1.02] transition-all duration-300">
           {/* Square image — full product, no crop */}
           <div className="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 img-shimmer"
@@ -59,7 +60,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
   if (variant === 'wide') {
     return (
       <div className="card group overflow-hidden relative">
-        <Link href={`/products/${product.slug}`} className="flex flex-col sm:flex-row h-full">
+        <Link href={canonicalProductHref(product.slug)} className="flex flex-col sm:flex-row h-full">
           {/* Full-product image panel */}
           <div className="relative w-full sm:w-64 h-56 sm:h-auto flex-shrink-0 overflow-hidden img-shimmer"
             style={{ background: `radial-gradient(ellipse at 50% 70%, ${accent}18, #0d0d11)` }}>
@@ -112,7 +113,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
   if (variant === 'hero') {
     return (
       <div className="card-product group overflow-hidden relative flex flex-col h-full">
-        <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
+        <Link href={canonicalProductHref(product.slug)} className="flex flex-col h-full">
           {/* Full product image — no crop */}
           <div className="relative overflow-hidden img-shimmer" style={{ height: 'clamp(240px, 50vw, 360px)',
             background: `radial-gradient(ellipse at 50% 75%, ${accent}20, #0a0a0e 70%)` }}>
@@ -177,7 +178,7 @@ export default function ProductCard({ product, variant = 'default', index = 0 }:
   /* ─── DEFAULT card ─── */
   return (
     <div className="card-product group overflow-hidden flex flex-col h-full relative">
-      <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
+      <Link href={canonicalProductHref(product.slug)} className="flex flex-col h-full">
 
         {/* Full product image — object-contain so nothing gets cut */}
         <div className="relative overflow-hidden img-shimmer" style={{ height: 'clamp(200px, 45vw, 300px)',

@@ -34,6 +34,29 @@ const jsonLd = {
       publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
       author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent', name: 'LooksMax Agent', url: 'https://www.peptidesmuscle.com/about/editors' },
       reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent' },
+      citation: [
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'The promoting effect of pentadecapeptide BPC 157 on tendon healing involves tendon outgrowth, cell survival, and cell migration',
+          author: 'Chang CH, Tsai WC, Lin MS, Hsu YH, Pang JH.',
+          isPartOf: { '@type': 'Periodical', name: 'Journal of Applied Physiology' },
+          datePublished: '2011-03-01',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1152/japplphysiol.00945.2010' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '21030672' },
+          ],
+          url: 'https://pubmed.ncbi.nlm.nih.gov/21030672/',
+        },
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Emerging Use of BPC-157 in Orthopaedic Sports Medicine',
+          isPartOf: { '@type': 'Periodical', name: 'PMC (PubMed Central)' },
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'PMC', value: 'PMC12313605' },
+          ],
+          url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12313605/',
+        },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -172,8 +195,8 @@ export default function Bpc157CompletePage() {
             <p className="label-gold">Recovery & Healing Peptide</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            BPC-157:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            BPC-157:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-03-28" dateModified="2026-03-28" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

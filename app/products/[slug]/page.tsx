@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getProductBySlug, products, type Product } from '@/lib/products'
 import {
+  canonicalProductHref,
   getCanonicalProductBySlug,
   getCanonicalProducts,
   getVariantsForParent,
@@ -386,7 +387,7 @@ function SynergyPanel({ product, label = 'Best Stacked With' }: { product: Produ
         {product.synergies.map(syn => {
           const sp = products.find(p => p.name.toLowerCase().includes(syn.toLowerCase()) || p.slug === syn)
           if (sp) return (
-            <Link key={syn} href={`/products/${sp.slug}`}>
+            <Link key={syn} href={canonicalProductHref(sp.slug)}>
               <div className="flex items-center gap-3 py-3 border-b border-white/[0.05] hover:border-[#d4a043]/20 group transition-colors">
                 <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0"
                   style={{ background: 'radial-gradient(circle, rgba(212,160,67,0.1), #0d0d11)' }}>
@@ -447,6 +448,7 @@ function ProductSpecs({ product }: { product: Product }) {
     vial ? ['Unit size', vial] : null,
     pack ? ['Pack count', pack] : null,
     ['Format', format],
+    ['HPLC purity', '≥98% (batch CoA available on request)'],
     ['Price', product.price],
   ].filter(Boolean) as Array<[string, string]>
 
@@ -566,6 +568,18 @@ export default function ProductPage({ params }: Props) {
   // Per playbook: one Product with offers[] array for variants, not one Offer.
   // Each Offer's url is the canonical parent page (not the affiliate redirect
   // which is X-Robots-Tag: noindex).
+  // Return-policy reference matches /refund (30-day, free return). Item condition
+  // is NewCondition for every research-grade vial.
+  const returnPolicyRef = {
+    '@type': 'MerchantReturnPolicy',
+    applicableCountry: 'US',
+    returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+    merchantReturnDays: 30,
+    returnMethod: 'https://schema.org/ReturnByMail',
+    returnFees: 'https://schema.org/FreeReturn',
+    url: 'https://www.peptidesmuscle.com/refund',
+  }
+
   const offerNode = variants.length > 0
     ? variants.map(v => ({
         '@type': 'Offer',
@@ -574,34 +588,20 @@ export default function ProductPage({ params }: Props) {
         url: canonicalUrl,
         name: `${product.name} — ${v.label}`,
         sku: v.slug,
+        itemCondition: 'https://schema.org/NewCondition',
         availability: 'https://schema.org/InStock',
+        hasMerchantReturnPolicy: returnPolicyRef,
       }))
     : {
         '@type': 'Offer',
         priceCurrency: 'USD',
         price: product.price.replace(/[^0-9.]/g, ''),
         url: canonicalUrl,
+        sku: product.slug,
+        itemCondition: 'https://schema.org/NewCondition',
         availability: 'https://schema.org/InStock',
+        hasMerchantReturnPolicy: returnPolicyRef,
       }
-
-  // Honest HPLC-purity Review schema. No reviewBody (that would be name-swap
-  // duplicate content across pages). Rating is a verifiable 98/100 HPLC-purity
-  // measurement — Phiogen publishes batch-specific CoAs via customer service.
-  // aggregateRating with ratingCount:1 reflects the single institutional review.
-  const reviewNode = {
-    '@type': 'Review',
-    author: { '@type': 'Organization', name: 'Independent HPLC Analysis' },
-    publisher: { '@type': 'Organization', name: 'Phiogen QC' },
-    datePublished: '2026-01-15',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '98',
-      bestRating: '100',
-      worstRating: '0',
-      name: 'HPLC Purity (%)',
-    },
-    itemReviewed: { '@type': 'Product', name: product.name },
-  }
 
   const jsonLdItems: object[] = [
     {
@@ -613,15 +613,6 @@ export default function ProductPage({ params }: Props) {
       brand: { '@type': 'Brand', name: 'Phiogen' },
       category: product.category,
       offers: offerNode,
-      review: reviewNode,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '98',
-        bestRating: '100',
-        worstRating: '0',
-        ratingCount: '1',
-        reviewCount: '1',
-      },
     },
     {
       '@type': 'BreadcrumbList',

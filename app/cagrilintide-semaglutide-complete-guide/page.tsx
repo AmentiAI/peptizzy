@@ -167,8 +167,8 @@ export default function CagriSemaGuidePage() {
             <p className="label-gold">Dual-Pathway Weight Loss</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            CagriSema:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            CagriSema:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-04-01" dateModified="2026-04-01" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -242,7 +242,7 @@ export default function CagriSemaGuidePage() {
           <div className="pl-10 mt-6">
             <div className="card rounded-xl p-5">
               <p className="text-white font-600 text-[14px] mb-2">How to Choose</p>
-              <p className="text-[#8888a0] text-[14px] leading-relaxed">Start with <Link href="/products/semaglutide-6mg" className="hover:underline" style={{ color: accent }}>semaglutide</Link> if you&apos;re new to GLP-1 protocols — it has the longest safety record and extensive clinical data. Move to CagriSema if you&apos;ve plateaued on semaglutide or want dual-pathway suppression from the start. Choose <Link href="/products/tirzepatide-15mg" className="hover:underline" style={{ color: '#a060ff' }}>tirzepatide</Link> if maximum total fat loss is the primary objective — it currently holds the highest average weight loss data among available compounds.</p>
+              <p className="text-[#8888a0] text-[14px] leading-relaxed">Start with <Link href="/products/semaglutide" className="hover:underline" style={{ color: accent }}>semaglutide</Link> if you&apos;re new to GLP-1 protocols — it has the longest safety record and extensive clinical data. Move to CagriSema if you&apos;ve plateaued on semaglutide or want dual-pathway suppression from the start. Choose <Link href="/products/tirzepatide" className="hover:underline" style={{ color: '#a060ff' }}>tirzepatide</Link> if maximum total fat loss is the primary objective — it currently holds the highest average weight loss data among available compounds.</p>
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@ export default function CagriSemaGuidePage() {
               <div className="card rounded-xl p-5">
                 <p className="font-700 text-[14px] mb-2 text-white">CJC-1295 + Ipamorelin Stack</p>
                 <p className="text-[#8888a0] text-[13px] leading-relaxed mb-3">The most commonly used muscle-preservation addition to GLP-1 protocols. Stimulates pulsatile growth hormone release to maintain nitrogen retention, support protein synthesis, and preferentially drive fat oxidation over muscle catabolism.</p>
-                <Link href="/products/ipamorelin-cjc-1295-blend-cjc-1295-5mg-ipa-5mg" className="text-[13px] font-600 hover:underline" style={{ color: accent }}>
+                <Link href="/products/ipamorelin-cjc-1295-blend" className="text-[13px] font-600 hover:underline" style={{ color: accent }}>
                   View CJC-1295 + Ipamorelin →
                 </Link>
               </div>

@@ -34,6 +34,32 @@ const jsonLd = {
       publisher: { '@type': 'Organization', name: 'PeptidesMuscle', url: 'https://www.peptidesmuscle.com', logo: { '@type': 'ImageObject', url: 'https://www.peptidesmuscle.com/max-avatar.png' } },
       author: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent', name: 'LooksMax Agent', url: 'https://www.peptidesmuscle.com/about/editors' },
       reviewedBy: { '@type': 'Person', '@id': 'https://www.peptidesmuscle.com/about/editors#looksmax-agent' },
+      citation: [
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1)',
+          author: 'Jastreboff AM, Aronne LJ, Ahmad NN, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'New England Journal of Medicine' },
+          datePublished: '2022-07-21',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1056/NEJMoa2206038' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '35658024' },
+          ],
+          url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2206038',
+        },
+        {
+          '@type': 'MedicalScholarlyArticle',
+          name: 'Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes (SURPASS-2)',
+          author: 'Frías JP, Davies MJ, Rosenstock J, et al.',
+          isPartOf: { '@type': 'Periodical', name: 'New England Journal of Medicine' },
+          datePublished: '2021-08-05',
+          identifier: [
+            { '@type': 'PropertyValue', propertyID: 'DOI', value: '10.1056/NEJMoa2107519' },
+            { '@type': 'PropertyValue', propertyID: 'PubMed', value: '34170647' },
+          ],
+          url: 'https://www.nejm.org/doi/full/10.1056/NEJMoa2107519',
+        },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -152,8 +178,8 @@ export default function TirzepatideCompletePage() {
             <p className="label-gold">Dual GIP+GLP-1 Weight Loss</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Tirzepatide:<br />
-            <span className="italic" style={{ color: accent }}>Complete Protocol Guide</span>
+            Tirzepatide:{' '}
+            <span className="italic block" style={{ color: accent }}>Complete Protocol Guide</span>
           </h1>
       <AuthorByline datePublished="2026-03-29" dateModified="2026-03-29" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -456,7 +482,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Pharmaceutical-grade lyophilized powder. Certificate of analysis verified. The dual GIP+GLP-1 agonist that outperforms all pure GLP-1 therapies in clinical trials.</p>
               <div className="flex gap-3">
                 <a href="/go/tirzepatide-15mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy Now →</a>
-                <Link href="/products/tirzepatide-15mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/tirzepatide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
@@ -464,14 +490,14 @@ export default function TirzepatideCompletePage() {
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Four vials of 15mg tirzepatide — a full month&apos;s supply at maximum dose for users who have completed titration and need sustained maintenance supply.</p>
               <div className="flex gap-3">
                 <a href="/go/tirzepatide-15mg" target="_blank" rel="noopener nofollow sponsored" className="btn-primary flex-1 justify-center py-3 text-[13px]">Buy 4-Pack →</a>
-                <Link href="/products/tirzepatide-60mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
+                <Link href="/products/tirzepatide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Product Info</Link>
               </div>
             </div>
             <div className="card-elevated rounded-2xl p-6">
               <p className="text-white font-700 text-[18px] mb-1">Start with Semaglutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">New to GLP-1 therapy? Semaglutide is the well-validated entry point with the longest safety track record — the proven first step before upgrading to dual agonism.</p>
               <div className="flex gap-3">
-                <Link href="/products/semaglutide-6mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Semaglutide</Link>
+                <Link href="/products/semaglutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Semaglutide</Link>
                 <Link href="/semaglutide-complete-guide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Sema Guide</Link>
               </div>
             </div>
@@ -479,7 +505,7 @@ export default function TirzepatideCompletePage() {
               <p className="text-white font-700 text-[18px] mb-1">Maximum Fat Loss: Retatrutide</p>
               <p className="text-[#8888a0] text-[13px] leading-relaxed mb-5">Need more than tirzepatide? Retatrutide&apos;s triple GIP+GLP-1+glucagon agonism produced 24.2% weight loss in trials — the most powerful option available.</p>
               <div className="flex gap-3">
-                <Link href="/products/retatrutide-10mg" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Retatrutide</Link>
+                <Link href="/products/retatrutide" className="btn-ghost flex-1 justify-center py-3 text-[13px]">View Retatrutide</Link>
                 <Link href="/retatrutide-complete-guide-results-dosage" className="btn-ghost flex-1 justify-center py-3 text-[13px]">Reta Guide</Link>
               </div>
             </div>

@@ -36,7 +36,10 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'cohere-ai',         allow: '/' }, // Cohere
       { userAgent: 'Diffbot',           allow: '/' }, // Knowledge-graph provider many LLMs use
     ],
-    sitemap: 'https://www.peptidesmuscle.com/sitemap.xml',
+    sitemap: [
+      'https://www.peptidesmuscle.com/sitemap.xml',
+      'https://www.peptidesmuscle.com/image-sitemap.xml',
+    ],
     host: 'https://www.peptidesmuscle.com',
   };
 }

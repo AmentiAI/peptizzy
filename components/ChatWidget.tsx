@@ -1,5 +1,6 @@
 'use client'
 
+import { canonicalProductHref } from '@/lib/variants'
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -41,7 +42,7 @@ function ProductCard({ p }: { p: PeptideCard }) {
   const accent = CATEGORY_ACCENT[p.category] ?? '#d4a043'
   return (
     <Link
-      href={`/products/${p.slug}`}
+      href={canonicalProductHref(p.slug)}
       className="rounded-xl overflow-hidden flex-shrink-0 block cursor-pointer active:scale-[0.97] transition-transform duration-150"
       style={{
         width: '180px',

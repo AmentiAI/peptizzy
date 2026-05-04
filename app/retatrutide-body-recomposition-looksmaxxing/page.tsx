@@ -211,8 +211,8 @@ export default function RetatrutideRecompPage() {
             <p className="label-gold">Body Recomposition & Looksmaxxing</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1 }}>
-            Retatrutide<br />
-            <span className="italic" style={{ color: '#d4a043' }}>The Recomp Stack</span>
+            Retatrutide{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>The Recomp Stack</span>
           </h1>
       <AuthorByline datePublished="2026-03-27" dateModified="2026-03-27" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-10">
@@ -449,7 +449,7 @@ export default function RetatrutideRecompPage() {
           <div className="flex items-start gap-6 mb-7">
             <p className="mono text-[#d4a043] text-[12px] mt-1 flex-shrink-0">06</p>
             <h2 className="font-['Playfair_Display'] font-900 text-white" style={{ fontSize: 'clamp(26px, 4vw, 40px)' }}>
-              Retatrutide vs. Tirzepatide vs. Semaglutide<br />
+              Retatrutide vs. Tirzepatide vs. Semaglutide{' '}
               <span style={{ color: '#d4a043' }} className="italic">for Looksmaxxing</span>
             </h2>
           </div>

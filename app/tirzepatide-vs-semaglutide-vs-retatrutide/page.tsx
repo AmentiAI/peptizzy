@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import AuthorByline from '@/components/AuthorByline'
@@ -54,8 +55,8 @@ export default function GlpComparisonPage() {
             <p className="label-gold">2026 Clinical Data</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Tirzepatide vs. Semaglutide<br />
-            <span className="italic" style={{ color: '#a060ff' }}>vs. Retatrutide</span>
+            Tirzepatide vs. Semaglutide{' '}
+            <span className="italic block" style={{ color: '#a060ff' }}>vs. Retatrutide</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
@@ -165,7 +166,7 @@ export default function GlpComparisonPage() {
                 <a href={c.aff} target="_blank" rel="noopener noreferrer" className="btn-primary justify-center py-3 text-[13px] mb-2">
                   Buy Now →
                 </a>
-                <Link href={`/products/${c.slug}`} className="btn-ghost justify-center py-2.5 text-[12px]">Learn More</Link>
+                <Link href={canonicalProductHref(c.slug)} className="btn-ghost justify-center py-2.5 text-[12px]">Learn More</Link>
               </div>
             ))}
           </div>

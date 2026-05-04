@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -138,7 +139,7 @@ export default function BodyCompositionPage() {
           <h1 className="mb-6" style={{ lineHeight: '0.93' }}>
             <span className="display text-white block" style={{ fontSize: 'clamp(48px, 7vw, 96px)' }}>
               Elite Body
-            </span>
+            </span>{' '}
             <span className="display-italic block" style={{ fontSize: 'clamp(48px, 7vw, 96px)', color: accent }}>
               Composition
             </span>
@@ -209,7 +210,7 @@ export default function BodyCompositionPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href={`/products/${pillar.slug}`} className="btn-primary text-[12px] py-3 px-6 inline-flex"
+                  <Link href={canonicalProductHref(pillar.slug)} className="btn-primary text-[12px] py-3 px-6 inline-flex"
                     style={{ background: `linear-gradient(135deg, #22a870, ${accent})` }}>
                     View Full Protocol
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -339,7 +340,7 @@ export default function BodyCompositionPage() {
                     <Image src={p.image} alt={p.name} fill className="object-contain p-6" />
                   </div>
                   <div className="p-5">
-                    <Link href={`/products/${p.slug}`}>
+                    <Link href={canonicalProductHref(p.slug)}>
                       <p className="text-white font-700 text-[16px] mb-1 hover:text-emerald-400 transition-colors">{p.name}</p>
                     </Link>
                     <p className="text-[#8888a0] text-[13px] mb-4 line-clamp-2">{p.shortDescription}</p>

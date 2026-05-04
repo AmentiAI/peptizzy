@@ -192,8 +192,8 @@ export default function PeptidesForCollagenSkinAntiAging() {
             <p className="label-gold">Skin & Collagen Peptides</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            Peptides for Collagen<br />
-            <span className="italic" style={{ color: accent }}>Skin & Anti-Aging</span>
+            Peptides for Collagen{' '}
+            <span className="italic block" style={{ color: accent }}>Skin & Anti-Aging</span>
           </h1>
       <AuthorByline datePublished="2026-04-03" dateModified="2026-04-03" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">

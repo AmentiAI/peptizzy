@@ -156,8 +156,8 @@ export default function PeptidesHairGrowthPage() {
             <p className="label-gold">Follicle Biology · GHK-Cu · TB-500</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 6vw, 68px)', lineHeight: 1.08 }}>
-            Peptides for Hair Growth<br />
-            <span className="italic" style={{ color: '#d4a043' }}>& Hair Loss Prevention</span>
+            Peptides for Hair Growth{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>& Hair Loss Prevention</span>
           </h1>
       <AuthorByline datePublished="2026-03-25" dateModified="2026-03-25" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl mb-8">

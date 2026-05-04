@@ -1,3 +1,4 @@
+import { canonicalProductHref } from '@/lib/variants'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -39,7 +40,7 @@ export default function StacksPage() {
           <h1 className="mb-5" style={{ lineHeight: '0.93' }}>
             <span className="display text-white block" style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
               Elite Stack
-            </span>
+            </span>{' '}
             <span className="display-italic gold-shimmer block" style={{ fontSize: 'clamp(50px, 7vw, 100px)' }}>
               Protocols
             </span>
@@ -105,7 +106,7 @@ export default function StacksPage() {
                         const p = products.find(prod => prod.slug === item.slug)
                         if (!p) return null
                         return (
-                          <Link key={item.slug} href={`/products/${item.slug}`}>
+                          <Link key={item.slug} href={canonicalProductHref(item.slug)}>
                             <div className="card flex items-center gap-5 p-4 group">
                               <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0"
                                 style={{ background: `radial-gradient(circle, ${stack.accent}22, #0d0d11)` }}>

@@ -48,8 +48,8 @@ export default function Snap8VsBotoxPage() {
             <p className="label-gold">Topical Peptide vs. Injectable</p>
           </div>
           <h1 className="font-['Playfair_Display'] font-900 text-white mb-6" style={{ fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.1 }}>
-            SNAP-8 vs. Botox:<br />
-            <span className="italic" style={{ color: '#d4a043' }}>Honest 2026 Review</span>
+            SNAP-8 vs. Botox:{' '}
+            <span className="italic block" style={{ color: '#d4a043' }}>Honest 2026 Review</span>
           </h1>
       <AuthorByline datePublished="2026-03-21" dateModified="2026-03-21" />
           <p className="text-[#8888a0] text-xl leading-relaxed max-w-2xl">
